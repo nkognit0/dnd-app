@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  background: rgb(100, 100, 100);
+}
+
+.app-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: white;
+  border-bottom: 1px solid rgb(220, 220, 220);
+}
+
+.app-toolbar .app-title {
+  font-weight: 600;
+  margin: 0 auto 0 8px;
+}
+
+.sheet-page {
+  background: white;
+  max-width: 1240px;
+  margin: 24px auto;
+  padding: 1px 0;
+}
+
+/* Bootstrap (used by the sheet) gives every label a bottom margin */
+.mantine-InputWrapper-label {
+  margin-bottom: 2px;
+}
+
+@media print {
+  body {
+    background: white;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .sheet-page {
+    margin: 0;
+    max-width: none;
+    break-after: page;
+  }
+}
