@@ -31,17 +31,20 @@ export function Pick(props: {
   placeholder?: string
   disabled?: boolean
   searchable?: boolean
+  // an optional choice can be cleared again
+  clearable?: boolean
 }) {
   return (
     <Select
       label={props.label}
       description={props.description}
-      placeholder={props.placeholder ?? 'Выберите'}
+      placeholder={props.placeholder ?? (props.clearable ? 'Не выбрано' : 'Выберите')}
       data={props.data}
       value={props.value}
       onChange={props.onChange}
       disabled={props.disabled}
       searchable={props.searchable ?? true}
+      clearable={props.clearable}
       spellCheck={false}
       // typing replaces the chosen value instead of being appended to it
       onFocus={(e) => e.currentTarget.select()}

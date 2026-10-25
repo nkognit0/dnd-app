@@ -14,6 +14,8 @@ import equipmentJson from '@data/equipment.json'
 import equipmentCategoriesJson from '@data/equipment-categories.json'
 import weaponsJson from '@data/weapons.json'
 import armorJson from '@data/armor.json'
+import classFeaturesJson from '@data/class-features.json'
+import subclassesJson from '@data/subclasses.json'
 import ruJson from '@data/i18n/ru.json'
 
 export type Ability = 'str' | 'dex' | 'con' | 'int' | 'wis' | 'cha'
@@ -90,10 +92,100 @@ export interface ClassFeature {
   grants?: Record<string, unknown>
 }
 
+// ---- level-up vocabulary shared by classes, subclasses and feats (see dnd-db/README.md)
+export interface LevelUpChoice {
+  id: string
+  feature?: string
+  type:
+    | 'skill' | 'expertise' | 'skill-or-expertise' | 'tool' | 'language' | 'damage-type' | 'spell' | 'class-option'
+    | 'fighting-style' | 'fighting-style-swap' | 'spellbook' | 'spell-mastery' | 'signature-spells' | 'ability-increase'
+  level?: number
+  levels?: [number, number]
+  count?: number | 'proficiency_bonus'
+  from?: string[] | 'any' | 'class-list'
+  from_category?: string
+  options_group?: string
+  total_from_table?: string
+  total_by_level?: Record<string, number>
+  replace?: number
+  optional?: boolean
+  spell_level?: number | 'slot-or-cantrip'
+  spell_levels?: number[]
+  lists?: string[] | 'any'
+  schools?: string[]
+  ritual?: boolean
+  always_prepared?: boolean
+  alternative?: { id: string; name: string; name_ru: string; cantrips: number; list: string; ability: Ability }
+  // ability-increase
+  max_score?: number
+  options?: { from?: Ability[]; plus_1?: number; plus_2?: number; unproficient_saves_only?: boolean }[]
+}
+
+export interface LevelUpGrant {
+  feature?: string
+  level?: number
+  skills?: string[]
+  tools?: string[]
+  tool_fallback?: string
+  weapons?: string[]
+  armor?: string[]
+  saves?: Ability[]
+  save_fallback?: Ability[]
+  cantrips?: string[]
+  cantrip_fallback_list?: string
+  not_counted?: boolean
+  spells?: string[]
+  rituals?: string[]
+  ability?: Ability
+  hp_per_class_level?: number
+  hp_bonus?: number
+  hp_bonus_per_level?: number
+  speed_bonus?: number
+  initiative_bonus?: string
+  jack_of_all_trades?: boolean
+  extra_spell_lists?: string[]
+  all_skills?: boolean
+  save_of_increased_ability?: boolean
+}
+
+export interface ClassFeatureData {
+  id: string
+  class: string
+  feature: string
+  name: string
+  name_ru?: string | null
+  levels: number[]
+}
+
+export interface SubclassSpellcasting {
+  feature: string
+  list: string
+  ability: Ability
+  cantrips: Record<string, number>
+  fixed_cantrips?: string[]
+  cantrip_swap?: string
+  prepared_swap?: { when: string; count: string }
+  levels: Record<string, { prepared_spells: number; spell_slots: number[] }>
+}
+
+export interface SubclassData extends Named {
+  class: string
+  level: number
+  link: string
+  features: { id: string; level: number; name: string; name_ru: string }[]
+  always_prepared?: Record<string, string[]>
+  grants?: LevelUpGrant[]
+  choices?: LevelUpChoice[]
+  note?: string
+  savant_school?: string
+  spellcasting?: SubclassSpellcasting
+}
+
 export interface ClassData extends Named {
   primary_abilities: Ability[]
   primary_ability_mode: 'all' | 'any'
   hit_die: number
+  hit_points: { per_level: { roll: string; fixed: number } }
   saving_throws: Ability[]
   skill_proficiencies: Proficiencies
   tool_proficiencies: Proficiencies
@@ -106,10 +198,16 @@ export interface ClassData extends Named {
     ability: Ability
     kind: 'prepared' | 'pact'
     list: string
+    cantrip_swap?: 'level-up' | 'long-rest' | null
+    prepared_swap?: { when: 'level-up' | 'long-rest'; count: 'one' | 'any' }
   }
   level_1_features: ClassFeature[]
   level_1_choices: ClassChoice[]
   levels: ClassLevel[]
+  subclasses: { id: string; name: string; source: string }[]
+  level_up_choices: LevelUpChoice[]
+  level_up_grants: LevelUpGrant[]
+  level_up_unsupported?: { feature: string; level: number; note: string }[]
 }
 
 export interface ClassOption extends Named {
@@ -175,6 +273,15 @@ export interface FeatData extends Named {
   repeatable: boolean
   choices?: FeatChoice[]
   grants?: Record<string, unknown>
+  link?: string
+  prerequisite?: {
+    minimum_level?: number
+    ability_any?: Ability[]
+    ability_min?: number
+    armor_training?: string
+    spellcasting?: boolean
+    feature_named?: string
+  }
 }
 
 export interface SpellData extends Named {
@@ -238,6 +345,8 @@ export const equipment = equipmentJson as unknown as EquipmentData[]
 export const equipmentCategories = equipmentCategoriesJson as unknown as (Named & { items: string[] })[]
 export const weapons = weaponsJson as unknown as WeaponData[]
 export const armor = armorJson as unknown as ArmorData[]
+export const classFeatures = classFeaturesJson as unknown as ClassFeatureData[]
+export const subclasses = subclassesJson as unknown as SubclassData[]
 export const ru = ruJson as unknown as RuNames
 
 function index<T extends { id: string }>(list: T[]): Record<string, T> {
@@ -257,7 +366,8 @@ export const byId = {
   category: index(equipmentCategories),
   weapon: index(weapons),
   armor: index(armor),
-  alignment: index(alignments)
+  alignment: index(alignments),
+  subclass: index(subclasses)
 }
 
 // Russian name of any record, falling back to the English one.

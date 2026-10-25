@@ -1,6 +1,7 @@
 // Short Russian summaries for the sheet's text blocks: level 1 class features,
 // species traits and feats, with the character's own numbers filled in.
 import { Ability, abilityName, abilityShort, byId, classOptions, nameOf, ruName } from '../data'
+import type { ClassData, SpeciesOption } from '../data'
 import type { WizardState } from '../wizard/state'
 import { Derived, PROFICIENCY_BONUS as PB } from './derive'
 
@@ -16,14 +17,91 @@ const spellName = (id: string) => '«' + nameOf(byId.spell[id]) + '»'
 const skillNames = (ids: string[]) => ids.map((id) => nameOf(byId.skill[id])).join(', ')
 const damageName = (id: string) => ruName('damage_types', id).toLowerCase()
 
-const INVOCATIONS_RU: Record<string, string> = {
-  'armor-of-shadows': 'Доспех теней',
-  'eldritch-mind': 'Таинственный разум',
-  'pact-of-the-blade': 'Договор клинка',
-  'pact-of-the-chain': 'Договор цепи',
-  'pact-of-the-tome': 'Договор гримуара'
+export const invocationName = (id: string, fallback: string) =>
+  nameOf((classOptions['eldritch-invocation'] || []).find((o) => o.id === id)) || fallback
+
+// "2 очка", "5 очков"
+export function points(n: number): string {
+  const m10 = n % 10
+  const m100 = n % 100
+  if (m10 === 1 && m100 !== 11) return n + ' очко'
+  if (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return n + ' очка'
+  return n + ' очков'
 }
-export const invocationName = (id: string, fallback: string) => INVOCATIONS_RU[id] || fallback
+
+// What a level-dependent line needs. The creation wizard fills it for level 1, the level-up
+// for the new level, so the numbers in the sheet's text blocks stay current.
+export interface NumbersCtx {
+  cls: ClassData
+  level: number
+  mods: Record<Ability, number>
+  // wizard: spells in the spellbook
+  spellbook?: number
+}
+
+// The line of a class feature whose numbers follow the level or a modifier, or null.
+export function classFeatureNumbers(featureId: string, name: string, x: NumbersCtx): string | null {
+  const r = x.cls.levels[x.level - 1]
+  const col = (k: string) => Number(r.columns[k] ?? 0)
+  switch (featureId) {
+    case 'rage':
+      return `${name}: ${times(col('rages'))} за долгий отдых, +${col('rage_damage')} к урону атаками Силы, сопротивление дробящему, колющему и рубящему урону`
+    case 'bardic-inspiration':
+      return `${name}: ${dice(String(r.columns.bardic_inspiration_die || 'd6'))}, ${times(Math.max(1, x.mods.cha))} за долгий отдых`
+    case 'spellcasting':
+    case 'pact-magic': {
+      const parts: string[] = []
+      if (r.cantrips) parts.push('заговоров ' + r.cantrips)
+      if (r.prepared_spells) parts.push('подготовленных заклинаний ' + r.prepared_spells)
+      if (r.pact_slots) {
+        parts.push(`ячеек договора ${r.pact_slots.count} (${r.pact_slots.slot_level} круг, восстанавливаются после короткого отдыха)`)
+      } else if (r.spell_slots) {
+        const slots = r.spell_slots.map((n, i) => (n ? `${i + 1} круга ${n}` : '')).filter(Boolean)
+        if (slots.length) parts.push('ячеек ' + slots.join(', '))
+      }
+      if (x.cls.id === 'wizard') parts.push('в книге заклинаний ' + (x.spellbook ?? 6))
+      const ability = x.cls.spellcasting ? abilityName(x.cls.spellcasting.ability) : ''
+      return `${name} (${ability}): ${parts.join(', ')}`
+    }
+    case 'second-wind':
+      return `${name}: ${times(col('second_wind'))}; бонусным действием восстановить 1к10 + ${x.level} ${x.level === 1 ? 'хит' : 'хитов'}`
+    case 'martial-arts':
+      return `${name}: кость ${dice(String(r.columns.martial_arts || 'd6'))}, безоружный удар бонусным действием, Лов вместо Сил для монашеского оружия`
+    case 'lay-on-hands':
+      return `${name}: запас ${5 * x.level} хитов на долгий отдых`
+    case 'favored-enemy':
+      return `${name}: ${spellName('hunters-mark')} всегда подготовлено, ${times(col('favored_enemy'))} без ячейки за долгий отдых`
+    case 'sneak-attack':
+      return `${name}: +${dice(String(r.columns.sneak_attack || '1d6'))} раз в ход`
+    case 'arcane-recovery':
+      return `${name}: раз в день после короткого отдыха вернуть ячейки суммарно ${Math.ceil(x.level / 2)} круга`
+    case 'tinkers-magic':
+      return `${name}: заговор ${spellName('mending')}; с инструментами ремонтника создать простой предмет ${times(Math.max(1, x.mods.int))} за долгий отдых`
+    default:
+      return null
+  }
+}
+
+// The species trait line whose numbers follow the proficiency bonus (breath: also the level), or null.
+export function speciesNumberLine(speciesId: string, x: { level: number; pb: number; con: number; option: SpeciesOption | null }): string | null {
+  switch (speciesId) {
+    case 'aasimar':
+      return `Исцеляющие руки: раз за долгий отдых касанием восстановить ${x.pb}к4 хитов`
+    case 'dragonborn': {
+      const dt = x.option?.breath_weapon_damage_type
+      const n = x.level >= 17 ? 4 : x.level >= 11 ? 3 : x.level >= 5 ? 2 : 1
+      return `Оружие дыхания: ${n}к10 ${dt ? damageName(dt) : ''}, Сл ${8 + x.con + x.pb} Лов, конус 15 фт или линия 30 фт; ${times(x.pb)} за долгий отдых`
+    }
+    case 'dwarf':
+      return `Знание камня: чувство вибрации 60 фт на 10 минут, ${times(x.pb)} за долгий отдых`
+    case 'goliath':
+      return `Великанье происхождение: ${x.option ? nameOf(x.option) : ''}, ${times(x.pb)} за долгий отдых`
+    case 'orc':
+      return `Прилив адреналина: рывок бонусным действием и ${x.pb} временных ${x.pb >= 5 ? 'хитов' : 'хита'}, ${times(x.pb)} за короткий или долгий отдых`
+    default:
+      return null
+  }
+}
 
 const ORDER_EFFECT: Record<string, string> = {
   protector: 'владение воинским оружием и тяжёлыми доспехами',
@@ -35,16 +113,12 @@ const ORDER_EFFECT: Record<string, string> = {
 export function classFeatureLines(d: Derived, s: WizardState): string[] {
   const cls = d.cls
   if (!cls) return []
-  const l1 = cls.levels[0]
-  const col = (k: string) => Number(l1.columns[k] ?? 0)
   const lines: string[] = []
+  const ctx: NumbersCtx = { cls, level: 1, mods: d.mods }
   for (const f of cls.level_1_features) {
     const name = f.name_ru || f.name
-    let text = name
+    let text = classFeatureNumbers(f.id, name, ctx) ?? name
     switch (f.id) {
-      case 'rage':
-        text = `${name}: ${times(col('rages'))} за долгий отдых, +${col('rage_damage')} к урону атаками Силы, сопротивление дробящему, колющему и рубящему урону`
-        break
       case 'unarmored-defense':
         text = cls.id === 'monk'
           ? `${name}: КД = 10 + Лов + Мдр без доспехов и щита`
@@ -56,21 +130,6 @@ export function classFeatureLines(d: Derived, s: WizardState): string[] {
           return w ? `${nameOf(w)} (${ruName('weapon_masteries', w.mastery).toLowerCase()})` : id
         })
         text = `${name}: ${list.join(', ')}`
-        break
-      }
-      case 'bardic-inspiration':
-        text = `${name}: к6, ${times(Math.max(1, d.mods.cha))} за долгий отдых`
-        break
-      case 'spellcasting':
-      case 'pact-magic': {
-        const parts: string[] = []
-        if (l1.cantrips) parts.push('заговоров ' + l1.cantrips)
-        if (l1.prepared_spells) parts.push('подготовленных заклинаний ' + l1.prepared_spells)
-        if (l1.pact_slots) parts.push('ячеек договора ' + l1.pact_slots.count + ' (1 круг, восстанавливаются после короткого отдыха)')
-        else if (l1.spell_slots) parts.push('ячеек 1 круга ' + l1.spell_slots[0])
-        if (cls.id === 'wizard') parts.push('в книге заклинаний 6')
-        const ability = cls.spellcasting ? abilityName(cls.spellcasting.ability) : ''
-        text = `${name} (${ability}): ${parts.join(', ')}`
         break
       }
       case 'divine-order':
@@ -88,23 +147,8 @@ export function classFeatureLines(d: Derived, s: WizardState): string[] {
         text = `${name}: ${st ? nameOf(st) : '—'}`
         break
       }
-      case 'second-wind':
-        text = `${name}: ${times(col('second_wind'))}; бонусным действием восстановить 1к10 + 1 хит`
-        break
-      case 'martial-arts':
-        text = `${name}: кость ${dice(String(l1.columns.martial_arts || 'd6'))}, безоружный удар бонусным действием, Лов вместо Сил для монашеского оружия`
-        break
-      case 'lay-on-hands':
-        text = `${name}: запас 5 хитов на долгий отдых`
-        break
-      case 'favored-enemy':
-        text = `${name}: ${spellName('hunters-mark')} всегда подготовлено, ${times(col('favored_enemy'))} без ячейки за долгий отдых`
-        break
       case 'expertise':
         text = `${name}: ${skillNames(s.skills.expertise)}`
-        break
-      case 'sneak-attack':
-        text = `${name}: +${dice(String(l1.columns.sneak_attack || '1d6'))} раз в ход`
         break
       case 'thieves-cant':
         text = `${name} и ещё один язык: ${s.skills.extraLanguages.map((id) => nameOf(byId.language[id])).join(', ')}`
@@ -118,14 +162,8 @@ export function classFeatureLines(d: Derived, s: WizardState): string[] {
         text = `${name}: ${list.join(', ')}`
         break
       }
-      case 'arcane-recovery':
-        text = `${name}: раз в день после короткого отдыха вернуть ячейки суммарно 1 круга`
-        break
       case 'ritual-adept':
         text = `${name}: ритуалы из книги заклинаний без подготовки`
-        break
-      case 'tinkers-magic':
-        text = `${name}: заговор ${spellName('mending')}; с инструментами ремонтника создать простой предмет ${times(Math.max(1, d.mods.int))} за долгий отдых`
         break
     }
     lines.push(text)
@@ -145,13 +183,14 @@ export function speciesTraitLines(d: Derived, s: WizardState): string[] {
   const opt = d.spOption ? nameOf(d.spOption) : ''
   const dv = d.darkvision ? `Тёмное зрение ${d.darkvision} фт` : ''
   const ab = s.species.spellAbility ? ` (${abilityName(s.species.spellAbility as Ability)})` : ''
-  const lines: (string | false)[] = (() => {
+  const num = speciesNumberLine(sp.id, { level: 1, pb: PB, con: d.mods.con, option: d.spOption || null })
+  const lines: (string | false | null)[] = (() => {
     switch (sp.id) {
       case 'aasimar':
         return [
           'Небесное сопротивление: некротическая энергия и излучение',
           dv,
-          `Исцеляющие руки: раз за долгий отдых касанием восстановить ${PB}к4 хитов`,
+          num,
           `Несущий свет: заговор ${spellName('light')} (Харизма)`,
           'Небесное откровение — с 3-го уровня'
         ]
@@ -160,7 +199,7 @@ export function speciesTraitLines(d: Derived, s: WizardState): string[] {
         const dmg = dt ? damageName(dt) : ''
         return [
           `Драконий предок: ${opt} (${dmg})`,
-          `Оружие дыхания: 1к10 ${dmg}, Сл ${8 + d.mods.con + PB} Лов, конус 15 фт или линия 30 фт; ${times(PB)} за долгий отдых`,
+          num,
           `Сопротивление урону: ${dmg}`,
           dv,
           'Драконий полёт — с 5-го уровня'
@@ -171,7 +210,7 @@ export function speciesTraitLines(d: Derived, s: WizardState): string[] {
           dv,
           'Дварфийская устойчивость: сопротивление урону ядом, преимущество против отравления',
           'Дварфийская выдержка: +1 хит за каждый уровень',
-          `Знание камня: чувство вибрации 60 фт на 10 минут, ${times(PB)} за долгий отдых`
+          num
         ]
       case 'elf':
         return [
@@ -191,7 +230,7 @@ export function speciesTraitLines(d: Derived, s: WizardState): string[] {
         ]
       case 'goliath':
         return [
-          `Великанье происхождение: ${opt}, ${times(PB)} за долгий отдых`,
+          num,
           'Большая форма — с 5-го уровня',
           'Мощное телосложение: преимущество против захвата, грузоподъёмность как у Большого существа'
         ]
@@ -212,7 +251,7 @@ export function speciesTraitLines(d: Derived, s: WizardState): string[] {
       }
       case 'orc':
         return [
-          `Прилив адреналина: рывок бонусным действием и ${PB} временных хита, ${times(PB)} за короткий или долгий отдых`,
+          num,
           dv,
           'Неумолимая стойкость: раз за долгий отдых остаться с 1 хитом вместо 0'
         ]
@@ -264,7 +303,7 @@ export function featLines(d: Derived, s: WizardState): string[] {
         detail = '+2 хита за каждый уровень'
         break
       case 'lucky':
-        detail = `${PB} очка удачи на долгий отдых`
+        detail = `${points(PB)} удачи на долгий отдых`
         break
       case 'savage-attacker':
         detail = 'раз в ход бросать урон оружия дважды и выбирать'

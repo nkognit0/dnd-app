@@ -28,6 +28,24 @@ body {
   padding: 1px 0;
 }
 
+.app-footer {
+  max-width: 1240px;
+  margin: 0 auto 24px;
+  padding: 0 16px;
+  color: rgb(225, 225, 225);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.app-footer p {
+  margin: 0 0 4px;
+}
+
+.app-footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+
 /* Bootstrap (used by the sheet) gives every label a bottom margin */
 .mantine-InputWrapper-label {
   margin-bottom: 2px;

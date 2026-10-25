@@ -12,7 +12,8 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "deploy": "node scripts/deploy.mjs"
   },
   "dependencies": {
     "@mantine/core": "8.3.18",
