@@ -13,6 +13,8 @@ import type { ChoiceDef } from './plan'
 import { readSheet } from './read'
 import type { SheetInfo } from './read'
 import { FeatStep, FeaturesStep, HpStep, LevelStepProps, SpellsStep, StepId, SubclassStep, SummaryStep } from './steps'
+import { useHistory } from '../wizard/history'
+import { UndoRedo } from '../wizard/UndoRedo'
 
 // the picks of each step, by key prefix; a step resets every step after it
 const ORDER: StepId[] = ['hp', 'subclass', 'feat', 'features', 'spells', 'summary']
@@ -85,7 +87,9 @@ function stepsFor(info: SheetInfo, p: LevelPicks): StepDef[] {
 
 export function LevelUpWizard(props: { character: DnDCharacter; onClose: () => void; onComplete: (c: DnDCharacter) => void }) {
   const read = useMemo(() => readSheet(props.character), [props.character])
-  const [picks, setPicks] = useState<LevelPicks>(emptyPicks)
+  const history = useHistory<LevelPicks>(emptyPicks)
+  const picks = history.value
+  const { change } = history
   const [active, setActive] = useState(0)
   const scrollRef = useRef<HTMLDivElement>(null)
   const info = read.info
@@ -134,18 +138,23 @@ export function LevelUpWizard(props: { character: DnDCharacter; onClose: () => v
   const stepProps: LevelStepProps = {
     info,
     picks,
-    update: (patch) => {
-      const next = { ...picks, ...patch }
-      if (JSON.stringify(next) === JSON.stringify(picks)) return
-      setPicks(resetAfter(next, step.id))
-    },
-    choose: (key, values) => {
-      if (JSON.stringify(picks.choices[key] || []) === JSON.stringify(values)) return
-      const next = { ...picks, choices: { ...picks.choices, [key]: values } }
+    update: (patch) => change((prev) => {
+      const next = { ...prev, ...patch }
+      return JSON.stringify(next) === JSON.stringify(prev) ? prev : resetAfter(next, step.id)
+    }, current),
+    choose: (key, values) => change((prev) => {
+      if (JSON.stringify(prev.choices[key] || []) === JSON.stringify(values)) return prev
+      const next = { ...prev, choices: { ...prev.choices, [key]: values } }
       if (!values.length) delete next.choices[key]
-      setPicks(sanitize(step.id, info, resetAfter(next, step.id)))
-    }
+      return sanitize(step.id, info, resetAfter(next, step.id))
+    }, current)
   }
+  // starting over can be undone; undo and redo open the step where the change was made
+  const reset = () => {
+    change((prev) => (JSON.stringify(prev) === JSON.stringify(emptyPicks()) ? prev : emptyPicks()), current)
+    setActive(0)
+  }
+  const show = (s: number | null) => s != null && setActive(s)
   const result = step.id === 'summary' ? applyLevelUp(props.character, info, picks) : null
   const last = current === steps.length - 1
 
@@ -178,10 +187,16 @@ export function LevelUpWizard(props: { character: DnDCharacter; onClose: () => v
             {step.id === 'summary' && result && <SummaryStep summary={result.summary} warnings={read.warnings} />}
           </Box>
           <Group justify='space-between' mt='auto' style={{ flexShrink: 0 }}>
-            <Button variant='subtle' color='gray' onClick={() => { setPicks(emptyPicks()); setActive(0) }}>
+            <Button variant='subtle' color='gray' onClick={reset}>
               Начать заново
             </Button>
             <Group>
+              <UndoRedo
+                canUndo={history.canUndo}
+                canRedo={history.canRedo}
+                onUndo={() => show(history.undo())}
+                onRedo={() => show(history.redo())}
+              />
               <Button variant='default' disabled={current === 0} onClick={() => setActive(current - 1)}>
                 Назад
               </Button>

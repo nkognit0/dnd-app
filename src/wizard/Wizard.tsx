@@ -4,6 +4,8 @@ import type { DnDCharacter } from 'dnd-sheet'
 import { derive } from '../rules/derive'
 import type { Derived } from '../rules/derive'
 import { buildCharacter } from '../rules/sheet'
+import { useHistory } from './history'
+import { UndoRedo } from './UndoRedo'
 import { StepKey, WizardState, applyUpdate, initialState } from './state'
 import type { StepProps } from './steps/common'
 import { BackgroundStep, ClassStep, SpeciesStep, backgroundValid, classValid, speciesValid } from './steps/origin'
@@ -36,31 +38,41 @@ const STEPS: StepDef[] = [
 ]
 
 export function Wizard(props: { opened: boolean; onClose: () => void; onComplete: (c: DnDCharacter) => void }) {
-  const [state, setState] = useState<WizardState>(initialState)
+  const history = useHistory<WizardState>(initialState)
+  const state = history.value
   const [active, setActive] = useState(0)
   const d = useMemo(() => derive(state), [state])
   const scrollRef = useRef<HTMLDivElement>(null)
+  // the step on screen, for the history to know where a change was made
+  const currentRef = useRef(0)
 
   // A step can be opened when every step before it is complete.
   const validity = STEPS.map((st) => st.valid(state, d))
   const firstOpen = validity.findIndex((v) => !v)
   const maxStep = firstOpen === -1 ? STEPS.length - 1 : firstOpen
 
-  const set = useCallback(<K extends StepKey>(key: K, patch: Partial<WizardState[K]>) => {
-    setState((prev) => applyUpdate(prev, key, patch))
-  }, [])
+  const { change } = history
+  const set = useCallback(<K extends StepKey>(key: K, patch: Partial<WizardState[K]>, typing?: boolean) => {
+    change((prev) => applyUpdate(prev, key, patch), currentRef.current, typing ? key + ':' + Object.keys(patch).join() : undefined)
+  }, [change])
 
+  // starting over is an action too, so it can be undone
   const reset = () => {
-    setState(initialState())
+    change((prev) => (JSON.stringify(prev) === JSON.stringify(initialState()) ? prev : initialState()), currentRef.current)
     setActive(0)
   }
 
   const finish = () => {
     props.onComplete(buildCharacter(state).character)
-    reset()
+    history.clear(initialState())
+    setActive(0)
   }
 
+  // undo and redo open the step where the change was made
+  const show = (step: number | null) => step != null && setActive(step)
+
   const current = Math.min(active, maxStep)
+  currentRef.current = current
   const step = STEPS[current]
   const Comp = step.Comp
   const last = current === STEPS.length - 1
@@ -110,6 +122,12 @@ export function Wizard(props: { opened: boolean; onClose: () => void; onComplete
               Начать заново
             </Button>
             <Group>
+              <UndoRedo
+                canUndo={history.canUndo}
+                canRedo={history.canRedo}
+                onUndo={() => show(history.undo())}
+                onRedo={() => show(history.redo())}
+              />
               <Button variant='default' disabled={current === 0} onClick={() => setActive(current - 1)}>
                 Назад
               </Button>

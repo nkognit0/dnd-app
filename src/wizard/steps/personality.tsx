@@ -12,7 +12,7 @@ export function PersonalityStep({ s, set }: StepProps) {
       label={label}
       withAsterisk={required}
       value={(p[key] as string) || ''}
-      onChange={(e) => set('personality', { [key]: e.currentTarget.value } as Partial<PersonalityState>)}
+      onChange={(e) => set('personality', { [key]: e.currentTarget.value } as Partial<PersonalityState>, true)}
     />
   )
   const area = (key: keyof PersonalityState, label: string, rows = 2) => (
@@ -21,7 +21,7 @@ export function PersonalityStep({ s, set }: StepProps) {
       autosize
       minRows={rows}
       value={(p[key] as string) || ''}
-      onChange={(e) => set('personality', { [key]: e.currentTarget.value } as Partial<PersonalityState>)}
+      onChange={(e) => set('personality', { [key]: e.currentTarget.value } as Partial<PersonalityState>, true)}
     />
   )
   return (

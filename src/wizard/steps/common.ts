@@ -4,7 +4,8 @@ import type { StepKey, WizardState } from '../state'
 export interface StepProps {
   s: WizardState
   d: Derived
-  set: <K extends StepKey>(key: K, patch: Partial<WizardState[K]>) => void
+  // typing: the change comes from a text field, so undo takes back the whole edit of it at once
+  set: <K extends StepKey>(key: K, patch: Partial<WizardState[K]>, typing?: boolean) => void
 }
 
 export const ARMOR_RU: Record<string, string> = {

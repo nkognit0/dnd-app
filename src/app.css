@@ -1,6 +1,7 @@
+/* secondary bg on both sides of the sheet column */
 body {
   margin: 0;
-  background: rgb(100, 100, 100);
+  background: #F9FAFC;
 }
 
 .app-toolbar {
@@ -13,26 +14,31 @@ body {
   gap: 8px;
   padding: 10px 16px;
   background: white;
-  border-bottom: 1px solid rgb(220, 220, 220);
+  border-bottom: 1px solid #B6C1D5;
 }
 
-.app-toolbar .app-title {
-  font-weight: 600;
-  margin: 0 auto 0 8px;
+/* sheets stack edge to edge in one centred column, outlined like the sheet boxes */
+.sheet-column {
+  max-width: 1240px;
+  margin: 0 auto;
+  border: 1px solid #B6C1D5;
+  border-top: none;
 }
 
 .sheet-page {
   background: white;
-  max-width: 1240px;
-  margin: 24px auto;
   padding: 1px 0;
+}
+
+.sheet-page + .sheet-page {
+  border-top: 1px solid #B6C1D5;
 }
 
 .app-footer {
   max-width: 1240px;
-  margin: 0 auto 24px;
+  margin: 16px auto 24px;
   padding: 0 16px;
-  color: rgb(225, 225, 225);
+  color: #737E8A;
   font-size: 12px;
   line-height: 1.5;
 }
@@ -44,6 +50,25 @@ body {
 .app-footer a {
   color: inherit;
   text-decoration: underline;
+}
+
+/* steps not reached yet: palette secondary text instead of black faded to grey */
+.mantine-NavLink-root[data-disabled] {
+  opacity: 1;
+  color: #737E8A;
+}
+
+/* fields with nothing to choose: secondary bg and text, not faded */
+.mantine-Input-input:disabled,
+.mantine-Input-input[data-disabled] {
+  opacity: 1;
+  background-color: #F9FAFC;
+  color: #737E8A;
+}
+
+/* chips inside such fields: tertiary bg */
+.mantine-Input-input[data-disabled] .mantine-Pill-root {
+  background-color: #F2F3F5;
 }
 
 /* Bootstrap (used by the sheet) gives every label a bottom margin */
@@ -58,9 +83,14 @@ body {
   .no-print {
     display: none !important;
   }
-  .sheet-page {
-    margin: 0;
+  .sheet-column {
     max-width: none;
+    border: none;
+  }
+  .sheet-page {
     break-after: page;
+  }
+  .sheet-page + .sheet-page {
+    border-top: none;
   }
 }

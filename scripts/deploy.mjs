@@ -2,7 +2,7 @@
 // force-pushed as the only commit of the gh-pages branch of `origin`.
 // Only the build goes out; the sources stay in this repository.
 import { execFileSync } from 'node:child_process'
-import { writeFileSync } from 'node:fs'
+import { rmSync, writeFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { build } from 'vite'
 
@@ -24,6 +24,9 @@ const source = git(root, 'rev-parse', '--short', 'HEAD') + (git(root, 'status', 
 // the build is committed under the author of the last source commit
 const author = ['-c', `user.name=${git(root, 'log', '-1', '--format=%an')}`, '-c', `user.email=${git(root, 'log', '-1', '--format=%ae')}`]
 
+// a fresh repository every time, so the branch really holds this one commit
+// (Vite keeps dist/.git when it empties the folder)
+rmSync(`${dist}/.git`, { recursive: true, force: true })
 git(dist, 'init', '-q', '-b', 'gh-pages')
 // publish the files byte for byte, whatever core.autocrlf says
 git(dist, 'config', 'core.autocrlf', 'false')

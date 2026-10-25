@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
-import { Button } from '@mantine/core'
+import { ActionIcon, Button, Group } from '@mantine/core'
 import {
   DnDCharacter,
+  DnDCharacterFeaturesSheet,
   DnDCharacterProfileSheet,
   DnDCharacterSpellSheet,
   DnDCharacterStatsSheet
 } from 'dnd-sheet'
 import meta from '@data/meta.json'
+import { Icon, IconName } from './icons'
 import { LevelUpWizard } from './levelup/LevelUpWizard'
 import { MAX_LEVEL, sheetLevel } from './levelup/read'
 import { Wizard } from './wizard/Wizard'
@@ -68,6 +70,13 @@ export default function App() {
 
   const sheetProps = { character, onCharacterChanged: (c: DnDCharacter) => setCharacter(c) }
 
+  // square icon button; the label is its tooltip and its name for screen readers
+  const toolbarIcon = (icon: IconName, label: string, onClick: () => void) => (
+    <ActionIcon variant='default' size='input-sm' onClick={onClick} aria-label={label} title={label}>
+      <Icon name={icon} />
+    </ActionIcon>
+  )
+
   return (
     <>
       <div className='app-toolbar no-print'>
@@ -77,28 +86,28 @@ export default function App() {
             Новый уровень: {level + 1}
           </Button>
         )}
-        <span className='app-title'>Лист персонажа D&amp;D 2024</span>
-        <Button variant='default' onClick={() => fileInput.current?.click()}>Импорт JSON</Button>
-        <Button variant='default' onClick={exportJson}>Экспорт JSON</Button>
-        <Button variant='default' onClick={() => window.print()}>Печать</Button>
-        <Button
-          variant='subtle'
-          color='gray'
-          onClick={() => window.confirm('Очистить лист?') && setCharacter({})}
-        >
-          Очистить
-        </Button>
+        <Group gap='xs' ml='auto'>
+          {toolbarIcon('upload', 'Импорт JSON', () => fileInput.current?.click())}
+          {toolbarIcon('download', 'Экспорт JSON', exportJson)}
+          {toolbarIcon('print', 'Печать', () => window.print())}
+          {toolbarIcon('trash', 'Очистить лист', () => window.confirm('Очистить лист?') && setCharacter({}))}
+        </Group>
         <input ref={fileInput} type='file' accept='application/json,.json' hidden onChange={importJson} />
       </div>
-      <div className='sheet-page'>
-        <DnDCharacterStatsSheet {...sheetProps} />
-      </div>
-      <div className='sheet-page'>
-        <DnDCharacterProfileSheet {...sheetProps} />
-      </div>
-      <div className='sheet-page'>
-        <DnDCharacterSpellSheet {...sheetProps} />
-      </div>
+      <main className='sheet-column'>
+        <div className='sheet-page'>
+          <DnDCharacterStatsSheet {...sheetProps} />
+        </div>
+        <div className='sheet-page'>
+          <DnDCharacterFeaturesSheet {...sheetProps} />
+        </div>
+        <div className='sheet-page'>
+          <DnDCharacterProfileSheet {...sheetProps} />
+        </div>
+        <div className='sheet-page'>
+          <DnDCharacterSpellSheet {...sheetProps} />
+        </div>
+      </main>
       {/* the SRD license (CC-BY-4.0) requires this credit wherever the app is shared */}
       <footer className='app-footer no-print'>
         <p>{meta.attribution} Материалы SRD переведены на русский и сокращены.</p>
