@@ -1,0 +1,402 @@
+[
+  {
+    "roll": 1,
+    "trinket": "A mummified goblin hand"
+  },
+  {
+    "roll": 2,
+    "trinket": "A crystal that faintly glows in moonlight"
+  },
+  {
+    "roll": 3,
+    "trinket": "A gold coin minted in an unknown land"
+  },
+  {
+    "roll": 4,
+    "trinket": "A diary written in a language you don't know"
+  },
+  {
+    "roll": 5,
+    "trinket": "A brass ring that never tarnishes"
+  },
+  {
+    "roll": 6,
+    "trinket": "An old chess piece made from glass"
+  },
+  {
+    "roll": 7,
+    "trinket": "A pair of knucklebone dice, each with a skull symbol on the side that would normally show six pips"
+  },
+  {
+    "roll": 8,
+    "trinket": "A small idol depicting a nightmarish creature that gives you unsettling dreams when you sleep near it"
+  },
+  {
+    "roll": 9,
+    "trinket": "A lock of someone's hair"
+  },
+  {
+    "roll": 10,
+    "trinket": "The deed for a parcel of land in a realm unknown to you"
+  },
+  {
+    "roll": 11,
+    "trinket": "A 1-ounce block made from an unknown material"
+  },
+  {
+    "roll": 12,
+    "trinket": "A small cloth doll skewered with needles"
+  },
+  {
+    "roll": 13,
+    "trinket": "A tooth from an unknown beast"
+  },
+  {
+    "roll": 14,
+    "trinket": "An enormous scale, perhaps from a dragon"
+  },
+  {
+    "roll": 15,
+    "trinket": "A bright-green feather"
+  },
+  {
+    "roll": 16,
+    "trinket": "An old divination card bearing your likeness"
+  },
+  {
+    "roll": 17,
+    "trinket": "A glass orb filled with moving smoke"
+  },
+  {
+    "roll": 18,
+    "trinket": "A 1-pound egg with a bright-red shell"
+  },
+  {
+    "roll": 19,
+    "trinket": "A pipe that blows bubbles"
+  },
+  {
+    "roll": 20,
+    "trinket": "A glass jar containing a bit of flesh floating in pickling fluid"
+  },
+  {
+    "roll": 21,
+    "trinket": "A gnome-crafted music box that plays a song you dimly remember from your childhood"
+  },
+  {
+    "roll": 22,
+    "trinket": "A wooden statuette of a smug halfling"
+  },
+  {
+    "roll": 23,
+    "trinket": "A brass orb etched with strange runes"
+  },
+  {
+    "roll": 24,
+    "trinket": "A multicolored stone disk"
+  },
+  {
+    "roll": 25,
+    "trinket": "A silver icon of a raven"
+  },
+  {
+    "roll": 26,
+    "trinket": "A bag containing forty-seven teeth, one of which is rotten"
+  },
+  {
+    "roll": 27,
+    "trinket": "A shard of obsidian that always feels warm to the touch"
+  },
+  {
+    "roll": 28,
+    "trinket": "A dragon's talon strung on a leather necklace"
+  },
+  {
+    "roll": 29,
+    "trinket": "A pair of old socks"
+  },
+  {
+    "roll": 30,
+    "trinket": "A blank book whose pages refuse to hold ink, chalk, graphite, or any other marking"
+  },
+  {
+    "roll": 31,
+    "trinket": "A silver badge that is a five-pointed star"
+  },
+  {
+    "roll": 32,
+    "trinket": "A knife that belonged to a relative"
+  },
+  {
+    "roll": 33,
+    "trinket": "A glass vial filled with nail clippings"
+  },
+  {
+    "roll": 34,
+    "trinket": "A rectangular metal device with two tiny metal cups on one end that throws sparks when wet"
+  },
+  {
+    "roll": 35,
+    "trinket": "A white, sequined glove sized for a human"
+  },
+  {
+    "roll": 36,
+    "trinket": "A vest with one hundred tiny pockets"
+  },
+  {
+    "roll": 37,
+    "trinket": "A weightless stone"
+  },
+  {
+    "roll": 38,
+    "trinket": "A sketch of a goblin"
+  },
+  {
+    "roll": 39,
+    "trinket": "An empty glass vial that smells of perfume"
+  },
+  {
+    "roll": 40,
+    "trinket": "A gemstone that looks like a lump of coal when examined by anyone but you"
+  },
+  {
+    "roll": 41,
+    "trinket": "A scrap of cloth from an old banner"
+  },
+  {
+    "roll": 42,
+    "trinket": "A rank insignia from a lost legionnaire"
+  },
+  {
+    "roll": 43,
+    "trinket": "A silver bell without a clapper"
+  },
+  {
+    "roll": 44,
+    "trinket": "A mechanical canary inside a lamp"
+  },
+  {
+    "roll": 45,
+    "trinket": "A miniature chest carved to look like it has numerous feet on the bottom"
+  },
+  {
+    "roll": 46,
+    "trinket": "A dead sprite inside a clear glass bottle"
+  },
+  {
+    "roll": 47,
+    "trinket": "A metal can that has no opening but sounds as if it is filled with liquid, sand, spiders, or broken glass (your choice)"
+  },
+  {
+    "roll": 48,
+    "trinket": "A glass orb filled with water, in which swims a clockwork goldfish"
+  },
+  {
+    "roll": 49,
+    "trinket": "A silver spoon with an M engraved on the handle"
+  },
+  {
+    "roll": 50,
+    "trinket": "A whistle made from gold-colored wood"
+  },
+  {
+    "roll": 51,
+    "trinket": "A dead scarab beetle the size of your hand"
+  },
+  {
+    "roll": 52,
+    "trinket": "Two toy soldiers, one missing a head"
+  },
+  {
+    "roll": 53,
+    "trinket": "A small box filled with different-sized buttons"
+  },
+  {
+    "roll": 54,
+    "trinket": "A candle that can't be lit"
+  },
+  {
+    "roll": 55,
+    "trinket": "A miniature cage with no door"
+  },
+  {
+    "roll": 56,
+    "trinket": "An old key"
+  },
+  {
+    "roll": 57,
+    "trinket": "An indecipherable treasure map"
+  },
+  {
+    "roll": 58,
+    "trinket": "A hilt from a broken sword"
+  },
+  {
+    "roll": 59,
+    "trinket": "A rabbit's foot"
+  },
+  {
+    "roll": 60,
+    "trinket": "A glass eye"
+  },
+  {
+    "roll": 61,
+    "trinket": "A cameo of a hideous person"
+  },
+  {
+    "roll": 62,
+    "trinket": "A silver skull the size of a coin"
+  },
+  {
+    "roll": 63,
+    "trinket": "An alabaster mask"
+  },
+  {
+    "roll": 64,
+    "trinket": "A cone of sticky black incense that stinks"
+  },
+  {
+    "roll": 65,
+    "trinket": "A nightcap that gives you pleasant dreams when you wear it"
+  },
+  {
+    "roll": 66,
+    "trinket": "A single caltrop made from bone"
+  },
+  {
+    "roll": 67,
+    "trinket": "A gold monocle frame without the lens"
+  },
+  {
+    "roll": 68,
+    "trinket": "A 1-inch cube, each side a different color"
+  },
+  {
+    "roll": 69,
+    "trinket": "A crystal doorknob"
+  },
+  {
+    "roll": 70,
+    "trinket": "A packet filled with pink dust"
+  },
+  {
+    "roll": 71,
+    "trinket": "A fragment of a beautiful song, written as musical notes on two pieces of parchment"
+  },
+  {
+    "roll": 72,
+    "trinket": "A silver teardrop earring containing a real teardrop"
+  },
+  {
+    "roll": 73,
+    "trinket": "An eggshell painted with scenes of misery in disturbing detail"
+  },
+  {
+    "roll": 74,
+    "trinket": "A fan that, when unfolded, shows a sleepy cat"
+  },
+  {
+    "roll": 75,
+    "trinket": "A set of bone pipes"
+  },
+  {
+    "roll": 76,
+    "trinket": "A four-leaf clover pressed inside a book discussing manners and etiquette"
+  },
+  {
+    "roll": 77,
+    "trinket": "A sheet of parchment upon which is drawn a mechanical contraption"
+  },
+  {
+    "roll": 78,
+    "trinket": "An ornate scabbard that fits no blade you have found"
+  },
+  {
+    "roll": 79,
+    "trinket": "An invitation to a party where a murder happened"
+  },
+  {
+    "roll": 80,
+    "trinket": "A bronze pentacle with an etching of a rat's head in its center"
+  },
+  {
+    "roll": 81,
+    "trinket": "A purple handkerchief embroidered with the name of an archmage"
+  },
+  {
+    "roll": 82,
+    "trinket": "Half a floor plan for a temple, a castle, or another structure"
+  },
+  {
+    "roll": 83,
+    "trinket": "A bit of folded cloth that, when unfolded, turns into a stylish cap"
+  },
+  {
+    "roll": 84,
+    "trinket": "A receipt of deposit at a bank in a far-off city"
+  },
+  {
+    "roll": 85,
+    "trinket": "A diary with seven missing pages"
+  },
+  {
+    "roll": 86,
+    "trinket": "An empty silver snuffbox bearing the inscription “dreams” on its lid"
+  },
+  {
+    "roll": 87,
+    "trinket": "An iron holy symbol devoted to an unknown god"
+  },
+  {
+    "roll": 88,
+    "trinket": "A book about a legendary hero's rise and fall, with the last chapter missing"
+  },
+  {
+    "roll": 89,
+    "trinket": "A vial of dragon blood"
+  },
+  {
+    "roll": 90,
+    "trinket": "An ancient arrow of elven design"
+  },
+  {
+    "roll": 91,
+    "trinket": "A needle that never bends"
+  },
+  {
+    "roll": 92,
+    "trinket": "An ornate brooch of dwarven design"
+  },
+  {
+    "roll": 93,
+    "trinket": "An empty wine bottle bearing a pretty label that says, “The Wizard of Wines Winery, Red Dragon Crush, 331422-W”"
+  },
+  {
+    "roll": 94,
+    "trinket": "A mosaic tile with a multicolored, glazed surface"
+  },
+  {
+    "roll": 95,
+    "trinket": "A petrified mouse"
+  },
+  {
+    "roll": 96,
+    "trinket": "A black pirate flag adorned with a dragon's skull and crossbones"
+  },
+  {
+    "roll": 97,
+    "trinket": "A tiny mechanical crab or spider that moves about when it's not being observed"
+  },
+  {
+    "roll": 98,
+    "trinket": "A glass jar containing lard with a label that reads, “Griffon Grease”"
+  },
+  {
+    "roll": 99,
+    "trinket": "A wooden box with a ceramic bottom that holds a living worm with a head on each end of its body"
+  },
+  {
+    "roll": 0,
+    "trinket": "A metal urn containing the ashes of a hero"
+  }
+]

@@ -1,0 +1,1354 @@
+[
+  {
+    "id": "alchemists-supplies",
+    "name": "Alchemist's Supplies",
+    "name_ru": "Инструменты алхимика",
+    "source": "srd-5.2.1",
+    "type": "artisan",
+    "ability": "int",
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "cost_cp": 5000,
+    "weight_lb": 8,
+    "craft": [
+      {
+        "item": "acid"
+      },
+      {
+        "item": "alchemists-fire"
+      },
+      {
+        "item": "component-pouch"
+      },
+      {
+        "item": "oil"
+      },
+      {
+        "item": "paper"
+      },
+      {
+        "item": "perfume"
+      }
+    ],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "utilize": "Identify a substance (DC 15), or start a fire (DC 15)"
+  },
+  {
+    "id": "brewers-supplies",
+    "name": "Brewer's Supplies",
+    "name_ru": "Инструменты пивовара",
+    "source": "srd-5.2.1",
+    "type": "artisan",
+    "ability": "int",
+    "cost": {
+      "amount": 20,
+      "unit": "gp"
+    },
+    "cost_cp": 2000,
+    "weight_lb": 9,
+    "craft": [
+      {
+        "item": "antitoxin"
+      }
+    ],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "utilize": "Detect poisoned drink (DC 15), or identify alcohol (DC 10)"
+  },
+  {
+    "id": "calligraphers-supplies",
+    "name": "Calligrapher's Supplies",
+    "name_ru": "Инструменты каллиграфа",
+    "source": "srd-5.2.1",
+    "type": "artisan",
+    "ability": "dex",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 5,
+    "craft": [
+      {
+        "item": "ink"
+      },
+      {
+        "text": "Spell Scroll"
+      }
+    ],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "backgrounds_fixed": [
+        "acolyte",
+        "sage",
+        "scribe"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "utilize": "Write text with impressive flourishes that guard against forgery (DC 15)"
+  },
+  {
+    "id": "carpenters-tools",
+    "name": "Carpenter's Tools",
+    "name_ru": "Инструменты плотника",
+    "source": "srd-5.2.1",
+    "type": "artisan",
+    "ability": "str",
+    "cost": {
+      "amount": 8,
+      "unit": "gp"
+    },
+    "cost_cp": 800,
+    "weight_lb": 6,
+    "craft": [
+      {
+        "item": "club"
+      },
+      {
+        "item": "greatclub"
+      },
+      {
+        "item": "quarterstaff"
+      },
+      {
+        "item": "barrel"
+      },
+      {
+        "item": "chest"
+      },
+      {
+        "item": "ladder"
+      },
+      {
+        "item": "pole"
+      },
+      {
+        "item": "ram-portable"
+      },
+      {
+        "item": "torch"
+      }
+    ],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "backgrounds_fixed": [
+        "farmer"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "crafter",
+        "skilled"
+      ]
+    },
+    "utilize": "Seal or pry open a door or container (DC 20)"
+  },
+  {
+    "id": "cartographer-tools",
+    "name": "Cartographer's Tools",
+    "name_ru": "Инструменты картографа",
+    "source": "srd-5.2.1",
+    "type": "artisan",
+    "ability": "wis",
+    "cost": {
+      "amount": 15,
+      "unit": "gp"
+    },
+    "cost_cp": 1500,
+    "weight_lb": 6,
+    "craft": [
+      {
+        "item": "map"
+      }
+    ],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "backgrounds_fixed": [
+        "guide"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "utilize": "Draft a map of a small area (DC 15)"
+  },
+  {
+    "id": "cobblers-tools",
+    "name": "Cobbler's Tools",
+    "name_ru": "Инструменты сапожника",
+    "source": "srd-5.2.1",
+    "type": "artisan",
+    "ability": "dex",
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 5,
+    "craft": [
+      {
+        "item": "climbers-kit"
+      }
+    ],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "utilize": "Modify footwear to give Advantage on the wearer's next Dexterity (Acrobatics) check (DC 10)"
+  },
+  {
+    "id": "cooks-utensils",
+    "name": "Cook's Utensils",
+    "name_ru": "Инструменты повара",
+    "source": "srd-5.2.1",
+    "type": "artisan",
+    "ability": "wis",
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 8,
+    "craft": [
+      {
+        "item": "rations"
+      }
+    ],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "utilize": "Improve food's flavor (DC 10), or detect spoiled or poisoned food (DC 15)"
+  },
+  {
+    "id": "glassblowers-tools",
+    "name": "Glassblower's Tools",
+    "name_ru": "Инструменты стеклодува",
+    "source": "srd-5.2.1",
+    "type": "artisan",
+    "ability": "int",
+    "cost": {
+      "amount": 30,
+      "unit": "gp"
+    },
+    "cost_cp": 3000,
+    "weight_lb": 5,
+    "craft": [
+      {
+        "item": "bottle-glass"
+      },
+      {
+        "item": "magnifying-glass"
+      },
+      {
+        "item": "spyglass"
+      },
+      {
+        "item": "vial"
+      }
+    ],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "utilize": "Discern what a glass object held in the past 24 hours (DC 15)"
+  },
+  {
+    "id": "jewelers-tools",
+    "name": "Jeweler's Tools",
+    "name_ru": "Инструменты ювелира",
+    "source": "srd-5.2.1",
+    "type": "artisan",
+    "ability": "int",
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "cost_cp": 2500,
+    "weight_lb": 2,
+    "craft": [
+      {
+        "category": "arcane-foci"
+      },
+      {
+        "category": "holy-symbols"
+      }
+    ],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "utilize": "Discern a gem's value (DC 15)"
+  },
+  {
+    "id": "leatherworkers-tools",
+    "name": "Leatherworker's Tools",
+    "name_ru": "Инструменты кожевника",
+    "source": "srd-5.2.1",
+    "type": "artisan",
+    "ability": "dex",
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 5,
+    "craft": [
+      {
+        "item": "sling"
+      },
+      {
+        "item": "whip"
+      },
+      {
+        "item": "hide-armor"
+      },
+      {
+        "item": "leather-armor"
+      },
+      {
+        "item": "studded-leather-armor"
+      },
+      {
+        "item": "backpack"
+      },
+      {
+        "item": "case-crossbow-bolt"
+      },
+      {
+        "item": "case-map-or-scroll"
+      },
+      {
+        "item": "parchment"
+      },
+      {
+        "item": "pouch"
+      },
+      {
+        "item": "quiver"
+      },
+      {
+        "item": "waterskin"
+      }
+    ],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "crafter",
+        "skilled"
+      ]
+    },
+    "utilize": "Add a design to a leather item (DC 10)"
+  },
+  {
+    "id": "masons-tools",
+    "name": "Mason's Tools",
+    "name_ru": "Инструменты каменщика",
+    "source": "srd-5.2.1",
+    "type": "artisan",
+    "ability": "str",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 8,
+    "craft": [
+      {
+        "item": "block-and-tackle"
+      }
+    ],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "crafter",
+        "skilled"
+      ]
+    },
+    "utilize": "Chisel a symbol or hole in stone (DC 10)"
+  },
+  {
+    "id": "painters-supplies",
+    "name": "Painter's Supplies",
+    "name_ru": "Инструменты художника",
+    "source": "srd-5.2.1",
+    "type": "artisan",
+    "ability": "wis",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 5,
+    "craft": [
+      {
+        "category": "druidic-foci"
+      },
+      {
+        "category": "holy-symbols"
+      }
+    ],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "utilize": "Paint a recognizable image of something you've seen (DC 10)"
+  },
+  {
+    "id": "potters-tools",
+    "name": "Potter's Tools",
+    "name_ru": "Инструменты гончара",
+    "source": "srd-5.2.1",
+    "type": "artisan",
+    "ability": "int",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 3,
+    "craft": [
+      {
+        "item": "jug"
+      },
+      {
+        "item": "lamp"
+      }
+    ],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "crafter",
+        "skilled"
+      ]
+    },
+    "utilize": "Discern what a ceramic object held in the past 24 hours (DC 15)"
+  },
+  {
+    "id": "smiths-tools",
+    "name": "Smith's Tools",
+    "name_ru": "Инструменты кузнеца",
+    "source": "srd-5.2.1",
+    "type": "artisan",
+    "ability": "str",
+    "cost": {
+      "amount": 20,
+      "unit": "gp"
+    },
+    "cost_cp": 2000,
+    "weight_lb": 8,
+    "craft": [
+      {
+        "text": "Any Melee weapon (except Club, Greatclub, Quarterstaff, and Whip)"
+      },
+      {
+        "text": "Medium armor (except Hide)"
+      },
+      {
+        "text": "Heavy armor"
+      },
+      {
+        "item": "ball-bearings"
+      },
+      {
+        "item": "bucket"
+      },
+      {
+        "item": "caltrops"
+      },
+      {
+        "item": "chain"
+      },
+      {
+        "item": "crowbar"
+      },
+      {
+        "item": "bullets-firearm"
+      },
+      {
+        "item": "grappling-hook"
+      },
+      {
+        "item": "pot-iron"
+      },
+      {
+        "item": "spikes-iron"
+      },
+      {
+        "item": "bullets-sling"
+      }
+    ],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "crafter",
+        "skilled"
+      ]
+    },
+    "utilize": "Pry open a door or container (DC 20)"
+  },
+  {
+    "id": "tinkers-tools",
+    "name": "Tinker's Tools",
+    "name_ru": "Инструменты ремонтника",
+    "source": "srd-5.2.1",
+    "type": "artisan",
+    "ability": "dex",
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "cost_cp": 5000,
+    "weight_lb": 10,
+    "craft": [
+      {
+        "item": "musket"
+      },
+      {
+        "item": "pistol"
+      },
+      {
+        "item": "bell"
+      },
+      {
+        "item": "lantern-bullseye"
+      },
+      {
+        "item": "flask"
+      },
+      {
+        "item": "lantern-hooded"
+      },
+      {
+        "item": "hunting-trap"
+      },
+      {
+        "item": "lock"
+      },
+      {
+        "item": "manacles"
+      },
+      {
+        "item": "mirror"
+      },
+      {
+        "item": "shovel"
+      },
+      {
+        "item": "signal-whistle"
+      },
+      {
+        "item": "tinderbox"
+      }
+    ],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk"
+      ],
+      "classes_fixed": [
+        "artificer"
+      ],
+      "feats": [
+        "crafter",
+        "skilled"
+      ]
+    },
+    "utilize": "Assemble a Tiny item composed of scrap, which falls apart in 1 minute (DC 20)"
+  },
+  {
+    "id": "weavers-tools",
+    "name": "Weaver's Tools",
+    "name_ru": "Инструменты ткача",
+    "source": "srd-5.2.1",
+    "type": "artisan",
+    "ability": "dex",
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 5,
+    "craft": [
+      {
+        "item": "padded-armor"
+      },
+      {
+        "item": "basket"
+      },
+      {
+        "item": "bedroll"
+      },
+      {
+        "item": "blanket"
+      },
+      {
+        "item": "clothes-fine"
+      },
+      {
+        "item": "net"
+      },
+      {
+        "item": "robe"
+      },
+      {
+        "item": "rope"
+      },
+      {
+        "item": "sack"
+      },
+      {
+        "item": "string"
+      },
+      {
+        "item": "tent"
+      },
+      {
+        "item": "clothes-travelers"
+      }
+    ],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "crafter",
+        "skilled"
+      ]
+    },
+    "utilize": "Mend a tear in clothing (DC 10), or sew a Tiny design (DC 10)"
+  },
+  {
+    "id": "woodcarvers-tools",
+    "name": "Woodcarver's Tools",
+    "name_ru": "Инструменты резчика по дереву",
+    "source": "srd-5.2.1",
+    "type": "artisan",
+    "ability": "dex",
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 5,
+    "craft": [
+      {
+        "item": "club"
+      },
+      {
+        "item": "greatclub"
+      },
+      {
+        "item": "quarterstaff"
+      },
+      {
+        "text": "Ranged weapons (except Pistol, Musket, and Sling)"
+      },
+      {
+        "category": "arcane-foci"
+      },
+      {
+        "item": "arrows"
+      },
+      {
+        "item": "bolts"
+      },
+      {
+        "category": "druidic-foci"
+      },
+      {
+        "item": "ink-pen"
+      },
+      {
+        "item": "needles"
+      }
+    ],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "crafter",
+        "skilled"
+      ]
+    },
+    "utilize": "Carve a pattern in wood (DC 10)"
+  },
+  {
+    "id": "disguise-kit",
+    "name": "Disguise Kit",
+    "name_ru": "Набор для грима",
+    "source": "srd-5.2.1",
+    "type": "other",
+    "ability": "cha",
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "cost_cp": 2500,
+    "weight_lb": 3,
+    "craft": [
+      {
+        "item": "costume"
+      }
+    ],
+    "proficiency_from": {
+      "feats": [
+        "skilled"
+      ]
+    },
+    "utilize": "Apply makeup (DC 10)"
+  },
+  {
+    "id": "forgery-kit",
+    "name": "Forgery Kit",
+    "name_ru": "Набор для фальсификации",
+    "source": "srd-5.2.1",
+    "type": "other",
+    "ability": "dex",
+    "cost": {
+      "amount": 15,
+      "unit": "gp"
+    },
+    "cost_cp": 1500,
+    "weight_lb": 5,
+    "craft": [],
+    "proficiency_from": {
+      "backgrounds_fixed": [
+        "charlatan"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "utilize": "Mimic 10 or fewer words of someone else's handwriting (DC 15), or duplicate a wax seal (DC 20)"
+  },
+  {
+    "id": "dice",
+    "name": "Dice",
+    "name_ru": "Игральные кости",
+    "source": "srd-5.2.1",
+    "type": "gaming-set",
+    "ability": "wis",
+    "cost": {
+      "amount": 1,
+      "unit": "sp"
+    },
+    "cost_cp": 10,
+    "weight_lb": 0,
+    "craft": [],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "guard",
+        "noble",
+        "soldier"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "utilize": "Discern whether someone is cheating (DC 10), or win the game (DC 20)"
+  },
+  {
+    "id": "dragonchess",
+    "name": "Dragonchess",
+    "name_ru": "Драконьи шахматы",
+    "source": "srd-5.2.1",
+    "type": "gaming-set",
+    "ability": "wis",
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 0,
+    "craft": [],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "guard",
+        "noble",
+        "soldier"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "utilize": "Discern whether someone is cheating (DC 10), or win the game (DC 20)"
+  },
+  {
+    "id": "playing-cards",
+    "name": "Playing Cards",
+    "name_ru": "Игральные карты",
+    "source": "srd-5.2.1",
+    "type": "gaming-set",
+    "ability": "wis",
+    "cost": {
+      "amount": 5,
+      "unit": "sp"
+    },
+    "cost_cp": 50,
+    "weight_lb": 0,
+    "craft": [],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "guard",
+        "noble",
+        "soldier"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "utilize": "Discern whether someone is cheating (DC 10), or win the game (DC 20)"
+  },
+  {
+    "id": "three-dragon-ante",
+    "name": "Three-Dragon Ante",
+    "name_ru": "Ставка трёх драконов",
+    "source": "srd-5.2.1",
+    "type": "gaming-set",
+    "ability": "wis",
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 0,
+    "craft": [],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "guard",
+        "noble",
+        "soldier"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "utilize": "Discern whether someone is cheating (DC 10), or win the game (DC 20)"
+  },
+  {
+    "id": "herbalism-kit",
+    "name": "Herbalism Kit",
+    "name_ru": "Набор травника",
+    "source": "srd-5.2.1",
+    "type": "other",
+    "ability": "int",
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 3,
+    "craft": [
+      {
+        "item": "antitoxin"
+      },
+      {
+        "item": "candle"
+      },
+      {
+        "item": "healers-kit"
+      },
+      {
+        "item": "potion-of-healing"
+      }
+    ],
+    "proficiency_from": {
+      "backgrounds_fixed": [
+        "hermit"
+      ],
+      "classes_fixed": [
+        "druid"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "utilize": "Identify a plant (DC 10)"
+  },
+  {
+    "id": "bagpipes",
+    "name": "Bagpipes",
+    "name_ru": "Волынка",
+    "source": "srd-5.2.1",
+    "type": "musical-instrument",
+    "ability": "cha",
+    "cost": {
+      "amount": 30,
+      "unit": "gp"
+    },
+    "cost_cp": 3000,
+    "weight_lb": 6,
+    "craft": [],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "entertainer"
+      ],
+      "classes_choice": [
+        "bard",
+        "monk"
+      ],
+      "feats": [
+        "musician",
+        "skilled"
+      ]
+    },
+    "utilize": "Play a known tune (DC 10), or improvise a song (DC 15)"
+  },
+  {
+    "id": "drum",
+    "name": "Drum",
+    "name_ru": "Барабан",
+    "source": "srd-5.2.1",
+    "type": "musical-instrument",
+    "ability": "cha",
+    "cost": {
+      "amount": 6,
+      "unit": "gp"
+    },
+    "cost_cp": 600,
+    "weight_lb": 3,
+    "craft": [],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "entertainer"
+      ],
+      "classes_choice": [
+        "bard",
+        "monk"
+      ],
+      "feats": [
+        "musician",
+        "skilled"
+      ]
+    },
+    "utilize": "Play a known tune (DC 10), or improvise a song (DC 15)"
+  },
+  {
+    "id": "dulcimer",
+    "name": "Dulcimer",
+    "name_ru": "Цимбалы",
+    "source": "srd-5.2.1",
+    "type": "musical-instrument",
+    "ability": "cha",
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "cost_cp": 2500,
+    "weight_lb": 10,
+    "craft": [],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "entertainer"
+      ],
+      "classes_choice": [
+        "bard",
+        "monk"
+      ],
+      "feats": [
+        "musician",
+        "skilled"
+      ]
+    },
+    "utilize": "Play a known tune (DC 10), or improvise a song (DC 15)"
+  },
+  {
+    "id": "flute",
+    "name": "Flute",
+    "name_ru": "Флейта",
+    "source": "srd-5.2.1",
+    "type": "musical-instrument",
+    "ability": "cha",
+    "cost": {
+      "amount": 2,
+      "unit": "gp"
+    },
+    "cost_cp": 200,
+    "weight_lb": 1,
+    "craft": [],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "entertainer"
+      ],
+      "classes_choice": [
+        "bard",
+        "monk"
+      ],
+      "feats": [
+        "musician",
+        "skilled"
+      ]
+    },
+    "utilize": "Play a known tune (DC 10), or improvise a song (DC 15)"
+  },
+  {
+    "id": "horn",
+    "name": "Horn",
+    "name_ru": "Рожок",
+    "source": "srd-5.2.1",
+    "type": "musical-instrument",
+    "ability": "cha",
+    "cost": {
+      "amount": 3,
+      "unit": "gp"
+    },
+    "cost_cp": 300,
+    "weight_lb": 2,
+    "craft": [],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "entertainer"
+      ],
+      "classes_choice": [
+        "bard",
+        "monk"
+      ],
+      "feats": [
+        "musician",
+        "skilled"
+      ]
+    },
+    "utilize": "Play a known tune (DC 10), or improvise a song (DC 15)"
+  },
+  {
+    "id": "lute",
+    "name": "Lute",
+    "name_ru": "Лютня",
+    "source": "srd-5.2.1",
+    "type": "musical-instrument",
+    "ability": "cha",
+    "cost": {
+      "amount": 35,
+      "unit": "gp"
+    },
+    "cost_cp": 3500,
+    "weight_lb": 2,
+    "craft": [],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "entertainer"
+      ],
+      "classes_choice": [
+        "bard",
+        "monk"
+      ],
+      "feats": [
+        "musician",
+        "skilled"
+      ]
+    },
+    "utilize": "Play a known tune (DC 10), or improvise a song (DC 15)"
+  },
+  {
+    "id": "lyre",
+    "name": "Lyre",
+    "name_ru": "Лира",
+    "source": "srd-5.2.1",
+    "type": "musical-instrument",
+    "ability": "cha",
+    "cost": {
+      "amount": 30,
+      "unit": "gp"
+    },
+    "cost_cp": 3000,
+    "weight_lb": 2,
+    "craft": [],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "entertainer"
+      ],
+      "classes_choice": [
+        "bard",
+        "monk"
+      ],
+      "feats": [
+        "musician",
+        "skilled"
+      ]
+    },
+    "utilize": "Play a known tune (DC 10), or improvise a song (DC 15)"
+  },
+  {
+    "id": "pan-flute",
+    "name": "Pan Flute",
+    "name_ru": "Свирель",
+    "source": "srd-5.2.1",
+    "type": "musical-instrument",
+    "ability": "cha",
+    "cost": {
+      "amount": 12,
+      "unit": "gp"
+    },
+    "cost_cp": 1200,
+    "weight_lb": 2,
+    "craft": [],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "entertainer"
+      ],
+      "classes_choice": [
+        "bard",
+        "monk"
+      ],
+      "feats": [
+        "musician",
+        "skilled"
+      ]
+    },
+    "utilize": "Play a known tune (DC 10), or improvise a song (DC 15)"
+  },
+  {
+    "id": "shawm",
+    "name": "Shawm",
+    "name_ru": "Шалмей",
+    "source": "srd-5.2.1",
+    "type": "musical-instrument",
+    "ability": "cha",
+    "cost": {
+      "amount": 2,
+      "unit": "gp"
+    },
+    "cost_cp": 200,
+    "weight_lb": 1,
+    "craft": [],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "entertainer"
+      ],
+      "classes_choice": [
+        "bard",
+        "monk"
+      ],
+      "feats": [
+        "musician",
+        "skilled"
+      ]
+    },
+    "utilize": "Play a known tune (DC 10), or improvise a song (DC 15)"
+  },
+  {
+    "id": "viol",
+    "name": "Viol",
+    "name_ru": "Виола",
+    "source": "srd-5.2.1",
+    "type": "musical-instrument",
+    "ability": "cha",
+    "cost": {
+      "amount": 30,
+      "unit": "gp"
+    },
+    "cost_cp": 3000,
+    "weight_lb": 1,
+    "craft": [],
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "entertainer"
+      ],
+      "classes_choice": [
+        "bard",
+        "monk"
+      ],
+      "feats": [
+        "musician",
+        "skilled"
+      ]
+    },
+    "utilize": "Play a known tune (DC 10), or improvise a song (DC 15)"
+  },
+  {
+    "id": "navigators-tools",
+    "name": "Navigator's Tools",
+    "name_ru": "Инструменты навигатора",
+    "source": "srd-5.2.1",
+    "type": "other",
+    "ability": "wis",
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "cost_cp": 2500,
+    "weight_lb": 2,
+    "craft": [],
+    "proficiency_from": {
+      "backgrounds_fixed": [
+        "merchant",
+        "sailor"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "utilize": "Plot a course (DC 10), or determine position by stargazing (DC 15)"
+  },
+  {
+    "id": "poisoners-kit",
+    "name": "Poisoner's Kit",
+    "name_ru": "Набор отравителя",
+    "source": "srd-5.2.1",
+    "type": "other",
+    "ability": "int",
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "cost_cp": 5000,
+    "weight_lb": 2,
+    "craft": [
+      {
+        "item": "poison-basic"
+      }
+    ],
+    "proficiency_from": {
+      "feats": [
+        "skilled"
+      ]
+    },
+    "utilize": "Detect a poisoned object (DC 10)"
+  },
+  {
+    "id": "thieves-tools",
+    "name": "Thieves' Tools",
+    "name_ru": "Воровские инструменты",
+    "source": "srd-5.2.1",
+    "type": "other",
+    "ability": "dex",
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "cost_cp": 2500,
+    "weight_lb": 1,
+    "craft": [],
+    "proficiency_from": {
+      "backgrounds_fixed": [
+        "criminal",
+        "wayfarer"
+      ],
+      "classes_fixed": [
+        "rogue",
+        "artificer"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "utilize": "Pick a lock (DC 15), or disarm a trap (DC 15)"
+  }
+]

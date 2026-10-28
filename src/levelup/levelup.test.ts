@@ -52,7 +52,7 @@ function artificer(): DnDCharacter {
   const s = initialState()
   s.cls.classId = 'artificer'
   s.background = { backgroundId: 'noble', toolChoice: ['playing-cards'] }
-  s.species = { speciesId: 'human', optionId: null, size: 'medium', skill: 'insight', feat: 'lucky', spellAbility: null }
+  s.species = { speciesId: 'human', optionId: null, size: 'medium', skills: ['insight'], tool: null, feat: 'lucky', spellAbility: null, resistance: null }
   s.roll.rolls = STANDARD
   s.abilities = { assign: { int: 0, con: 1, dex: 2, cha: 3, wis: 4, str: 5 }, mode: '2-1', plus2: 'int', plus1: 'cha' }
   s.feats.background.picks = ['skill:deception', 'skill:perception', 'tool:jewelers-tools']
@@ -198,7 +198,7 @@ describe('wizard 1 → 2', () => {
   const s = initialState()
   s.cls.classId = 'wizard'
   s.background = { backgroundId: 'criminal', toolChoice: [] }
-  s.species = { speciesId: 'human', optionId: null, size: 'medium', skill: 'insight', feat: 'tough', spellAbility: null }
+  s.species = { speciesId: 'human', optionId: null, size: 'medium', skills: ['insight'], tool: null, feat: 'tough', spellAbility: null, resistance: null }
   s.roll.rolls = STANDARD
   s.abilities = { assign: { int: 0, con: 1, dex: 2, wis: 3, cha: 4, str: 5 }, mode: '2-1', plus2: 'int', plus1: 'con' }
   s.skills = { classSkills: ['arcana', 'history'], classTools: [], languages: ['elvish', 'draconic'], extraLanguages: [], expertise: [] }
@@ -245,7 +245,7 @@ describe('warlock pact slots move up a level', () => {
   const s = initialState()
   s.cls.classId = 'warlock'
   s.background = { backgroundId: 'criminal', toolChoice: [] }
-  s.species = { speciesId: 'human', optionId: null, size: 'medium', skill: 'insight', feat: 'alert', spellAbility: null }
+  s.species = { speciesId: 'human', optionId: null, size: 'medium', skills: ['insight'], tool: null, feat: 'alert', spellAbility: null, resistance: null }
   s.roll.rolls = STANDARD
   s.abilities = { assign: { cha: 0, con: 1, dex: 2, wis: 3, int: 4, str: 5 }, mode: '2-1', plus2: 'int', plus1: 'cha' }
   s.skills = { classSkills: ['arcana', 'deception'], classTools: [], languages: ['elvish', 'draconic'], extraLanguages: [], expertise: [] }
@@ -261,5 +261,59 @@ describe('warlock pact slots move up a level', () => {
   it('level 3: slots are level 2', () => {
     expect(c3.lvl1SpellSlotsTotal).toBe('')
     expect(c3.lvl2SpellSlotsTotal).toBe('2')
+  })
+})
+
+// the dwarf fighter with another species
+function fighterAs(species: Partial<ReturnType<typeof initialState>['species']>): DnDCharacter {
+  const s = initialState()
+  s.cls.classId = 'fighter'
+  s.background = { backgroundId: 'soldier', toolChoice: ['dice'] }
+  s.species = { ...s.species, size: 'medium', ...species }
+  s.roll.rolls = STANDARD
+  s.abilities = { assign: { str: 0, dex: 1, con: 2, cha: 3, wis: 4, int: 5 }, mode: '2-1', plus2: 'str', plus1: 'con' }
+  s.skills = { classSkills: ['perception', 'survival'], classTools: [], languages: ['dwarvish', 'giant'], extraLanguages: [], expertise: [] }
+  s.features = { fightingStyle: 'great-weapon-fighting', order: null, invocations: [], masteries: ['greatsword', 'flail', 'javelin'] }
+  s.equipment = { classOption: 'A', bgOption: 'A', picks: {}, purchases: [] }
+  s.personality.name = 'Тест'
+  return buildCharacter(s).character
+}
+
+describe('species from Eberron and Ravenloft level up', () => {
+  it('Kalashtar: telepathy grows with the level', () => {
+    const c2 = level(fighterAs({ speciesId: 'kalashtar' })).character
+    expect(c2.speciesTraits).toContain('Связь разумов: телепатия 20 фт')
+    expect(c2.speciesTraits).not.toContain('телепатия 10 фт')
+  })
+  it('Dhampir: walls and ceilings from level 3', () => {
+    const c2 = level(fighterAs({ speciesId: 'dhampir' })).character
+    const r3 = level(c2, { subclass: 'champion' })
+    expect(r3.character.speciesTraits).toContain('Паучье лазание: по стенам и потолкам без рук (с 3-й ур.)')
+    expect(r3.character.speed).toBe('35 фт')
+  })
+  it('Shifter: Shifting follows the proficiency bonus and Strength', () => {
+    const c2 = level(fighterAs({ speciesId: 'shifter', skills: ['acrobatics'], optionId: 'longtooth' })).character
+    const c3 = level(c2, { subclass: 'champion' }).character
+    const c4 = level(c3, { feat: 'ability-score-improvement' }, { 'ft:mode': ['2'], 'ft:plus2': ['str'] }).character
+    expect(c4.speciesTraits).toContain('укус бонусным действием, 1к6 + 4 колющего; 2 раза')
+    const c5 = level(c4).character
+    expect(c5.speciesTraits).toContain('Перевоплощение (Длинные зубы): бонусным действием на 1 минуту, 6 временных хитов; укус бонусным действием, 1к6 + 4 колющего; 3 раза за долгий отдых')
+  })
+  it('Warforged keeps the +1 AC through level-ups', () => {
+    const c2 = level(fighterAs({ speciesId: 'warforged', skills: ['insight'], tool: 'smiths-tools' })).character
+    expect(c2.ac).toBe('17')
+  })
+  it('the nine new species read back from the sheet and go up to level 20', () => {
+    const choices: Record<string, Partial<ReturnType<typeof initialState>['species']>> = {
+      changeling: { skills: ['deception', 'persuasion'] }, dhampir: {}, hexblood: { spellAbility: 'wis' }, kalashtar: {},
+      khoravar: { spellAbility: 'int', skills: ['history'] }, lupin: { skills: ['stealth'] }, reborn: { skills: ['history'], resistance: 'poison' },
+      shifter: { skills: ['acrobatics'], optionId: 'wildhunt' }, warforged: { skills: ['insight'], tool: 'smiths-tools' }
+    }
+    for (const [id, ch] of Object.entries(choices)) {
+      let c = fighterAs({ speciesId: id, ...ch })
+      expect(info(c).species.id).toBe(id)
+      for (let l = 2; l <= 20; l++) c = level(c, l === 3 ? { subclass: 'champion' } : {}).character
+      expect(c.classLevel).toBe(`${nameOf(byId.class.fighter)} 20`)
+    }
   })
 })

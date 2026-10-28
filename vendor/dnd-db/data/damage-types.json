@@ -1,0 +1,93 @@
+[
+  {
+    "id": "acid",
+    "name": "Acid",
+    "name_ru": "Кислота",
+    "source": "srd-5.2.1",
+    "description": "Corrosive liquids, digestive enzymes"
+  },
+  {
+    "id": "bludgeoning",
+    "name": "Bludgeoning",
+    "name_ru": "Дробящий",
+    "source": "srd-5.2.1",
+    "description": "Blunt objects, constriction, falling"
+  },
+  {
+    "id": "cold",
+    "name": "Cold",
+    "name_ru": "Холод",
+    "source": "srd-5.2.1",
+    "description": "Freezing water, icy blasts"
+  },
+  {
+    "id": "fire",
+    "name": "Fire",
+    "name_ru": "Огонь",
+    "source": "srd-5.2.1",
+    "description": "Flames, unbearable heat"
+  },
+  {
+    "id": "force",
+    "name": "Force",
+    "name_ru": "Силовое поле",
+    "source": "srd-5.2.1",
+    "description": "Pure magical energy"
+  },
+  {
+    "id": "lightning",
+    "name": "Lightning",
+    "name_ru": "Электричество",
+    "source": "srd-5.2.1",
+    "description": "Electricity"
+  },
+  {
+    "id": "necrotic",
+    "name": "Necrotic",
+    "name_ru": "Некротическая энергия",
+    "source": "srd-5.2.1",
+    "description": "Life-draining energy"
+  },
+  {
+    "id": "piercing",
+    "name": "Piercing",
+    "name_ru": "Колющий",
+    "source": "srd-5.2.1",
+    "description": "Fangs, puncturing objects"
+  },
+  {
+    "id": "poison",
+    "name": "Poison",
+    "name_ru": "Яд",
+    "source": "srd-5.2.1",
+    "description": "Toxic gas, venom"
+  },
+  {
+    "id": "psychic",
+    "name": "Psychic",
+    "name_ru": "Психическая энергия",
+    "source": "srd-5.2.1",
+    "description": "Mind-rending energy"
+  },
+  {
+    "id": "radiant",
+    "name": "Radiant",
+    "name_ru": "Излучение",
+    "source": "srd-5.2.1",
+    "description": "Holy energy, searing radiation"
+  },
+  {
+    "id": "slashing",
+    "name": "Slashing",
+    "name_ru": "Рубящий",
+    "source": "srd-5.2.1",
+    "description": "Claws, cutting objects"
+  },
+  {
+    "id": "thunder",
+    "name": "Thunder",
+    "name_ru": "Звук",
+    "source": "srd-5.2.1",
+    "description": "Concussive sound"
+  }
+]

@@ -1,0 +1,744 @@
+{
+  "ability_generation": {
+    "method_in_use": "roll",
+    "point_buy": {
+      "budget": 27,
+      "costs": {
+        "10": 2,
+        "11": 3,
+        "12": 4,
+        "13": 5,
+        "14": 7,
+        "15": 9,
+        "8": 0,
+        "9": 1
+      },
+      "max_score": 15,
+      "min_score": 8
+    },
+    "roll": {
+      "dice": "4d6",
+      "drop": "lowest",
+      "note": "Roll four d6, drop the lowest, sum the rest; do it six times and assign the results to the abilities.",
+      "times": 6
+    },
+    "standard_array": [
+      15,
+      14,
+      13,
+      12,
+      10,
+      8
+    ],
+    "standard_array_by_class": {
+      "barbarian": {
+        "cha": 8,
+        "con": 14,
+        "dex": 13,
+        "int": 10,
+        "str": 15,
+        "wis": 12
+      },
+      "bard": {
+        "cha": 15,
+        "con": 12,
+        "dex": 14,
+        "int": 13,
+        "str": 8,
+        "wis": 10
+      },
+      "cleric": {
+        "cha": 12,
+        "con": 13,
+        "dex": 8,
+        "int": 10,
+        "str": 14,
+        "wis": 15
+      },
+      "druid": {
+        "cha": 10,
+        "con": 14,
+        "dex": 12,
+        "int": 13,
+        "str": 8,
+        "wis": 15
+      },
+      "fighter": {
+        "cha": 12,
+        "con": 13,
+        "dex": 14,
+        "int": 8,
+        "str": 15,
+        "wis": 10
+      },
+      "monk": {
+        "cha": 8,
+        "con": 13,
+        "dex": 15,
+        "int": 10,
+        "str": 12,
+        "wis": 14
+      },
+      "paladin": {
+        "cha": 14,
+        "con": 13,
+        "dex": 10,
+        "int": 8,
+        "str": 15,
+        "wis": 12
+      },
+      "ranger": {
+        "cha": 10,
+        "con": 13,
+        "dex": 15,
+        "int": 8,
+        "str": 12,
+        "wis": 14
+      },
+      "rogue": {
+        "cha": 8,
+        "con": 13,
+        "dex": 15,
+        "int": 14,
+        "str": 12,
+        "wis": 10
+      },
+      "sorcerer": {
+        "cha": 15,
+        "con": 14,
+        "dex": 13,
+        "int": 8,
+        "str": 10,
+        "wis": 12
+      },
+      "warlock": {
+        "cha": 15,
+        "con": 13,
+        "dex": 14,
+        "int": 12,
+        "str": 8,
+        "wis": 10
+      },
+      "wizard": {
+        "cha": 10,
+        "con": 13,
+        "dex": 12,
+        "int": 15,
+        "str": 8,
+        "wis": 14
+      }
+    }
+  },
+  "ability_modifiers": {
+    "formula": "floor((score - 10) / 2)",
+    "table": [
+      {
+        "modifier": -4,
+        "scores": "3"
+      },
+      {
+        "modifier": -3,
+        "scores": "4-5"
+      },
+      {
+        "modifier": -2,
+        "scores": "6-7"
+      },
+      {
+        "modifier": -1,
+        "scores": "8-9"
+      },
+      {
+        "modifier": 0,
+        "scores": "10-11"
+      },
+      {
+        "modifier": 1,
+        "scores": "12-13"
+      },
+      {
+        "modifier": 2,
+        "scores": "14-15"
+      },
+      {
+        "modifier": 3,
+        "scores": "16-17"
+      },
+      {
+        "modifier": 4,
+        "scores": "18-19"
+      },
+      {
+        "modifier": 5,
+        "scores": "20"
+      }
+    ]
+  },
+  "advancement": [
+    {
+      "level": 1,
+      "proficiency_bonus": 2,
+      "xp": 0
+    },
+    {
+      "level": 2,
+      "proficiency_bonus": 2,
+      "xp": 300
+    },
+    {
+      "level": 3,
+      "proficiency_bonus": 2,
+      "xp": 900
+    },
+    {
+      "level": 4,
+      "proficiency_bonus": 2,
+      "xp": 2700
+    },
+    {
+      "level": 5,
+      "proficiency_bonus": 3,
+      "xp": 6500
+    },
+    {
+      "level": 6,
+      "proficiency_bonus": 3,
+      "xp": 14000
+    },
+    {
+      "level": 7,
+      "proficiency_bonus": 3,
+      "xp": 23000
+    },
+    {
+      "level": 8,
+      "proficiency_bonus": 3,
+      "xp": 34000
+    },
+    {
+      "level": 9,
+      "proficiency_bonus": 4,
+      "xp": 48000
+    },
+    {
+      "level": 10,
+      "proficiency_bonus": 4,
+      "xp": 64000
+    },
+    {
+      "level": 11,
+      "proficiency_bonus": 4,
+      "xp": 85000
+    },
+    {
+      "level": 12,
+      "proficiency_bonus": 4,
+      "xp": 100000
+    },
+    {
+      "level": 13,
+      "proficiency_bonus": 5,
+      "xp": 120000
+    },
+    {
+      "level": 14,
+      "proficiency_bonus": 5,
+      "xp": 140000
+    },
+    {
+      "level": 15,
+      "proficiency_bonus": 5,
+      "xp": 165000
+    },
+    {
+      "level": 16,
+      "proficiency_bonus": 5,
+      "xp": 195000
+    },
+    {
+      "level": 17,
+      "proficiency_bonus": 6,
+      "xp": 225000
+    },
+    {
+      "level": 18,
+      "proficiency_bonus": 6,
+      "xp": 265000
+    },
+    {
+      "level": 19,
+      "proficiency_bonus": 6,
+      "xp": 305000
+    },
+    {
+      "level": 20,
+      "proficiency_bonus": 6,
+      "xp": 355000
+    }
+  ],
+  "armor_class": {
+    "armor": "armor.armor_class: base + Dex modifier (capped by dex_max when set); shields add bonus",
+    "class_features": {
+      "barbarian": "10 + Dex + Con (shield allowed)",
+      "monk": "10 + Dex + Wis (no armor, no shield)"
+    },
+    "unarmored": {
+      "add": [
+        "dex"
+      ],
+      "base": 10
+    }
+  },
+  "background_ability_increase": {
+    "from": "background.ability_scores",
+    "max_score": 20,
+    "options": [
+      [
+        2,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ]
+  },
+  "coins": [
+    {
+      "coin": "Copper Piece (CP)",
+      "value_gp": "1/100"
+    },
+    {
+      "coin": "Silver Piece (SP)",
+      "value_gp": "1/10"
+    },
+    {
+      "coin": "Electrum Piece (EP)",
+      "value_gp": "1/2"
+    },
+    {
+      "coin": "Gold Piece (GP)",
+      "value_gp": "1"
+    },
+    {
+      "coin": "Platinum Piece (PP)",
+      "value_gp": "10"
+    }
+  ],
+  "higher_level_starting_equipment": [
+    [
+      "2–4",
+      "Normal starting equipment",
+      "1 Common"
+    ],
+    [
+      "5–10",
+      "500 GP plus 1d10 × 25 GP plus normal starting equipment",
+      "1 Common, 1 Uncommon"
+    ],
+    [
+      "11–16",
+      "5,000 gp plus 1d10 × 250 GP plus normal starting equipment",
+      "2 Common, 3 Uncommon, 1 Rare"
+    ],
+    [
+      "17–20",
+      "20,000 GP plus 1d10 × 250 GP plus normal starting equipment",
+      "2 Common, 4 Uncommon, 3 Rare, 1 Very Rare"
+    ]
+  ],
+  "hit_points": {
+    "fixed_per_level": {
+      "barbarian": 7,
+      "bard": 5,
+      "cleric": 5,
+      "druid": 5,
+      "fighter": 6,
+      "monk": 5,
+      "paladin": 6,
+      "ranger": 6,
+      "rogue": 5,
+      "sorcerer": 4,
+      "warlock": 5,
+      "wizard": 4
+    },
+    "level_1": "class hit die maximum + Constitution modifier",
+    "per_level": "roll the hit die or take the fixed value, + Constitution modifier (minimum 1)"
+  },
+  "initiative": {
+    "bonuses": [
+      {
+        "add": "proficiency_bonus",
+        "feat": "alert"
+      }
+    ],
+    "formula": "dex_mod"
+  },
+  "languages": {
+    "choose": {
+      "count": 2,
+      "from_rarity": "standard",
+      "or_roll": "1d12 on the Standard Languages table"
+    },
+    "known": [
+      "common"
+    ]
+  },
+  "level_1_hit_points_table": [
+    [
+      "Barbarian",
+      "12 + Con. modifier"
+    ],
+    [
+      "Fighter, Paladin, or Ranger",
+      "10 + Con. modifier"
+    ],
+    [
+      "Bard, Cleric, Druid, Monk, Rogue, or Warlock",
+      "8 + Con. modifier"
+    ],
+    [
+      "Sorcerer or Wizard",
+      "6 + Con. modifier"
+    ]
+  ],
+  "multiclass_spell_slots": [
+    {
+      "level": 1,
+      "slots": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "level": 2,
+      "slots": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "level": 3,
+      "slots": [
+        4,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "level": 4,
+      "slots": [
+        4,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "level": 5,
+      "slots": [
+        4,
+        3,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "level": 6,
+      "slots": [
+        4,
+        3,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "level": 7,
+      "slots": [
+        4,
+        3,
+        3,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "level": 8,
+      "slots": [
+        4,
+        3,
+        3,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "level": 9,
+      "slots": [
+        4,
+        3,
+        3,
+        3,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "level": 10,
+      "slots": [
+        4,
+        3,
+        3,
+        3,
+        2,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "level": 11,
+      "slots": [
+        4,
+        3,
+        3,
+        3,
+        2,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "level": 12,
+      "slots": [
+        4,
+        3,
+        3,
+        3,
+        2,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "level": 13,
+      "slots": [
+        4,
+        3,
+        3,
+        3,
+        2,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "level": 14,
+      "slots": [
+        4,
+        3,
+        3,
+        3,
+        2,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "level": 15,
+      "slots": [
+        4,
+        3,
+        3,
+        3,
+        2,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "level": 16,
+      "slots": [
+        4,
+        3,
+        3,
+        3,
+        2,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "level": 17,
+      "slots": [
+        4,
+        3,
+        3,
+        3,
+        2,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "level": 18,
+      "slots": [
+        4,
+        3,
+        3,
+        3,
+        3,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "level": 19,
+      "slots": [
+        4,
+        3,
+        3,
+        3,
+        3,
+        2,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "level": 20,
+      "slots": [
+        4,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2,
+        1,
+        1
+      ]
+    }
+  ],
+  "passive_perception": {
+    "formula": "10 + Wisdom (Perception) check modifier"
+  },
+  "saving_throw": {
+    "formula": "ability_mod + (proficiency_bonus if proficient)"
+  },
+  "skill_check": {
+    "formula": "ability_mod + (proficiency_bonus if proficient; 2 x proficiency_bonus with Expertise)"
+  },
+  "spell_preparation_by_class": {
+    "Artificer": {
+      "count": "any",
+      "when": "long-rest"
+    },
+    "Bard": {
+      "count": "one",
+      "when": "level-up"
+    },
+    "Cleric": {
+      "count": "any",
+      "when": "long-rest"
+    },
+    "Druid": {
+      "count": "any",
+      "when": "long-rest"
+    },
+    "Paladin": {
+      "count": "one",
+      "when": "long-rest"
+    },
+    "Ranger": {
+      "count": "one",
+      "when": "long-rest"
+    },
+    "Sorcerer": {
+      "count": "one",
+      "when": "level-up"
+    },
+    "Warlock": {
+      "count": "one",
+      "when": "level-up"
+    },
+    "Wizard": {
+      "count": "any",
+      "when": "long-rest"
+    }
+  },
+  "spellcasting": {
+    "attack_bonus": "spellcasting ability modifier + proficiency_bonus",
+    "save_dc": "8 + spellcasting ability modifier + proficiency_bonus"
+  },
+  "starting_equipment": "Choose one option from the class and one from the background; coins can be spent on equipment right away.",
+  "weapon_attack": {
+    "ability": "Strength for melee, Dexterity for ranged; Finesse lets you choose; Thrown uses the melee ability",
+    "formula": "ability_mod + (proficiency_bonus if proficient)"
+  }
+}

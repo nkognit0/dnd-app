@@ -1,0 +1,1156 @@
+{
+  "artificer-magic-item-plans": [
+    {
+      "id": "alchemy-jug",
+      "name": "Alchemy Jug",
+      "name_ru": "Алхимический сосуд",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 2
+    },
+    {
+      "id": "rope-of-climbing",
+      "name": "Rope of Climbing",
+      "name_ru": "Верёвка лазания",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 2
+    },
+    {
+      "id": "returning-weapon",
+      "name": "Returning Weapon",
+      "name_ru": "Возвращающееся оружие",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 2
+    },
+    {
+      "id": "wand-of-the-war-mage-plus-1",
+      "name": "Wand of the War Mage +1",
+      "name_ru": "Волшебная палочка боевого мага +1",
+      "class": "artificer",
+      "attunement": true,
+      "min_level": 2
+    },
+    {
+      "id": "wand-of-magic-detection",
+      "name": "Wand of Magic Detection",
+      "name_ru": "Волшебная палочка обнаружения магии",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 2
+    },
+    {
+      "id": "wand-of-secrets",
+      "name": "Wand of Secrets",
+      "name_ru": "Волшебная палочка секретов",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 2
+    },
+    {
+      "id": "sending-stones",
+      "name": "Sending Stones",
+      "name_ru": "Камни послания",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 2
+    },
+    {
+      "id": "common-magic-item",
+      "name": "Common magic item that isn't a Potion, a Scroll, or cursed",
+      "name_ru": "Магический предмет Обычной редкости, за исключением Зелий, Свитков и проклятых",
+      "class": "artificer",
+      "attunement": "varies",
+      "min_level": 2,
+      "repeatable": true
+    },
+    {
+      "id": "manifold-tool",
+      "name": "Manifold Tool",
+      "name_ru": "Многообразный инструмент",
+      "class": "artificer",
+      "attunement": true,
+      "min_level": 2
+    },
+    {
+      "id": "goggles-of-night",
+      "name": "Goggles of Night",
+      "name_ru": "Ночные очки",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 2
+    },
+    {
+      "id": "wraps-of-unarmed-power-plus-1",
+      "name": "Wraps of Unarmed Power +1",
+      "name_ru": "Обмотки безоружной мощи +1",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 2
+    },
+    {
+      "id": "weapon-plus-1",
+      "name": "Weapon, +1",
+      "name_ru": "Оружие +1",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 2
+    },
+    {
+      "id": "repeating-shot",
+      "name": "Repeating Shot",
+      "name_ru": "Оружие повторного выстрела",
+      "class": "artificer",
+      "attunement": true,
+      "min_level": 2
+    },
+    {
+      "id": "bag-of-holding",
+      "name": "Bag of Holding",
+      "name_ru": "Сумка хранения",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 2
+    },
+    {
+      "id": "cap-of-water-breathing",
+      "name": "Cap of Water Breathing",
+      "name_ru": "Шапка подводного дыхания",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 2
+    },
+    {
+      "id": "shield-plus-1",
+      "name": "Shield +1",
+      "name_ru": "Щит +1",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 2
+    },
+    {
+      "id": "wand-of-web",
+      "name": "Wand of Web",
+      "name_ru": "Волшебная палочка паутины",
+      "class": "artificer",
+      "attunement": true,
+      "min_level": 6
+    },
+    {
+      "id": "wand-of-magic-missiles",
+      "name": "Wand of Magic Missiles",
+      "name_ru": "Волшебная палочка стрел",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 6
+    },
+    {
+      "id": "armor-plus-1",
+      "name": "Armor +1",
+      "name_ru": "Доспех +1",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 6
+    },
+    {
+      "id": "spell-refueling-ring",
+      "name": "Spell-Refueling Ring",
+      "name_ru": "Кольцо восстановления заклинаний",
+      "class": "artificer",
+      "attunement": true,
+      "min_level": 6
+    },
+    {
+      "id": "ring-of-swimming",
+      "name": "Ring of Swimming",
+      "name_ru": "Кольцо плавания",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 6
+    },
+    {
+      "id": "ring-of-water-walking",
+      "name": "Ring of Water Walking",
+      "name_ru": "Кольцо хождения по воде",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 6
+    },
+    {
+      "id": "necklace-of-adaptation",
+      "name": "Necklace of Adaptation",
+      "name_ru": "Ожерелье адаптации",
+      "class": "artificer",
+      "attunement": true,
+      "min_level": 6
+    },
+    {
+      "id": "dazzling-weapon",
+      "name": "Dazzling Weapon",
+      "name_ru": "Ослепительное оружие",
+      "class": "artificer",
+      "attunement": true,
+      "min_level": 6
+    },
+    {
+      "id": "weapon-of-warning",
+      "name": "Weapon of Warning",
+      "name_ru": "Оружие предупреждения",
+      "class": "artificer",
+      "attunement": true,
+      "min_level": 6
+    },
+    {
+      "id": "repulsion-shield",
+      "name": "Repulsion Shield",
+      "name_ru": "Отталкивающий щит",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 6
+    },
+    {
+      "id": "eyes-of-minute-seeing",
+      "name": "Eyes of Minute Seeing",
+      "name_ru": "Очки детального зрения",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 6
+    },
+    {
+      "id": "eyes-of-charming",
+      "name": "Eyes of Charming",
+      "name_ru": "Очки очарования",
+      "class": "artificer",
+      "attunement": true,
+      "min_level": 6
+    },
+    {
+      "id": "gloves-of-thievery",
+      "name": "Gloves of Thievery",
+      "name_ru": "Перчатки воровства",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 6
+    },
+    {
+      "id": "cloak-of-the-manta-ray",
+      "name": "Cloak of the Manta Ray",
+      "name_ru": "Плащ ската",
+      "class": "artificer",
+      "attunement": true,
+      "min_level": 6
+    },
+    {
+      "id": "boots-of-the-winding-path",
+      "name": "Boots of the Winding Path",
+      "name_ru": "Сапоги извилистого пути",
+      "class": "artificer",
+      "attunement": true,
+      "min_level": 6
+    },
+    {
+      "id": "pipes-of-haunting",
+      "name": "Pipes of Haunting",
+      "name_ru": "Свирель ужаса",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 6
+    },
+    {
+      "id": "mind-sharpener",
+      "name": "Mind Sharpener",
+      "name_ru": "Усилитель разума",
+      "class": "artificer",
+      "attunement": true,
+      "min_level": 6
+    },
+    {
+      "id": "lantern-of-revealing",
+      "name": "Lantern of Revealing",
+      "name_ru": "Фонарь обнаружения",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 6
+    },
+    {
+      "id": "helm-of-awareness",
+      "name": "Helm of Awareness",
+      "name_ru": "Шлем осведомлённости",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 6
+    },
+    {
+      "id": "sentinel-shield",
+      "name": "Sentinel Shield",
+      "name_ru": "Щит часового",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 6
+    },
+    {
+      "id": "cloak-of-elvenkind",
+      "name": "Cloak of Elvenkind",
+      "name_ru": "Эльфийский плащ",
+      "class": "artificer",
+      "attunement": true,
+      "min_level": 6
+    },
+    {
+      "id": "boots-of-elvenkind",
+      "name": "Boots of Elvenkind",
+      "name_ru": "Эльфийские сапоги",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 6
+    },
+    {
+      "id": "wand-of-the-war-mage-plus-2",
+      "name": "Wand of the War Mage +2",
+      "name_ru": "Волшебная палочка боевого мага + 2",
+      "class": "artificer",
+      "attunement": true,
+      "min_level": 10
+    },
+    {
+      "id": "armor-of-resistance",
+      "name": "Armor of Resistance",
+      "name_ru": "Доспех сопротивления",
+      "class": "artificer",
+      "attunement": true,
+      "min_level": 10
+    },
+    {
+      "id": "dagger-of-venom",
+      "name": "Dagger of Venom",
+      "name_ru": "Кинжал яда",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 10
+    },
+    {
+      "id": "ring-of-feather-falling",
+      "name": "Ring of Feather Falling",
+      "name_ru": "Кольцо падения пёрышком",
+      "class": "artificer",
+      "attunement": true,
+      "min_level": 10
+    },
+    {
+      "id": "ring-of-jumping",
+      "name": "Ring of Jumping",
+      "name_ru": "Кольцо прыжков",
+      "class": "artificer",
+      "attunement": true,
+      "min_level": 10
+    },
+    {
+      "id": "ring-of-mind-shielding",
+      "name": "Ring of Mind Shielding",
+      "name_ru": "Кольцо защиты разума",
+      "class": "artificer",
+      "attunement": true,
+      "min_level": 10
+    },
+    {
+      "id": "uncommon-wondrous-item",
+      "name": "Uncommon Wondrous Item that isn't cursed",
+      "name_ru": "Необычный Чудесный предмет, за исключением проклятых",
+      "class": "artificer",
+      "attunement": "varies",
+      "min_level": 10,
+      "repeatable": true
+    },
+    {
+      "id": "wraps-of-unarmed-power-plus-2",
+      "name": "Wraps of Unarmed Power +2",
+      "name_ru": "Обмотки безоружной мощи +2",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 10
+    },
+    {
+      "id": "weapon-plus-2",
+      "name": "Weapon, +2",
+      "name_ru": "Оружие +2",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 10
+    },
+    {
+      "id": "shield-plus-2",
+      "name": "Shield +2",
+      "name_ru": "Щит +2",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 10
+    },
+    {
+      "id": "elven-chain",
+      "name": "Elven Chain",
+      "name_ru": "Эльфийская кольчуга",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 10
+    },
+    {
+      "id": "armor-plus-2",
+      "name": "Armor +2",
+      "name_ru": "Доспех +2",
+      "class": "artificer",
+      "attunement": false,
+      "min_level": 14
+    },
+    {
+      "id": "ring-of-the-ram",
+      "name": "Ring of the Ram",
+      "name_ru": "Кольцо барана",
+      "class": "artificer",
+      "attunement": true,
+      "min_level": 14
+    },
+    {
+      "id": "ring-of-protection",
+      "name": "Ring of Protection",
+      "name_ru": "Кольцо защиты",
+      "class": "artificer",
+      "attunement": true,
+      "min_level": 14
+    },
+    {
+      "id": "ring-of-free-action",
+      "name": "Ring of Free Action",
+      "name_ru": "Кольцо свободных действий",
+      "class": "artificer",
+      "attunement": true,
+      "min_level": 14
+    },
+    {
+      "id": "arrow-catching-shield",
+      "name": "Arrow-Catching Shield",
+      "name_ru": "Ловящий стрелы щит",
+      "class": "artificer",
+      "attunement": true,
+      "min_level": 14
+    },
+    {
+      "id": "rare-wondrous-item",
+      "name": "Rare Wondrous Item that isn't cursed",
+      "name_ru": "Редкий Чудесный предмет, за исключением проклятых",
+      "class": "artificer",
+      "attunement": "varies",
+      "min_level": 14,
+      "repeatable": true
+    },
+    {
+      "id": "flame-tongue",
+      "name": "Flame Tongue",
+      "name_ru": "Язык пламени",
+      "class": "artificer",
+      "attunement": true,
+      "min_level": 14
+    }
+  ],
+  "blessed-strikes": [
+    {
+      "id": "divine-strike",
+      "name": "Divine Strike",
+      "name_ru": "Божественный удар",
+      "class": "cleric"
+    },
+    {
+      "id": "potent-spellcasting",
+      "name": "Potent Spellcasting",
+      "name_ru": "Могущественные заклинания",
+      "class": "cleric"
+    }
+  ],
+  "divine-order": [
+    {
+      "id": "protector",
+      "name": "Protector",
+      "name_ru": "Защитник",
+      "class": "cleric",
+      "description": "Trained for battle, you gain proficiency with Martial weapons and training with Heavy armor.",
+      "grants": {
+        "armor_training": [
+          "heavy"
+        ],
+        "weapon_proficiencies": [
+          "martial"
+        ]
+      }
+    },
+    {
+      "id": "thaumaturge",
+      "name": "Thaumaturge",
+      "name_ru": "Чудотворец",
+      "class": "cleric",
+      "description": "You know one extra cantrip from the Cleric spell list. In addition, your mystical connection to the divine gives you a bonus to your Intelligence (Arcana or Religion) checks. The bonus equals your Wisdom modifier (minimum of +1).",
+      "grants": {
+        "extra_cantrips": 1,
+        "skill_check_bonus": {
+          "bonus": "wis_mod",
+          "min": 1,
+          "skills": [
+            "arcana",
+            "religion"
+          ]
+        }
+      }
+    }
+  ],
+  "eldritch-invocation": [
+    {
+      "id": "agonizing-blast",
+      "name": "Agonizing Blast",
+      "name_ru": "Мучительный взрыв",
+      "class": "warlock",
+      "description": "Choose one of your known Warlock cantrips that deals damage. You can add your Charisma modifier to that spell's damage rolls.\n\n**Repeatable.** You can gain this invocation more than once. Each time you do so, choose a different eligible cantrip.",
+      "min_level": 2,
+      "prerequisite": "Level 2+ Warlock, a Warlock Cantrip That Deals Damage",
+      "repeatable": true
+    },
+    {
+      "id": "armor-of-shadows",
+      "name": "Armor of Shadows",
+      "name_ru": "Доспех теней",
+      "class": "warlock",
+      "description": "You can cast *Mage Armor* on yourself without expending a spell slot.",
+      "min_level": 1
+    },
+    {
+      "id": "ascendant-step",
+      "name": "Ascendant Step",
+      "name_ru": "Восходящий шаг",
+      "class": "warlock",
+      "description": "You can cast *Levitate* on yourself without expending a spell slot.",
+      "min_level": 5,
+      "prerequisite": "Level 5+ Warlock"
+    },
+    {
+      "id": "devils-sight",
+      "name": "Devil's Sight",
+      "name_ru": "Дьявольское зрение",
+      "class": "warlock",
+      "description": "You can see normally in Dim Light and Darkness both magical and nonmagical—within 120 feet of yourself.",
+      "min_level": 2,
+      "prerequisite": "Level 2+ Warlock"
+    },
+    {
+      "id": "devouring-blade",
+      "name": "Devouring Blade",
+      "name_ru": "Пожирающий клинок",
+      "class": "warlock",
+      "description": "The Extra Attack of your Thirsting Blade invocation confers two extra attacks rather than one.",
+      "min_level": 12,
+      "prerequisite": "Level 12+ Warlock, Thirsting Blade Invocation"
+    },
+    {
+      "id": "eldritch-mind",
+      "name": "Eldritch Mind",
+      "name_ru": "Мистический разум",
+      "class": "warlock",
+      "description": "You have Advantage on Constitution saving throws that you make to maintain Concentration.",
+      "min_level": 1
+    },
+    {
+      "id": "eldritch-smite",
+      "name": "Eldritch Smite",
+      "name_ru": "Мистическая кара",
+      "class": "warlock",
+      "description": "Once per turn when you hit a creature with your pact weapon, you can expend a Pact Magic spell slot to deal an extra 1d8 Force damage to the target, plus another 1d8 per level of the spell slot, and you can give the target the Prone condition if it is Huge or smaller.",
+      "min_level": 5,
+      "prerequisite": "Level 5+ Warlock, Pact of the Blade Invocation"
+    },
+    {
+      "id": "eldritch-spear",
+      "name": "Eldritch Spear",
+      "name_ru": "Мистическое копьё",
+      "class": "warlock",
+      "description": "Choose one of your known Warlock cantrips that deals damage and has a range of 10+ feet. When you cast that spell, its range increases by a number of feet equal to 30 times your Warlock level.\n\n**Repeatable.** You can gain this invocation more than once. Each time you do so, choose a different eligible cantrip.",
+      "min_level": 2,
+      "prerequisite": "Level 2+ Warlock, a Warlock Cantrip That Deals Damage",
+      "repeatable": true
+    },
+    {
+      "id": "fiendish-vigor",
+      "name": "Fiendish Vigor",
+      "name_ru": "Мощь Исчадия",
+      "class": "warlock",
+      "description": "You can cast *False Life* on yourself without expending a spell slot. When you cast the spell with this feature, you don't roll the die for the Temporary Hit Points; you automatically get the highest number on the die.",
+      "min_level": 2,
+      "prerequisite": "Level 2+ Warlock"
+    },
+    {
+      "id": "gaze-of-two-minds",
+      "name": "Gaze of Two Minds",
+      "name_ru": "Взор двух умов",
+      "class": "warlock",
+      "description": "You can use a Bonus Action to touch a willing creature and perceive through its senses until the end of your next turn. As long as the creature is on the same plane of existence as you, you can take a Bonus Action on subsequent turns to maintain this connection, extending the duration until the end of your next turn. The connection ends if you don't maintain it in this way.\n\nWhile perceiving through the other creature's senses, you benefit from any special senses possessed by that creature, and you can cast spells as if you were in your space or the other creature's space if the two of you are within 60 feet of each other.",
+      "min_level": 5,
+      "prerequisite": "Level 5+ Warlock"
+    },
+    {
+      "id": "gift-of-the-depths",
+      "name": "Gift of the Depths",
+      "name_ru": "Дар глубин",
+      "class": "warlock",
+      "description": "You can breathe underwater, and you gain a Swim Speed equal to your Speed.\n\nYou can also cast *Water Breathing* once without expending a spell slot. You regain the ability to cast it in this way again when you finish a Long Rest.",
+      "min_level": 5,
+      "prerequisite": "Level 5+ Warlock"
+    },
+    {
+      "id": "gift-of-the-protectors",
+      "name": "Gift of the Protectors",
+      "name_ru": "Дар защитников",
+      "class": "warlock",
+      "description": "A new page appears in your *Book of Shadows* when you conjure it. With your permission, a creature can take an action to write its name on that page, which can contain a number of names equal to your Charisma modifier (minimum of one name).\n\nWhen any creature whose name is on the page is reduced to 0 Hit Points but not killed outright, the creature magically drops to 1 Hit Point instead. Once this magic is triggered, no creature can benefit from it until you finish a Long Rest.\n\nAs a Magic action, you can erase a name on the page by touching it.",
+      "min_level": 9,
+      "prerequisite": "Level 9+ Warlock, Pact of the Tome Invocation"
+    },
+    {
+      "id": "investment-of-the-chain-master",
+      "name": "Investment of the Chain Master",
+      "name_ru": "Облачение хозяина цепи",
+      "class": "warlock",
+      "description": "When you cast *Find Familiar*, you infuse the summoned familiar with a measure of your eldritch power, granting the creature the following benefits.\n\n**Aerial or Aquatic.** The familiar gains either a Fly Speed or a Swim Speed (your choice) of 40 feet.\n\n**Quick Attack.** As a Bonus Action, you can command the familiar to take the Attack action.\n\n**Necrotic or Radiant Damage.** Whenever the familiar deals Bludgeoning, Piercing, or Slashing damage, you can make it deal Necrotic or Radiant damage instead.\n\n**Your Save DC.** If the familiar forces a creature to make a saving throw, it uses your spell save DC.\n\n**Resistance.** When the familiar takes damage, you can take a Reaction to grant it Resistance against that damage.",
+      "min_level": 5,
+      "prerequisite": "Level 5+ Warlock, Pact of the Chain Invocation"
+    },
+    {
+      "id": "lessons-of-the-first-ones",
+      "name": "**Lessons of the First Ones**",
+      "name_ru": "Уроки древних",
+      "class": "warlock",
+      "description": "You have received knowledge from an elder entity of the multiverse, allowing you to gain one Origin feat of your choice (see \"Feats\").\n\n**Repeatable.** You can gain this invocation more than once. Each time you do so, choose a different Origin feat.",
+      "min_level": 2,
+      "prerequisite": "Level 2+ Warlock",
+      "repeatable": true
+    },
+    {
+      "id": "lifedrinker",
+      "name": "Lifedrinker",
+      "name_ru": "Пьющий жизни",
+      "class": "warlock",
+      "description": "Once per turn when you hit a creature with your pact weapon, you can deal an extra 1d6 Necrotic, Psychic, or Radiant damage (your choice) to the creature, and you can expend one of your Hit Point Dice to roll it and regain a number of Hit Points equal to the roll plus your Constitution modifier (minimum of 1 Hit Point).",
+      "min_level": 9,
+      "prerequisite": "Level 9+ Warlock, Pact of the Blade Invocation"
+    },
+    {
+      "id": "mask-of-many-faces",
+      "name": "Mask of Many Faces",
+      "name_ru": "Маска многих лиц",
+      "class": "warlock",
+      "description": "You can cast *Disguise Self* without expending a spell slot.",
+      "min_level": 2,
+      "prerequisite": "Level 2+ Warlock"
+    },
+    {
+      "id": "master-of-myriad-forms",
+      "name": "Master of Myriad Forms",
+      "name_ru": "Мастер бесчисленных обликов",
+      "class": "warlock",
+      "description": "You can cast *Alter Self* without expending a spell slot.",
+      "min_level": 5,
+      "prerequisite": "Level 5+ Warlock"
+    },
+    {
+      "id": "misty-visions",
+      "name": "Misty Visions",
+      "name_ru": "Туманные видения",
+      "class": "warlock",
+      "description": "You can cast *Silent Image* without expending a spell slot.",
+      "min_level": 2,
+      "prerequisite": "Level 2+ Warlock"
+    },
+    {
+      "id": "one-with-shadows",
+      "name": "One with Shadows",
+      "name_ru": "Один среди теней",
+      "class": "warlock",
+      "description": "While you're in an area of Dim Light or Darkness, you can cast *Invisibility* on yourself without expending a spell slot.",
+      "min_level": 5,
+      "prerequisite": "Level 5+ Warlock"
+    },
+    {
+      "id": "otherworldly-leap",
+      "name": "Otherworldly Leap",
+      "name_ru": "Потусторонний прыжок",
+      "class": "warlock",
+      "description": "You can cast *Jump* on yourself without expending a spell slot.",
+      "min_level": 2,
+      "prerequisite": "Level 2+ Warlock"
+    },
+    {
+      "id": "pact-of-the-blade",
+      "name": "Pact of the Blade",
+      "name_ru": "Договор клинка",
+      "class": "warlock",
+      "description": "As a Bonus Action, you can conjure a pact weapon in your hand—a Simple or Martial Melee weapon of your choice with which you bond—or create a bond with a magic weapon you touch; you can't bond with a magic weapon if someone else is attuned to it or another Warlock is bonded with it. Until the bond ends, you have proficiency with the weapon, and you can use it as a Spellcasting Focus.\n\nWhenever you attack with the bonded weapon, you can use your Charisma modifier for the attack and damage rolls instead of using Strength or Dexterity; and you can cause the weapon to deal Necrotic, Psychic, or Radiant damage or its normal damage type.\n\nYour bond with the weapon ends if you use this feature's Bonus Action again, if the weapon is more than 5 feet away from you for 1 minute or more, or if you die. A conjured weapon disappears when the bond ends.",
+      "min_level": 1
+    },
+    {
+      "id": "pact-of-the-chain",
+      "name": "Pact of the Chain",
+      "name_ru": "Договор цепи",
+      "class": "warlock",
+      "description": "You learn the *Find Familiar* spell and can cast it as a Magic action without expending a spell slot.\n\nWhen you cast the spell, you choose one of the normal forms for your familiar or one of the following special forms: **Imp, Pseudodragon, Quasit, Skeleton, Sphinx of Wonder, Sprite,** or **Venomous Snake** (see \"Monsters\" for the familiar's stat block).\n\nAdditionally, when you take the Attack action, you can forgo one of your own attacks to allow your familiar to make one attack of its own with its Reaction.",
+      "min_level": 1
+    },
+    {
+      "id": "pact-of-the-tome",
+      "name": "Pact of the Tome",
+      "name_ru": "Договор гримуара",
+      "class": "warlock",
+      "description": "Stitching together strands of shadow, you conjure forth a book in your hand at the end of a Short or Long Rest. This *Book of Shadows* (you determine its appearance) contains eldritch magic that only you can access, granting you the benefits below. The book disappears if you conjure another book with this feature or if you die.\n\n**Cantrips and Rituals.** When the book appears, choose three cantrips, and choose two level 1 spells that have the Ritual tag. The spells can be from any class's spell list, and they must be spells you don't already have prepared. While the book is on your person, you have the chosen spells prepared, and they function as Warlock spells for you.\n\n**Spellcasting Focus.** You can use the book as a Spellcasting Focus.",
+      "min_level": 1
+    },
+    {
+      "id": "repelling-blast",
+      "name": "Repelling Blast",
+      "name_ru": "Отталкивающий заряд",
+      "class": "warlock",
+      "description": "Choose one of your known Warlock cantrips that requires an attack roll. When you hit a Large or smaller creature with that cantrip, you can push the creature up to 10 feet straight away from you.\n\n**Repeatable.** You can gain this invocation more than once. Each time you do so, choose a different eligible cantrip.",
+      "min_level": 2,
+      "prerequisite": "Level 2+ Warlock, a Warlock Cantrip That Deals Damage via an Attack Roll",
+      "repeatable": true
+    },
+    {
+      "id": "thirsting-blade",
+      "name": "Thirsting Blade",
+      "name_ru": "Жаждущий клинок",
+      "class": "warlock",
+      "description": "You gain the Extra Attack feature for your pact weapon only. With that feature, you can attack twice with the weapon instead of once when you take the Attack action on your turn.",
+      "min_level": 5,
+      "prerequisite": "Level 5+ Warlock, Pact of the Blade Invocation"
+    },
+    {
+      "id": "visions-of-distant-realms",
+      "name": "Visions of Distant Realms",
+      "name_ru": "Видения дальних земель",
+      "class": "warlock",
+      "description": "You can cast *Arcane Eye* without expending a spell slot.",
+      "min_level": 9,
+      "prerequisite": "Level 9+ Warlock"
+    },
+    {
+      "id": "whispers-of-the-grave",
+      "name": "Whispers of the Grave",
+      "name_ru": "Могильный шёпот",
+      "class": "warlock",
+      "description": "You can cast *Speak with Dead* without expending a spell slot.",
+      "min_level": 7,
+      "prerequisite": "Level 7+ Warlock"
+    },
+    {
+      "id": "witch-sight",
+      "name": "Witch Sight",
+      "name_ru": "Ведьмачий взор",
+      "class": "warlock",
+      "description": "You have Truesight with a range of 30 feet.",
+      "min_level": 15,
+      "prerequisite": "Level 15+ Warlock"
+    }
+  ],
+  "elemental-fury": [
+    {
+      "id": "potent-spellcasting",
+      "name": "Potent Spellcasting",
+      "name_ru": "Мощные заклинания",
+      "class": "druid"
+    },
+    {
+      "id": "primal-strike",
+      "name": "Primal Strike",
+      "name_ru": "Природный удар",
+      "class": "druid"
+    }
+  ],
+  "maneuvers": [
+    {
+      "id": "evasive-footwork",
+      "name": "Evasive Footwork",
+      "name_ru": "Активное уклонение",
+      "class": "fighter",
+      "subclass": "battle-master"
+    },
+    {
+      "id": "lunging-attack",
+      "name": "Lunging Attack",
+      "name_ru": "Атака с выпадом",
+      "class": "fighter",
+      "subclass": "battle-master"
+    },
+    {
+      "id": "maneuvering-attack",
+      "name": "Maneuvering Attack",
+      "name_ru": "Атака с манёвром",
+      "class": "fighter",
+      "subclass": "battle-master"
+    },
+    {
+      "id": "menacing-attack",
+      "name": "Menacing Attack",
+      "name_ru": "Атака с угрозой",
+      "class": "fighter",
+      "subclass": "battle-master"
+    },
+    {
+      "id": "feinting-attack",
+      "name": "Feinting Attack",
+      "name_ru": "Атака с финтом",
+      "class": "fighter",
+      "subclass": "battle-master"
+    },
+    {
+      "id": "ambush",
+      "name": "Ambush",
+      "name_ru": "Засада",
+      "class": "fighter",
+      "subclass": "battle-master"
+    },
+    {
+      "id": "commanding-presence",
+      "name": "Commanding Presence",
+      "name_ru": "Командирский напор",
+      "class": "fighter",
+      "subclass": "battle-master"
+    },
+    {
+      "id": "disarming-attack",
+      "name": "Disarming Attack",
+      "name_ru": "Обезоруживающая атака",
+      "class": "fighter",
+      "subclass": "battle-master"
+    },
+    {
+      "id": "trip-attack",
+      "name": "Trip Attack",
+      "name_ru": "Опрокидывающая атака",
+      "class": "fighter",
+      "subclass": "battle-master"
+    },
+    {
+      "id": "riposte",
+      "name": "Riposte",
+      "name_ru": "Ответный удар",
+      "class": "fighter",
+      "subclass": "battle-master"
+    },
+    {
+      "id": "distracting-strike",
+      "name": "Distracting Strike",
+      "name_ru": "Отвлекающий удар",
+      "class": "fighter",
+      "subclass": "battle-master"
+    },
+    {
+      "id": "parry",
+      "name": "Parry",
+      "name_ru": "Парирование",
+      "class": "fighter",
+      "subclass": "battle-master"
+    },
+    {
+      "id": "bait-and-switch",
+      "name": "Bait and Switch",
+      "name_ru": "Подмена",
+      "class": "fighter",
+      "subclass": "battle-master"
+    },
+    {
+      "id": "goading-attack",
+      "name": "Goading Attack",
+      "name_ru": "Провоцирующая атака",
+      "class": "fighter",
+      "subclass": "battle-master"
+    },
+    {
+      "id": "sweeping-attack",
+      "name": "Sweeping Attack",
+      "name_ru": "Рассекающая атака",
+      "class": "fighter",
+      "subclass": "battle-master"
+    },
+    {
+      "id": "rally",
+      "name": "Rally",
+      "name_ru": "Сплочение",
+      "class": "fighter",
+      "subclass": "battle-master"
+    },
+    {
+      "id": "tactical-assessment",
+      "name": "Tactical Assessment",
+      "name_ru": "Тактическая оценка",
+      "class": "fighter",
+      "subclass": "battle-master"
+    },
+    {
+      "id": "pushing-attack",
+      "name": "Pushing Attack",
+      "name_ru": "Толкающая атака",
+      "class": "fighter",
+      "subclass": "battle-master"
+    },
+    {
+      "id": "precision-attack",
+      "name": "Precision Attack",
+      "name_ru": "Точная атака",
+      "class": "fighter",
+      "subclass": "battle-master"
+    },
+    {
+      "id": "commanders-strike",
+      "name": "Commander's Strike",
+      "name_ru": "Удар командующего",
+      "class": "fighter",
+      "subclass": "battle-master"
+    }
+  ],
+  "metamagic": [
+    {
+      "id": "careful-spell",
+      "name": "Careful Spell",
+      "name_ru": "Аккуратное заклинание",
+      "class": "sorcerer",
+      "cost": "1 Sorcery Point",
+      "description": "When you cast a spell that forces other creatures to make a saving throw, you can protect some of those creatures from the spell's full force. To do so, spend 1 Sorcery Point and choose a number of those creatures up to your Charisma modifier (minimum of one creature). A chosen creature automatically succeeds on its saving throw against the spell, and it takes no damage if it would normally take half damage on a successful save."
+    },
+    {
+      "id": "distant-spell",
+      "name": "Distant Spell",
+      "name_ru": "Далёкое заклинание",
+      "class": "sorcerer",
+      "cost": "1 Sorcery Point",
+      "description": "When you cast a spell that has a range of at least 5 feet, you can spend 1 Sorcery Point to double the spell's range. Or when you cast a spell that has a range of Touch, you can spend 1 Sorcery Point to make the spell's range 30 feet."
+    },
+    {
+      "id": "empowered-spell",
+      "name": "Empowered Spell",
+      "name_ru": "Усиленное заклинание",
+      "class": "sorcerer",
+      "cost": "1 Sorcery Point",
+      "description": "When you roll damage for a spell, you can spend 1 Sorcery Point to reroll a number of the damage dice up to your Charisma modifier (minimum of one), and you must use the new rolls. You can use Empowered Spell even if you've already used a different Metamagic option during the casting of the spell."
+    },
+    {
+      "id": "extended-spell",
+      "name": "Extended Spell",
+      "name_ru": "Продлённое заклинание",
+      "class": "sorcerer",
+      "cost": "1 Sorcery Point",
+      "description": "When you cast a spell that has a duration of 1 minute or longer, you can spend 1 Sorcery Point to double its duration to a maximum duration of 24 hours. If the affected spell requires Concentration, you have Advantage on any saving throw you make to maintain that Concentration."
+    },
+    {
+      "id": "heightened-spell",
+      "name": "Heightened Spell",
+      "name_ru": "Непреодолимое заклинание",
+      "class": "sorcerer",
+      "cost": "2 Sorcery Points",
+      "description": "When you cast a spell that forces a creature to make a saving throw, you can spend 2 Sorcery Points to give one target of the spell Disadvantage on saves against the spell."
+    },
+    {
+      "id": "quickened-spell",
+      "name": "Quickened Spell",
+      "name_ru": "Ускоренное заклинание",
+      "class": "sorcerer",
+      "cost": "2 Sorcery Points",
+      "description": "When you cast a spell that has a casting time of an action, you can spend 2 Sorcery Points to change the casting time to a Bonus Action for this casting. You can't modify a spell in this way if you've already cast a level 1+ spell on the current turn, nor can you cast a level 1+ spell on this turn after modifying a spell in this way."
+    },
+    {
+      "id": "seeking-spell",
+      "name": "Seeking Spell",
+      "name_ru": "Ищущее заклинание",
+      "class": "sorcerer",
+      "cost": "1 Sorcery Point",
+      "description": "If you make an attack roll for a spell and miss, you can spend 1 Sorcery Point to reroll the d20, and you must use the new roll. You can use Seeking Spell even if you've already used a different Metamagic option during the casting of the spell.\n\n Subtle Spell\n\n*Cost: 1 Sorcery Point*\n\nWhen you cast a spell, you can spend 1 Sorcery Point to cast it without any Verbal, Somatic, or Material components, except Material components that are consumed by the spell or that have a cost specified in the spell."
+    },
+    {
+      "id": "subtle-spell",
+      "name": "Subtle Spell",
+      "name_ru": "Неуловимое заклинание",
+      "class": "sorcerer",
+      "cost": "1 Sorcery Point",
+      "description": "When you cast a spell, you can spend 1 Sorcery Point to cast it without any Verbal, Somatic, or Material components, except Material components that are consumed by the spell or that have a cost specified in the spell."
+    },
+    {
+      "id": "transmuted-spell",
+      "name": "Transmuted Spell",
+      "name_ru": "Преобразованное заклинание",
+      "class": "sorcerer",
+      "cost": "1 Sorcery Point",
+      "description": "When you cast a spell that deals a type of damage from the following list, you can spend 1 Sorcery Point to change that damage type to one of the other listed types: Acid, Cold, Fire, Lightning, Poison, Thunder."
+    },
+    {
+      "id": "twinned-spell",
+      "name": "Twinned Spell",
+      "name_ru": "Удвоенное заклинание",
+      "class": "sorcerer",
+      "cost": "1 Sorcery Point",
+      "description": "When you cast a spell, such as *Charm Person*, that can be cast with a higher-level spell slot to target an additional creature, you can spend 1 Sorcery Point to increase the spell's effective level by 1."
+    }
+  ],
+  "primal-order": [
+    {
+      "id": "magician",
+      "name": "Magician",
+      "name_ru": "Ведун",
+      "class": "druid",
+      "description": "You know one extra cantrip from the Druid spell list. In addition, your mystical connection to nature gives you a bonus to your Intelligence (Arcana or Nature) checks. The bonus equals your Wisdom modifier (minimum bonus of +1).",
+      "grants": {
+        "extra_cantrips": 1,
+        "skill_check_bonus": {
+          "bonus": "wis_mod",
+          "min": 1,
+          "skills": [
+            "arcana",
+            "nature"
+          ]
+        }
+      }
+    },
+    {
+      "id": "warden",
+      "name": "Warden",
+      "name_ru": "Страж",
+      "class": "druid",
+      "description": "Trained for battle, you gain proficiency with Martial weapons and training with Medium armor.",
+      "grants": {
+        "armor_training": [
+          "medium"
+        ],
+        "weapon_proficiencies": [
+          "martial"
+        ]
+      }
+    }
+  ],
+  "tinkers-magic-items": [
+    {
+      "name": "Ball Bearings",
+      "item": "ball-bearings"
+    },
+    {
+      "name": "Flask",
+      "item": "flask"
+    },
+    {
+      "name": "Pouch",
+      "item": "pouch"
+    },
+    {
+      "name": "Basket",
+      "item": "basket"
+    },
+    {
+      "name": "Grappling Hook",
+      "item": "grappling-hook"
+    },
+    {
+      "name": "Rope",
+      "item": "rope"
+    },
+    {
+      "name": "Bedroll",
+      "item": "bedroll"
+    },
+    {
+      "name": "Hunting Trap",
+      "item": "hunting-trap"
+    },
+    {
+      "name": "Sack",
+      "item": "sack"
+    },
+    {
+      "name": "Bell",
+      "item": "bell"
+    },
+    {
+      "name": "Jug",
+      "item": "jug"
+    },
+    {
+      "name": "Shovel",
+      "item": "shovel"
+    },
+    {
+      "name": "Blanket",
+      "item": "blanket"
+    },
+    {
+      "name": "Lamp",
+      "item": "lamp"
+    },
+    {
+      "name": "Spikes, Iron",
+      "item": "spikes-iron"
+    },
+    {
+      "name": "Block and Tackle",
+      "item": "block-and-tackle"
+    },
+    {
+      "name": "Manacles",
+      "item": "manacles"
+    },
+    {
+      "name": "String",
+      "item": "string"
+    },
+    {
+      "name": "Bottle, Glass",
+      "item": "bottle-glass"
+    },
+    {
+      "name": "Net",
+      "item": "net"
+    },
+    {
+      "name": "Tinderbox",
+      "item": "tinderbox"
+    },
+    {
+      "name": "Bucket",
+      "item": "bucket"
+    },
+    {
+      "name": "Oil",
+      "item": "oil"
+    },
+    {
+      "name": "Torch",
+      "item": "torch"
+    },
+    {
+      "name": "Caltrops",
+      "item": "caltrops"
+    },
+    {
+      "name": "Paper",
+      "item": "paper"
+    },
+    {
+      "name": "Vial",
+      "item": "vial"
+    },
+    {
+      "name": "Candle",
+      "item": "candle"
+    },
+    {
+      "name": "Parchment",
+      "item": "parchment"
+    },
+    {
+      "name": "Crowbar",
+      "item": "crowbar"
+    },
+    {
+      "name": "Pole",
+      "item": "pole"
+    }
+  ]
+}

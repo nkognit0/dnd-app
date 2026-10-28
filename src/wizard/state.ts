@@ -42,9 +42,11 @@ export interface WizardState {
     speciesId: string | null
     optionId: string | null
     size: string | null
-    skill: string | null
+    skills: string[]
+    tool: string | null
     feat: string | null
     spellAbility: Ability | null
+    resistance: string | null
   }
   roll: { rolls: Roll[] }
   abilities: {
@@ -102,7 +104,7 @@ export function initialStep<K extends StepKey>(key: K): WizardState[K] {
   const init: { [P in StepKey]: () => WizardState[P] } = {
     cls: () => ({ classId: null }),
     background: () => ({ backgroundId: null, toolChoice: [] }),
-    species: () => ({ speciesId: null, optionId: null, size: null, skill: null, feat: null, spellAbility: null }),
+    species: () => ({ speciesId: null, optionId: null, size: null, skills: [], tool: null, feat: null, spellAbility: null, resistance: null }),
     roll: () => ({ rolls: [] }),
     abilities: () => ({ assign: {}, mode: null, plus2: null, plus1: null }),
     feats: () => ({ background: emptyFeat(), species: emptyFeat() }),

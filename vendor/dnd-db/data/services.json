@@ -1,0 +1,229 @@
+{
+  "food_drink_lodging": [
+    [
+      "Item",
+      "Cost"
+    ],
+    [
+      "Ale (mug)",
+      "4 CP"
+    ],
+    [
+      "Bread (loaf)",
+      "2 CP"
+    ],
+    [
+      "Cheese (wedge)",
+      "1 SP"
+    ],
+    [
+      "Inn Stay per Day"
+    ],
+    [
+      "Squalid",
+      "7 CP"
+    ],
+    [
+      "Poor",
+      "1 SP"
+    ],
+    [
+      "Modest",
+      "5 SP"
+    ],
+    [
+      "Comfortable",
+      "8 SP"
+    ],
+    [
+      "Wealthy",
+      "2 GP"
+    ],
+    [
+      "Aristocratic",
+      "4 GP"
+    ],
+    [
+      "Meal"
+    ],
+    [
+      "Squalid",
+      "1 CP"
+    ],
+    [
+      "Poor",
+      "2 CP"
+    ],
+    [
+      "Modest",
+      "1 SP"
+    ],
+    [
+      "Comfortable",
+      "2 SP"
+    ],
+    [
+      "Wealthy",
+      "3 SP"
+    ],
+    [
+      "Aristocratic",
+      "6 SP"
+    ],
+    [
+      "Wine (bottle)"
+    ],
+    [
+      "Common",
+      "2 SP"
+    ],
+    [
+      "Fine",
+      "10 GP"
+    ]
+  ],
+  "hirelings": [
+    [
+      "Service",
+      "Cost"
+    ],
+    [
+      "Skilled hireling",
+      "2 GP per day"
+    ],
+    [
+      "Untrained hireling",
+      "2 SP per day"
+    ],
+    [
+      "Messenger",
+      "2 CP per mile"
+    ]
+  ],
+  "spell_scroll_costs": [
+    [
+      "Spell Level",
+      "Time",
+      "Cost"
+    ],
+    [
+      "Cantrip",
+      "1 day",
+      "15 GP"
+    ],
+    [
+      "1",
+      "1 day",
+      "25 GP"
+    ],
+    [
+      "2",
+      "3 days",
+      "100 GP"
+    ],
+    [
+      "3",
+      "5 days",
+      "150 GP"
+    ],
+    [
+      "4",
+      "10 days",
+      "1,000 GP"
+    ],
+    [
+      "5",
+      "25 days",
+      "1,500 GP"
+    ],
+    [
+      "6",
+      "40 days",
+      "10,000 GP"
+    ],
+    [
+      "7",
+      "50 days",
+      "12,500 GP"
+    ],
+    [
+      "8",
+      "60 days",
+      "15,000 GP"
+    ],
+    [
+      "9",
+      "120 days",
+      "50,000 GP"
+    ]
+  ],
+  "spellcasting_services": [
+    [
+      "Spell Level",
+      "Availability",
+      "Cost"
+    ],
+    [
+      "Cantrip",
+      "Village, town, or city",
+      "30 GP"
+    ],
+    [
+      "1",
+      "Village, town, or city",
+      "50 GP"
+    ],
+    [
+      "2",
+      "Village, town, or city",
+      "200 GP"
+    ],
+    [
+      "3",
+      "Town or city only",
+      "300 GP"
+    ],
+    [
+      "4–5",
+      "Town or city only",
+      "2,000 GP"
+    ],
+    [
+      "6–8",
+      "City only",
+      "20,000 GP"
+    ],
+    [
+      "9",
+      "City only",
+      "100,000 GP"
+    ]
+  ],
+  "stabling": [
+    "Stabling per day",
+    "—",
+    "5 SP"
+  ],
+  "travel": [
+    [
+      "Service",
+      "Cost"
+    ],
+    [
+      "Coach ride between towns",
+      "3 CP per mile"
+    ],
+    [
+      "Coach ride within a city",
+      "1 CP per mile"
+    ],
+    [
+      "Road or gate toll",
+      "1 CP"
+    ],
+    [
+      "Ship's passage",
+      "1 SP per mile"
+    ]
+  ]
+}

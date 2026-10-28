@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync } from 'node:fs'
+import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
 import type { Plugin } from 'vite'
@@ -8,10 +8,24 @@ const here = (p: string) => fileURLToPath(new URL(p, import.meta.url))
 
 const readJson = (file: string) => JSON.parse(readFileSync(file, 'utf8'))
 
+// The sheet sources and the rules data come from the folders next to this one, so edits there
+// show up here at once. Where they are missing (GitHub Actions) the copies in vendor/ are used:
+// scripts/vendor.mjs refreshes them before a commit.
+const SHEET = existsSync(here('../dnd-sheet/src')) ? here('../dnd-sheet') : here('vendor/dnd-sheet')
+const DATA = existsSync(here('../dnd-db/data')) ? here('../dnd-db/data') : here('vendor/dnd-db/data')
+
 function licenseText(dir: string): string {
   const file = readdirSync(dir).find((f) => /^licen[cs]e/i.test(f))
   return file ? readFileSync(`${dir}/${file}`, 'utf8').trim() : ''
 }
+
+// the item icons of the inventory (public/icons/items, copied by scripts/item-icons.mjs)
+const ITEM_ICONS = [
+  'Иконки предметов: D&D Item Icons by Gwillewyn (https://github.com/Gwillewyn/dnd-item-icons-by-gwill),',
+  'основаны на иконках game-icons.net (авторы Lorc, Delapouite и другие, https://game-icons.net/).',
+  'Лицензия Creative Commons Attribution 3.0 Unported: https://creativecommons.org/licenses/by/3.0/',
+  'Иконки использованы без изменений; файлы переименованы по id предметов.'
+].join('\n')
 
 // licenses.txt next to the built page: the SRD credit, the sheet's license
 // and the license of every npm package that ended up in the bundle
@@ -37,8 +51,9 @@ function licenses(): Plugin {
       }
       const parts = [
         'Конструктор персонажа D&D 2024 — авторство и лицензии',
-        `${readJson(here('../dnd-db/data/meta.json')).attribution}\nМатериалы SRD переведены на русский и сокращены.`,
-        `Лист персонажа основан на dnd-character-sheets (https://github.com/DarylBuckle/dnd-character-sheets)\n\n${licenseText(here('../dnd-sheet'))}`,
+        `${readJson(`${DATA}/meta.json`).attribution}\nМатериалы SRD переведены на русский и сокращены.`,
+        `Лист персонажа основан на dnd-character-sheets (https://github.com/DarylBuckle/dnd-character-sheets)\n\n${licenseText(SHEET)}`,
+        ITEM_ICONS,
         ...[...packages.keys()].sort().map((key) => packages.get(key)!)
       ]
       this.emitFile({ type: 'asset', fileName: 'licenses.txt', source: parts.join(`\n\n${'='.repeat(72)}\n\n`) + '\n' })
@@ -46,16 +61,14 @@ function licenses(): Plugin {
   }
 }
 
-// The sheet components come straight from ../dnd-sheet/src and the rules data
-// from ../dnd-db/data, so edits there show up here without copying.
 export default defineConfig({
   // relative paths: the build works from any folder, e.g. https://<login>.github.io/dnd-app/
   base: './',
   plugins: [react(), licenses()],
   resolve: {
     alias: {
-      '@data': here('../dnd-db/data'),
-      'dnd-sheet': here('../dnd-sheet/src/index.tsx')
+      '@data': DATA,
+      'dnd-sheet': `${SHEET}/src/index.tsx`
     },
     // one React for the app and the sheet sources
     dedupe: ['react', 'react-dom']

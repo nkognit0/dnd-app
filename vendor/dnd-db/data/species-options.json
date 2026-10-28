@@ -1,0 +1,541 @@
+[
+  {
+    "id": "black",
+    "name": "Black",
+    "name_ru": "Чёрный дракон",
+    "source": "srd-5.2.1",
+    "group": "draconic-ancestry",
+    "species": "dragonborn",
+    "resistances": [
+      "acid"
+    ],
+    "breath_weapon_damage_type": "acid",
+    "spells": []
+  },
+  {
+    "id": "blue",
+    "name": "Blue",
+    "name_ru": "Синий дракон",
+    "source": "srd-5.2.1",
+    "group": "draconic-ancestry",
+    "species": "dragonborn",
+    "resistances": [
+      "lightning"
+    ],
+    "breath_weapon_damage_type": "lightning",
+    "spells": []
+  },
+  {
+    "id": "brass",
+    "name": "Brass",
+    "name_ru": "Латунный дракон",
+    "source": "srd-5.2.1",
+    "group": "draconic-ancestry",
+    "species": "dragonborn",
+    "resistances": [
+      "fire"
+    ],
+    "breath_weapon_damage_type": "fire",
+    "spells": []
+  },
+  {
+    "id": "bronze",
+    "name": "Bronze",
+    "name_ru": "Бронзовый дракон",
+    "source": "srd-5.2.1",
+    "group": "draconic-ancestry",
+    "species": "dragonborn",
+    "resistances": [
+      "lightning"
+    ],
+    "breath_weapon_damage_type": "lightning",
+    "spells": []
+  },
+  {
+    "id": "copper",
+    "name": "Copper",
+    "name_ru": "Медный дракон",
+    "source": "srd-5.2.1",
+    "group": "draconic-ancestry",
+    "species": "dragonborn",
+    "resistances": [
+      "acid"
+    ],
+    "breath_weapon_damage_type": "acid",
+    "spells": []
+  },
+  {
+    "id": "gold",
+    "name": "Gold",
+    "name_ru": "Золотой дракон",
+    "source": "srd-5.2.1",
+    "group": "draconic-ancestry",
+    "species": "dragonborn",
+    "resistances": [
+      "fire"
+    ],
+    "breath_weapon_damage_type": "fire",
+    "spells": []
+  },
+  {
+    "id": "green",
+    "name": "Green",
+    "name_ru": "Зелёный дракон",
+    "source": "srd-5.2.1",
+    "group": "draconic-ancestry",
+    "species": "dragonborn",
+    "resistances": [
+      "poison"
+    ],
+    "breath_weapon_damage_type": "poison",
+    "spells": []
+  },
+  {
+    "id": "red",
+    "name": "Red",
+    "name_ru": "Красный дракон",
+    "source": "srd-5.2.1",
+    "group": "draconic-ancestry",
+    "species": "dragonborn",
+    "resistances": [
+      "fire"
+    ],
+    "breath_weapon_damage_type": "fire",
+    "spells": []
+  },
+  {
+    "id": "silver",
+    "name": "Silver",
+    "name_ru": "Серебряный дракон",
+    "source": "srd-5.2.1",
+    "group": "draconic-ancestry",
+    "species": "dragonborn",
+    "resistances": [
+      "cold"
+    ],
+    "breath_weapon_damage_type": "cold",
+    "spells": []
+  },
+  {
+    "id": "white",
+    "name": "White",
+    "name_ru": "Белый дракон",
+    "source": "srd-5.2.1",
+    "group": "draconic-ancestry",
+    "species": "dragonborn",
+    "resistances": [
+      "cold"
+    ],
+    "breath_weapon_damage_type": "cold",
+    "spells": []
+  },
+  {
+    "id": "drow",
+    "name": "Drow",
+    "name_ru": "Дроу",
+    "source": "srd-5.2.1",
+    "group": "elven-lineage",
+    "species": "elf",
+    "darkvision": 120,
+    "resistances": [],
+    "levels": {
+      "1": "The range of your Darkvision increases to 120 feet. You also know the Dancing Lights cantrip.",
+      "3": "Faerie Fire",
+      "5": "Darkness"
+    },
+    "spells": [
+      {
+        "character_level": 1,
+        "spell": "dancing-lights"
+      },
+      {
+        "character_level": 3,
+        "spell": "faerie-fire"
+      },
+      {
+        "character_level": 5,
+        "spell": "darkness"
+      }
+    ]
+  },
+  {
+    "id": "high-elf",
+    "name": "High Elf",
+    "name_ru": "Высший эльф",
+    "source": "srd-5.2.1",
+    "group": "elven-lineage",
+    "species": "elf",
+    "resistances": [],
+    "levels": {
+      "1": "You know the Prestidigitation cantrip. Whenever you finish a Long Rest, you can replace that cantrip with a different cantrip from the Wizard spell list.",
+      "3": "Detect Magic",
+      "5": "Misty Step"
+    },
+    "spells": [
+      {
+        "character_level": 1,
+        "note": "can be replaced by another Wizard cantrip after a Long Rest",
+        "spell": "prestidigitation"
+      },
+      {
+        "character_level": 3,
+        "spell": "detect-magic"
+      },
+      {
+        "character_level": 5,
+        "spell": "misty-step"
+      }
+    ],
+    "traits": [
+      {
+        "name": "High Elf: Cantrip Versatility",
+        "description": "You know the Prestidigitation cantrip. Whenever you finish a Long Rest, you can replace that cantrip with a different cantrip from the Wizard spell list."
+      }
+    ]
+  },
+  {
+    "id": "wood-elf",
+    "name": "Wood Elf",
+    "name_ru": "Лесной эльф",
+    "source": "srd-5.2.1",
+    "group": "elven-lineage",
+    "species": "elf",
+    "speed": 35,
+    "resistances": [],
+    "levels": {
+      "1": "Your Speed increases to 35 feet. You also know the Druidcraft cantrip.",
+      "3": "Longstrider",
+      "5": "Pass without Trace"
+    },
+    "spells": [
+      {
+        "character_level": 3,
+        "spell": "longstrider"
+      },
+      {
+        "character_level": 5,
+        "spell": "pass-without-trace"
+      }
+    ],
+    "traits": [
+      {
+        "name": "Wood Elf: Movement Speed Increase",
+        "description": "Your Movement Speed increases to 35 feet."
+      }
+    ]
+  },
+  {
+    "id": "forest-gnome",
+    "name": "Forest Gnome",
+    "name_ru": "Лесной гном",
+    "source": "srd-5.2.1",
+    "group": "gnomish-lineage",
+    "species": "gnome",
+    "resistances": [],
+    "spells": [
+      {
+        "character_level": 1,
+        "spell": "minor-illusion"
+      },
+      {
+        "character_level": 1,
+        "spell": "speak-with-animals",
+        "uses": "proficiency_bonus per long rest"
+      }
+    ],
+    "traits": [
+      {
+        "name": "Gnomish Lineage: Forest Gnome",
+        "description": "You always have the Speak with Animals spell prepared. You can cast it without a spell slot a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest. You can also use any spell slots you have to cast the spell."
+      }
+    ]
+  },
+  {
+    "id": "rock-gnome",
+    "name": "Rock Gnome",
+    "name_ru": "Скальный гном",
+    "source": "srd-5.2.1",
+    "group": "gnomish-lineage",
+    "species": "gnome",
+    "resistances": [],
+    "spells": [
+      {
+        "character_level": 1,
+        "spell": "mending"
+      },
+      {
+        "character_level": 1,
+        "spell": "prestidigitation"
+      }
+    ],
+    "traits": [
+      {
+        "name": "Gnomish Lineage: Rock Gnome",
+        "description": "You know the Prestidigitation cantrip. In addition, you can spend 10 minutes casting Prestidigitation to create a Tiny clockwork device (AC 5, 1 HP), such as a toy, fire starter, or music box. When you create the device, you determine its function by choosing one effect from Prestidigitation; the device produces that effect whenever you or another creature takes a Bonus Action to activate it with a touch. If the chosen effect has options within it, you choose one of those options for the device when you create it. For example, if you choose the spell’s ignite-extinguish effect, you determine whether the device ignites or extinguishes fire; the device doesn’t do both. You can have three such devices in existence at a time, and each falls apart 8 hours after its creation or when you dismantle it with a touch as a Utilize action."
+      }
+    ]
+  },
+  {
+    "id": "clouds-jaunt",
+    "name": "Cloud's Jaunt",
+    "name_ru": "Облачный шаг (облачный великан)",
+    "source": "srd-5.2.1",
+    "group": "giant-ancestry",
+    "species": "goliath",
+    "resistances": [],
+    "spells": [],
+    "traits": [
+      {
+        "name": "Giant Ancestry: Cloud's Jaunt",
+        "description": "As a Bonus Action, you magically teleport up to 30 feet to an unoccupied space you can see."
+      }
+    ]
+  },
+  {
+    "id": "fires-burn",
+    "name": "Fire's Burn",
+    "name_ru": "Огненный ожог (огненный великан)",
+    "source": "srd-5.2.1",
+    "group": "giant-ancestry",
+    "species": "goliath",
+    "resistances": [],
+    "spells": [],
+    "traits": [
+      {
+        "name": "Giant Ancestry: Fire's Burn",
+        "description": "When you hit a target with an attack roll and deal damage to it, you can also deal 1d10 Fire damage to that target."
+      }
+    ]
+  },
+  {
+    "id": "frosts-chill",
+    "name": "Frost's Chill",
+    "name_ru": "Ледяной холод (ледяной великан)",
+    "source": "srd-5.2.1",
+    "group": "giant-ancestry",
+    "species": "goliath",
+    "resistances": [],
+    "spells": [],
+    "traits": [
+      {
+        "name": "Giant Ancestry: Frost's Chill",
+        "description": "When you hit a target with an attack roll and deal damage to it, you can also deal 1d6 Cold damage to that target and reduce its Speed by 10 feet until the start of your next turn."
+      }
+    ]
+  },
+  {
+    "id": "hills-tumble",
+    "name": "Hill's Tumble",
+    "name_ru": "Холмовое падение (холмовой великан)",
+    "source": "srd-5.2.1",
+    "group": "giant-ancestry",
+    "species": "goliath",
+    "resistances": [],
+    "spells": [],
+    "traits": [
+      {
+        "name": "Giant Ancestry: Hill's Tumble",
+        "description": "When you hit a Large or smaller creature with an attack roll and deal damage to it, you can give that target the Prone condition."
+      }
+    ]
+  },
+  {
+    "id": "stones-endurance",
+    "name": "Stone's Endurance",
+    "name_ru": "Каменная стойкость (каменный великан)",
+    "source": "srd-5.2.1",
+    "group": "giant-ancestry",
+    "species": "goliath",
+    "resistances": [],
+    "spells": [],
+    "traits": [
+      {
+        "name": "Giant Ancestry: Stone's Endurance",
+        "description": "When you take damage, you can take a Reaction to roll 1d12. Add your Constitution modifier to the number rolled and reduce the damage by that total."
+      }
+    ]
+  },
+  {
+    "id": "storms-thunder",
+    "name": "Storm's Thunder",
+    "name_ru": "Штормовой гром (штормовой великан)",
+    "source": "srd-5.2.1",
+    "group": "giant-ancestry",
+    "species": "goliath",
+    "resistances": [],
+    "spells": [],
+    "traits": [
+      {
+        "name": "Giant Ancestry: Storm's Thunder",
+        "description": "When you take damage from a creature within 60 feet of you, you can take a Reaction to deal 1d8 Thunder damage to that creature."
+      }
+    ]
+  },
+  {
+    "id": "abyssal",
+    "name": "Abyssal",
+    "name_ru": "Наследие Бездны",
+    "source": "srd-5.2.1",
+    "group": "fiendish-legacy",
+    "species": "tiefling",
+    "resistances": [
+      "poison"
+    ],
+    "levels": {
+      "1": "You have Resistance to Poison damage. You also know the Poison Spray cantrip.",
+      "3": "Ray of Sickness",
+      "5": "Hold Person"
+    },
+    "spells": [
+      {
+        "character_level": 1,
+        "spell": "poison-spray"
+      },
+      {
+        "character_level": 3,
+        "spell": "ray-of-sickness"
+      },
+      {
+        "character_level": 5,
+        "spell": "hold-person"
+      }
+    ]
+  },
+  {
+    "id": "chthonic",
+    "name": "Chthonic",
+    "name_ru": "Хтоническое наследие",
+    "source": "srd-5.2.1",
+    "group": "fiendish-legacy",
+    "species": "tiefling",
+    "resistances": [
+      "necrotic"
+    ],
+    "levels": {
+      "1": "You have Resistance to Necrotic damage. You also know the Chill Touch cantrip.",
+      "3": "False Life",
+      "5": "Ray of Enfeeblement"
+    },
+    "spells": [
+      {
+        "character_level": 1,
+        "spell": "chill-touch"
+      },
+      {
+        "character_level": 3,
+        "spell": "false-life"
+      },
+      {
+        "character_level": 5,
+        "spell": "ray-of-enfeeblement"
+      }
+    ]
+  },
+  {
+    "id": "infernal",
+    "name": "Infernal",
+    "name_ru": "Инфернальное наследие",
+    "source": "srd-5.2.1",
+    "group": "fiendish-legacy",
+    "species": "tiefling",
+    "resistances": [
+      "fire"
+    ],
+    "levels": {
+      "1": "You have Resistance to Fire damage. You also know the Fire Bolt cantrip.",
+      "3": "Hellish Rebuke",
+      "5": "Darkness"
+    },
+    "spells": [
+      {
+        "character_level": 1,
+        "spell": "fire-bolt"
+      },
+      {
+        "character_level": 3,
+        "spell": "hellish-rebuke"
+      },
+      {
+        "character_level": 5,
+        "spell": "darkness"
+      }
+    ]
+  },
+  {
+    "id": "heavenly-wings",
+    "name": "Heavenly Wings",
+    "name_ru": "Небесные крылья",
+    "source": "phb-2024",
+    "group": "celestial-revelation",
+    "species": "aasimar",
+    "character_level": 3,
+    "chosen": "each time you transform",
+    "summary": "Fly Speed equal to your Speed while transformed; extra damage is Radiant."
+  },
+  {
+    "id": "inner-radiance",
+    "name": "Inner Radiance",
+    "name_ru": "Внутреннее сияние",
+    "source": "phb-2024",
+    "group": "celestial-revelation",
+    "species": "aasimar",
+    "character_level": 3,
+    "chosen": "each time you transform",
+    "summary": "Shed Bright Light 10 ft; at the end of each of your turns creatures within 10 ft take Radiant damage equal to your Proficiency Bonus."
+  },
+  {
+    "id": "necrotic-shroud",
+    "name": "Necrotic Shroud",
+    "name_ru": "Некротический саван",
+    "source": "phb-2024",
+    "group": "celestial-revelation",
+    "species": "aasimar",
+    "character_level": 3,
+    "chosen": "each time you transform",
+    "summary": "Non-allies within 10 ft must succeed on a Charisma save or have the Frightened condition until the end of your next turn; extra damage is Necrotic."
+  },
+  {
+    "id": "beasthide",
+    "name": "Beasthide",
+    "name_ru": "Звериная шкура",
+    "source": "efota",
+    "group": "shifting",
+    "species": "shifter",
+    "resistances": [],
+    "spells": [],
+    "summary": "On shifting gain 1d6 extra Temporary Hit Points; +1 Armor Class while shifted."
+  },
+  {
+    "id": "longtooth",
+    "name": "Longtooth",
+    "name_ru": "Длинные зубы",
+    "source": "efota",
+    "group": "shifting",
+    "species": "shifter",
+    "resistances": [],
+    "spells": [],
+    "summary": "On shifting and as a Bonus Action on later turns while shifted, make an Unarmed Strike with your fangs; on a damaging hit it can deal Piercing damage equal to 1d6 + your Strength modifier."
+  },
+  {
+    "id": "swiftstride",
+    "name": "Swiftstride",
+    "name_ru": "Быстрая поступь",
+    "source": "efota",
+    "group": "shifting",
+    "species": "shifter",
+    "resistances": [],
+    "spells": [],
+    "summary": "Speed +10 feet while shifted; when a creature ends its turn within 5 feet of you, a Reaction moves you up to 10 feet without provoking Opportunity Attacks."
+  },
+  {
+    "id": "wildhunt",
+    "name": "Wildhunt",
+    "name_ru": "Дикая охота",
+    "source": "efota",
+    "group": "shifting",
+    "species": "shifter",
+    "resistances": [],
+    "spells": [],
+    "summary": "While shifted, Advantage on Wisdom checks, and no creature within 30 feet of you can make an attack roll with Advantage against you unless you have the Incapacitated condition."
+  }
+]

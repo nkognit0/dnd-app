@@ -232,7 +232,7 @@ export interface BackgroundData extends Named {
 
 export interface SpeciesChoice {
   id: string
-  type: 'size' | 'skill' | 'feat' | 'ability' | 'species-option'
+  type: 'size' | 'skill' | 'tool' | 'skill-or-tool' | 'feat' | 'ability' | 'resistance' | 'species-option'
   count: number
   from?: string[] | 'any'
   options_group?: string
@@ -240,6 +240,7 @@ export interface SpeciesChoice {
 }
 
 export interface SpeciesData extends Named {
+  creature_type: string
   size_options: { size: string; height: string }[]
   speed: number
   darkvision: number | null
@@ -294,6 +295,11 @@ export interface SpellData extends Named {
   range: string
   concentration: boolean
   ritual: boolean
+  casting_time: string
+  components: { verbal: boolean; somatic: boolean; material: boolean; material_text: string | null }
+  duration: string
+  description?: string | null
+  higher_level?: string | null
 }
 
 export interface EquipmentData extends Named {
@@ -302,7 +308,11 @@ export interface EquipmentData extends Named {
   categories: string[]
   cost: { amount: number; unit: string } | null
   cost_cp: number | null
+  weight_lb?: number | null
+  description?: string | null
   ammunition?: { bundle_size: number }
+  pack?: { contents: { item: string; qty: number }[] }
+  tool?: { type: string; ability: Ability; utilize: string; craft: { item: string }[] }
 }
 
 export interface WeaponData extends Named {
@@ -318,12 +328,19 @@ export interface WeaponData extends Named {
   }
   mastery: string
   mastery_classes: string[]
+  cost: { amount: number; unit: string } | null
+  weight_lb?: number | null
 }
 
 export interface ArmorData extends Named {
   type: 'light' | 'medium' | 'heavy' | 'shield'
   armor_class: { base?: number; add_dex?: boolean; dex_max?: number | null; bonus?: number }
   strength_requirement: number | null
+  stealth_disadvantage?: boolean
+  don_time?: string
+  doff_time?: string
+  cost: { amount: number; unit: string } | null
+  weight_lb?: number | null
 }
 
 interface RuNames {

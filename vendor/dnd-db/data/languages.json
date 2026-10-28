@@ -1,0 +1,174 @@
+[
+  {
+    "id": "common",
+    "name": "Common",
+    "name_ru": "Общий",
+    "source": "srd-5.2.1",
+    "origin": "Sigil",
+    "rarity": "standard",
+    "roll_d12": null
+  },
+  {
+    "id": "common-sign-language",
+    "name": "Common Sign Language",
+    "name_ru": "Общий язык жестов",
+    "source": "srd-5.2.1",
+    "origin": "Sigil",
+    "rarity": "standard",
+    "roll_d12": "1"
+  },
+  {
+    "id": "draconic",
+    "name": "Draconic",
+    "name_ru": "Драконий",
+    "source": "srd-5.2.1",
+    "origin": "Dragons",
+    "rarity": "standard",
+    "roll_d12": "2"
+  },
+  {
+    "id": "dwarvish",
+    "name": "Dwarvish",
+    "name_ru": "Дварфийский",
+    "source": "srd-5.2.1",
+    "origin": "Dwarves",
+    "rarity": "standard",
+    "roll_d12": "3-4"
+  },
+  {
+    "id": "elvish",
+    "name": "Elvish",
+    "name_ru": "Эльфийский",
+    "source": "srd-5.2.1",
+    "origin": "Elves",
+    "rarity": "standard",
+    "roll_d12": "5-6"
+  },
+  {
+    "id": "giant",
+    "name": "Giant",
+    "name_ru": "Великаний",
+    "source": "srd-5.2.1",
+    "origin": "Giants",
+    "rarity": "standard",
+    "roll_d12": "7"
+  },
+  {
+    "id": "gnomish",
+    "name": "Gnomish",
+    "name_ru": "Гномий",
+    "source": "srd-5.2.1",
+    "origin": "Gnomes",
+    "rarity": "standard",
+    "roll_d12": "8"
+  },
+  {
+    "id": "goblin",
+    "name": "Goblin",
+    "name_ru": "Гоблинский",
+    "source": "srd-5.2.1",
+    "origin": "Goblinoids",
+    "rarity": "standard",
+    "roll_d12": "9"
+  },
+  {
+    "id": "halfling",
+    "name": "Halfling",
+    "name_ru": "Полуросликов",
+    "source": "srd-5.2.1",
+    "origin": "Halflings",
+    "rarity": "standard",
+    "roll_d12": "10-11"
+  },
+  {
+    "id": "orc",
+    "name": "Orc",
+    "name_ru": "Орочий",
+    "source": "srd-5.2.1",
+    "origin": "Orcs",
+    "rarity": "standard",
+    "roll_d12": "12"
+  },
+  {
+    "id": "abyssal",
+    "name": "Abyssal",
+    "name_ru": "Язык Бездны",
+    "source": "srd-5.2.1",
+    "origin": "Demons of the Abyss",
+    "rarity": "rare",
+    "roll_d12": null
+  },
+  {
+    "id": "celestial",
+    "name": "Celestial",
+    "name_ru": "Небесный",
+    "source": "srd-5.2.1",
+    "origin": "Celestials",
+    "rarity": "rare",
+    "roll_d12": null
+  },
+  {
+    "id": "deep-speech",
+    "name": "Deep Speech",
+    "name_ru": "Глубинная речь",
+    "source": "srd-5.2.1",
+    "origin": "Aberrations",
+    "rarity": "rare",
+    "roll_d12": null
+  },
+  {
+    "id": "druidic",
+    "name": "Druidic",
+    "name_ru": "Друидический",
+    "source": "srd-5.2.1",
+    "origin": "Druidic circles",
+    "rarity": "rare",
+    "roll_d12": null
+  },
+  {
+    "id": "infernal",
+    "name": "Infernal",
+    "name_ru": "Инфернальный",
+    "source": "srd-5.2.1",
+    "origin": "Devils of the Nine Hells",
+    "rarity": "rare",
+    "roll_d12": null
+  },
+  {
+    "id": "primordial",
+    "name": "Primordial",
+    "name_ru": "Первичный",
+    "source": "srd-5.2.1",
+    "note": "Primordial includes the Aquan, Auran, Ignan, and Terran dialects. Creatures that know one of these dialects can communicate with those that know a different one.",
+    "origin": "Elementals",
+    "rarity": "rare",
+    "roll_d12": null
+  },
+  {
+    "id": "sylvan",
+    "name": "Sylvan",
+    "name_ru": "Сильван",
+    "source": "srd-5.2.1",
+    "origin": "The Feywild",
+    "rarity": "rare",
+    "roll_d12": null
+  },
+  {
+    "id": "thieves-cant",
+    "name": "Thieves' Cant",
+    "name_ru": "Воровской жаргон",
+    "source": "srd-5.2.1",
+    "origin": "Various criminal guilds",
+    "rarity": "rare",
+    "roll_d12": null
+  },
+  {
+    "id": "undercommon",
+    "name": "Undercommon",
+    "name_ru": "Подземный",
+    "source": "srd-5.2.1",
+    "origin": "The Underdark",
+    "rarity": "rare",
+    "roll_d12": null
+  }
+]

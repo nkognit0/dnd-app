@@ -17,8 +17,8 @@
     "types": ["vite/client"],
     "baseUrl": ".",
     "paths": {
-      "@data/*": ["../dnd-db/data/*"],
-      "dnd-sheet": ["../dnd-sheet/src/index.tsx"],
+      "@data/*": ["../dnd-db/data/*", "./vendor/dnd-db/data/*"],
+      "dnd-sheet": ["../dnd-sheet/src/index.tsx", "./vendor/dnd-sheet/src/index.tsx"],
       "react": ["./node_modules/@types/react"],
       "react/jsx-runtime": ["./node_modules/@types/react/jsx-runtime"]
     }

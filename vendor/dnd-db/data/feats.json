@@ -1,0 +1,2104 @@
+[
+  {
+    "id": "boon-of-combat-prowess",
+    "name": "Boon of Combat Prowess",
+    "name_ru": "Дар боевого мастерства",
+    "source": "srd-5.2.1",
+    "category": "epic-boon",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 30,
+        "options": [
+          {
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "description": "You gain the following benefits.\n**Ability Score Increase.** Increase one ability score of your choice by 1, to a maximum of 30.\n**Peerless Aim.** When you miss with an attack roll, you can hit instead. Once you use this benefit, you can't use it again until the start of your next turn.",
+    "link": "https://next.dnd.su/feats/373-boon-of-combat-prowess/",
+    "prerequisite": {
+      "minimum_level": 19
+    },
+    "repeatable": false
+  },
+  {
+    "id": "boon-of-dimensional-travel",
+    "name": "Boon of Dimensional Travel",
+    "name_ru": "Дар пространственных путешествий",
+    "source": "srd-5.2.1",
+    "category": "epic-boon",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 30,
+        "options": [
+          {
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "description": "You gain the following benefits.\n**Ability Score Increase.** Increase one ability score of your choice by 1, to a maximum of 30.\n**Blink Steps.** Immediately after you take the Attack action or the Magic action, you can teleport up to 30 feet to an unoccupied space you can see.",
+    "link": "https://next.dnd.su/feats/374-boon-of-dimensional-travel/",
+    "prerequisite": {
+      "minimum_level": 19
+    },
+    "repeatable": false
+  },
+  {
+    "id": "boon-of-energy-resistance",
+    "name": "Boon of Energy Resistance",
+    "name_ru": "Дар сопротивления энергии",
+    "source": "phb-2024",
+    "category": "epic-boon",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 30,
+        "options": [
+          {
+            "from": [
+              "cha",
+              "con",
+              "dex",
+              "int",
+              "str",
+              "wis"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/375-boon-of-energy-resistance/",
+    "prerequisite": {
+      "minimum_level": 19
+    },
+    "repeatable": false
+  },
+  {
+    "id": "boon-of-fate",
+    "name": "Boon of Fate",
+    "name_ru": "Дар судьбы",
+    "source": "srd-5.2.1",
+    "category": "epic-boon",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 30,
+        "options": [
+          {
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "description": "You gain the following benefits.\n**Ability Score Increase.** Increase one ability score of your choice by 1, to a maximum of 30.\n**Improve Fate.** When you or another creature within 60 feet of you succeeds on or fails a D20 Test, you can roll 2d4 and apply the total rolled as a bonus or penalty to the d20 roll. Once you use this benefit, you can't use it again until you roll Initiative or finish a Short or Long Rest.",
+    "link": "https://next.dnd.su/feats/376-boon-of-fate/",
+    "prerequisite": {
+      "minimum_level": 19
+    },
+    "repeatable": false
+  },
+  {
+    "id": "boon-of-fortitude",
+    "name": "Boon of Fortitude",
+    "name_ru": "Дар стойкости",
+    "source": "phb-2024",
+    "category": "epic-boon",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 30,
+        "options": [
+          {
+            "from": [
+              "cha",
+              "con",
+              "dex",
+              "int",
+              "str",
+              "wis"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "grants": {
+      "hp_bonus": 40
+    },
+    "link": "https://next.dnd.su/feats/377-boon-of-fortitude/",
+    "prerequisite": {
+      "minimum_level": 19
+    },
+    "repeatable": false
+  },
+  {
+    "id": "boon-of-irresistible-offense",
+    "name": "Boon of Irresistible Offense",
+    "name_ru": "Дар неотразимого нападения",
+    "source": "srd-5.2.1",
+    "category": "epic-boon",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 30,
+        "options": [
+          {
+            "from": [
+              "dex",
+              "str"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "description": "You gain the following benefits.\n**Ability Score Increase.** Increase one ability score of your choice by 1, to a maximum of 30.\n**Overcome Defenses.** The Bludgeoning, Piercing, and Slashing damage you deal always ignores Resistance.\n**Overwhelming Strike.** When you roll a 20 on the d20 for an attack roll, you can deal extra damage to the target equal to the ability score increased by this feat. The extra damage's type is the same as the attack's type.",
+    "link": "https://next.dnd.su/feats/378-boon-of-irresistible-offense/",
+    "prerequisite": {
+      "minimum_level": 19
+    },
+    "repeatable": false
+  },
+  {
+    "id": "boon-of-recovery",
+    "name": "Boon of Recovery",
+    "name_ru": "Дар восстановления",
+    "source": "phb-2024",
+    "category": "epic-boon",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 30,
+        "options": [
+          {
+            "from": [
+              "cha",
+              "con",
+              "dex",
+              "int",
+              "str",
+              "wis"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/379-boon-of-recovery/",
+    "prerequisite": {
+      "minimum_level": 19
+    },
+    "repeatable": false
+  },
+  {
+    "id": "boon-of-skill",
+    "name": "Boon of Skill",
+    "name_ru": "Дар умелости",
+    "source": "phb-2024",
+    "category": "epic-boon",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 30,
+        "options": [
+          {
+            "from": [
+              "cha",
+              "con",
+              "dex",
+              "int",
+              "str",
+              "wis"
+            ],
+            "plus_1": 1
+          }
+        ]
+      },
+      {
+        "id": "expertise",
+        "type": "expertise",
+        "count": 1
+      }
+    ],
+    "grants": {
+      "all_skills": true
+    },
+    "link": "https://next.dnd.su/feats/380-boon-of-skill/",
+    "prerequisite": {
+      "minimum_level": 19
+    },
+    "repeatable": false
+  },
+  {
+    "id": "boon-of-speed",
+    "name": "Boon of Speed",
+    "name_ru": "Дар скорости",
+    "source": "phb-2024",
+    "category": "epic-boon",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 30,
+        "options": [
+          {
+            "from": [
+              "cha",
+              "con",
+              "dex",
+              "int",
+              "str",
+              "wis"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "grants": {
+      "speed_bonus": 30
+    },
+    "link": "https://next.dnd.su/feats/381-boon-of-speed/",
+    "prerequisite": {
+      "minimum_level": 19
+    },
+    "repeatable": false
+  },
+  {
+    "id": "boon-of-spell-recall",
+    "name": "Boon of Spell Recall",
+    "name_ru": "Дар восстановления заклинаний",
+    "source": "srd-5.2.1",
+    "category": "epic-boon",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 30,
+        "options": [
+          {
+            "from": [
+              "cha",
+              "int",
+              "wis"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "description": "You gain the following benefits.\n**Ability Score Increase.** Increase one ability score of your choice by 1, to a maximum of 30.\n**Free Casting.** Whenever you cast a spell with a level 1–4 spell slot, roll 1d4. If the number you roll is the same as the slot's level, the slot isn't expended.",
+    "link": "https://next.dnd.su/feats/382-boon-of-spell-recall/",
+    "prerequisite": {
+      "feature_named": "Spellcasting",
+      "minimum_level": 19,
+      "spellcasting": true
+    },
+    "repeatable": false
+  },
+  {
+    "id": "boon-of-the-night-spirit",
+    "name": "Boon of the Night Spirit",
+    "name_ru": "Дар ночного духа",
+    "source": "srd-5.2.1",
+    "category": "epic-boon",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 30,
+        "options": [
+          {
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "description": "You gain the following benefits.\n**Ability Score Increase.** Increase one ability score of your choice by 1, to a maximum of 30.\n**Merge with Shadows.** While within Dim Light or Darkness, you can give yourself the Invisible condition as a Bonus Action. The condition ends on you immediately after you take an action, a Bonus Action, or a Reaction.\n**Shadowy form.** While within Dim Light or Darkness, you have Resistance to all damage except Psychic and Radiant.",
+    "link": "https://next.dnd.su/feats/383-boon-of-the-night-spirit/",
+    "prerequisite": {
+      "minimum_level": 19
+    },
+    "repeatable": false
+  },
+  {
+    "id": "boon-of-truesight",
+    "name": "Boon of Truesight",
+    "name_ru": "Дар истинного зрения",
+    "source": "srd-5.2.1",
+    "category": "epic-boon",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 30,
+        "options": [
+          {
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "description": "You gain the following benefits.\n**Ability Score Increase.** Increase one ability score of your choice by 1, to a maximum of 30.\n**Truesight.** You have Truesight with a range of 60 feet.",
+    "link": "https://next.dnd.su/feats/384-boon-of-truesight/",
+    "prerequisite": {
+      "minimum_level": 19
+    },
+    "repeatable": false
+  },
+  {
+    "id": "archery",
+    "name": "Archery",
+    "name_ru": "Стрельба",
+    "source": "srd-5.2.1",
+    "category": "fighting-style",
+    "choices": [],
+    "description": "You gain a +2 bonus to attack rolls you make with Ranged weapons.",
+    "prerequisite": {
+      "feature_named": "Fighting Style"
+    },
+    "repeatable": false
+  },
+  {
+    "id": "blind-fighting",
+    "name": "Blind Fighting",
+    "name_ru": "Слепой бой",
+    "source": "phb-2024",
+    "category": "fighting-style",
+    "choices": [],
+    "prerequisite": {
+      "feature_named": "Fighting Style"
+    },
+    "repeatable": false,
+    "summary": "You have Blindsight with a range of 10 feet."
+  },
+  {
+    "id": "defense",
+    "name": "Defense",
+    "name_ru": "Оборона",
+    "source": "srd-5.2.1",
+    "category": "fighting-style",
+    "choices": [],
+    "description": "While you're wearing Light, Medium, or Heavy armor, you gain a +1 bonus to Armor Class.",
+    "prerequisite": {
+      "feature_named": "Fighting Style"
+    },
+    "repeatable": false
+  },
+  {
+    "id": "dueling",
+    "name": "Dueling",
+    "name_ru": "Дуэлянт",
+    "source": "phb-2024",
+    "category": "fighting-style",
+    "choices": [],
+    "prerequisite": {
+      "feature_named": "Fighting Style"
+    },
+    "repeatable": false,
+    "summary": "+2 to damage rolls with a Melee weapon held in one hand when you hold no other weapons."
+  },
+  {
+    "id": "great-weapon-fighting",
+    "name": "Great Weapon Fighting",
+    "name_ru": "Сражение большим оружием",
+    "source": "srd-5.2.1",
+    "category": "fighting-style",
+    "choices": [],
+    "description": "When you roll damage for an attack you make with a Melee weapon that you are holding with two hands, you can treat any 1 or 2 on a damage die as a 3. The weapon must have the Two-Handed or Versatile property to gain this benefit.",
+    "prerequisite": {
+      "feature_named": "Fighting Style"
+    },
+    "repeatable": false
+  },
+  {
+    "id": "interception",
+    "name": "Interception",
+    "name_ru": "Перехват",
+    "source": "phb-2024",
+    "category": "fighting-style",
+    "choices": [],
+    "prerequisite": {
+      "feature_named": "Fighting Style"
+    },
+    "repeatable": false,
+    "summary": "Reaction: reduce damage to a creature within 5 feet of you by 1d10 + your Proficiency Bonus while holding a Shield or a Simple or Martial weapon."
+  },
+  {
+    "id": "protection",
+    "name": "Protection",
+    "name_ru": "Защита",
+    "source": "phb-2024",
+    "category": "fighting-style",
+    "choices": [],
+    "prerequisite": {
+      "feature_named": "Fighting Style"
+    },
+    "repeatable": false,
+    "summary": "Reaction while holding a Shield: impose Disadvantage on an attack against a target within 5 feet of you, and on further attacks against it until the start of your next turn."
+  },
+  {
+    "id": "thrown-weapon-fighting",
+    "name": "Thrown Weapon Fighting",
+    "name_ru": "Метательное оружие",
+    "source": "phb-2024",
+    "category": "fighting-style",
+    "choices": [],
+    "prerequisite": {
+      "feature_named": "Fighting Style"
+    },
+    "repeatable": false,
+    "summary": "+2 to the damage roll when you hit with a ranged attack using a weapon with the Thrown property."
+  },
+  {
+    "id": "two-weapon-fighting",
+    "name": "Two Weapon Fighting",
+    "name_ru": "Сражение двумя оружиями",
+    "source": "srd-5.2.1",
+    "category": "fighting-style",
+    "choices": [],
+    "description": "When you make an extra attack as a result of using a weapon that has the Light property, you can add your ability modifier to the damage of that attack if you aren't already adding it to the damage.",
+    "prerequisite": {
+      "feature_named": "Fighting Style"
+    },
+    "repeatable": false
+  },
+  {
+    "id": "unarmed-fighting",
+    "name": "Unarmed Fighting",
+    "name_ru": "Рукопашный бой",
+    "source": "phb-2024",
+    "category": "fighting-style",
+    "choices": [],
+    "prerequisite": {
+      "feature_named": "Fighting Style"
+    },
+    "repeatable": false,
+    "summary": "Unarmed Strikes deal 1d6 + Strength Bludgeoning (1d8 if you hold no weapons or Shield); at the start of your turn deal 1d4 Bludgeoning to one creature you are grappling."
+  },
+  {
+    "id": "ability-score-improvement",
+    "name": "Ability Score Improvement",
+    "name_ru": "Увеличение характеристик",
+    "source": "srd-5.2.1",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "plus_2": 1
+          },
+          {
+            "plus_1": 2
+          }
+        ]
+      }
+    ],
+    "description": "Increase one ability score of your choice by 2, or increase two ability scores of your choice by 1. This feat can't increase an ability score above 20.",
+    "link": "https://next.dnd.su/feats/320-ability-score-improvement/",
+    "prerequisite": {
+      "minimum_level": 4
+    },
+    "repeatable": true,
+    "repeatable_note": "You can take this feat more than once."
+  },
+  {
+    "id": "actor",
+    "name": "Actor",
+    "name_ru": "Актёр",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "cha"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/321-actor/",
+    "prerequisite": {
+      "ability_any": [
+        "cha"
+      ],
+      "ability_min": 13,
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "athlete",
+    "name": "Athlete",
+    "name_ru": "Атлет",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "dex",
+              "str"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/322-athlete/",
+    "prerequisite": {
+      "ability_any": [
+        "str",
+        "dex"
+      ],
+      "ability_min": 13,
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "charger",
+    "name": "Charger",
+    "name_ru": "Налётчик",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "dex",
+              "str"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/323-charger/",
+    "prerequisite": {
+      "ability_any": [
+        "str",
+        "dex"
+      ],
+      "ability_min": 13,
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "chef",
+    "name": "Chef",
+    "name_ru": "Шеф-повар",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "con",
+              "wis"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "grants": {
+      "tools": [
+        "cooks-utensils"
+      ]
+    },
+    "link": "https://next.dnd.su/feats/324-chef/",
+    "prerequisite": {
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "crossbow-expert",
+    "name": "Crossbow Expert",
+    "name_ru": "Эксперт по арбалетам",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "dex"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/325-crossbow-expert/",
+    "prerequisite": {
+      "ability_any": [
+        "dex"
+      ],
+      "ability_min": 13,
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "crusher",
+    "name": "Crusher",
+    "name_ru": "Крушитель",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "con",
+              "str"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/326-crusher/",
+    "prerequisite": {
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "defensive-duelist",
+    "name": "Defensive Duelist",
+    "name_ru": "Парирующий дуэлянт",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "dex"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/327-defensive-duelist/",
+    "prerequisite": {
+      "ability_any": [
+        "dex"
+      ],
+      "ability_min": 13,
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "dual-wielder",
+    "name": "Dual Wielder",
+    "name_ru": "Мастер боя двумя оружиями",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "dex",
+              "str"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/328-dual-wielder/",
+    "prerequisite": {
+      "ability_any": [
+        "str",
+        "dex"
+      ],
+      "ability_min": 13,
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "durable",
+    "name": "Durable",
+    "name_ru": "Стойкий",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "con"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/329-durable/",
+    "prerequisite": {
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "elemental-adept",
+    "name": "Elemental Adept",
+    "name_ru": "Стихийный адепт",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "cha",
+              "int",
+              "wis"
+            ],
+            "plus_1": 1
+          }
+        ]
+      },
+      {
+        "id": "energy",
+        "type": "damage-type",
+        "count": 1,
+        "from": [
+          "acid",
+          "cold",
+          "fire",
+          "lightning",
+          "thunder"
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/330-elemental-adept/",
+    "prerequisite": {
+      "minimum_level": 4,
+      "spellcasting": true
+    },
+    "repeatable": true
+  },
+  {
+    "id": "fey-touched",
+    "name": "Fey-Touched",
+    "name_ru": "Затронутый феями",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "cha",
+              "int",
+              "wis"
+            ],
+            "plus_1": 1
+          }
+        ]
+      },
+      {
+        "id": "fey-magic",
+        "type": "spell",
+        "always_prepared": true,
+        "count": 1,
+        "lists": "any",
+        "schools": [
+          "divination",
+          "enchantment"
+        ],
+        "spell_level": 1
+      }
+    ],
+    "grants": {
+      "spells": [
+        "misty-step"
+      ]
+    },
+    "link": "https://next.dnd.su/feats/331-fey-touched/",
+    "prerequisite": {
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "grappler",
+    "name": "Grappler",
+    "name_ru": "Борец",
+    "source": "srd-5.2.1",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "str",
+              "dex"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "description": "You gain the following benefits.\n**Ability Score Increase.** Increase your Strength or Dexterity score by 1, to a maximum of 20.\n**Punch and Grab.** When you hit a creature with an Unarmed Strike as part of the Attack action on your turn, you can use both the Damage and the Grapple option. You can use this benefit only once per turn.\n**Attack Advantage.** You have Advantage on attack rolls against a creature Grappled by you.\n**Fast Wrestler.** You don't have to spend extra movement to move a creature Grappled by you if the creature is your size or smaller.",
+    "link": "https://next.dnd.su/feats/332-grappler/",
+    "prerequisite": {
+      "ability_any": [
+        "str",
+        "dex"
+      ],
+      "ability_min": 13,
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "great-weapon-master",
+    "name": "Great Weapon Master",
+    "name_ru": "Мастер тяжёлого оружия",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "str"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/333-great-weapon-master/",
+    "prerequisite": {
+      "ability_any": [
+        "str"
+      ],
+      "ability_min": 13,
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "heavily-armored",
+    "name": "Heavily Armored",
+    "name_ru": "Знаток тяжёлых доспехов",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "con",
+              "str"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "grants": {
+      "armor": [
+        "heavy"
+      ]
+    },
+    "link": "https://next.dnd.su/feats/334-heavily-armored/",
+    "prerequisite": {
+      "armor_training": "medium",
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "heavy-armor-master",
+    "name": "Heavy Armor Master",
+    "name_ru": "Мастер тяжёлых доспехов",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "con",
+              "str"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/335-heavy-armor-master/",
+    "prerequisite": {
+      "armor_training": "heavy",
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "inspiring-leader",
+    "name": "Inspiring Leader",
+    "name_ru": "Воодушевляющий лидер",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "cha",
+              "wis"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/336-inspiring-leader/",
+    "prerequisite": {
+      "ability_any": [
+        "wis",
+        "cha"
+      ],
+      "ability_min": 13,
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "keen-mind",
+    "name": "Keen Mind",
+    "name_ru": "Острый ум",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "int"
+            ],
+            "plus_1": 1
+          }
+        ]
+      },
+      {
+        "id": "lore-knowledge",
+        "type": "skill-or-expertise",
+        "count": 1,
+        "from": [
+          "arcana",
+          "history",
+          "investigation",
+          "nature",
+          "religion"
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/337-keen-mind/",
+    "prerequisite": {
+      "ability_any": [
+        "int"
+      ],
+      "ability_min": 13,
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "lightly-armored",
+    "name": "Lightly Armored",
+    "name_ru": "Знаток лёгких доспехов",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "dex",
+              "str"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "grants": {
+      "armor": [
+        "light",
+        "shield"
+      ]
+    },
+    "link": "https://next.dnd.su/feats/338-lightly-armored/",
+    "prerequisite": {
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "mage-slayer",
+    "name": "Mage Slayer",
+    "name_ru": "Убийца магов",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "dex",
+              "str"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/339-mage-slayer/",
+    "prerequisite": {
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "martial-weapon-training",
+    "name": "Martial Weapon Training",
+    "name_ru": "Обученность воинскому оружию",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "dex",
+              "str"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "grants": {
+      "weapons": [
+        "martial"
+      ]
+    },
+    "link": "https://next.dnd.su/feats/340-martial-weapon-training/",
+    "prerequisite": {
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "medium-armor-master",
+    "name": "Medium Armor Master",
+    "name_ru": "Мастер средних доспехов",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "dex",
+              "str"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/341-medium-armor-master/",
+    "prerequisite": {
+      "armor_training": "medium",
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "moderately-armored",
+    "name": "Moderately Armored",
+    "name_ru": "Знаток средних доспехов",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "dex",
+              "str"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "grants": {
+      "armor": [
+        "medium"
+      ]
+    },
+    "link": "https://next.dnd.su/feats/342-moderately-armored/",
+    "prerequisite": {
+      "armor_training": "light",
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "mounted-combatant",
+    "name": "Mounted Combatant",
+    "name_ru": "Верховой боец",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "dex",
+              "str",
+              "wis"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/343-mounted-combatant/",
+    "prerequisite": {
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "observant",
+    "name": "Observant",
+    "name_ru": "Внимательный",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "int",
+              "wis"
+            ],
+            "plus_1": 1
+          }
+        ]
+      },
+      {
+        "id": "keen-observer",
+        "type": "skill-or-expertise",
+        "count": 1,
+        "from": [
+          "insight",
+          "investigation",
+          "perception"
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/344-observant/",
+    "prerequisite": {
+      "ability_any": [
+        "int",
+        "wis"
+      ],
+      "ability_min": 13,
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "piercer",
+    "name": "Piercer",
+    "name_ru": "Пронзатель",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "dex",
+              "str"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/345-piercer/",
+    "prerequisite": {
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "poisoner",
+    "name": "Poisoner",
+    "name_ru": "Отравитель",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "dex",
+              "int"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "grants": {
+      "tools": [
+        "poisoners-kit"
+      ]
+    },
+    "link": "https://next.dnd.su/feats/346-poisoner/",
+    "prerequisite": {
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "polearm-master",
+    "name": "Polearm Master",
+    "name_ru": "Мастер древкового оружия",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "dex",
+              "str"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/347-polearm-master/",
+    "prerequisite": {
+      "ability_any": [
+        "str",
+        "dex"
+      ],
+      "ability_min": 13,
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "resilient",
+    "name": "Resilient",
+    "name_ru": "Устойчивый",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "str",
+              "dex",
+              "con",
+              "int",
+              "wis",
+              "cha"
+            ],
+            "plus_1": 1,
+            "unproficient_saves_only": true
+          }
+        ]
+      }
+    ],
+    "grants": {
+      "save_of_increased_ability": true
+    },
+    "link": "https://next.dnd.su/feats/348-resilient/",
+    "prerequisite": {
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "ritual-caster",
+    "name": "Ritual Caster",
+    "name_ru": "Ритуальный заклинатель",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "cha",
+              "int",
+              "wis"
+            ],
+            "plus_1": 1
+          }
+        ]
+      },
+      {
+        "id": "rituals",
+        "type": "spell",
+        "always_prepared": true,
+        "count": "proficiency_bonus",
+        "lists": "any",
+        "ritual": true,
+        "spell_level": 1
+      }
+    ],
+    "link": "https://next.dnd.su/feats/349-ritual-caster/",
+    "prerequisite": {
+      "ability_any": [
+        "int",
+        "wis",
+        "cha"
+      ],
+      "ability_min": 13,
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "sentinel",
+    "name": "Sentinel",
+    "name_ru": "Страж",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "dex",
+              "str"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/350-sentinel/",
+    "prerequisite": {
+      "ability_any": [
+        "str",
+        "dex"
+      ],
+      "ability_min": 13,
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "shadow-touched",
+    "name": "Shadow-Touched",
+    "name_ru": "Затронутый тенью",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "cha",
+              "int",
+              "wis"
+            ],
+            "plus_1": 1
+          }
+        ]
+      },
+      {
+        "id": "shadow-magic",
+        "type": "spell",
+        "always_prepared": true,
+        "count": 1,
+        "lists": "any",
+        "schools": [
+          "illusion",
+          "necromancy"
+        ],
+        "spell_level": 1
+      }
+    ],
+    "grants": {
+      "spells": [
+        "invisibility"
+      ]
+    },
+    "link": "https://next.dnd.su/feats/351-shadow-touched/",
+    "prerequisite": {
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "sharpshooter",
+    "name": "Sharpshooter",
+    "name_ru": "Меткий стрелок",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "dex"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/352-sharpshooter/",
+    "prerequisite": {
+      "ability_any": [
+        "dex"
+      ],
+      "ability_min": 13,
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "shield-master",
+    "name": "Shield Master",
+    "name_ru": "Мастер щита",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "str"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/353-shield-master/",
+    "prerequisite": {
+      "armor_training": "shield",
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "skill-expert",
+    "name": "Skill Expert",
+    "name_ru": "Эксперт в навыке",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "cha",
+              "con",
+              "dex",
+              "int",
+              "str",
+              "wis"
+            ],
+            "plus_1": 1
+          }
+        ]
+      },
+      {
+        "id": "skill",
+        "type": "skill",
+        "count": 1,
+        "from": "any"
+      },
+      {
+        "id": "expertise",
+        "type": "expertise",
+        "count": 1
+      }
+    ],
+    "link": "https://next.dnd.su/feats/354-skill-expert/",
+    "prerequisite": {
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "skulker",
+    "name": "Skulker",
+    "name_ru": "Проныра",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "dex"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/355-skulker/",
+    "prerequisite": {
+      "ability_any": [
+        "dex"
+      ],
+      "ability_min": 13,
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "slasher",
+    "name": "Slasher",
+    "name_ru": "Рубака",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "dex",
+              "str"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/356-slasher/",
+    "prerequisite": {
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "speedy",
+    "name": "Speedy",
+    "name_ru": "Быстрый",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "con",
+              "dex"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/357-speedy/",
+    "prerequisite": {
+      "ability_any": [
+        "dex",
+        "con"
+      ],
+      "ability_min": 13,
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "spell-sniper",
+    "name": "Spell Sniper",
+    "name_ru": "Меткий заклинатель",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "cha",
+              "int",
+              "wis"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/358-spell-sniper/",
+    "prerequisite": {
+      "minimum_level": 4,
+      "spellcasting": true
+    },
+    "repeatable": false
+  },
+  {
+    "id": "telekinetic",
+    "name": "Telekinetic",
+    "name_ru": "Телекинетик",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "cha",
+              "int",
+              "wis"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "grants": {
+      "cantrips": [
+        "mage-hand"
+      ]
+    },
+    "link": "https://next.dnd.su/feats/359-telekinetic/",
+    "prerequisite": {
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "telepathic",
+    "name": "Telepathic",
+    "name_ru": "Телепат",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "cha",
+              "int",
+              "wis"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "grants": {
+      "spells": [
+        "detect-thoughts"
+      ]
+    },
+    "link": "https://next.dnd.su/feats/360-telepathic/",
+    "prerequisite": {
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "war-caster",
+    "name": "War Caster",
+    "name_ru": "Боевой заклинатель",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "cha",
+              "int",
+              "wis"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/361-war-caster/",
+    "prerequisite": {
+      "minimum_level": 4,
+      "spellcasting": true
+    },
+    "repeatable": false
+  },
+  {
+    "id": "weapon-master",
+    "name": "Weapon Master",
+    "name_ru": "Мастер оружия",
+    "source": "phb-2024",
+    "category": "general",
+    "choices": [
+      {
+        "id": "increase",
+        "type": "ability-increase",
+        "max_score": 20,
+        "options": [
+          {
+            "from": [
+              "dex",
+              "str"
+            ],
+            "plus_1": 1
+          }
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/feats/362-weapon-master/",
+    "prerequisite": {
+      "minimum_level": 4
+    },
+    "repeatable": false
+  },
+  {
+    "id": "alert",
+    "name": "Alert",
+    "name_ru": "Бдительный",
+    "source": "srd-5.2.1",
+    "category": "origin",
+    "choices": [],
+    "description": "You gain the following benefits.\n**Initiative Proficiency.** When you roll Initiative, you can add your Proficiency Bonus to the roll.\n**Initiative Swap.** Immediately after you roll Initiative, you can swap your Initiative with the Initiative of one willing ally in the same combat. You can't make this swap if you or the ally has the Incapacitated condition.",
+    "grants": {
+      "initiative_bonus": "proficiency_bonus"
+    },
+    "repeatable": false
+  },
+  {
+    "id": "crafter",
+    "name": "Crafter",
+    "name_ru": "Мастеровой",
+    "source": "phb-2024",
+    "category": "origin",
+    "choices": [
+      {
+        "id": "tools",
+        "type": "tool",
+        "count": 3,
+        "from": [
+          "carpenters-tools",
+          "leatherworkers-tools",
+          "masons-tools",
+          "potters-tools",
+          "smiths-tools",
+          "tinkers-tools",
+          "weavers-tools",
+          "woodcarvers-tools"
+        ],
+        "note": "Artisan's Tools from the Fast Crafting table."
+      }
+    ],
+    "repeatable": false,
+    "summary": "Proficiency with three Artisan's Tools from the Fast Crafting table; 20% discount on nonmagical items you buy; after a Long Rest you can craft one piece of gear from the Fast Crafting table that lasts until your next Long Rest."
+  },
+  {
+    "id": "healer",
+    "name": "Healer",
+    "name_ru": "Лекарь",
+    "source": "phb-2024",
+    "category": "origin",
+    "choices": [],
+    "repeatable": false,
+    "summary": "With a Healer's Kit you can, as a Utilize action, let a creature spend a Hit Point Die and heal the roll plus your Proficiency Bonus; you reroll 1s on healing dice from spells and this feat."
+  },
+  {
+    "id": "lucky",
+    "name": "Lucky",
+    "name_ru": "Везунчик",
+    "source": "phb-2024",
+    "category": "origin",
+    "choices": [],
+    "repeatable": false,
+    "summary": "Luck Points equal to your Proficiency Bonus (regained on a Long Rest): spend one to give yourself Advantage on a D20 Test or to impose Disadvantage on an attack roll against you."
+  },
+  {
+    "id": "magic-initiate",
+    "name": "Magic Initiate",
+    "name_ru": "Посвящённый в магию",
+    "source": "srd-5.2.1",
+    "category": "origin",
+    "choices": [
+      {
+        "id": "spell-list",
+        "type": "spell-list",
+        "count": 1,
+        "from": [
+          "cleric",
+          "druid",
+          "wizard"
+        ],
+        "note": "A background that grants this feat fixes the list."
+      },
+      {
+        "id": "spellcasting-ability",
+        "type": "ability",
+        "count": 1,
+        "from": [
+          "int",
+          "wis",
+          "cha"
+        ]
+      },
+      {
+        "id": "cantrips",
+        "type": "spell",
+        "count": 2,
+        "list": "$spell-list",
+        "spell_level": 0
+      },
+      {
+        "id": "level-1-spell",
+        "type": "spell",
+        "count": 1,
+        "list": "$spell-list",
+        "note": "Always prepared; one free cast per Long Rest.",
+        "spell_level": 1
+      }
+    ],
+    "description": "You gain the following benefits.\n**Two Cantrips.** You learn two cantrips of your choice from the Cleric, Druid, or Wizard spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for this feat's spells (choose when you select this feat).\n**Level 1 Spell.** Choose a level 1 spell from the same list you selected for this feat's cantrips. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have.\n**Spell Change.** Whenever you gain a new level, you can replace one of the spells you chose for this feat with a different spell of the same level from the chosen spell list.",
+    "repeatable": true,
+    "repeatable_note": "Choose a different spell list each time."
+  },
+  {
+    "id": "musician",
+    "name": "Musician",
+    "name_ru": "Музыкант",
+    "source": "phb-2024",
+    "category": "origin",
+    "choices": [
+      {
+        "id": "instruments",
+        "type": "tool",
+        "count": 3,
+        "from_categories": [
+          "musical-instruments"
+        ]
+      }
+    ],
+    "repeatable": false,
+    "summary": "Proficiency with three Musical Instruments; when you finish a Short or Long Rest you can play a song that gives Heroic Inspiration to a number of allies equal to your Proficiency Bonus."
+  },
+  {
+    "id": "savage-attacker",
+    "name": "Savage Attacker",
+    "name_ru": "Свирепый атакующий",
+    "source": "srd-5.2.1",
+    "category": "origin",
+    "choices": [],
+    "description": "You've trained to deal particularly damaging strikes. Once per turn when you hit a target with a weapon, you can roll the weapon's damage dice twice and use either roll against the target.",
+    "repeatable": false
+  },
+  {
+    "id": "skilled",
+    "name": "Skilled",
+    "name_ru": "Одарённый",
+    "source": "srd-5.2.1",
+    "category": "origin",
+    "choices": [
+      {
+        "id": "proficiencies",
+        "type": "skill-or-tool",
+        "count": 3,
+        "from": "any"
+      }
+    ],
+    "description": "You gain proficiency in any combination of three skills or tools of your choice.",
+    "repeatable": true,
+    "repeatable_note": "You can take this feat more than once."
+  },
+  {
+    "id": "tavern-brawler",
+    "name": "Tavern Brawler",
+    "name_ru": "Трактирный драчун",
+    "source": "phb-2024",
+    "category": "origin",
+    "choices": [],
+    "repeatable": false,
+    "summary": "Unarmed Strikes can deal 1d4 + Strength Bludgeoning damage and reroll 1s; proficiency with improvised weapons; once per turn an Unarmed Strike hit during the Attack action can also push the target 5 feet."
+  },
+  {
+    "id": "tough",
+    "name": "Tough",
+    "name_ru": "Крепкий",
+    "source": "phb-2024",
+    "category": "origin",
+    "choices": [],
+    "grants": {
+      "hp_bonus_per_level": 2
+    },
+    "repeatable": false,
+    "summary": "Your Hit Point maximum increases by twice your character level, and by 2 more each time you gain a level."
+  }
+]

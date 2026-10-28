@@ -1,0 +1,58 @@
+[
+  {
+    "id": "abjuration",
+    "name": "Abjuration",
+    "name_ru": "Ограждение",
+    "source": "srd-5.2.1",
+    "description": "Prevents or reverses harmful effects"
+  },
+  {
+    "id": "conjuration",
+    "name": "Conjuration",
+    "name_ru": "Вызов",
+    "source": "srd-5.2.1",
+    "description": "Transports creatures or objects"
+  },
+  {
+    "id": "divination",
+    "name": "Divination",
+    "name_ru": "Прорицание",
+    "source": "srd-5.2.1",
+    "description": "Reveals information"
+  },
+  {
+    "id": "enchantment",
+    "name": "Enchantment",
+    "name_ru": "Очарование",
+    "source": "srd-5.2.1",
+    "description": "Influences minds"
+  },
+  {
+    "id": "evocation",
+    "name": "Evocation",
+    "name_ru": "Воплощение",
+    "source": "srd-5.2.1",
+    "description": "Channels energy to create effects that are often destructive"
+  },
+  {
+    "id": "illusion",
+    "name": "Illusion",
+    "name_ru": "Иллюзия",
+    "source": "srd-5.2.1",
+    "description": "Deceives the mind or senses"
+  },
+  {
+    "id": "necromancy",
+    "name": "Necromancy",
+    "name_ru": "Некромантия",
+    "source": "srd-5.2.1",
+    "description": "Manipulates life and death"
+  },
+  {
+    "id": "transmutation",
+    "name": "Transmutation",
+    "name_ru": "Преобразование",
+    "source": "srd-5.2.1",
+    "description": "Transforms creatures or objects"
+  }
+]

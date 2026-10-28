@@ -19,8 +19,9 @@ const itemName = (id: string) => nameOf(byId.item[id])
 // Skills and tools known before the feat step, not counting the given slot.
 function knownBeforeFeats(d: Derived, s: WizardState, except: FeatSlot['slot']) {
   const skillSet = new Set<string>(d.bg?.skill_proficiencies || [])
-  if (s.species.skill) skillSet.add(s.species.skill)
+  for (const id of s.species.skills) skillSet.add(id)
   const toolSet = new Set<string>([...(d.bg?.tool_proficiencies.fixed || []), ...s.background.toolChoice])
+  if (s.species.tool) toolSet.add(s.species.tool)
   for (const slot of d.featSlots) {
     if (slot.slot === except) continue
     for (const p of slot.picks.picks) {

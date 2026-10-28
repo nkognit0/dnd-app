@@ -1,0 +1,585 @@
+{
+  "later_steps": [
+    {
+      "source": "Кость хитов класса",
+      "data": "rules.json → hit_points.fixed_per_level",
+      "dependency": "Класс, Телосложение",
+      "n": 53,
+      "step": "Хиты за каждый уровень"
+    },
+    {
+      "source": "Список подклассов",
+      "data": "classes.json → subclasses",
+      "dependency": "Класс",
+      "n": 54,
+      "step": "Подкласс (3-й уровень)"
+    },
+    {
+      "source": "Описание подкласса",
+      "data": "пока нет: подклассы только списком",
+      "dependency": "Подкласс",
+      "n": 55,
+      "step": "Выборы в умениях подкласса"
+    },
+    {
+      "source": "Список общих черт",
+      "data": "feats.json (category = general; пока только SRD)",
+      "dependency": "-; у части черт есть требования; воин и плут получают чаще",
+      "n": 56,
+      "step": "Увеличение характеристик или общая черта (4, 8, 12, 16-й уровни)"
+    },
+    {
+      "source": "Список заклинаний класса",
+      "data": "spells.json; classes.json → levels",
+      "dependency": "Класс, подкласс, уровень",
+      "n": 57,
+      "step": "Новые заговоры и заклинания"
+    },
+    {
+      "source": "Описание класса",
+      "data": "class-features.json; class-options.json",
+      "dependency": "Класс, уровень",
+      "n": 58,
+      "step": "Новые выборы в умениях класса (воззвания, метамагия и т.п.)"
+    },
+    {
+      "source": "Список эпических даров",
+      "data": "feats.json (category = epic-boon; пока только SRD)",
+      "dependency": "-",
+      "n": 59,
+      "step": "Эпический дар (19-й уровень)"
+    }
+  ],
+  "steps": [
+    {
+      "source": "Список классов",
+      "data": "classes.json",
+      "dependency": "-",
+      "n": 1,
+      "step": "Выбор класса"
+    },
+    {
+      "source": "Список предысторий",
+      "data": "backgrounds.json",
+      "dependency": "-",
+      "n": 2,
+      "step": "Выбор предыстории"
+    },
+    {
+      "source": "Список видов",
+      "data": "species.json",
+      "dependency": "-",
+      "n": 3,
+      "step": "Выбор вида (расы)"
+    },
+    {
+      "source": "Варианты в описании вида",
+      "data": "species-options.json (group из species.choices)",
+      "dependency": "Вид: есть у эльфа, гнома, тифлинга, драконорождённого, голиафа",
+      "depends_on": [
+        3
+      ],
+      "n": 4,
+      "step": "Вариант вида (родословная, наследие, предок)"
+    },
+    {
+      "source": "Варианты в описании вида",
+      "data": "species.json → size_options",
+      "dependency": "Вид: выбор есть у человека, тифлинга, аасимара",
+      "depends_on": [
+        3
+      ],
+      "n": 5,
+      "step": "Размер"
+    },
+    {
+      "source": "Броски кубиков: 4к6, меньшая кость отбрасывается, 6 раз",
+      "data": "rules.json → ability_generation.roll",
+      "dependency": "-",
+      "n": 6,
+      "step": "Получение шести значений"
+    },
+    {
+      "source": "6 характеристик",
+      "data": "abilities.json",
+      "dependency": "-",
+      "depends_on": [
+        6
+      ],
+      "n": 7,
+      "step": "Распределение значений по характеристикам"
+    },
+    {
+      "source": "3 характеристики из описания предыстории",
+      "data": "backgrounds.json → ability_scores; rules.json → background_ability_increase",
+      "dependency": "Предыстория",
+      "depends_on": [
+        2
+      ],
+      "n": 8,
+      "step": "Увеличение характеристик (+2/+1 или +1/+1/+1)"
+    },
+    {
+      "source": "Описание предыстории",
+      "auto": true,
+      "data": "backgrounds.json → skill_proficiencies",
+      "dependency": "АВТО: предыстория",
+      "depends_on": [
+        2
+      ],
+      "n": 9,
+      "step": "Навыки предыстории"
+    },
+    {
+      "source": "Описание предыстории",
+      "data": "backgrounds.json → tool_proficiencies",
+      "dependency": "Предыстория (иногда выбор внутри категории, например вид игрового набора)",
+      "depends_on": [
+        2
+      ],
+      "n": 10,
+      "step": "Инструмент предыстории"
+    },
+    {
+      "source": "Описание предыстории",
+      "auto": true,
+      "data": "backgrounds.json → feat",
+      "dependency": "АВТО: предыстория",
+      "depends_on": [
+        2
+      ],
+      "n": 11,
+      "step": "Черта происхождения"
+    },
+    {
+      "source": "Описание черты",
+      "data": "feats.json → choices",
+      "dependency": "Черта происхождения: есть у «Одарённого», «Посвящённого в магию», «Музыканта», «Ремесленника»",
+      "depends_on": [
+        11,
+        13
+      ],
+      "n": 12,
+      "step": "Выборы внутри черты происхождения"
+    },
+    {
+      "source": "Описание вида",
+      "data": "species.json → choices",
+      "dependency": "Вид: например, человек берёт навык и черту, эльф — навык из трёх",
+      "depends_on": [
+        3
+      ],
+      "n": 13,
+      "step": "Особенности вида с выбором (навык, черта, заклинательная характеристика)"
+    },
+    {
+      "source": "Таблица стандартных языков",
+      "data": "languages.json (rarity = standard); rules.json → languages",
+      "dependency": "-",
+      "n": 14,
+      "step": "Языки: Общий + 2 на выбор"
+    },
+    {
+      "source": "Описание класса",
+      "data": "classes.json → languages",
+      "dependency": "Класс: друидический у друида; воровской жаргон и ещё один язык на выбор у плута",
+      "depends_on": [
+        1
+      ],
+      "n": 15,
+      "step": "Языки класса"
+    },
+    {
+      "source": "Описание класса",
+      "auto": true,
+      "data": "classes.json → saving_throws",
+      "dependency": "АВТО: класс",
+      "depends_on": [
+        1
+      ],
+      "n": 16,
+      "step": "Спасброски"
+    },
+    {
+      "source": "Описание класса",
+      "auto": true,
+      "data": "classes.json → armor_training, weapon_proficiencies",
+      "dependency": "АВТО: класс",
+      "depends_on": [
+        1
+      ],
+      "n": 17,
+      "step": "Владение доспехами и оружием"
+    },
+    {
+      "source": "Список навыков класса",
+      "data": "classes.json → skill_proficiencies",
+      "dependency": "Класс; уже полученные навыки повторно не берутся",
+      "depends_on": [
+        1,
+        9,
+        12,
+        13
+      ],
+      "n": 18,
+      "step": "Навыки класса (N штук)"
+    },
+    {
+      "source": "Описание класса",
+      "data": "classes.json → tool_proficiencies",
+      "dependency": "Класс (у части классов есть выбор)",
+      "depends_on": [
+        1
+      ],
+      "n": 19,
+      "step": "Инструменты класса"
+    },
+    {
+      "source": "Оружие, которым владеешь",
+      "data": "classes.json → level_1_choices[weapon-mastery]; weapons.json → mastery, mastery_classes",
+      "dependency": "Класс (варвар, воин, паладин, следопыт, плут)",
+      "depends_on": [
+        1,
+        17
+      ],
+      "n": 20,
+      "step": "Мастерство оружия"
+    },
+    {
+      "source": "Описание класса",
+      "data": "classes.json → level_1_choices; class-options.json; feats.json (fighting-style)",
+      "dependency": "Класс: боевой стиль у воина, орден у жреца и друида, воззвания у колдуна",
+      "depends_on": [
+        1
+      ],
+      "n": 21,
+      "step": "Выборы в умениях 1-го уровня"
+    },
+    {
+      "source": "Навыки, которыми уже владеешь",
+      "data": "classes.json → level_1_choices[expertise]",
+      "dependency": "Класс (плут с 1-го уровня), навыки из шагов 9–18",
+      "depends_on": [
+        1,
+        9,
+        12,
+        13,
+        18
+      ],
+      "n": 22,
+      "step": "Компетентность"
+    },
+    {
+      "source": "Список заклинаний класса",
+      "data": "spells.json (level = 0, classes ∋ класс); classes.json → levels[0].cantrips",
+      "dependency": "Класс",
+      "depends_on": [
+        1,
+        21
+      ],
+      "n": 23,
+      "step": "Заговоры"
+    },
+    {
+      "source": "Список заклинаний класса",
+      "data": "spells.json (level = 1, classes ∋ класс); classes.json → levels[0].prepared_spells",
+      "dependency": "Класс",
+      "depends_on": [
+        1
+      ],
+      "n": 24,
+      "step": "Заклинания 1-го круга (подготовленные или книга заклинаний)"
+    },
+    {
+      "source": "Описание класса",
+      "data": "classes.json → starting_equipment",
+      "dependency": "Класс",
+      "depends_on": [
+        1
+      ],
+      "n": 25,
+      "step": "Снаряжение класса (А или Б)"
+    },
+    {
+      "source": "Описание предыстории",
+      "data": "backgrounds.json → starting_equipment",
+      "dependency": "Предыстория",
+      "depends_on": [
+        2
+      ],
+      "n": 26,
+      "step": "Снаряжение предыстории (А или Б)"
+    },
+    {
+      "source": "Таблицы снаряжения и цены",
+      "data": "equipment.json → cost, cost_cp",
+      "dependency": "Остаток золота из шагов 25–26",
+      "depends_on": [
+        25,
+        26
+      ],
+      "n": 27,
+      "step": "Покупки на оставшееся золото"
+    },
+    {
+      "source": "Таблица модификаторов",
+      "auto": true,
+      "data": "rules.json → ability_modifiers",
+      "dependency": "АВТО: значения характеристик",
+      "depends_on": [
+        7,
+        8
+      ],
+      "n": 28,
+      "step": "Модификаторы характеристик"
+    },
+    {
+      "source": "Таблица уровней",
+      "auto": true,
+      "data": "rules.json → advancement",
+      "dependency": "АВТО: уровень",
+      "n": 29,
+      "step": "Бонус мастерства"
+    },
+    {
+      "source": "Кость хитов класса",
+      "auto": true,
+      "data": "classes.json → hit_die, hit_points; species/feats grants (Dwarven Toughness, Tough)",
+      "dependency": "АВТО: класс, Телосложение",
+      "depends_on": [
+        1,
+        28
+      ],
+      "n": 30,
+      "step": "Хиты и кости хитов"
+    },
+    {
+      "source": "Правила доспехов",
+      "auto": true,
+      "data": "armor.json → armor_class; rules.json → armor_class",
+      "dependency": "АВТО: доспех, щит, Ловкость; у варвара и монаха — класс",
+      "depends_on": [
+        25,
+        26,
+        27,
+        28
+      ],
+      "n": 31,
+      "step": "Класс доспеха"
+    },
+    {
+      "source": "Модификатор Ловкости",
+      "auto": true,
+      "data": "rules.json → initiative",
+      "dependency": "АВТО: Ловкость, черта «Бдительный»",
+      "depends_on": [
+        28,
+        11
+      ],
+      "n": 32,
+      "step": "Инициатива"
+    },
+    {
+      "source": "Описание вида",
+      "auto": true,
+      "data": "species.json → speed; species-options.json → speed",
+      "dependency": "АВТО: вид",
+      "depends_on": [
+        3,
+        4
+      ],
+      "n": 33,
+      "step": "Скорость"
+    },
+    {
+      "source": "Описание вида",
+      "auto": true,
+      "data": "species.json → darkvision; species-options.json → darkvision",
+      "dependency": "АВТО: вид",
+      "depends_on": [
+        3,
+        4
+      ],
+      "n": 34,
+      "step": "Тёмное зрение"
+    },
+    {
+      "source": "Описание вида",
+      "auto": true,
+      "data": "species.json → resistances; species-options.json → resistances",
+      "dependency": "АВТО: вид",
+      "depends_on": [
+        3,
+        4
+      ],
+      "n": 35,
+      "step": "Сопротивления"
+    },
+    {
+      "source": "Характеристики + владения",
+      "auto": true,
+      "data": "rules.json → saving_throw",
+      "dependency": "АВТО: класс, характеристики",
+      "depends_on": [
+        16,
+        28,
+        29
+      ],
+      "n": 36,
+      "step": "Бонусы спасбросков"
+    },
+    {
+      "source": "Характеристики + владения",
+      "auto": true,
+      "data": "rules.json → skill_check; skills.json → ability",
+      "dependency": "АВТО: навыки, компетентность, характеристики",
+      "depends_on": [
+        9,
+        12,
+        13,
+        18,
+        22,
+        28,
+        29
+      ],
+      "n": 37,
+      "step": "Бонусы навыков"
+    },
+    {
+      "source": "10 + бонус Восприятия",
+      "auto": true,
+      "data": "rules.json → passive_perception",
+      "dependency": "АВТО: Мудрость, владение Восприятием",
+      "depends_on": [
+        37
+      ],
+      "n": 38,
+      "step": "Пассивное восприятие"
+    },
+    {
+      "source": "Таблица оружия",
+      "auto": true,
+      "data": "weapons.json; rules.json → weapon_attack",
+      "dependency": "АВТО: оружие, Сила или Ловкость, владение",
+      "depends_on": [
+        17,
+        25,
+        26,
+        27,
+        28
+      ],
+      "n": 39,
+      "step": "Атаки оружием"
+    },
+    {
+      "source": "Заклинательная характеристика класса",
+      "auto": true,
+      "data": "classes.json → spellcasting.ability; rules.json → spellcasting",
+      "dependency": "АВТО: класс, характеристики",
+      "depends_on": [
+        1,
+        28,
+        29
+      ],
+      "n": 40,
+      "step": "Сложность спасброска заклинаний"
+    },
+    {
+      "source": "Заклинательная характеристика класса",
+      "auto": true,
+      "data": "rules.json → spellcasting",
+      "dependency": "АВТО: класс, характеристики",
+      "depends_on": [
+        1,
+        28,
+        29
+      ],
+      "n": 41,
+      "step": "Бонус атаки заклинаниями"
+    },
+    {
+      "source": "Таблица класса",
+      "auto": true,
+      "data": "classes.json → levels[].spell_slots",
+      "dependency": "АВТО: класс, уровень",
+      "depends_on": [
+        1
+      ],
+      "n": 42,
+      "step": "Ячейки заклинаний"
+    },
+    {
+      "source": "9 мировоззрений",
+      "data": "alignments.json (selectable = true)",
+      "dependency": "-",
+      "n": 43,
+      "step": "Мировоззрение"
+    },
+    {
+      "source": "Свободно",
+      "dependency": "-",
+      "free": true,
+      "n": 44,
+      "step": "Имя"
+    },
+    {
+      "source": "Свободно",
+      "dependency": "-",
+      "free": true,
+      "n": 45,
+      "step": "Возраст"
+    },
+    {
+      "source": "Свободно",
+      "dependency": "-",
+      "free": true,
+      "helpers": "personality-tables.json → ability_descriptors",
+      "n": 46,
+      "step": "Внешность"
+    },
+    {
+      "source": "Свободно",
+      "dependency": "-",
+      "free": true,
+      "helpers": "personality-tables.json → alignment_traits",
+      "n": 47,
+      "step": "Черты характера"
+    },
+    {
+      "source": "Свободно",
+      "dependency": "-",
+      "free": true,
+      "n": 48,
+      "step": "Идеалы"
+    },
+    {
+      "source": "Свободно",
+      "dependency": "-",
+      "free": true,
+      "n": 49,
+      "step": "Привязанности"
+    },
+    {
+      "source": "Свободно",
+      "dependency": "-",
+      "free": true,
+      "n": 50,
+      "step": "Слабости"
+    },
+    {
+      "source": "Пантеон сеттинга",
+      "dependency": "-",
+      "free": true,
+      "n": 51,
+      "step": "Божество"
+    },
+    {
+      "source": "Свободно",
+      "dependency": "-",
+      "free": true,
+      "helpers": "trinkets.json (по желанию)",
+      "n": 52,
+      "step": "История персонажа"
+    }
+  ]
+}

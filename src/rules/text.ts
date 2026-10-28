@@ -82,9 +82,34 @@ export function classFeatureNumbers(featureId: string, name: string, x: NumbersC
   }
 }
 
-// The species trait line whose numbers follow the proficiency bonus (breath: also the level), or null.
-export function speciesNumberLine(speciesId: string, x: { level: number; pb: number; con: number; option: SpeciesOption | null }): string | null {
+// "1к4 + 2", "1к4 − 1", "1к4"
+const plusMod = (dieText: string, m: number) => (m > 0 ? `${dieText} + ${m}` : m < 0 ? `${dieText} − ${-m}` : dieText)
+
+const SHIFTING_RU: Record<string, (str: number) => string> = {
+  beasthide: () => 'ещё 1к6 временных хитов и +1 к КД',
+  longtooth: (str) => `укус бонусным действием, ${plusMod('1к6', str)} колющего`,
+  swiftstride: () => 'скорость +10 фт, реакцией отойти на 10 фт без провоцированных атак',
+  wildhunt: () => 'преимущество на проверки Мдр, в пределах 30 фт по вам не атакуют с преимуществом'
+}
+
+// The species trait line whose numbers follow the level, the proficiency bonus or a modifier, or null.
+export function speciesNumberLine(
+  speciesId: string,
+  x: { level: number; pb: number; con: number; str?: number; option: SpeciesOption | null }
+): string | null {
   switch (speciesId) {
+    case 'dhampir':
+      return `Укус вампира: безоружный удар ${plusMod('1к4', x.con)} колющего; вытягивание или усиление ${times(x.pb)} за долгий отдых`
+    case 'kalashtar':
+      return `Связь разумов: телепатия ${10 * x.level} фт; действием Магия собеседник может отвечать вам 1 час`
+    case 'lupin':
+      return `Вой: бонусным действием, существа на выбор в 15 фт — спасбросок Мдр Сл ${8 + x.pb + x.con}, иначе помеха на атаки и спасброски до вашего следующего хода; ${times(x.pb)} за долгий отдых`
+    case 'reborn':
+      return `Знание прошлой жизни: +1к6 к проваленной проверке характеристики, ${times(x.pb)} за долгий отдых`
+    case 'shifter': {
+      const benefit = x.option ? SHIFTING_RU[x.option.id]?.(x.str ?? 0) : ''
+      return `Перевоплощение${x.option ? ` (${nameOf(x.option)})` : ''}: бонусным действием на 1 минуту, ${2 * x.pb} временных хитов${benefit ? '; ' + benefit : ''}; ${times(x.pb)} за долгий отдых`
+    }
     case 'aasimar':
       return `Исцеляющие руки: раз за долгий отдых касанием восстановить ${x.pb}к4 хитов`
     case 'dragonborn': {
@@ -183,7 +208,10 @@ export function speciesTraitLines(d: Derived, s: WizardState): string[] {
   const opt = d.spOption ? nameOf(d.spOption) : ''
   const dv = d.darkvision ? `Тёмное зрение ${d.darkvision} фт` : ''
   const ab = s.species.spellAbility ? ` (${abilityName(s.species.spellAbility as Ability)})` : ''
-  const num = speciesNumberLine(sp.id, { level: 1, pb: PB, con: d.mods.con, option: d.spOption || null })
+  const num = speciesNumberLine(sp.id, { level: 1, pb: PB, con: d.mods.con, str: d.mods.str, option: d.spOption || null })
+  const chosenSkills = s.species.skills.length ? skillNames(s.species.skills) : '—'
+  const tool = s.species.tool ? nameOf(byId.item[s.species.tool]) : ''
+  const kind = sp.creature_type !== 'humanoid' ? `Тип существа: ${ruName('creature_types', sp.creature_type)}` : ''
   const lines: (string | false | null)[] = (() => {
     switch (sp.id) {
       case 'aasimar':
@@ -217,7 +245,7 @@ export function speciesTraitLines(d: Derived, s: WizardState): string[] {
           dv,
           `Эльфийская родословная: ${opt} — ${lineageSpells(d)}${ab}`,
           'Наследие фей: преимущество на спасброски от очарования',
-          `Обострённые чувства: ${s.species.skill ? skillNames([s.species.skill]) : '—'}`,
+          `Обострённые чувства: ${chosenSkills}`,
           'Транс: долгий отдых за 4 часа медитации'
         ]
       case 'gnome':
@@ -245,7 +273,7 @@ export function speciesTraitLines(d: Derived, s: WizardState): string[] {
         const feat = s.species.feat ? byId.feat[s.species.feat] : undefined
         return [
           'Находчивость: героическое вдохновение после каждого долгого отдыха',
-          `Умелый: ${s.species.skill ? skillNames([s.species.skill]) : '—'}`,
+          `Умелый: ${chosenSkills}`,
           `Разносторонний: черта «${feat ? nameOf(feat) : '—'}»`
         ]
       }
@@ -263,6 +291,72 @@ export function speciesTraitLines(d: Derived, s: WizardState): string[] {
           `Иномирное присутствие: заговор ${spellName('thaumaturgy')}`
         ]
       }
+      case 'changeling':
+        return [
+          kind,
+          `Инстинкты подменыша: ${chosenSkills}`,
+          'Перевёртыш: действием изменить внешность и голос, размер Средний или Маленький; в чужом облике преимущество на проверки Харизмы'
+        ]
+      case 'dhampir':
+        return [
+          dv,
+          `Паучье лазание: скорость лазания ${d.speed} фт; по стенам и потолкам без рук — с 3-го уровня`,
+          `След не-жизни: сопротивление (${damageName('necrotic')})`,
+          num
+        ]
+      case 'hexblood':
+        return [
+          kind,
+          dv,
+          'Мистический маркер: бонусным действием раз за долгий отдых; послание до 25 слов или наблюдение через маркер в пределах 10 миль',
+          `Ведьмовская магия: ${spellName('disguise-self')} и ${spellName('hex')} всегда подготовлены, каждое раз за долгий отдых без ячейки${ab}`
+        ]
+      case 'kalashtar':
+        return [
+          kind,
+          'Двойственность разума: преимущество на спасброски Мдр и Хар',
+          `Ментальная дисциплина: сопротивление (${damageName('psychic')})`,
+          num,
+          `Отделённый от снов: «${spellName('dream')}» не действует на вас; после долгого отдыха владение одним навыком до следующего`
+        ]
+      case 'khoravar':
+        return [
+          dv,
+          'Наследие фей: преимущество на спасброски от очарования',
+          `Дар фей: заговор ${spellName('friends')}${ab}; после долгого отдыха можно заменить заговором Волшебника, Друида или Жреца`,
+          'Сопротивление летаргии: проваленный спасбросок от бессознательности можно сделать успешным, снова — через 1к4 долгих отдыха',
+          `Универсальные умения: ${s.species.skills.length ? chosenSkills : tool || '—'}; после долгого отдыха можно заменить другим навыком или инструментом`
+        ]
+      case 'lupin':
+        return [
+          dv,
+          'Звериный наскок: безоружные удары наносят рубящий урон; раз в ход при попадании в действии Атака — и урон, и толчок',
+          num,
+          `Инстинкты оборотня: ${chosenSkills}`
+        ]
+      case 'reborn':
+        return [
+          'Избежавший смерти: преимущество на спасброски от смерти',
+          'Небренный: без истощения от жажды, голода и удушья; не спит, долгий отдых за 4 часа',
+          `Знание прошлой жизни: навык ${chosenSkills}`,
+          num,
+          `Сверхъестественная устойчивость: сопротивление (${s.species.resistance ? damageName(s.species.resistance) : '—'})`
+        ]
+      case 'shifter':
+        return [
+          `Звериные инстинкты: ${chosenSkills}`,
+          dv,
+          num
+        ]
+      case 'warforged':
+        return [
+          kind,
+          'Устойчивость конструкта: сопротивление урону ядом, преимущество против отравления',
+          'Встроенная защита: +1 к КД, надетый доспех нельзя снять против вашей воли',
+          'Отдых часового: не спит, долгий отдых за 6 часов',
+          `Специальная сборка: ${chosenSkills}, ${tool || '—'}`,
+          'Неустанность: без истощения от жажды, голода и удушья'
+        ]
       default:
         return []
     }

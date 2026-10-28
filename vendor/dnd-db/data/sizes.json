@@ -1,0 +1,50 @@
+[
+  {
+    "id": "tiny",
+    "name": "Tiny",
+    "name_ru": "Крошечный",
+    "source": "srd-5.2.1",
+    "playable": false,
+    "space_ft": 2.5
+  },
+  {
+    "id": "small",
+    "name": "Small",
+    "name_ru": "Маленький",
+    "source": "srd-5.2.1",
+    "playable": true,
+    "space_ft": 5
+  },
+  {
+    "id": "medium",
+    "name": "Medium",
+    "name_ru": "Средний",
+    "source": "srd-5.2.1",
+    "playable": true,
+    "space_ft": 5
+  },
+  {
+    "id": "large",
+    "name": "Large",
+    "name_ru": "Большой",
+    "source": "srd-5.2.1",
+    "playable": false,
+    "space_ft": 10
+  },
+  {
+    "id": "huge",
+    "name": "Huge",
+    "name_ru": "Огромный",
+    "source": "srd-5.2.1",
+    "playable": false,
+    "space_ft": 15
+  },
+  {
+    "id": "gargantuan",
+    "name": "Gargantuan",
+    "name_ru": "Громадный",
+    "source": "srd-5.2.1",
+    "playable": false,
+    "space_ft": 20
+  }
+]

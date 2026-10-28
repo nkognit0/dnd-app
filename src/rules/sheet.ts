@@ -3,10 +3,15 @@ import type { DnDAttack, DnDCharacter, DnDSpell } from 'dnd-sheet'
 import { ABILITIES, Ability, abilityShort, byId, nameOf, ruName, skills } from '../data'
 import type { WizardState } from '../wizard/state'
 import {
-  Derived, KnownSpell, PROFICIENCY_BONUS as PB, armorClass, derive, initiative, inventory, maxHitPoints,
-  ownedWeapons, purchasesCp, signed, skillBonus, knownSpells, spellAttack, spellSaveDC, startingGoldCp
+  Derived, InventoryLine, KnownSpell, PROFICIENCY_BONUS as PB, armorClass, derive, initiative, inventory, maxHitPoints,
+  purchasesCp, signed, skillBonus, knownSpells, spellAttack, spellSaveDC, startingGoldCp
 } from './derive'
 import { classFeatureLines, dice, featLines, speciesTraitLines } from './text'
+import { logEvent } from '../changelog/changelog'
+import { creationWhy } from '../changelog/creation'
+import { inventoryFromText } from '../inventory/sync'
+import { autoEquip, wornWeapons } from '../inventory/worn'
+import { weaponAbility, weaponRow } from './weapons'
 
 // sheet field name for each skill (keys come from the sheet component)
 export const SKILL_FIELD: Record<string, string> = {
@@ -23,7 +28,6 @@ const NOTE_RU: Record<string, string> = {
 }
 
 const damageName = (id: string) => ruName('damage_types', id).toLowerCase()
-const lc = (s: string) => s.charAt(0).toLowerCase() + s.slice(1)
 
 function rangeRu(range: string): string {
   return range
@@ -32,29 +36,12 @@ function rangeRu(range: string): string {
     .replace(/^Touch$/i, 'касание')
 }
 
-function weaponRows(d: Derived, s: WizardState, inv: ReturnType<typeof inventory>): DnDAttack[] {
-  return ownedWeapons(inv).map(({ line, weapon: w }) => {
-    const finesse = w.properties.includes('finesse')
-    const ability: Ability = finesse ? (d.mods.dex > d.mods.str ? 'dex' : 'str') : w.type === 'ranged' ? 'dex' : 'str'
-    const m = d.mods[ability]
-    const proficient = d.weaponIds.has(w.id)
-    const props = w.properties.map((p) => {
-      const name = lc(ruName('weapon_properties', p))
-      const det = w.property_details
-      if (p === 'ammunition' && det.ammunition) return `${name} (${det.ammunition.range_normal}/${det.ammunition.range_long})`
-      if (p === 'thrown' && det.thrown) return `${name} (${det.thrown.range_normal}/${det.thrown.range_long})`
-      if (p === 'versatile' && det.versatile) return `${name} (${dice(det.versatile.damage_dice)})`
-      return name
-    })
-    const notes = [props.join(', ')]
-    if (s.features.masteries.includes(w.id)) notes.push('мастерство: ' + lc(ruName('weapon_masteries', w.mastery)))
-    if (!proficient) notes.push('нет владения')
-    return {
-      name: nameOf(w) + (line.qty > 1 && !byId.item[w.id]?.ammunition ? ` ×${line.qty}` : ''),
-      bonus: signed(m + (proficient ? PB : 0)),
-      damage: `${dice(w.damage_dice)}${m ? signed(m) : ''} ${damageName(w.damage_type)}`,
-      notes: notes.filter(Boolean).join('; ')
-    }
+// the weapons the new hero holds (both sets)
+function weaponRows(d: Derived, s: WizardState, ids: string[]): DnDAttack[] {
+  return ids.map((id) => {
+    const w = byId.weapon[id]
+    const m = d.mods[weaponAbility(w, d.mods)]
+    return weaponRow(w, { mod: m, pb: PB, proficient: d.weaponIds.has(w.id), mastery: s.features.masteries.includes(w.id) })
   })
 }
 
@@ -86,6 +73,10 @@ function weaponTrainingText(d: Derived): string {
   }
   return 'Простое оружие'
 }
+
+// one entry of the equipment field
+export const itemText = (l: InventoryLine) =>
+  nameOf(l.item) + (l.qty > 1 ? ` ×${l.qty}` : '') + (l.note ? ` (${NOTE_RU[l.note] || l.note})` : '')
 
 function coins(cp: number) {
   const total = Math.max(0, cp)
@@ -151,17 +142,20 @@ export function buildCharacter(s: WizardState): BuiltCharacter {
   c.hitDiceMax = cls ? '1к' + cls.hit_die : ''
   c.hitDice = c.hitDiceMax
 
-  const rows = [...weaponRows(d, s, inv), ...cantripRows(d, known)]
-  c.attacks = rows.slice(0, 5)
-  c.attacksText = rows.slice(5).map((r) => `${r.name}: ${r.bonus}, ${r.damage}${r.notes ? '; ' + r.notes : ''}`).join('\n')
-
   const money = coins(startingGoldCp(d, s) - purchasesCp(s))
   c.gp = String(money.gp)
   c.sp = money.sp ? String(money.sp) : ''
   c.cp = money.cp ? String(money.cp) : ''
-  c.equipment = inv
-    .map((l) => nameOf(l.item) + (l.qty > 1 ? ` ×${l.qty}` : '') + (l.note ? ` (${NOTE_RU[l.note] || l.note})` : ''))
-    .join(', ')
+  c.equipment = inv.map(itemText).join(', ')
+  // the inventory tab starts with the same things, one cell per thing (a bundle of arrows is one);
+  // the hero wears the armour and shield the armour class counts and holds weapons
+  const bag = autoEquip(inventoryFromText(c), { armor: ac.armor?.id, shield: ac.shield })
+  c.inventory = bag.cells
+  c.worn = bag.worn
+
+  const rows = [...weaponRows(d, s, wornWeapons(bag.worn)), ...cantripRows(d, known)]
+  c.attacks = rows.slice(0, 5)
+  c.attacksText = rows.slice(5).map((r) => `${r.name}: ${r.bonus}, ${r.damage}${r.notes ? '; ' + r.notes : ''}`).join('\n')
 
   c.personalityTraits = p.traits
   c.ideals = p.ideals
@@ -198,5 +192,8 @@ export function buildCharacter(s: WizardState): BuiltCharacter {
     c.lvl1SpellSlotsTotal = slots ? String(slots) : ''
   }
 
-  return { character: c, derived: d, acFormula: ac.formula, warnings }
+  // the change log starts with the creation: every filled field and why it has its value
+  const why = creationWhy(s, d, c, { ac, known, inv, itemText, skillField: SKILL_FIELD })
+  const title = `Создание персонажа: ${[p.name, cls ? nameOf(cls) + ' 1' : ''].filter(Boolean).join(', ')}`
+  return { character: logEvent({}, c, why, title, []), derived: d, acFormula: ac.formula, warnings }
 }

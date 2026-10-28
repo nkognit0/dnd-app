@@ -1,0 +1,1000 @@
+[
+  {
+    "id": "acolyte",
+    "name": "Acolyte",
+    "name_ru": "Прислужник",
+    "source": "srd-5.2.1",
+    "ability_scores": [
+      "int",
+      "wis",
+      "cha"
+    ],
+    "feat": {
+      "id": "magic-initiate",
+      "spell_list": "cleric"
+    },
+    "skill_proficiencies": [
+      "insight",
+      "religion"
+    ],
+    "starting_equipment": {
+      "options": [
+        {
+          "id": "A",
+          "gp": 8,
+          "items": [
+            {
+              "item": "calligraphers-supplies",
+              "qty": 1
+            },
+            {
+              "item": "book",
+              "note": "prayers",
+              "qty": 1
+            },
+            {
+              "category": "holy-symbols",
+              "qty": 1
+            },
+            {
+              "item": "parchment",
+              "qty": 10
+            },
+            {
+              "item": "robe",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "gp": 50
+        }
+      ],
+      "text": "Choose A or B: (A) Calligrapher's Supplies, Book (prayers), Holy Symbol, Parchment (10 sheets), Robe, 8 GP; or (B) 50 GP"
+    },
+    "tool_proficiencies": {
+      "choose": [],
+      "fixed": [
+        "calligraphers-supplies"
+      ]
+    }
+  },
+  {
+    "id": "artisan",
+    "name": "Artisan",
+    "name_ru": "Ремесленник",
+    "source": "phb-2024",
+    "ability_scores": [
+      "str",
+      "dex",
+      "int"
+    ],
+    "feat": {
+      "id": "crafter"
+    },
+    "skill_proficiencies": [
+      "investigation",
+      "persuasion"
+    ],
+    "starting_equipment": {
+      "options": [
+        {
+          "id": "A",
+          "gp": 32,
+          "items": [
+            {
+              "categories": [
+                "artisans-tools"
+              ],
+              "qty": 1,
+              "same_as": "tool_proficiency"
+            },
+            {
+              "item": "pouch",
+              "qty": 2
+            },
+            {
+              "item": "clothes-travelers",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "gp": 50
+        }
+      ],
+      "text": "Choose A or B: (A) Artisan's Tools (same as above), 2 Pouches, Traveler's Clothes, 32 GP; or (B) 50 GP"
+    },
+    "tool_proficiencies": {
+      "choose": [
+        {
+          "count": 1,
+          "from_categories": [
+            "artisans-tools"
+          ]
+        }
+      ],
+      "fixed": []
+    }
+  },
+  {
+    "id": "charlatan",
+    "name": "Charlatan",
+    "name_ru": "Шарлатан",
+    "source": "phb-2024",
+    "ability_scores": [
+      "dex",
+      "con",
+      "cha"
+    ],
+    "feat": {
+      "id": "skilled"
+    },
+    "skill_proficiencies": [
+      "deception",
+      "sleight-of-hand"
+    ],
+    "starting_equipment": {
+      "options": [
+        {
+          "id": "A",
+          "gp": 15,
+          "items": [
+            {
+              "item": "forgery-kit",
+              "qty": 1
+            },
+            {
+              "item": "costume",
+              "qty": 1
+            },
+            {
+              "item": "clothes-fine",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "gp": 50
+        }
+      ],
+      "text": "Choose A or B: (A) Forgery Kit, Costume, Fine Clothes, 15 GP; or (B) 50 GP"
+    },
+    "tool_proficiencies": {
+      "choose": [],
+      "fixed": [
+        "forgery-kit"
+      ]
+    }
+  },
+  {
+    "id": "criminal",
+    "name": "Criminal",
+    "name_ru": "Преступник",
+    "source": "srd-5.2.1",
+    "ability_scores": [
+      "dex",
+      "con",
+      "int"
+    ],
+    "feat": {
+      "id": "alert"
+    },
+    "skill_proficiencies": [
+      "sleight-of-hand",
+      "stealth"
+    ],
+    "starting_equipment": {
+      "options": [
+        {
+          "id": "A",
+          "gp": 16,
+          "items": [
+            {
+              "item": "dagger",
+              "qty": 2
+            },
+            {
+              "item": "thieves-tools",
+              "qty": 1
+            },
+            {
+              "item": "crowbar",
+              "qty": 1
+            },
+            {
+              "item": "pouch",
+              "qty": 2
+            },
+            {
+              "item": "clothes-travelers",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "gp": 50
+        }
+      ],
+      "text": "Choose A or B: (A) 2 Daggers, Thieves' Tools, Crowbar, 2 Pouches, Traveler's Clothes, 16 GP; or (B) 50 GP"
+    },
+    "tool_proficiencies": {
+      "choose": [],
+      "fixed": [
+        "thieves-tools"
+      ]
+    }
+  },
+  {
+    "id": "entertainer",
+    "name": "Entertainer",
+    "name_ru": "Артист",
+    "source": "phb-2024",
+    "ability_scores": [
+      "str",
+      "dex",
+      "cha"
+    ],
+    "feat": {
+      "id": "musician"
+    },
+    "skill_proficiencies": [
+      "acrobatics",
+      "performance"
+    ],
+    "starting_equipment": {
+      "options": [
+        {
+          "id": "A",
+          "gp": 11,
+          "items": [
+            {
+              "categories": [
+                "musical-instruments"
+              ],
+              "qty": 1,
+              "same_as": "tool_proficiency"
+            },
+            {
+              "item": "costume",
+              "qty": 2
+            },
+            {
+              "item": "mirror",
+              "qty": 1
+            },
+            {
+              "item": "perfume",
+              "qty": 1
+            },
+            {
+              "item": "clothes-travelers",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "gp": 50
+        }
+      ],
+      "text": "Choose A or B: (A) Musical Instrument (same as above), 2 Costumes, Mirror, Perfume, Traveler's Clothes, 11 GP; or (B) 50 GP"
+    },
+    "tool_proficiencies": {
+      "choose": [
+        {
+          "count": 1,
+          "from_categories": [
+            "musical-instruments"
+          ]
+        }
+      ],
+      "fixed": []
+    }
+  },
+  {
+    "id": "farmer",
+    "name": "Farmer",
+    "name_ru": "Фермер",
+    "source": "phb-2024",
+    "ability_scores": [
+      "str",
+      "con",
+      "wis"
+    ],
+    "feat": {
+      "id": "tough"
+    },
+    "skill_proficiencies": [
+      "animal-handling",
+      "nature"
+    ],
+    "starting_equipment": {
+      "options": [
+        {
+          "id": "A",
+          "gp": 30,
+          "items": [
+            {
+              "item": "sickle",
+              "qty": 1
+            },
+            {
+              "item": "carpenters-tools",
+              "qty": 1
+            },
+            {
+              "item": "healers-kit",
+              "qty": 1
+            },
+            {
+              "item": "pot-iron",
+              "qty": 1
+            },
+            {
+              "item": "shovel",
+              "qty": 1
+            },
+            {
+              "item": "clothes-travelers",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "gp": 50
+        }
+      ],
+      "text": "Choose A or B: (A) Sickle, Carpenter's Tools, Healer's Kit, Iron Pot, Shovel, Traveler's Clothes, 30 GP; or (B) 50 GP"
+    },
+    "tool_proficiencies": {
+      "choose": [],
+      "fixed": [
+        "carpenters-tools"
+      ]
+    }
+  },
+  {
+    "id": "guard",
+    "name": "Guard",
+    "name_ru": "Стражник",
+    "source": "phb-2024",
+    "ability_scores": [
+      "str",
+      "int",
+      "wis"
+    ],
+    "feat": {
+      "id": "alert"
+    },
+    "skill_proficiencies": [
+      "athletics",
+      "perception"
+    ],
+    "starting_equipment": {
+      "options": [
+        {
+          "id": "A",
+          "gp": 12,
+          "items": [
+            {
+              "item": "spear",
+              "qty": 1
+            },
+            {
+              "item": "light-crossbow",
+              "qty": 1
+            },
+            {
+              "item": "bolts",
+              "qty": 20
+            },
+            {
+              "categories": [
+                "gaming-sets"
+              ],
+              "qty": 1,
+              "same_as": "tool_proficiency"
+            },
+            {
+              "item": "lantern-hooded",
+              "qty": 1
+            },
+            {
+              "item": "manacles",
+              "qty": 1
+            },
+            {
+              "item": "quiver",
+              "qty": 1
+            },
+            {
+              "item": "clothes-travelers",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "gp": 50
+        }
+      ],
+      "text": "Choose A or B: (A) Spear, Light Crossbow, 20 Bolts, Gaming Set (same as above), Hooded Lantern, Manacles, Quiver, Traveler's Clothes, 12 GP; or (B) 50 GP"
+    },
+    "tool_proficiencies": {
+      "choose": [
+        {
+          "count": 1,
+          "from_categories": [
+            "gaming-sets"
+          ]
+        }
+      ],
+      "fixed": []
+    }
+  },
+  {
+    "id": "guide",
+    "name": "Guide",
+    "name_ru": "Проводник",
+    "source": "phb-2024",
+    "ability_scores": [
+      "dex",
+      "con",
+      "wis"
+    ],
+    "feat": {
+      "id": "magic-initiate",
+      "spell_list": "druid"
+    },
+    "skill_proficiencies": [
+      "stealth",
+      "survival"
+    ],
+    "starting_equipment": {
+      "options": [
+        {
+          "id": "A",
+          "gp": 3,
+          "items": [
+            {
+              "item": "shortbow",
+              "qty": 1
+            },
+            {
+              "item": "arrows",
+              "qty": 20
+            },
+            {
+              "item": "cartographer-tools",
+              "qty": 1
+            },
+            {
+              "item": "bedroll",
+              "qty": 1
+            },
+            {
+              "item": "quiver",
+              "qty": 1
+            },
+            {
+              "item": "tent",
+              "qty": 1
+            },
+            {
+              "item": "clothes-travelers",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "gp": 50
+        }
+      ],
+      "text": "Choose A or B: (A) Shortbow, 20 Arrows, Cartographer's Tools, Bedroll, Quiver, Tent, Traveler's Clothes, 3 GP; or (B) 50 GP"
+    },
+    "tool_proficiencies": {
+      "choose": [],
+      "fixed": [
+        "cartographer-tools"
+      ]
+    }
+  },
+  {
+    "id": "hermit",
+    "name": "Hermit",
+    "name_ru": "Отшельник",
+    "source": "phb-2024",
+    "ability_scores": [
+      "con",
+      "wis",
+      "cha"
+    ],
+    "feat": {
+      "id": "healer"
+    },
+    "skill_proficiencies": [
+      "medicine",
+      "religion"
+    ],
+    "starting_equipment": {
+      "options": [
+        {
+          "id": "A",
+          "gp": 16,
+          "items": [
+            {
+              "item": "quarterstaff",
+              "qty": 1
+            },
+            {
+              "item": "herbalism-kit",
+              "qty": 1
+            },
+            {
+              "item": "bedroll",
+              "qty": 1
+            },
+            {
+              "item": "book",
+              "note": "philosophy",
+              "qty": 1
+            },
+            {
+              "item": "lamp",
+              "qty": 1
+            },
+            {
+              "item": "oil",
+              "qty": 3
+            },
+            {
+              "item": "clothes-travelers",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "gp": 50
+        }
+      ],
+      "text": "Choose A or B: (A) Quarterstaff, Herbalism Kit, Bedroll, Book (philosophy), Lamp, Oil (3 flasks), Traveler's Clothes, 16 GP; or (B) 50 GP"
+    },
+    "tool_proficiencies": {
+      "choose": [],
+      "fixed": [
+        "herbalism-kit"
+      ]
+    }
+  },
+  {
+    "id": "merchant",
+    "name": "Merchant",
+    "name_ru": "Торговец",
+    "source": "phb-2024",
+    "ability_scores": [
+      "con",
+      "int",
+      "cha"
+    ],
+    "feat": {
+      "id": "lucky"
+    },
+    "skill_proficiencies": [
+      "animal-handling",
+      "persuasion"
+    ],
+    "starting_equipment": {
+      "options": [
+        {
+          "id": "A",
+          "gp": 22,
+          "items": [
+            {
+              "item": "navigators-tools",
+              "qty": 1
+            },
+            {
+              "item": "pouch",
+              "qty": 2
+            },
+            {
+              "item": "clothes-travelers",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "gp": 50
+        }
+      ],
+      "text": "Choose A or B: (A) Navigator's Tools, 2 Pouches, Traveler's Clothes, 22 GP; or (B) 50 GP"
+    },
+    "tool_proficiencies": {
+      "choose": [],
+      "fixed": [
+        "navigators-tools"
+      ]
+    }
+  },
+  {
+    "id": "noble",
+    "name": "Noble",
+    "name_ru": "Дворянин",
+    "source": "phb-2024",
+    "ability_scores": [
+      "str",
+      "int",
+      "cha"
+    ],
+    "feat": {
+      "id": "skilled"
+    },
+    "skill_proficiencies": [
+      "history",
+      "persuasion"
+    ],
+    "starting_equipment": {
+      "options": [
+        {
+          "id": "A",
+          "gp": 29,
+          "items": [
+            {
+              "categories": [
+                "gaming-sets"
+              ],
+              "qty": 1,
+              "same_as": "tool_proficiency"
+            },
+            {
+              "item": "clothes-fine",
+              "qty": 1
+            },
+            {
+              "item": "perfume",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "gp": 50
+        }
+      ],
+      "text": "Choose A or B: (A) Gaming Set (same as above), Fine Clothes, Perfume, 29 GP; or (B) 50 GP"
+    },
+    "tool_proficiencies": {
+      "choose": [
+        {
+          "count": 1,
+          "from_categories": [
+            "gaming-sets"
+          ]
+        }
+      ],
+      "fixed": []
+    }
+  },
+  {
+    "id": "sage",
+    "name": "Sage",
+    "name_ru": "Мудрец",
+    "source": "srd-5.2.1",
+    "ability_scores": [
+      "con",
+      "int",
+      "wis"
+    ],
+    "feat": {
+      "id": "magic-initiate",
+      "spell_list": "wizard"
+    },
+    "skill_proficiencies": [
+      "arcana",
+      "history"
+    ],
+    "starting_equipment": {
+      "options": [
+        {
+          "id": "A",
+          "gp": 8,
+          "items": [
+            {
+              "item": "quarterstaff",
+              "qty": 1
+            },
+            {
+              "item": "calligraphers-supplies",
+              "qty": 1
+            },
+            {
+              "item": "book",
+              "note": "history",
+              "qty": 1
+            },
+            {
+              "item": "parchment",
+              "qty": 8
+            },
+            {
+              "item": "robe",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "gp": 50
+        }
+      ],
+      "text": "Choose A or B: (A) Quarterstaff, Calligrapher's Supplies, Book (history), Parchment (8 sheets), Robe, 8 GP; or (B) 50 GP"
+    },
+    "tool_proficiencies": {
+      "choose": [],
+      "fixed": [
+        "calligraphers-supplies"
+      ]
+    }
+  },
+  {
+    "id": "sailor",
+    "name": "Sailor",
+    "name_ru": "Моряк",
+    "source": "phb-2024",
+    "ability_scores": [
+      "str",
+      "dex",
+      "wis"
+    ],
+    "feat": {
+      "id": "tavern-brawler"
+    },
+    "skill_proficiencies": [
+      "acrobatics",
+      "perception"
+    ],
+    "starting_equipment": {
+      "options": [
+        {
+          "id": "A",
+          "gp": 20,
+          "items": [
+            {
+              "item": "dagger",
+              "qty": 1
+            },
+            {
+              "item": "navigators-tools",
+              "qty": 1
+            },
+            {
+              "item": "rope",
+              "qty": 1
+            },
+            {
+              "item": "clothes-travelers",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "gp": 50
+        }
+      ],
+      "text": "Choose A or B: (A) Dagger, Navigator's Tools, Rope, Traveler's Clothes, 20 GP; or (B) 50 GP"
+    },
+    "tool_proficiencies": {
+      "choose": [],
+      "fixed": [
+        "navigators-tools"
+      ]
+    }
+  },
+  {
+    "id": "scribe",
+    "name": "Scribe",
+    "name_ru": "Писарь",
+    "source": "phb-2024",
+    "ability_scores": [
+      "dex",
+      "int",
+      "wis"
+    ],
+    "feat": {
+      "id": "skilled"
+    },
+    "skill_proficiencies": [
+      "investigation",
+      "perception"
+    ],
+    "starting_equipment": {
+      "options": [
+        {
+          "id": "A",
+          "gp": 23,
+          "items": [
+            {
+              "item": "calligraphers-supplies",
+              "qty": 1
+            },
+            {
+              "item": "clothes-fine",
+              "qty": 1
+            },
+            {
+              "item": "lamp",
+              "qty": 1
+            },
+            {
+              "item": "oil",
+              "qty": 3
+            },
+            {
+              "item": "parchment",
+              "qty": 12
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "gp": 50
+        }
+      ],
+      "text": "Choose A or B: (A) Calligrapher's Supplies, Fine Clothes, Lamp, Oil (3 flasks), Parchment (12 sheets), 23 GP; or (B) 50 GP"
+    },
+    "tool_proficiencies": {
+      "choose": [],
+      "fixed": [
+        "calligraphers-supplies"
+      ]
+    }
+  },
+  {
+    "id": "soldier",
+    "name": "Soldier",
+    "name_ru": "Солдат",
+    "source": "srd-5.2.1",
+    "ability_scores": [
+      "str",
+      "dex",
+      "con"
+    ],
+    "feat": {
+      "id": "savage-attacker"
+    },
+    "skill_proficiencies": [
+      "athletics",
+      "intimidation"
+    ],
+    "starting_equipment": {
+      "options": [
+        {
+          "id": "A",
+          "gp": 14,
+          "items": [
+            {
+              "item": "spear",
+              "qty": 1
+            },
+            {
+              "item": "shortbow",
+              "qty": 1
+            },
+            {
+              "item": "arrows",
+              "qty": 20
+            },
+            {
+              "categories": [
+                "gaming-sets"
+              ],
+              "qty": 1,
+              "same_as": "tool_proficiency"
+            },
+            {
+              "item": "healers-kit",
+              "qty": 1
+            },
+            {
+              "item": "quiver",
+              "qty": 1
+            },
+            {
+              "item": "clothes-travelers",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "gp": 50
+        }
+      ],
+      "text": "Choose A or B: (A) Spear, Shortbow, 20 Arrows, Gaming Set (same as above), Healer's Kit, Quiver, Traveler's Clothes, 14 GP; or (B) 50 GP"
+    },
+    "tool_proficiencies": {
+      "choose": [
+        {
+          "count": 1,
+          "from_categories": [
+            "gaming-sets"
+          ]
+        }
+      ],
+      "fixed": []
+    }
+  },
+  {
+    "id": "wayfarer",
+    "name": "Wayfarer",
+    "name_ru": "Странник",
+    "source": "phb-2024",
+    "ability_scores": [
+      "dex",
+      "wis",
+      "cha"
+    ],
+    "feat": {
+      "id": "lucky"
+    },
+    "skill_proficiencies": [
+      "insight",
+      "stealth"
+    ],
+    "starting_equipment": {
+      "options": [
+        {
+          "id": "A",
+          "gp": 16,
+          "items": [
+            {
+              "item": "dagger",
+              "qty": 2
+            },
+            {
+              "item": "thieves-tools",
+              "qty": 1
+            },
+            {
+              "category": "gaming-sets",
+              "qty": 1
+            },
+            {
+              "item": "bedroll",
+              "qty": 1
+            },
+            {
+              "item": "pouch",
+              "qty": 2
+            },
+            {
+              "item": "clothes-travelers",
+              "qty": 1
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "gp": 50
+        }
+      ],
+      "text": "Choose A or B: (A) 2 Daggers, Thieves' Tools, Gaming Set (any), Bedroll, 2 Pouches, Traveler's Clothes, 16 GP; or (B) 50 GP"
+    },
+    "tool_proficiencies": {
+      "choose": [],
+      "fixed": [
+        "thieves-tools"
+      ]
+    }
+  }
+]

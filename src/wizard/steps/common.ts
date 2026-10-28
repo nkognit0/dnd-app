@@ -15,7 +15,7 @@ export const ARMOR_RU: Record<string, string> = {
   shield: 'Щиты'
 }
 
-const UNIT_RU: Record<string, string> = { cp: 'мм', sp: 'см', ep: 'эм', gp: 'зм', pp: 'пм' }
+const UNIT_RU: Record<string, string> = { cp: 'мм', sp: 'см', gp: 'зм', pp: 'пм' }
 
 export function price(cost: { amount: number; unit: string } | null | undefined): string {
   if (!cost) return 'нет цены'

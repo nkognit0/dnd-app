@@ -1,0 +1,146 @@
+[
+  {
+    "id": "acrobatics",
+    "name": "Acrobatics",
+    "name_ru": "Акробатика",
+    "source": "srd-5.2.1",
+    "ability": "dex",
+    "description": "Stay on your feet in a tricky situation, or perform an acrobatic stunt."
+  },
+  {
+    "id": "animal-handling",
+    "name": "Animal Handling",
+    "name_ru": "Уход за животными",
+    "source": "srd-5.2.1",
+    "ability": "wis",
+    "description": "Calm or train an animal, or get an animal to behave in a certain way."
+  },
+  {
+    "id": "arcana",
+    "name": "Arcana",
+    "name_ru": "Тайная магия",
+    "source": "srd-5.2.1",
+    "ability": "int",
+    "description": "Recall lore about spells, magic items, and the planes of existence."
+  },
+  {
+    "id": "athletics",
+    "name": "Athletics",
+    "name_ru": "Атлетика",
+    "source": "srd-5.2.1",
+    "ability": "str",
+    "description": "Jump farther than normal, stay afloat in rough water, or break something."
+  },
+  {
+    "id": "deception",
+    "name": "Deception",
+    "name_ru": "Обман",
+    "source": "srd-5.2.1",
+    "ability": "cha",
+    "description": "Tell a convincing lie, or wear a disguise convincingly."
+  },
+  {
+    "id": "history",
+    "name": "History",
+    "name_ru": "История",
+    "source": "srd-5.2.1",
+    "ability": "int",
+    "description": "Recall lore about historical events, people, nations, and cultures."
+  },
+  {
+    "id": "insight",
+    "name": "Insight",
+    "name_ru": "Проницательность",
+    "source": "srd-5.2.1",
+    "ability": "wis",
+    "description": "Discern a person’s mood and intentions."
+  },
+  {
+    "id": "intimidation",
+    "name": "Intimidation",
+    "name_ru": "Запугивание",
+    "source": "srd-5.2.1",
+    "ability": "cha",
+    "description": "Awe or threaten someone into doing what you want."
+  },
+  {
+    "id": "investigation",
+    "name": "Investigation",
+    "name_ru": "Расследование",
+    "source": "srd-5.2.1",
+    "ability": "int",
+    "description": "Find obscure information in books, or deduce how something works."
+  },
+  {
+    "id": "medicine",
+    "name": "Medicine",
+    "name_ru": "Медицина",
+    "source": "srd-5.2.1",
+    "ability": "wis",
+    "description": "Diagnose an illness, or determine what killed the recently slain."
+  },
+  {
+    "id": "nature",
+    "name": "Nature",
+    "name_ru": "Природа",
+    "source": "srd-5.2.1",
+    "ability": "int",
+    "description": "Recall lore about terrain, plants, animals, and weather."
+  },
+  {
+    "id": "perception",
+    "name": "Perception",
+    "name_ru": "Восприятие",
+    "source": "srd-5.2.1",
+    "ability": "wis",
+    "description": "Using a combination of senses, notice something that’s easy to miss."
+  },
+  {
+    "id": "performance",
+    "name": "Performance",
+    "name_ru": "Выступление",
+    "source": "srd-5.2.1",
+    "ability": "cha",
+    "description": "Act, tell a story, perform music, or dance."
+  },
+  {
+    "id": "persuasion",
+    "name": "Persuasion",
+    "name_ru": "Убеждение",
+    "source": "srd-5.2.1",
+    "ability": "cha",
+    "description": "Honestly and graciously convince someone of something."
+  },
+  {
+    "id": "religion",
+    "name": "Religion",
+    "name_ru": "Религия",
+    "source": "srd-5.2.1",
+    "ability": "int",
+    "description": "Recall lore about gods, religious rituals, and holy symbols."
+  },
+  {
+    "id": "sleight-of-hand",
+    "name": "Sleight of Hand",
+    "name_ru": "Ловкость рук",
+    "source": "srd-5.2.1",
+    "ability": "dex",
+    "description": "Pick a pocket, conceal a handheld object, or perform legerdemain."
+  },
+  {
+    "id": "stealth",
+    "name": "Stealth",
+    "name_ru": "Скрытность",
+    "source": "srd-5.2.1",
+    "ability": "dex",
+    "description": "Escape notice by moving quietly and hiding behind things."
+  },
+  {
+    "id": "survival",
+    "name": "Survival",
+    "name_ru": "Выживание",
+    "source": "srd-5.2.1",
+    "ability": "wis",
+    "description": "Follow tracks, forage, find a trail, or avoid natural hazards."
+  }
+]

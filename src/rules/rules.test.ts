@@ -3,6 +3,9 @@ import { byId, nameOf } from '../data'
 import { applyUpdate, initialState, Roll, WizardState } from '../wizard/state'
 import { rollAbility, rollAbilityScores } from './dice'
 import { buildCharacter } from './sheet'
+import { derive } from './derive'
+import { speciesValid } from '../wizard/steps/origin'
+import { bagOf } from '../inventory/worn'
 
 const roll = (total: number): Roll => ({ dice: [], dropped: 0, total })
 const STANDARD = [15, 14, 13, 12, 10, 8].map(roll)
@@ -98,6 +101,16 @@ describe('dwarf fighter (soldier)', () => {
     expect(c.toolProficiencies).toBe(nameOf(byId.item['dice']))
     expect(c.languages).toBe(['common', 'dwarvish', 'giant'].map((id) => nameOf(byId.language[id])).join(', '))
   })
+  it('the inventory tab starts with the starting equipment, one cell per item; the hero is dressed', () => {
+    const { cells, worn } = bagOf(c)
+    expect(worn.armor?.id).toBe('chain-mail')
+    expect(worn.main1?.id).toBe('greatsword')
+    expect(worn.main2?.id).toBe('shortbow')
+    expect(cells.filter((s) => s?.id === 'javelin')).toHaveLength(8)
+    expect(cells.some((s) => s?.id === 'greatsword')).toBe(false)
+    // the attack table: the weapons in hands, not every weapon owned
+    expect((c.attacks || []).map((a) => a.name)).toEqual([nameOf(byId.weapon['greatsword']), nameOf(byId.weapon['shortbow'])])
+  })
   it('feats and traits', () => {
     expect(c.feats).toContain(nameOf(byId.feat['savage-attacker']))
     expect(c.feats).toContain(nameOf(byId.feat['great-weapon-fighting']))
@@ -109,7 +122,7 @@ describe('human noble artificer', () => {
   const s = initialState()
   s.cls.classId = 'artificer'
   s.background = { backgroundId: 'noble', toolChoice: ['playing-cards'] }
-  s.species = { speciesId: 'human', optionId: null, size: 'medium', skill: 'insight', feat: 'lucky', spellAbility: null }
+  s.species = { speciesId: 'human', optionId: null, size: 'medium', skills: ['insight'], tool: null, feat: 'lucky', spellAbility: null, resistance: null }
   s.roll.rolls = STANDARD
   s.abilities = { assign: { int: 0, con: 1, dex: 2, cha: 3, wis: 4, str: 5 }, mode: '2-1', plus2: 'int', plus1: 'cha' }
   s.feats.background.picks = ['skill:deception', 'skill:perception', 'tool:jewelers-tools']
@@ -144,5 +157,71 @@ describe('human noble artificer', () => {
     expect(c.equipment).toContain(nameOf(byId.item['playing-cards']))
     expect(c.gp).toBe('35')
     expect(c.toolProficiencies).toContain(nameOf(byId.item['jewelers-tools']))
+  })
+})
+
+// the dwarf fighter above with another species: Str 17, Dex 14, Con 14, chain mail
+function fighterAs(species: Partial<WizardState['species']>): WizardState {
+  const s = dwarfFighter()
+  s.species = { ...s.species, size: 'medium', ...species }
+  return s
+}
+
+describe('species from Eberron and Ravenloft', () => {
+  it('every choice is required before the species step is complete', () => {
+    const s = fighterAs({ speciesId: 'warforged', skills: ['insight'] })
+    expect(speciesValid(s, derive(s))).toBe(false)
+    s.species.tool = 'smiths-tools'
+    expect(speciesValid(s, derive(s))).toBe(true)
+    const ch = fighterAs({ speciesId: 'changeling', skills: ['deception'] })
+    expect(speciesValid(ch, derive(ch))).toBe(false)
+    ch.species.skills = ['deception', 'persuasion']
+    expect(speciesValid(ch, derive(ch))).toBe(true)
+  })
+  it('Warforged: +1 AC over armor, a skill and a tool', () => {
+    const { character: c } = buildCharacter(fighterAs({ speciesId: 'warforged', skills: ['insight'], tool: 'smiths-tools' }))
+    expect(c.ac).toBe('17')
+    expect(c.skillInsightChecked).toBe(true)
+    expect(c.toolProficiencies).toContain(nameOf(byId.item['smiths-tools']))
+    expect(c.speciesTraits).toContain('Тип существа: Конструкт')
+    expect(c.speciesTraits).toContain(`Специальная сборка: ${nameOf(byId.skill.insight)}, ${nameOf(byId.item['smiths-tools'])}`)
+  })
+  it('Hexblood: Disguise Self and Hex with the chosen ability', () => {
+    const { character: c } = buildCharacter(fighterAs({ speciesId: 'hexblood', size: 'small', spellAbility: 'cha' }))
+    expect(c.size).toBe('Маленький')
+    expect(c.lvl1Spells!.map((x) => x.name)).toEqual([`${nameOf(byId.spell['disguise-self'])} (вид)`, `${nameOf(byId.spell.hex)} (вид)`])
+    expect(c.spellcastingClass).toBe(`${nameOf(byId.species.hexblood)} (ХАР)`)
+    expect(c.spellSaveDC).toBe('11')
+    expect(c.speciesTraits).toContain('Тип существа: Фея')
+  })
+  it('Reborn: chosen skill and resistance, Knowledge from a Past Life by the proficiency bonus', () => {
+    const { character: c } = buildCharacter(fighterAs({ speciesId: 'reborn', skills: ['history'], resistance: 'cold' }))
+    expect(c.skillHistory).toBe('+1')
+    expect(c.speciesTraits).toContain('Знание прошлой жизни: +1к6 к проваленной проверке характеристики, 2 раза за долгий отдых')
+    expect(c.speciesTraits).toContain('сопротивление (холод)')
+  })
+  it('Changeling: two skills', () => {
+    const { character: c } = buildCharacter(fighterAs({ speciesId: 'changeling', skills: ['deception', 'persuasion'] }))
+    expect(c.skillDeception).toBe('+3')
+    expect(c.skillPersuasionChecked).toBe(true)
+  })
+  it('Shifter: the Shifting benefit goes into the species field and the trait line', () => {
+    const { character: c } = buildCharacter(fighterAs({ speciesId: 'shifter', skills: ['acrobatics'], optionId: 'longtooth' }))
+    expect(c.species).toBe(`${nameOf(byId.species.shifter)} (${nameOf(byId.speciesOption.longtooth)})`)
+    expect(c.speciesTraits).toContain('бонусным действием на 1 минуту, 4 временных хитов; укус бонусным действием, 1к6 + 3 колющего; 2 раза за долгий отдых')
+  })
+  it('Khoravar: Friends and a tool through Skill Versatility', () => {
+    const { character: c } = buildCharacter(fighterAs({ speciesId: 'khoravar', spellAbility: 'wis', tool: 'herbalism-kit' }))
+    expect(c.toolProficiencies).toContain(nameOf(byId.item['herbalism-kit']))
+    expect(c.cantrips!.map((x) => x.name)).toContain(`${nameOf(byId.spell.friends)} (вид)`)
+  })
+  it('Dhampir, Kalashtar and Lupin numbers', () => {
+    const dh = buildCharacter(fighterAs({ speciesId: 'dhampir' })).character
+    expect(dh.speed).toBe('35 фт')
+    expect(dh.speciesTraits).toContain('Укус вампира: безоружный удар 1к4 + 2 колющего; вытягивание или усиление 2 раза за долгий отдых')
+    const ka = buildCharacter(fighterAs({ speciesId: 'kalashtar' })).character
+    expect(ka.speciesTraits).toContain('Связь разумов: телепатия 10 фт')
+    const lu = buildCharacter(fighterAs({ speciesId: 'lupin', skills: ['stealth'] })).character
+    expect(lu.speciesTraits).toContain('спасбросок Мдр Сл 12')
   })
 })

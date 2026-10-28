@@ -1,0 +1,8415 @@
+[
+  {
+    "id": "club",
+    "name": "Club",
+    "name_ru": "Дубинка",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "simple-melee",
+    "cost": {
+      "amount": 1,
+      "unit": "sp"
+    },
+    "cost_cp": 10,
+    "weight_lb": 2,
+    "categories": [
+      "weapons",
+      "simple-weapons",
+      "melee-weapons",
+      "simple-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "weapon": {
+      "category": "simple",
+      "type": "melee",
+      "damage_dice": "1d4",
+      "damage_type": "bludgeoning",
+      "mastery": "slow",
+      "properties": [
+        "light"
+      ],
+      "property_details": {}
+    }
+  },
+  {
+    "id": "dagger",
+    "name": "Dagger",
+    "name_ru": "Кинжал",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "simple-melee",
+    "cost": {
+      "amount": 2,
+      "unit": "gp"
+    },
+    "cost_cp": 200,
+    "weight_lb": 1,
+    "categories": [
+      "weapons",
+      "simple-weapons",
+      "melee-weapons",
+      "simple-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "starting_equipment_for": [
+      {
+        "id": "bard",
+        "type": "class",
+        "option": "A",
+        "qty": 2
+      },
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 5
+      },
+      {
+        "id": "rogue",
+        "type": "class",
+        "option": "A",
+        "qty": 2
+      },
+      {
+        "id": "sorcerer",
+        "type": "class",
+        "option": "A",
+        "qty": 2
+      },
+      {
+        "id": "warlock",
+        "type": "class",
+        "option": "A",
+        "qty": 2
+      },
+      {
+        "id": "wizard",
+        "type": "class",
+        "option": "A",
+        "qty": 2
+      },
+      {
+        "id": "artificer",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "criminal",
+        "type": "background",
+        "option": "A",
+        "qty": 2
+      },
+      {
+        "id": "sailor",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "wayfarer",
+        "type": "background",
+        "option": "A",
+        "qty": 2
+      }
+    ],
+    "weapon": {
+      "category": "simple",
+      "type": "melee",
+      "damage_dice": "1d4",
+      "damage_type": "piercing",
+      "mastery": "nick",
+      "properties": [
+        "finesse",
+        "light",
+        "thrown"
+      ],
+      "property_details": {
+        "thrown": {
+          "range_long": 60,
+          "range_normal": 20
+        }
+      }
+    }
+  },
+  {
+    "id": "greatclub",
+    "name": "Greatclub",
+    "name_ru": "Палица",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "simple-melee",
+    "cost": {
+      "amount": 2,
+      "unit": "sp"
+    },
+    "cost_cp": 20,
+    "weight_lb": 10,
+    "categories": [
+      "weapons",
+      "simple-weapons",
+      "melee-weapons",
+      "simple-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "weapon": {
+      "category": "simple",
+      "type": "melee",
+      "damage_dice": "1d8",
+      "damage_type": "bludgeoning",
+      "mastery": "push",
+      "properties": [
+        "two-handed"
+      ],
+      "property_details": {}
+    }
+  },
+  {
+    "id": "handaxe",
+    "name": "Handaxe",
+    "name_ru": "Ручной топор",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "simple-melee",
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 2,
+    "categories": [
+      "weapons",
+      "simple-weapons",
+      "melee-weapons",
+      "simple-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "starting_equipment_for": [
+      {
+        "id": "barbarian",
+        "type": "class",
+        "option": "A",
+        "qty": 4
+      }
+    ],
+    "weapon": {
+      "category": "simple",
+      "type": "melee",
+      "damage_dice": "1d6",
+      "damage_type": "slashing",
+      "mastery": "vex",
+      "properties": [
+        "light",
+        "thrown"
+      ],
+      "property_details": {
+        "thrown": {
+          "range_long": 60,
+          "range_normal": 20
+        }
+      }
+    }
+  },
+  {
+    "id": "javelin",
+    "name": "Javelin",
+    "name_ru": "Метательное копьё",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "simple-melee",
+    "cost": {
+      "amount": 5,
+      "unit": "sp"
+    },
+    "cost_cp": 50,
+    "weight_lb": 2,
+    "categories": [
+      "weapons",
+      "simple-weapons",
+      "melee-weapons",
+      "simple-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "starting_equipment_for": [
+      {
+        "id": "fighter",
+        "type": "class",
+        "option": "A",
+        "qty": 8
+      },
+      {
+        "id": "paladin",
+        "type": "class",
+        "option": "A",
+        "qty": 6
+      }
+    ],
+    "weapon": {
+      "category": "simple",
+      "type": "melee",
+      "damage_dice": "1d6",
+      "damage_type": "piercing",
+      "mastery": "slow",
+      "properties": [
+        "thrown"
+      ],
+      "property_details": {
+        "thrown": {
+          "range_long": 120,
+          "range_normal": 30
+        }
+      }
+    }
+  },
+  {
+    "id": "light-hammer",
+    "name": "Light Hammer",
+    "name_ru": "Лёгкий молот",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "simple-melee",
+    "cost": {
+      "amount": 2,
+      "unit": "gp"
+    },
+    "cost_cp": 200,
+    "weight_lb": 2,
+    "categories": [
+      "weapons",
+      "simple-weapons",
+      "melee-weapons",
+      "simple-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "weapon": {
+      "category": "simple",
+      "type": "melee",
+      "damage_dice": "1d4",
+      "damage_type": "bludgeoning",
+      "mastery": "nick",
+      "properties": [
+        "light",
+        "thrown"
+      ],
+      "property_details": {
+        "thrown": {
+          "range_long": 60,
+          "range_normal": 20
+        }
+      }
+    }
+  },
+  {
+    "id": "mace",
+    "name": "Mace",
+    "name_ru": "Булава",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "simple-melee",
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 4,
+    "categories": [
+      "weapons",
+      "simple-weapons",
+      "melee-weapons",
+      "simple-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "starting_equipment_for": [
+      {
+        "id": "cleric",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      }
+    ],
+    "weapon": {
+      "category": "simple",
+      "type": "melee",
+      "damage_dice": "1d6",
+      "damage_type": "bludgeoning",
+      "mastery": "sap",
+      "properties": [],
+      "property_details": {}
+    }
+  },
+  {
+    "id": "quarterstaff",
+    "name": "Quarterstaff",
+    "name_ru": "Боевой посох",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "simple-melee",
+    "cost": {
+      "amount": 2,
+      "unit": "sp"
+    },
+    "cost_cp": 20,
+    "weight_lb": 4,
+    "categories": [
+      "weapons",
+      "simple-weapons",
+      "melee-weapons",
+      "simple-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "starting_equipment_for": [
+      {
+        "id": "hermit",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "sage",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ],
+    "weapon": {
+      "category": "simple",
+      "type": "melee",
+      "damage_dice": "1d6",
+      "damage_type": "bludgeoning",
+      "mastery": "topple",
+      "properties": [
+        "versatile"
+      ],
+      "property_details": {
+        "versatile": {
+          "damage_dice": "1d8"
+        }
+      }
+    }
+  },
+  {
+    "id": "sickle",
+    "name": "Sickle",
+    "name_ru": "Серп",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "simple-melee",
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 2,
+    "categories": [
+      "weapons",
+      "simple-weapons",
+      "melee-weapons",
+      "simple-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "starting_equipment_for": [
+      {
+        "id": "druid",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "warlock",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "farmer",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ],
+    "weapon": {
+      "category": "simple",
+      "type": "melee",
+      "damage_dice": "1d4",
+      "damage_type": "slashing",
+      "mastery": "nick",
+      "properties": [
+        "light"
+      ],
+      "property_details": {}
+    }
+  },
+  {
+    "id": "spear",
+    "name": "Spear",
+    "name_ru": "Копьё",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "simple-melee",
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 3,
+    "categories": [
+      "weapons",
+      "simple-weapons",
+      "melee-weapons",
+      "simple-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "starting_equipment_for": [
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "sorcerer",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "guard",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "soldier",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ],
+    "weapon": {
+      "category": "simple",
+      "type": "melee",
+      "damage_dice": "1d6",
+      "damage_type": "piercing",
+      "mastery": "sap",
+      "properties": [
+        "thrown",
+        "versatile"
+      ],
+      "property_details": {
+        "thrown": {
+          "range_long": 60,
+          "range_normal": 20
+        },
+        "versatile": {
+          "damage_dice": "1d8"
+        }
+      }
+    }
+  },
+  {
+    "id": "dart",
+    "name": "Dart",
+    "name_ru": "Дротик",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "simple-ranged",
+    "cost": {
+      "amount": 5,
+      "unit": "cp"
+    },
+    "cost_cp": 5,
+    "weight_lb": 0.25,
+    "categories": [
+      "weapons",
+      "simple-weapons",
+      "ranged-weapons",
+      "simple-ranged-weapons"
+    ],
+    "mastery_classes": [
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "weapon": {
+      "category": "simple",
+      "type": "ranged",
+      "damage_dice": "1d4",
+      "damage_type": "piercing",
+      "mastery": "vex",
+      "properties": [
+        "finesse",
+        "thrown"
+      ],
+      "property_details": {
+        "thrown": {
+          "range_long": 60,
+          "range_normal": 20
+        }
+      }
+    }
+  },
+  {
+    "id": "light-crossbow",
+    "name": "Light Crossbow",
+    "name_ru": "Лёгкий арбалет",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "simple-ranged",
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "cost_cp": 2500,
+    "weight_lb": 5,
+    "categories": [
+      "weapons",
+      "simple-weapons",
+      "ranged-weapons",
+      "simple-ranged-weapons"
+    ],
+    "mastery_classes": [
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "starting_equipment_for": [
+      {
+        "id": "guard",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ],
+    "weapon": {
+      "category": "simple",
+      "type": "ranged",
+      "damage_dice": "1d8",
+      "damage_type": "piercing",
+      "mastery": "slow",
+      "properties": [
+        "ammunition",
+        "loading",
+        "two-handed"
+      ],
+      "property_details": {
+        "ammunition": {
+          "ammunition": "bolts",
+          "range_long": 320,
+          "range_normal": 80
+        }
+      }
+    }
+  },
+  {
+    "id": "shortbow",
+    "name": "Shortbow",
+    "name_ru": "Короткий лук",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "simple-ranged",
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "cost_cp": 2500,
+    "weight_lb": 2,
+    "categories": [
+      "weapons",
+      "simple-weapons",
+      "ranged-weapons",
+      "simple-ranged-weapons"
+    ],
+    "mastery_classes": [
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "starting_equipment_for": [
+      {
+        "id": "rogue",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "guide",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "soldier",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ],
+    "weapon": {
+      "category": "simple",
+      "type": "ranged",
+      "damage_dice": "1d6",
+      "damage_type": "piercing",
+      "mastery": "vex",
+      "properties": [
+        "ammunition",
+        "two-handed"
+      ],
+      "property_details": {
+        "ammunition": {
+          "ammunition": "arrows",
+          "range_long": 320,
+          "range_normal": 80
+        }
+      }
+    }
+  },
+  {
+    "id": "sling",
+    "name": "Sling",
+    "name_ru": "Праща",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "simple-ranged",
+    "cost": {
+      "amount": 1,
+      "unit": "sp"
+    },
+    "cost_cp": 10,
+    "weight_lb": 0,
+    "categories": [
+      "weapons",
+      "simple-weapons",
+      "ranged-weapons",
+      "simple-ranged-weapons"
+    ],
+    "mastery_classes": [
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "weapon": {
+      "category": "simple",
+      "type": "ranged",
+      "damage_dice": "1d4",
+      "damage_type": "bludgeoning",
+      "mastery": "slow",
+      "properties": [
+        "ammunition"
+      ],
+      "property_details": {
+        "ammunition": {
+          "ammunition": "bullets-sling",
+          "range_long": 120,
+          "range_normal": 30
+        }
+      }
+    }
+  },
+  {
+    "id": "battleaxe",
+    "name": "Battleaxe",
+    "name_ru": "Боевой топор",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "martial-melee",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 4,
+    "categories": [
+      "weapons",
+      "martial-weapons",
+      "melee-weapons",
+      "martial-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "weapon": {
+      "category": "martial",
+      "type": "melee",
+      "damage_dice": "1d8",
+      "damage_type": "slashing",
+      "mastery": "topple",
+      "properties": [
+        "versatile"
+      ],
+      "property_details": {
+        "versatile": {
+          "damage_dice": "1d10"
+        }
+      }
+    }
+  },
+  {
+    "id": "flail",
+    "name": "Flail",
+    "name_ru": "Цеп",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "martial-melee",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 2,
+    "categories": [
+      "weapons",
+      "martial-weapons",
+      "melee-weapons",
+      "martial-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "starting_equipment_for": [
+      {
+        "id": "fighter",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      }
+    ],
+    "weapon": {
+      "category": "martial",
+      "type": "melee",
+      "damage_dice": "1d8",
+      "damage_type": "bludgeoning",
+      "mastery": "sap",
+      "properties": [],
+      "property_details": {}
+    }
+  },
+  {
+    "id": "glaive",
+    "name": "Glaive",
+    "name_ru": "Глефа",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "martial-melee",
+    "cost": {
+      "amount": 20,
+      "unit": "gp"
+    },
+    "cost_cp": 2000,
+    "weight_lb": 6,
+    "categories": [
+      "weapons",
+      "martial-weapons",
+      "melee-weapons",
+      "martial-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "weapon": {
+      "category": "martial",
+      "type": "melee",
+      "damage_dice": "1d10",
+      "damage_type": "slashing",
+      "mastery": "graze",
+      "properties": [
+        "heavy",
+        "reach",
+        "two-handed"
+      ],
+      "property_details": {}
+    }
+  },
+  {
+    "id": "greataxe",
+    "name": "Greataxe",
+    "name_ru": "Секира",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "martial-melee",
+    "cost": {
+      "amount": 30,
+      "unit": "gp"
+    },
+    "cost_cp": 3000,
+    "weight_lb": 7,
+    "categories": [
+      "weapons",
+      "martial-weapons",
+      "melee-weapons",
+      "martial-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "starting_equipment_for": [
+      {
+        "id": "barbarian",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      }
+    ],
+    "weapon": {
+      "category": "martial",
+      "type": "melee",
+      "damage_dice": "1d12",
+      "damage_type": "slashing",
+      "mastery": "cleave",
+      "properties": [
+        "heavy",
+        "two-handed"
+      ],
+      "property_details": {}
+    }
+  },
+  {
+    "id": "greatsword",
+    "name": "Greatsword",
+    "name_ru": "Двуручный меч",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "martial-melee",
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "cost_cp": 5000,
+    "weight_lb": 6,
+    "categories": [
+      "weapons",
+      "martial-weapons",
+      "melee-weapons",
+      "martial-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "starting_equipment_for": [
+      {
+        "id": "fighter",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      }
+    ],
+    "weapon": {
+      "category": "martial",
+      "type": "melee",
+      "damage_dice": "2d6",
+      "damage_type": "slashing",
+      "mastery": "graze",
+      "properties": [
+        "heavy",
+        "two-handed"
+      ],
+      "property_details": {}
+    }
+  },
+  {
+    "id": "halberd",
+    "name": "Halberd",
+    "name_ru": "Алебарда",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "martial-melee",
+    "cost": {
+      "amount": 20,
+      "unit": "gp"
+    },
+    "cost_cp": 2000,
+    "weight_lb": 6,
+    "categories": [
+      "weapons",
+      "martial-weapons",
+      "melee-weapons",
+      "martial-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "weapon": {
+      "category": "martial",
+      "type": "melee",
+      "damage_dice": "1d10",
+      "damage_type": "slashing",
+      "mastery": "cleave",
+      "properties": [
+        "heavy",
+        "reach",
+        "two-handed"
+      ],
+      "property_details": {}
+    }
+  },
+  {
+    "id": "lance",
+    "name": "Lance",
+    "name_ru": "Длинное копьё",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "martial-melee",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 6,
+    "categories": [
+      "weapons",
+      "martial-weapons",
+      "melee-weapons",
+      "martial-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "weapon": {
+      "category": "martial",
+      "type": "melee",
+      "damage_dice": "1d10",
+      "damage_type": "piercing",
+      "mastery": "topple",
+      "properties": [
+        "heavy",
+        "reach",
+        "two-handed"
+      ],
+      "property_details": {
+        "two-handed": {
+          "note": "unless mounted"
+        }
+      }
+    }
+  },
+  {
+    "id": "longsword",
+    "name": "Longsword",
+    "name_ru": "Длинный меч",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "martial-melee",
+    "cost": {
+      "amount": 15,
+      "unit": "gp"
+    },
+    "cost_cp": 1500,
+    "weight_lb": 3,
+    "categories": [
+      "weapons",
+      "martial-weapons",
+      "melee-weapons",
+      "martial-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "starting_equipment_for": [
+      {
+        "id": "paladin",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      }
+    ],
+    "weapon": {
+      "category": "martial",
+      "type": "melee",
+      "damage_dice": "1d8",
+      "damage_type": "slashing",
+      "mastery": "sap",
+      "properties": [
+        "versatile"
+      ],
+      "property_details": {
+        "versatile": {
+          "damage_dice": "1d10"
+        }
+      }
+    }
+  },
+  {
+    "id": "maul",
+    "name": "Maul",
+    "name_ru": "Молот",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "martial-melee",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 10,
+    "categories": [
+      "weapons",
+      "martial-weapons",
+      "melee-weapons",
+      "martial-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "weapon": {
+      "category": "martial",
+      "type": "melee",
+      "damage_dice": "2d6",
+      "damage_type": "bludgeoning",
+      "mastery": "topple",
+      "properties": [
+        "heavy",
+        "two-handed"
+      ],
+      "property_details": {}
+    }
+  },
+  {
+    "id": "morningstar",
+    "name": "Morningstar",
+    "name_ru": "Моргенштерн",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "martial-melee",
+    "cost": {
+      "amount": 15,
+      "unit": "gp"
+    },
+    "cost_cp": 1500,
+    "weight_lb": 4,
+    "categories": [
+      "weapons",
+      "martial-weapons",
+      "melee-weapons",
+      "martial-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "weapon": {
+      "category": "martial",
+      "type": "melee",
+      "damage_dice": "1d8",
+      "damage_type": "piercing",
+      "mastery": "sap",
+      "properties": [],
+      "property_details": {}
+    }
+  },
+  {
+    "id": "pike",
+    "name": "Pike",
+    "name_ru": "Пика",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "martial-melee",
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 18,
+    "categories": [
+      "weapons",
+      "martial-weapons",
+      "melee-weapons",
+      "martial-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "weapon": {
+      "category": "martial",
+      "type": "melee",
+      "damage_dice": "1d10",
+      "damage_type": "piercing",
+      "mastery": "push",
+      "properties": [
+        "heavy",
+        "reach",
+        "two-handed"
+      ],
+      "property_details": {}
+    }
+  },
+  {
+    "id": "rapier",
+    "name": "Rapier",
+    "name_ru": "Рапира",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "martial-melee",
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "cost_cp": 2500,
+    "weight_lb": 2,
+    "categories": [
+      "weapons",
+      "martial-weapons",
+      "melee-weapons",
+      "martial-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "weapon": {
+      "category": "martial",
+      "type": "melee",
+      "damage_dice": "1d8",
+      "damage_type": "piercing",
+      "mastery": "vex",
+      "properties": [
+        "finesse"
+      ],
+      "property_details": {}
+    }
+  },
+  {
+    "id": "scimitar",
+    "name": "Scimitar",
+    "name_ru": "Скимитар",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "martial-melee",
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "cost_cp": 2500,
+    "weight_lb": 3,
+    "categories": [
+      "weapons",
+      "martial-weapons",
+      "melee-weapons",
+      "martial-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "starting_equipment_for": [
+      {
+        "id": "fighter",
+        "type": "class",
+        "option": "B",
+        "qty": 1
+      },
+      {
+        "id": "ranger",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      }
+    ],
+    "weapon": {
+      "category": "martial",
+      "type": "melee",
+      "damage_dice": "1d6",
+      "damage_type": "slashing",
+      "mastery": "nick",
+      "properties": [
+        "finesse",
+        "light"
+      ],
+      "property_details": {}
+    }
+  },
+  {
+    "id": "shortsword",
+    "name": "Shortsword",
+    "name_ru": "Короткий меч",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "martial-melee",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 2,
+    "categories": [
+      "weapons",
+      "martial-weapons",
+      "melee-weapons",
+      "martial-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "starting_equipment_for": [
+      {
+        "id": "fighter",
+        "type": "class",
+        "option": "B",
+        "qty": 1
+      },
+      {
+        "id": "ranger",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "rogue",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      }
+    ],
+    "weapon": {
+      "category": "martial",
+      "type": "melee",
+      "damage_dice": "1d6",
+      "damage_type": "piercing",
+      "mastery": "vex",
+      "properties": [
+        "finesse",
+        "light"
+      ],
+      "property_details": {}
+    }
+  },
+  {
+    "id": "trident",
+    "name": "Trident",
+    "name_ru": "Трезубец",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "martial-melee",
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 4,
+    "categories": [
+      "weapons",
+      "martial-weapons",
+      "melee-weapons",
+      "martial-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "weapon": {
+      "category": "martial",
+      "type": "melee",
+      "damage_dice": "1d8",
+      "damage_type": "piercing",
+      "mastery": "topple",
+      "properties": [
+        "thrown",
+        "versatile"
+      ],
+      "property_details": {
+        "thrown": {
+          "range_long": 60,
+          "range_normal": 20
+        },
+        "versatile": {
+          "damage_dice": "1d10"
+        }
+      }
+    }
+  },
+  {
+    "id": "warhammer",
+    "name": "Warhammer",
+    "name_ru": "Боевой молот",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "martial-melee",
+    "cost": {
+      "amount": 15,
+      "unit": "gp"
+    },
+    "cost_cp": 1500,
+    "weight_lb": 5,
+    "categories": [
+      "weapons",
+      "martial-weapons",
+      "melee-weapons",
+      "martial-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "weapon": {
+      "category": "martial",
+      "type": "melee",
+      "damage_dice": "1d8",
+      "damage_type": "bludgeoning",
+      "mastery": "push",
+      "properties": [
+        "versatile"
+      ],
+      "property_details": {
+        "versatile": {
+          "damage_dice": "1d10"
+        }
+      }
+    }
+  },
+  {
+    "id": "war-pick",
+    "name": "War Pick",
+    "name_ru": "Боевая кирка",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "martial-melee",
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 2,
+    "categories": [
+      "weapons",
+      "martial-weapons",
+      "melee-weapons",
+      "martial-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "weapon": {
+      "category": "martial",
+      "type": "melee",
+      "damage_dice": "1d8",
+      "damage_type": "piercing",
+      "mastery": "sap",
+      "properties": [
+        "versatile"
+      ],
+      "property_details": {
+        "versatile": {
+          "damage_dice": "1d10"
+        }
+      }
+    }
+  },
+  {
+    "id": "whip",
+    "name": "Whip",
+    "name_ru": "Кнут",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "martial-melee",
+    "cost": {
+      "amount": 2,
+      "unit": "gp"
+    },
+    "cost_cp": 200,
+    "weight_lb": 3,
+    "categories": [
+      "weapons",
+      "martial-weapons",
+      "melee-weapons",
+      "martial-melee-weapons"
+    ],
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "weapon": {
+      "category": "martial",
+      "type": "melee",
+      "damage_dice": "1d4",
+      "damage_type": "slashing",
+      "mastery": "slow",
+      "properties": [
+        "finesse",
+        "reach"
+      ],
+      "property_details": {}
+    }
+  },
+  {
+    "id": "blowgun",
+    "name": "Blowgun",
+    "name_ru": "Духовая трубка",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "martial-ranged",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 1,
+    "categories": [
+      "weapons",
+      "martial-weapons",
+      "ranged-weapons",
+      "martial-ranged-weapons"
+    ],
+    "mastery_classes": [
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "weapon": {
+      "category": "martial",
+      "type": "ranged",
+      "damage_dice": "1",
+      "damage_type": "piercing",
+      "mastery": "vex",
+      "properties": [
+        "ammunition",
+        "loading"
+      ],
+      "property_details": {
+        "ammunition": {
+          "ammunition": "needles",
+          "range_long": 100,
+          "range_normal": 25
+        }
+      }
+    }
+  },
+  {
+    "id": "hand-crossbow",
+    "name": "Hand Crossbow",
+    "name_ru": "Ручной арбалет",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "martial-ranged",
+    "cost": {
+      "amount": 75,
+      "unit": "gp"
+    },
+    "cost_cp": 7500,
+    "weight_lb": 3,
+    "categories": [
+      "weapons",
+      "martial-weapons",
+      "ranged-weapons",
+      "martial-ranged-weapons"
+    ],
+    "mastery_classes": [
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "weapon": {
+      "category": "martial",
+      "type": "ranged",
+      "damage_dice": "1d6",
+      "damage_type": "piercing",
+      "mastery": "vex",
+      "properties": [
+        "ammunition",
+        "light",
+        "loading"
+      ],
+      "property_details": {
+        "ammunition": {
+          "ammunition": "bolts",
+          "range_long": 120,
+          "range_normal": 30
+        }
+      }
+    }
+  },
+  {
+    "id": "heavy-crossbow",
+    "name": "Heavy Crossbow",
+    "name_ru": "Тяжёлый арбалет",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "martial-ranged",
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "cost_cp": 5000,
+    "weight_lb": 18,
+    "categories": [
+      "weapons",
+      "martial-weapons",
+      "ranged-weapons",
+      "martial-ranged-weapons"
+    ],
+    "mastery_classes": [
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "weapon": {
+      "category": "martial",
+      "type": "ranged",
+      "damage_dice": "1d10",
+      "damage_type": "piercing",
+      "mastery": "push",
+      "properties": [
+        "ammunition",
+        "heavy",
+        "loading",
+        "two-handed"
+      ],
+      "property_details": {
+        "ammunition": {
+          "ammunition": "bolts",
+          "range_long": 400,
+          "range_normal": 100
+        }
+      }
+    }
+  },
+  {
+    "id": "longbow",
+    "name": "Longbow",
+    "name_ru": "Длинный лук",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "martial-ranged",
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "cost_cp": 5000,
+    "weight_lb": 2,
+    "categories": [
+      "weapons",
+      "martial-weapons",
+      "ranged-weapons",
+      "martial-ranged-weapons"
+    ],
+    "mastery_classes": [
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "starting_equipment_for": [
+      {
+        "id": "fighter",
+        "type": "class",
+        "option": "B",
+        "qty": 1
+      },
+      {
+        "id": "ranger",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      }
+    ],
+    "weapon": {
+      "category": "martial",
+      "type": "ranged",
+      "damage_dice": "1d8",
+      "damage_type": "piercing",
+      "mastery": "slow",
+      "properties": [
+        "ammunition",
+        "heavy",
+        "two-handed"
+      ],
+      "property_details": {
+        "ammunition": {
+          "ammunition": "arrows",
+          "range_long": 600,
+          "range_normal": 150
+        }
+      }
+    }
+  },
+  {
+    "id": "musket",
+    "name": "Musket",
+    "name_ru": "Мушкет",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "martial-ranged",
+    "cost": {
+      "amount": 500,
+      "unit": "gp"
+    },
+    "cost_cp": 50000,
+    "weight_lb": 10,
+    "categories": [
+      "weapons",
+      "martial-weapons",
+      "ranged-weapons",
+      "martial-ranged-weapons"
+    ],
+    "mastery_classes": [
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "weapon": {
+      "category": "martial",
+      "type": "ranged",
+      "damage_dice": "1d12",
+      "damage_type": "piercing",
+      "mastery": "slow",
+      "properties": [
+        "ammunition",
+        "loading",
+        "two-handed"
+      ],
+      "property_details": {
+        "ammunition": {
+          "ammunition": "bullets-firearm",
+          "range_long": 120,
+          "range_normal": 40
+        }
+      }
+    }
+  },
+  {
+    "id": "pistol",
+    "name": "Pistol",
+    "name_ru": "Пистоль",
+    "source": "srd-5.2.1",
+    "category": "weapon",
+    "subcategory": "martial-ranged",
+    "cost": {
+      "amount": 250,
+      "unit": "gp"
+    },
+    "cost_cp": 25000,
+    "weight_lb": 3,
+    "categories": [
+      "weapons",
+      "martial-weapons",
+      "ranged-weapons",
+      "martial-ranged-weapons"
+    ],
+    "mastery_classes": [
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "weapon": {
+      "category": "martial",
+      "type": "ranged",
+      "damage_dice": "1d10",
+      "damage_type": "piercing",
+      "mastery": "vex",
+      "properties": [
+        "ammunition",
+        "loading"
+      ],
+      "property_details": {
+        "ammunition": {
+          "ammunition": "bullets-firearm",
+          "range_long": 90,
+          "range_normal": 30
+        }
+      }
+    }
+  },
+  {
+    "id": "padded-armor",
+    "name": "Padded Armor",
+    "name_ru": "Стёганый доспех",
+    "source": "srd-5.2.1",
+    "category": "armor",
+    "subcategory": "light",
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 8,
+    "armor": {
+      "type": "light",
+      "armor_class": {
+        "add_dex": true,
+        "base": 11,
+        "dex_max": null
+      },
+      "doff_time": "1 Minute",
+      "don_time": "1 Minute",
+      "stealth_disadvantage": true,
+      "strength_requirement": null
+    },
+    "categories": [
+      "armor",
+      "light-armor"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue",
+      "warlock",
+      "artificer"
+    ]
+  },
+  {
+    "id": "leather-armor",
+    "name": "Leather Armor",
+    "name_ru": "Кожаный доспех",
+    "source": "srd-5.2.1",
+    "category": "armor",
+    "subcategory": "light",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 10,
+    "armor": {
+      "type": "light",
+      "armor_class": {
+        "add_dex": true,
+        "base": 11,
+        "dex_max": null
+      },
+      "doff_time": "1 Minute",
+      "don_time": "1 Minute",
+      "stealth_disadvantage": false,
+      "strength_requirement": null
+    },
+    "categories": [
+      "armor",
+      "light-armor"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue",
+      "warlock",
+      "artificer"
+    ],
+    "starting_equipment_for": [
+      {
+        "id": "bard",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "druid",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "rogue",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "warlock",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "studded-leather-armor",
+    "name": "Studded Leather Armor",
+    "name_ru": "Проклёпанный кожаный доспех",
+    "source": "srd-5.2.1",
+    "category": "armor",
+    "subcategory": "light",
+    "cost": {
+      "amount": 45,
+      "unit": "gp"
+    },
+    "cost_cp": 4500,
+    "weight_lb": 13,
+    "armor": {
+      "type": "light",
+      "armor_class": {
+        "add_dex": true,
+        "base": 12,
+        "dex_max": null
+      },
+      "doff_time": "1 Minute",
+      "don_time": "1 Minute",
+      "stealth_disadvantage": false,
+      "strength_requirement": null
+    },
+    "categories": [
+      "armor",
+      "light-armor"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue",
+      "warlock",
+      "artificer"
+    ],
+    "starting_equipment_for": [
+      {
+        "id": "fighter",
+        "type": "class",
+        "option": "B",
+        "qty": 1
+      },
+      {
+        "id": "ranger",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "artificer",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "hide-armor",
+    "name": "Hide Armor",
+    "name_ru": "Шкурный доспех",
+    "source": "srd-5.2.1",
+    "category": "armor",
+    "subcategory": "medium",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 12,
+    "armor": {
+      "type": "medium",
+      "armor_class": {
+        "add_dex": true,
+        "base": 12,
+        "dex_max": null
+      },
+      "doff_time": "1 Minute",
+      "don_time": "5 Minutes",
+      "stealth_disadvantage": false,
+      "strength_requirement": null
+    },
+    "categories": [
+      "armor",
+      "medium-armor"
+    ],
+    "conditional_proficiency": [
+      {
+        "class": "druid",
+        "option": "warden"
+      }
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "cleric",
+      "fighter",
+      "paladin",
+      "ranger",
+      "artificer"
+    ]
+  },
+  {
+    "id": "chain-shirt",
+    "name": "Chain Shirt",
+    "name_ru": "Кольчужная рубаха",
+    "source": "srd-5.2.1",
+    "category": "armor",
+    "subcategory": "medium",
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "cost_cp": 5000,
+    "weight_lb": 20,
+    "armor": {
+      "type": "medium",
+      "armor_class": {
+        "add_dex": true,
+        "base": 13,
+        "dex_max": null
+      },
+      "doff_time": "1 Minute",
+      "don_time": "5 Minutes",
+      "stealth_disadvantage": false,
+      "strength_requirement": null
+    },
+    "categories": [
+      "armor",
+      "medium-armor"
+    ],
+    "conditional_proficiency": [
+      {
+        "class": "druid",
+        "option": "warden"
+      }
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "cleric",
+      "fighter",
+      "paladin",
+      "ranger",
+      "artificer"
+    ],
+    "starting_equipment_for": [
+      {
+        "id": "cleric",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "scale-mail",
+    "name": "Scale Mail",
+    "name_ru": "Чешуйчатый доспех",
+    "source": "srd-5.2.1",
+    "category": "armor",
+    "subcategory": "medium",
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "cost_cp": 5000,
+    "weight_lb": 45,
+    "armor": {
+      "type": "medium",
+      "armor_class": {
+        "add_dex": true,
+        "base": 14,
+        "dex_max": null
+      },
+      "doff_time": "1 Minute",
+      "don_time": "5 Minutes",
+      "stealth_disadvantage": true,
+      "strength_requirement": null
+    },
+    "categories": [
+      "armor",
+      "medium-armor"
+    ],
+    "conditional_proficiency": [
+      {
+        "class": "druid",
+        "option": "warden"
+      }
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "cleric",
+      "fighter",
+      "paladin",
+      "ranger",
+      "artificer"
+    ]
+  },
+  {
+    "id": "breastplate",
+    "name": "Breastplate",
+    "name_ru": "Кираса",
+    "source": "srd-5.2.1",
+    "category": "armor",
+    "subcategory": "medium",
+    "cost": {
+      "amount": 400,
+      "unit": "gp"
+    },
+    "cost_cp": 40000,
+    "weight_lb": 20,
+    "armor": {
+      "type": "medium",
+      "armor_class": {
+        "add_dex": true,
+        "base": 14,
+        "dex_max": null
+      },
+      "doff_time": "1 Minute",
+      "don_time": "5 Minutes",
+      "stealth_disadvantage": false,
+      "strength_requirement": null
+    },
+    "categories": [
+      "armor",
+      "medium-armor"
+    ],
+    "conditional_proficiency": [
+      {
+        "class": "druid",
+        "option": "warden"
+      }
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "cleric",
+      "fighter",
+      "paladin",
+      "ranger",
+      "artificer"
+    ]
+  },
+  {
+    "id": "half-plate-armor",
+    "name": "Half Plate Armor",
+    "name_ru": "Полулаты",
+    "source": "srd-5.2.1",
+    "category": "armor",
+    "subcategory": "medium",
+    "cost": {
+      "amount": 750,
+      "unit": "gp"
+    },
+    "cost_cp": 75000,
+    "weight_lb": 40,
+    "armor": {
+      "type": "medium",
+      "armor_class": {
+        "add_dex": true,
+        "base": 15,
+        "dex_max": null
+      },
+      "doff_time": "1 Minute",
+      "don_time": "5 Minutes",
+      "stealth_disadvantage": true,
+      "strength_requirement": null
+    },
+    "categories": [
+      "armor",
+      "medium-armor"
+    ],
+    "conditional_proficiency": [
+      {
+        "class": "druid",
+        "option": "warden"
+      }
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "cleric",
+      "fighter",
+      "paladin",
+      "ranger",
+      "artificer"
+    ]
+  },
+  {
+    "id": "ring-mail",
+    "name": "Ring Mail",
+    "name_ru": "Колечный доспех",
+    "source": "srd-5.2.1",
+    "category": "armor",
+    "subcategory": "heavy",
+    "cost": {
+      "amount": 30,
+      "unit": "gp"
+    },
+    "cost_cp": 3000,
+    "weight_lb": 40,
+    "armor": {
+      "type": "heavy",
+      "armor_class": {
+        "add_dex": false,
+        "base": 14,
+        "dex_max": null
+      },
+      "doff_time": "5 Minutes",
+      "don_time": "10 Minutes",
+      "stealth_disadvantage": true,
+      "strength_requirement": null
+    },
+    "categories": [
+      "armor",
+      "heavy-armor"
+    ],
+    "conditional_proficiency": [
+      {
+        "class": "cleric",
+        "option": "protector"
+      }
+    ],
+    "proficient_classes": [
+      "fighter",
+      "paladin"
+    ]
+  },
+  {
+    "id": "chain-mail",
+    "name": "Chain Mail",
+    "name_ru": "Кольчуга",
+    "source": "srd-5.2.1",
+    "category": "armor",
+    "subcategory": "heavy",
+    "cost": {
+      "amount": 75,
+      "unit": "gp"
+    },
+    "cost_cp": 7500,
+    "weight_lb": 55,
+    "armor": {
+      "type": "heavy",
+      "armor_class": {
+        "add_dex": false,
+        "base": 16,
+        "dex_max": null
+      },
+      "doff_time": "5 Minutes",
+      "don_time": "10 Minutes",
+      "stealth_disadvantage": true,
+      "strength_requirement": 13
+    },
+    "categories": [
+      "armor",
+      "heavy-armor"
+    ],
+    "conditional_proficiency": [
+      {
+        "class": "cleric",
+        "option": "protector"
+      }
+    ],
+    "proficient_classes": [
+      "fighter",
+      "paladin"
+    ],
+    "starting_equipment_for": [
+      {
+        "id": "fighter",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "paladin",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "splint-armor",
+    "name": "Splint Armor",
+    "name_ru": "Наборный доспех",
+    "source": "srd-5.2.1",
+    "category": "armor",
+    "subcategory": "heavy",
+    "cost": {
+      "amount": 200,
+      "unit": "gp"
+    },
+    "cost_cp": 20000,
+    "weight_lb": 60,
+    "armor": {
+      "type": "heavy",
+      "armor_class": {
+        "add_dex": false,
+        "base": 17,
+        "dex_max": null
+      },
+      "doff_time": "5 Minutes",
+      "don_time": "10 Minutes",
+      "stealth_disadvantage": true,
+      "strength_requirement": 15
+    },
+    "categories": [
+      "armor",
+      "heavy-armor"
+    ],
+    "conditional_proficiency": [
+      {
+        "class": "cleric",
+        "option": "protector"
+      }
+    ],
+    "proficient_classes": [
+      "fighter",
+      "paladin"
+    ]
+  },
+  {
+    "id": "plate-armor",
+    "name": "Plate Armor",
+    "name_ru": "Латы",
+    "source": "srd-5.2.1",
+    "category": "armor",
+    "subcategory": "heavy",
+    "cost": {
+      "amount": 1500,
+      "unit": "gp"
+    },
+    "cost_cp": 150000,
+    "weight_lb": 65,
+    "armor": {
+      "type": "heavy",
+      "armor_class": {
+        "add_dex": false,
+        "base": 18,
+        "dex_max": null
+      },
+      "doff_time": "5 Minutes",
+      "don_time": "10 Minutes",
+      "stealth_disadvantage": true,
+      "strength_requirement": 15
+    },
+    "categories": [
+      "armor",
+      "heavy-armor"
+    ],
+    "conditional_proficiency": [
+      {
+        "class": "cleric",
+        "option": "protector"
+      }
+    ],
+    "proficient_classes": [
+      "fighter",
+      "paladin"
+    ]
+  },
+  {
+    "id": "shield",
+    "name": "Shield",
+    "name_ru": "Щит",
+    "source": "srd-5.2.1",
+    "category": "armor",
+    "subcategory": "shield",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 6,
+    "armor": {
+      "type": "shield",
+      "armor_class": {
+        "bonus": 2
+      },
+      "doff_time": "Utilize action",
+      "don_time": "Utilize action",
+      "stealth_disadvantage": false,
+      "strength_requirement": null
+    },
+    "categories": [
+      "armor",
+      "shields"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "cleric",
+      "druid",
+      "fighter",
+      "paladin",
+      "ranger",
+      "artificer"
+    ],
+    "starting_equipment_for": [
+      {
+        "id": "cleric",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "druid",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "paladin",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "alchemists-supplies",
+    "name": "Alchemist's Supplies",
+    "name_ru": "Инструменты алхимика",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "artisan",
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "cost_cp": 5000,
+    "weight_lb": 8,
+    "categories": [
+      "tools",
+      "artisans-tools"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "artisan",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "artisan",
+      "ability": "int",
+      "craft": [
+        {
+          "item": "acid"
+        },
+        {
+          "item": "alchemists-fire"
+        },
+        {
+          "item": "component-pouch"
+        },
+        {
+          "item": "oil"
+        },
+        {
+          "item": "paper"
+        },
+        {
+          "item": "perfume"
+        }
+      ],
+      "utilize": "Identify a substance (DC 15), or start a fire (DC 15)"
+    }
+  },
+  {
+    "id": "brewers-supplies",
+    "name": "Brewer's Supplies",
+    "name_ru": "Инструменты пивовара",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "artisan",
+    "cost": {
+      "amount": 20,
+      "unit": "gp"
+    },
+    "cost_cp": 2000,
+    "weight_lb": 9,
+    "categories": [
+      "tools",
+      "artisans-tools"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "artisan",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "artisan",
+      "ability": "int",
+      "craft": [
+        {
+          "item": "antitoxin"
+        }
+      ],
+      "utilize": "Detect poisoned drink (DC 15), or identify alcohol (DC 10)"
+    }
+  },
+  {
+    "id": "calligraphers-supplies",
+    "name": "Calligrapher's Supplies",
+    "name_ru": "Инструменты каллиграфа",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "artisan",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 5,
+    "categories": [
+      "tools",
+      "artisans-tools"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "backgrounds_fixed": [
+        "acolyte",
+        "sage",
+        "scribe"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "acolyte",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "artisan",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "sage",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "scribe",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ],
+    "tool": {
+      "type": "artisan",
+      "ability": "dex",
+      "craft": [
+        {
+          "item": "ink"
+        },
+        {
+          "text": "Spell Scroll"
+        }
+      ],
+      "utilize": "Write text with impressive flourishes that guard against forgery (DC 15)"
+    }
+  },
+  {
+    "id": "carpenters-tools",
+    "name": "Carpenter's Tools",
+    "name_ru": "Инструменты плотника",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "artisan",
+    "cost": {
+      "amount": 8,
+      "unit": "gp"
+    },
+    "cost_cp": 800,
+    "weight_lb": 6,
+    "categories": [
+      "tools",
+      "artisans-tools"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "backgrounds_fixed": [
+        "farmer"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "crafter",
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "artisan",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "farmer",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ],
+    "tool": {
+      "type": "artisan",
+      "ability": "str",
+      "craft": [
+        {
+          "item": "club"
+        },
+        {
+          "item": "greatclub"
+        },
+        {
+          "item": "quarterstaff"
+        },
+        {
+          "item": "barrel"
+        },
+        {
+          "item": "chest"
+        },
+        {
+          "item": "ladder"
+        },
+        {
+          "item": "pole"
+        },
+        {
+          "item": "ram-portable"
+        },
+        {
+          "item": "torch"
+        }
+      ],
+      "utilize": "Seal or pry open a door or container (DC 20)"
+    }
+  },
+  {
+    "id": "cartographer-tools",
+    "name": "Cartographer's Tools",
+    "name_ru": "Инструменты картографа",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "artisan",
+    "cost": {
+      "amount": 15,
+      "unit": "gp"
+    },
+    "cost_cp": 1500,
+    "weight_lb": 6,
+    "categories": [
+      "tools",
+      "artisans-tools"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "backgrounds_fixed": [
+        "guide"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "artisan",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "guide",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ],
+    "tool": {
+      "type": "artisan",
+      "ability": "wis",
+      "craft": [
+        {
+          "item": "map"
+        }
+      ],
+      "utilize": "Draft a map of a small area (DC 15)"
+    }
+  },
+  {
+    "id": "cobblers-tools",
+    "name": "Cobbler's Tools",
+    "name_ru": "Инструменты сапожника",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "artisan",
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 5,
+    "categories": [
+      "tools",
+      "artisans-tools"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "artisan",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "artisan",
+      "ability": "dex",
+      "craft": [
+        {
+          "item": "climbers-kit"
+        }
+      ],
+      "utilize": "Modify footwear to give Advantage on the wearer's next Dexterity (Acrobatics) check (DC 10)"
+    }
+  },
+  {
+    "id": "cooks-utensils",
+    "name": "Cook's Utensils",
+    "name_ru": "Инструменты повара",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "artisan",
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 8,
+    "categories": [
+      "tools",
+      "artisans-tools"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "artisan",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "artisan",
+      "ability": "wis",
+      "craft": [
+        {
+          "item": "rations"
+        }
+      ],
+      "utilize": "Improve food's flavor (DC 10), or detect spoiled or poisoned food (DC 15)"
+    }
+  },
+  {
+    "id": "glassblowers-tools",
+    "name": "Glassblower's Tools",
+    "name_ru": "Инструменты стеклодува",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "artisan",
+    "cost": {
+      "amount": 30,
+      "unit": "gp"
+    },
+    "cost_cp": 3000,
+    "weight_lb": 5,
+    "categories": [
+      "tools",
+      "artisans-tools"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "artisan",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "artisan",
+      "ability": "int",
+      "craft": [
+        {
+          "item": "bottle-glass"
+        },
+        {
+          "item": "magnifying-glass"
+        },
+        {
+          "item": "spyglass"
+        },
+        {
+          "item": "vial"
+        }
+      ],
+      "utilize": "Discern what a glass object held in the past 24 hours (DC 15)"
+    }
+  },
+  {
+    "id": "jewelers-tools",
+    "name": "Jeweler's Tools",
+    "name_ru": "Инструменты ювелира",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "artisan",
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "cost_cp": 2500,
+    "weight_lb": 2,
+    "categories": [
+      "tools",
+      "artisans-tools"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "artisan",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "artisan",
+      "ability": "int",
+      "craft": [
+        {
+          "category": "arcane-foci"
+        },
+        {
+          "category": "holy-symbols"
+        }
+      ],
+      "utilize": "Discern a gem's value (DC 15)"
+    }
+  },
+  {
+    "id": "leatherworkers-tools",
+    "name": "Leatherworker's Tools",
+    "name_ru": "Инструменты кожевника",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "artisan",
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 5,
+    "categories": [
+      "tools",
+      "artisans-tools"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "crafter",
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "artisan",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "artisan",
+      "ability": "dex",
+      "craft": [
+        {
+          "item": "sling"
+        },
+        {
+          "item": "whip"
+        },
+        {
+          "item": "hide-armor"
+        },
+        {
+          "item": "leather-armor"
+        },
+        {
+          "item": "studded-leather-armor"
+        },
+        {
+          "item": "backpack"
+        },
+        {
+          "item": "case-crossbow-bolt"
+        },
+        {
+          "item": "case-map-or-scroll"
+        },
+        {
+          "item": "parchment"
+        },
+        {
+          "item": "pouch"
+        },
+        {
+          "item": "quiver"
+        },
+        {
+          "item": "waterskin"
+        }
+      ],
+      "utilize": "Add a design to a leather item (DC 10)"
+    }
+  },
+  {
+    "id": "masons-tools",
+    "name": "Mason's Tools",
+    "name_ru": "Инструменты каменщика",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "artisan",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 8,
+    "categories": [
+      "tools",
+      "artisans-tools"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "crafter",
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "artisan",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "artisan",
+      "ability": "str",
+      "craft": [
+        {
+          "item": "block-and-tackle"
+        }
+      ],
+      "utilize": "Chisel a symbol or hole in stone (DC 10)"
+    }
+  },
+  {
+    "id": "painters-supplies",
+    "name": "Painter's Supplies",
+    "name_ru": "Инструменты художника",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "artisan",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 5,
+    "categories": [
+      "tools",
+      "artisans-tools"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "artisan",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "artisan",
+      "ability": "wis",
+      "craft": [
+        {
+          "category": "druidic-foci"
+        },
+        {
+          "category": "holy-symbols"
+        }
+      ],
+      "utilize": "Paint a recognizable image of something you've seen (DC 10)"
+    }
+  },
+  {
+    "id": "potters-tools",
+    "name": "Potter's Tools",
+    "name_ru": "Инструменты гончара",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "artisan",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 3,
+    "categories": [
+      "tools",
+      "artisans-tools"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "crafter",
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "artisan",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "artisan",
+      "ability": "int",
+      "craft": [
+        {
+          "item": "jug"
+        },
+        {
+          "item": "lamp"
+        }
+      ],
+      "utilize": "Discern what a ceramic object held in the past 24 hours (DC 15)"
+    }
+  },
+  {
+    "id": "smiths-tools",
+    "name": "Smith's Tools",
+    "name_ru": "Инструменты кузнеца",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "artisan",
+    "cost": {
+      "amount": 20,
+      "unit": "gp"
+    },
+    "cost_cp": 2000,
+    "weight_lb": 8,
+    "categories": [
+      "tools",
+      "artisans-tools"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "crafter",
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "artisan",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "artisan",
+      "ability": "str",
+      "craft": [
+        {
+          "text": "Any Melee weapon (except Club, Greatclub, Quarterstaff, and Whip)"
+        },
+        {
+          "text": "Medium armor (except Hide)"
+        },
+        {
+          "text": "Heavy armor"
+        },
+        {
+          "item": "ball-bearings"
+        },
+        {
+          "item": "bucket"
+        },
+        {
+          "item": "caltrops"
+        },
+        {
+          "item": "chain"
+        },
+        {
+          "item": "crowbar"
+        },
+        {
+          "item": "bullets-firearm"
+        },
+        {
+          "item": "grappling-hook"
+        },
+        {
+          "item": "pot-iron"
+        },
+        {
+          "item": "spikes-iron"
+        },
+        {
+          "item": "bullets-sling"
+        }
+      ],
+      "utilize": "Pry open a door or container (DC 20)"
+    }
+  },
+  {
+    "id": "tinkers-tools",
+    "name": "Tinker's Tools",
+    "name_ru": "Инструменты ремонтника",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "artisan",
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "cost_cp": 5000,
+    "weight_lb": 10,
+    "categories": [
+      "tools",
+      "artisans-tools"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk"
+      ],
+      "classes_fixed": [
+        "artificer"
+      ],
+      "feats": [
+        "crafter",
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "artificer",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "artisan",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "artisan",
+      "ability": "dex",
+      "craft": [
+        {
+          "item": "musket"
+        },
+        {
+          "item": "pistol"
+        },
+        {
+          "item": "bell"
+        },
+        {
+          "item": "lantern-bullseye"
+        },
+        {
+          "item": "flask"
+        },
+        {
+          "item": "lantern-hooded"
+        },
+        {
+          "item": "hunting-trap"
+        },
+        {
+          "item": "lock"
+        },
+        {
+          "item": "manacles"
+        },
+        {
+          "item": "mirror"
+        },
+        {
+          "item": "shovel"
+        },
+        {
+          "item": "signal-whistle"
+        },
+        {
+          "item": "tinderbox"
+        }
+      ],
+      "utilize": "Assemble a Tiny item composed of scrap, which falls apart in 1 minute (DC 20)"
+    }
+  },
+  {
+    "id": "weavers-tools",
+    "name": "Weaver's Tools",
+    "name_ru": "Инструменты ткача",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "artisan",
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 5,
+    "categories": [
+      "tools",
+      "artisans-tools"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "crafter",
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "artisan",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "artisan",
+      "ability": "dex",
+      "craft": [
+        {
+          "item": "padded-armor"
+        },
+        {
+          "item": "basket"
+        },
+        {
+          "item": "bedroll"
+        },
+        {
+          "item": "blanket"
+        },
+        {
+          "item": "clothes-fine"
+        },
+        {
+          "item": "net"
+        },
+        {
+          "item": "robe"
+        },
+        {
+          "item": "rope"
+        },
+        {
+          "item": "sack"
+        },
+        {
+          "item": "string"
+        },
+        {
+          "item": "tent"
+        },
+        {
+          "item": "clothes-travelers"
+        }
+      ],
+      "utilize": "Mend a tear in clothing (DC 10), or sew a Tiny design (DC 10)"
+    }
+  },
+  {
+    "id": "woodcarvers-tools",
+    "name": "Woodcarver's Tools",
+    "name_ru": "Инструменты резчика по дереву",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "artisan",
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 5,
+    "categories": [
+      "tools",
+      "artisans-tools"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "artisan"
+      ],
+      "classes_choice": [
+        "monk",
+        "artificer"
+      ],
+      "feats": [
+        "crafter",
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "artisan",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "artisan",
+      "ability": "dex",
+      "craft": [
+        {
+          "item": "club"
+        },
+        {
+          "item": "greatclub"
+        },
+        {
+          "item": "quarterstaff"
+        },
+        {
+          "text": "Ranged weapons (except Pistol, Musket, and Sling)"
+        },
+        {
+          "category": "arcane-foci"
+        },
+        {
+          "item": "arrows"
+        },
+        {
+          "item": "bolts"
+        },
+        {
+          "category": "druidic-foci"
+        },
+        {
+          "item": "ink-pen"
+        },
+        {
+          "item": "needles"
+        }
+      ],
+      "utilize": "Carve a pattern in wood (DC 10)"
+    }
+  },
+  {
+    "id": "disguise-kit",
+    "name": "Disguise Kit",
+    "name_ru": "Набор для грима",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "other",
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "cost_cp": 2500,
+    "weight_lb": 3,
+    "categories": [
+      "tools",
+      "other-tools"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "feats": [
+        "skilled"
+      ]
+    },
+    "tool": {
+      "type": "other",
+      "ability": "cha",
+      "craft": [
+        {
+          "item": "costume"
+        }
+      ],
+      "utilize": "Apply makeup (DC 10)"
+    }
+  },
+  {
+    "id": "forgery-kit",
+    "name": "Forgery Kit",
+    "name_ru": "Набор для фальсификации",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "other",
+    "cost": {
+      "amount": 15,
+      "unit": "gp"
+    },
+    "cost_cp": 1500,
+    "weight_lb": 5,
+    "categories": [
+      "tools",
+      "other-tools"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_fixed": [
+        "charlatan"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "charlatan",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ],
+    "tool": {
+      "type": "other",
+      "ability": "dex",
+      "craft": [],
+      "utilize": "Mimic 10 or fewer words of someone else's handwriting (DC 15), or duplicate a wax seal (DC 20)"
+    }
+  },
+  {
+    "id": "dice",
+    "name": "Dice",
+    "name_ru": "Игральные кости",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "gaming-set",
+    "cost": {
+      "amount": 1,
+      "unit": "sp"
+    },
+    "cost_cp": 10,
+    "weight_lb": 0,
+    "categories": [
+      "tools",
+      "gaming-sets"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "guard",
+        "noble",
+        "soldier"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "guard",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "noble",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "soldier",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "wayfarer",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "gaming-set",
+      "ability": "wis",
+      "craft": [],
+      "utilize": "Discern whether someone is cheating (DC 10), or win the game (DC 20)"
+    }
+  },
+  {
+    "id": "dragonchess",
+    "name": "Dragonchess",
+    "name_ru": "Драконьи шахматы",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "gaming-set",
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 0,
+    "categories": [
+      "tools",
+      "gaming-sets"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "guard",
+        "noble",
+        "soldier"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "guard",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "noble",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "soldier",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "wayfarer",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "gaming-set",
+      "ability": "wis",
+      "craft": [],
+      "utilize": "Discern whether someone is cheating (DC 10), or win the game (DC 20)"
+    }
+  },
+  {
+    "id": "playing-cards",
+    "name": "Playing Cards",
+    "name_ru": "Игральные карты",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "gaming-set",
+    "cost": {
+      "amount": 5,
+      "unit": "sp"
+    },
+    "cost_cp": 50,
+    "weight_lb": 0,
+    "categories": [
+      "tools",
+      "gaming-sets"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "guard",
+        "noble",
+        "soldier"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "guard",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "noble",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "soldier",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "wayfarer",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "gaming-set",
+      "ability": "wis",
+      "craft": [],
+      "utilize": "Discern whether someone is cheating (DC 10), or win the game (DC 20)"
+    }
+  },
+  {
+    "id": "three-dragon-ante",
+    "name": "Three-Dragon Ante",
+    "name_ru": "Ставка трёх драконов",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "gaming-set",
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 0,
+    "categories": [
+      "tools",
+      "gaming-sets"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "guard",
+        "noble",
+        "soldier"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "guard",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "noble",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "soldier",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "wayfarer",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "gaming-set",
+      "ability": "wis",
+      "craft": [],
+      "utilize": "Discern whether someone is cheating (DC 10), or win the game (DC 20)"
+    }
+  },
+  {
+    "id": "herbalism-kit",
+    "name": "Herbalism Kit",
+    "name_ru": "Набор травника",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "other",
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 3,
+    "categories": [
+      "tools",
+      "other-tools"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_fixed": [
+        "hermit"
+      ],
+      "classes_fixed": [
+        "druid"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "druid",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "hermit",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ],
+    "tool": {
+      "type": "other",
+      "ability": "int",
+      "craft": [
+        {
+          "item": "antitoxin"
+        },
+        {
+          "item": "candle"
+        },
+        {
+          "item": "healers-kit"
+        },
+        {
+          "item": "potion-of-healing"
+        }
+      ],
+      "utilize": "Identify a plant (DC 10)"
+    }
+  },
+  {
+    "id": "bagpipes",
+    "name": "Bagpipes",
+    "name_ru": "Волынка",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "musical-instrument",
+    "cost": {
+      "amount": 30,
+      "unit": "gp"
+    },
+    "cost_cp": 3000,
+    "weight_lb": 6,
+    "categories": [
+      "tools",
+      "musical-instruments"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "entertainer"
+      ],
+      "classes_choice": [
+        "bard",
+        "monk"
+      ],
+      "feats": [
+        "musician",
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "bard",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "entertainer",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "musical-instrument",
+      "ability": "cha",
+      "craft": [],
+      "utilize": "Play a known tune (DC 10), or improvise a song (DC 15)"
+    }
+  },
+  {
+    "id": "drum",
+    "name": "Drum",
+    "name_ru": "Барабан",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "musical-instrument",
+    "cost": {
+      "amount": 6,
+      "unit": "gp"
+    },
+    "cost_cp": 600,
+    "weight_lb": 3,
+    "categories": [
+      "tools",
+      "musical-instruments"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "entertainer"
+      ],
+      "classes_choice": [
+        "bard",
+        "monk"
+      ],
+      "feats": [
+        "musician",
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "bard",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "entertainer",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "musical-instrument",
+      "ability": "cha",
+      "craft": [],
+      "utilize": "Play a known tune (DC 10), or improvise a song (DC 15)"
+    }
+  },
+  {
+    "id": "dulcimer",
+    "name": "Dulcimer",
+    "name_ru": "Цимбалы",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "musical-instrument",
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "cost_cp": 2500,
+    "weight_lb": 10,
+    "categories": [
+      "tools",
+      "musical-instruments"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "entertainer"
+      ],
+      "classes_choice": [
+        "bard",
+        "monk"
+      ],
+      "feats": [
+        "musician",
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "bard",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "entertainer",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "musical-instrument",
+      "ability": "cha",
+      "craft": [],
+      "utilize": "Play a known tune (DC 10), or improvise a song (DC 15)"
+    }
+  },
+  {
+    "id": "flute",
+    "name": "Flute",
+    "name_ru": "Флейта",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "musical-instrument",
+    "cost": {
+      "amount": 2,
+      "unit": "gp"
+    },
+    "cost_cp": 200,
+    "weight_lb": 1,
+    "categories": [
+      "tools",
+      "musical-instruments"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "entertainer"
+      ],
+      "classes_choice": [
+        "bard",
+        "monk"
+      ],
+      "feats": [
+        "musician",
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "bard",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "entertainer",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "musical-instrument",
+      "ability": "cha",
+      "craft": [],
+      "utilize": "Play a known tune (DC 10), or improvise a song (DC 15)"
+    }
+  },
+  {
+    "id": "horn",
+    "name": "Horn",
+    "name_ru": "Рожок",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "musical-instrument",
+    "cost": {
+      "amount": 3,
+      "unit": "gp"
+    },
+    "cost_cp": 300,
+    "weight_lb": 2,
+    "categories": [
+      "tools",
+      "musical-instruments"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "entertainer"
+      ],
+      "classes_choice": [
+        "bard",
+        "monk"
+      ],
+      "feats": [
+        "musician",
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "bard",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "entertainer",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "musical-instrument",
+      "ability": "cha",
+      "craft": [],
+      "utilize": "Play a known tune (DC 10), or improvise a song (DC 15)"
+    }
+  },
+  {
+    "id": "lute",
+    "name": "Lute",
+    "name_ru": "Лютня",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "musical-instrument",
+    "cost": {
+      "amount": 35,
+      "unit": "gp"
+    },
+    "cost_cp": 3500,
+    "weight_lb": 2,
+    "categories": [
+      "tools",
+      "musical-instruments"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "entertainer"
+      ],
+      "classes_choice": [
+        "bard",
+        "monk"
+      ],
+      "feats": [
+        "musician",
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "bard",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "entertainer",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "musical-instrument",
+      "ability": "cha",
+      "craft": [],
+      "utilize": "Play a known tune (DC 10), or improvise a song (DC 15)"
+    }
+  },
+  {
+    "id": "lyre",
+    "name": "Lyre",
+    "name_ru": "Лира",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "musical-instrument",
+    "cost": {
+      "amount": 30,
+      "unit": "gp"
+    },
+    "cost_cp": 3000,
+    "weight_lb": 2,
+    "categories": [
+      "tools",
+      "musical-instruments"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "entertainer"
+      ],
+      "classes_choice": [
+        "bard",
+        "monk"
+      ],
+      "feats": [
+        "musician",
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "bard",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "entertainer",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "musical-instrument",
+      "ability": "cha",
+      "craft": [],
+      "utilize": "Play a known tune (DC 10), or improvise a song (DC 15)"
+    }
+  },
+  {
+    "id": "pan-flute",
+    "name": "Pan Flute",
+    "name_ru": "Свирель",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "musical-instrument",
+    "cost": {
+      "amount": 12,
+      "unit": "gp"
+    },
+    "cost_cp": 1200,
+    "weight_lb": 2,
+    "categories": [
+      "tools",
+      "musical-instruments"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "entertainer"
+      ],
+      "classes_choice": [
+        "bard",
+        "monk"
+      ],
+      "feats": [
+        "musician",
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "bard",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "entertainer",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "musical-instrument",
+      "ability": "cha",
+      "craft": [],
+      "utilize": "Play a known tune (DC 10), or improvise a song (DC 15)"
+    }
+  },
+  {
+    "id": "shawm",
+    "name": "Shawm",
+    "name_ru": "Шалмей",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "musical-instrument",
+    "cost": {
+      "amount": 2,
+      "unit": "gp"
+    },
+    "cost_cp": 200,
+    "weight_lb": 1,
+    "categories": [
+      "tools",
+      "musical-instruments"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "entertainer"
+      ],
+      "classes_choice": [
+        "bard",
+        "monk"
+      ],
+      "feats": [
+        "musician",
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "bard",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "entertainer",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "musical-instrument",
+      "ability": "cha",
+      "craft": [],
+      "utilize": "Play a known tune (DC 10), or improvise a song (DC 15)"
+    }
+  },
+  {
+    "id": "viol",
+    "name": "Viol",
+    "name_ru": "Виола",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "musical-instrument",
+    "cost": {
+      "amount": 30,
+      "unit": "gp"
+    },
+    "cost_cp": 3000,
+    "weight_lb": 1,
+    "categories": [
+      "tools",
+      "musical-instruments"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_choice": [
+        "entertainer"
+      ],
+      "classes_choice": [
+        "bard",
+        "monk"
+      ],
+      "feats": [
+        "musician",
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "bard",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "entertainer",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ],
+    "tool": {
+      "type": "musical-instrument",
+      "ability": "cha",
+      "craft": [],
+      "utilize": "Play a known tune (DC 10), or improvise a song (DC 15)"
+    }
+  },
+  {
+    "id": "navigators-tools",
+    "name": "Navigator's Tools",
+    "name_ru": "Инструменты навигатора",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "other",
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "cost_cp": 2500,
+    "weight_lb": 2,
+    "categories": [
+      "tools",
+      "other-tools"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_fixed": [
+        "merchant",
+        "sailor"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "merchant",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "sailor",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ],
+    "tool": {
+      "type": "other",
+      "ability": "wis",
+      "craft": [],
+      "utilize": "Plot a course (DC 10), or determine position by stargazing (DC 15)"
+    }
+  },
+  {
+    "id": "poisoners-kit",
+    "name": "Poisoner's Kit",
+    "name_ru": "Набор отравителя",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "other",
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "cost_cp": 5000,
+    "weight_lb": 2,
+    "categories": [
+      "tools",
+      "other-tools"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "feats": [
+        "skilled"
+      ]
+    },
+    "tool": {
+      "type": "other",
+      "ability": "int",
+      "craft": [
+        {
+          "item": "poison-basic"
+        }
+      ],
+      "utilize": "Detect a poisoned object (DC 10)"
+    }
+  },
+  {
+    "id": "thieves-tools",
+    "name": "Thieves' Tools",
+    "name_ru": "Воровские инструменты",
+    "source": "srd-5.2.1",
+    "category": "tool",
+    "subcategory": "other",
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "cost_cp": 2500,
+    "weight_lb": 1,
+    "categories": [
+      "tools",
+      "other-tools"
+    ],
+    "description": null,
+    "proficiency_from": {
+      "backgrounds_fixed": [
+        "criminal",
+        "wayfarer"
+      ],
+      "classes_fixed": [
+        "rogue",
+        "artificer"
+      ],
+      "feats": [
+        "skilled"
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "rogue",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "artificer",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "criminal",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "wayfarer",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ],
+    "tool": {
+      "type": "other",
+      "ability": "dex",
+      "craft": [],
+      "utilize": "Pick a lock (DC 15), or disarm a trap (DC 15)"
+    }
+  },
+  {
+    "id": "acid",
+    "name": "Acid",
+    "name_ru": "Кислота",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "cost_cp": 2500,
+    "weight_lb": 1,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "When you take the Attack action, you can replace one of your attacks with throwing a vial of Acid. Target one creature or object you can see within 20 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or take 2d6 Acid damage."
+  },
+  {
+    "id": "alchemists-fire",
+    "name": "Alchemist's Fire",
+    "name_ru": "Алхимический огонь",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "cost_cp": 5000,
+    "weight_lb": 1,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "When you take the Attack action, you can replace one of your attacks with throwing a flask of Alchemist's Fire. Target one creature or object you can see within 20 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or take 1d4 Fire damage and start burning (see the Rules Glossary)."
+  },
+  {
+    "id": "antitoxin",
+    "name": "Antitoxin",
+    "name_ru": "Противоядие",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "cost_cp": 5000,
+    "weight_lb": 0,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "As a Bonus Action, you can drink a vial of Antitoxin to gain Advantage on saving throws to avoid or end the Poisoned condition for 1 hour."
+  },
+  {
+    "id": "backpack",
+    "name": "Backpack",
+    "name_ru": "Рюкзак",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 2,
+      "unit": "gp"
+    },
+    "cost_cp": 200,
+    "weight_lb": 5,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Backpack holds up to 30 pounds within 1 cubic foot. It can also serve as a saddlebag."
+  },
+  {
+    "id": "ball-bearings",
+    "name": "Ball bearings",
+    "name_ru": "Металлические шарики",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 2,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "As a Utilize action, you can spill Ball Bearings from their pouch. They spread to cover a level, 10-foot-square area within 10 feet of yourself. A creature that enters this area for the first time on a turn must succeed on a DC 10 Dexterity saving throw or have the Prone condition. It takes 10 minutes to recover the Ball Bearings."
+  },
+  {
+    "id": "barrel",
+    "name": "Barrel",
+    "name_ru": "Бочка",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 2,
+      "unit": "gp"
+    },
+    "cost_cp": 200,
+    "weight_lb": 70,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Barrel holds up to 40 gallons of liquid or up to 4 cubic feet of dry goods."
+  },
+  {
+    "id": "basket",
+    "name": "Basket",
+    "name_ru": "Корзина",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 4,
+      "unit": "sp"
+    },
+    "cost_cp": 40,
+    "weight_lb": 2,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Basket holds up to 40 pounds within 2 cubic feet."
+  },
+  {
+    "id": "bedroll",
+    "name": "Bedroll",
+    "name_ru": "Спальник",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 7,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Bedroll sleeps one Small or Medium creature. While in a Bedroll, you automatically succeed on saving throws against extreme cold (see the *Dungeon Master's Guide*).",
+    "starting_equipment_for": [
+      {
+        "id": "guide",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "hermit",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "wayfarer",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "bell",
+    "name": "Bell",
+    "name_ru": "Колокольчик",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 0,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "When rung as a Utilize action, a Bell produces a sound that can be heard up to 60 feet away."
+  },
+  {
+    "id": "blanket",
+    "name": "Blanket",
+    "name_ru": "Одеяло",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 5,
+      "unit": "sp"
+    },
+    "cost_cp": 50,
+    "weight_lb": 3,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "While wrapped in a blanket, you have Advantage on saving throws against extreme cold (see the *Dungeon Master's Guide*)."
+  },
+  {
+    "id": "block-and-tackle",
+    "name": "Block and tackle",
+    "name_ru": "Блок и лебёдка",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 5,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Block and Tackle allows you to hoist up to four times the weight you can normally lift."
+  },
+  {
+    "id": "book",
+    "name": "Book",
+    "name_ru": "Книга",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "cost_cp": 2500,
+    "weight_lb": 5,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Book contains fiction or nonfiction. If you consult an accurate nonfiction Book about its topic, you gain a +5 bonus to Intelligence (Arcana, History, Nature, or Religion) checks you make about that topic.",
+    "starting_equipment_for": [
+      {
+        "id": "warlock",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "acolyte",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "hermit",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "sage",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "bottle-glass",
+    "name": "Bottle, Glass",
+    "name_ru": "Стеклянная бутылка",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 2,
+      "unit": "gp"
+    },
+    "cost_cp": 200,
+    "weight_lb": 2,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Glass Bottle holds up to 1½ pints."
+  },
+  {
+    "id": "bucket",
+    "name": "Bucket",
+    "name_ru": "Ведро",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 5,
+      "unit": "cp"
+    },
+    "cost_cp": 5,
+    "weight_lb": 2,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Bucket holds up to half a cubic foot of contents."
+  },
+  {
+    "id": "burglars-pack",
+    "name": "Burglar's Pack",
+    "name_ru": "Набор взломщика",
+    "source": "srd-5.2.1",
+    "category": "pack",
+    "subcategory": null,
+    "cost": {
+      "amount": 16,
+      "unit": "gp"
+    },
+    "cost_cp": 1600,
+    "weight_lb": 42,
+    "categories": [
+      "adventuring-gear",
+      "equipment-packs"
+    ],
+    "description": "A Burglar's Pack contains the following items: Backpack, Ball Bearings, Bell, 10 Candles, Crowbar, Hooded Lantern, 7 flasks of Oil, 5 days of Rations, Rope, Tinderbox, and Waterskin.",
+    "pack": {
+      "contents": [
+        {
+          "item": "backpack",
+          "qty": 1
+        },
+        {
+          "item": "ball-bearings",
+          "qty": 1
+        },
+        {
+          "item": "bell",
+          "qty": 1
+        },
+        {
+          "item": "candle",
+          "qty": 10
+        },
+        {
+          "item": "crowbar",
+          "qty": 1
+        },
+        {
+          "item": "lantern-hooded",
+          "qty": 1
+        },
+        {
+          "item": "flask",
+          "qty": 7
+        },
+        {
+          "item": "oil",
+          "qty": 7
+        },
+        {
+          "item": "rations",
+          "qty": 5
+        },
+        {
+          "item": "rope",
+          "qty": 1
+        },
+        {
+          "item": "tinderbox",
+          "qty": 1
+        },
+        {
+          "item": "waterskin",
+          "qty": 1
+        }
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "rogue",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "caltrops",
+    "name": "Caltrops",
+    "name_ru": "Калтропы",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 2,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "As a Utilize action, you can spread Caltrops from their bag to cover a 5-foot-square area within 5 feet of yourself. A creature that enters this area for the first time on a turn must succeed on a DC 15 Dexterity saving throw or take 1 Piercing damage and have its Speed reduced to 0 until the start of its next turn. It takes 10 minutes to recover the Caltrops."
+  },
+  {
+    "id": "candle",
+    "name": "Candle",
+    "name_ru": "Свеча",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 1,
+      "unit": "cp"
+    },
+    "cost_cp": 1,
+    "weight_lb": 0,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "For 1 hour, a lit Candle sheds Bright Light in a 5-foot radius and Dim Light for an additional 5 feet."
+  },
+  {
+    "id": "case-crossbow-bolt",
+    "name": "Case, Crossbow Bolt",
+    "name_ru": "Футляр для арбалетных болтов",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 1,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Crossbow Bolt Case holds up to 20 Bolts."
+  },
+  {
+    "id": "case-map-or-scroll",
+    "name": "Case, Map or Scroll",
+    "name_ru": "Тубус для карт и свитков",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 1,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Map or Scroll Case holds up to 10 sheets of paper or 5 sheets of parchment."
+  },
+  {
+    "id": "chain",
+    "name": "Chain",
+    "name_ru": "Цепь",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 10,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "As a Utilize action, you can wrap a Chain around an unwilling creature within 5 feet of yourself that has the Grappled, Incapacitated, or Restrained condition if you succeed on a DC 13 Strength (Athletics) check. If the creature's legs are bound, the creature has the Restrained condition until it escapes. Escaping the Chain requires the creature to make a successful DC 18 Dexterity (Acrobatics) check as an action. Bursting the Chain requires a successful DC 20 Strength (Athletics) check as an action."
+  },
+  {
+    "id": "chest",
+    "name": "Chest",
+    "name_ru": "Сундук",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 25,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Chest holds up to 12 cubic feet of contents."
+  },
+  {
+    "id": "climbers-kit",
+    "name": "Climber's Kit",
+    "name_ru": "Комплект для лазания",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "cost_cp": 2500,
+    "weight_lb": 12,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Climber's Kit includes boot tips, gloves, pitons, and a harness. As a Utilize action, you can use the Climber's Kit to anchor yourself; when you do, you can't fall more than 25 feet from the anchor point, and you can't move more than 25 feet from there without undoing the anchor as a Bonus Action."
+  },
+  {
+    "id": "clothes-fine",
+    "name": "Clothes, Fine",
+    "name_ru": "Отличная одежда",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 15,
+      "unit": "gp"
+    },
+    "cost_cp": 1500,
+    "weight_lb": 6,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "Fine Clothes are made of expensive fabrics and adorned with expertly crafted details. Some events and locations admit only people wearing these clothes.",
+    "starting_equipment_for": [
+      {
+        "id": "charlatan",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "noble",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "scribe",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "clothes-travelers",
+    "name": "Clothes, Traveler's",
+    "name_ru": "Дорожная одежда",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 2,
+      "unit": "gp"
+    },
+    "cost_cp": 200,
+    "weight_lb": 4,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "Traveler's Clothes are resilient garments designed for travel in various environments.",
+    "starting_equipment_for": [
+      {
+        "id": "artisan",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "criminal",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "entertainer",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "farmer",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "guard",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "guide",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "hermit",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "merchant",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "sailor",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "soldier",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "wayfarer",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "component-pouch",
+    "name": "Component Pouch",
+    "name_ru": "Мешочек с компонентами",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "cost_cp": 2500,
+    "weight_lb": 2,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Component Pouch is watertight and filled with compartments that hold all the free Material components of your spells."
+  },
+  {
+    "id": "costume",
+    "name": "Costume",
+    "name_ru": "Костюм",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 4,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "While wearing a Costume, you have Advantage on any ability check you make to impersonate the person or type of person it represents.",
+    "starting_equipment_for": [
+      {
+        "id": "charlatan",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "entertainer",
+        "type": "background",
+        "option": "A",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "id": "crowbar",
+    "name": "Crowbar",
+    "name_ru": "Ломик",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 2,
+      "unit": "gp"
+    },
+    "cost_cp": 200,
+    "weight_lb": 5,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "Using a Crowbar gives you Advantage on Strength checks where the Crowbar's leverage can be applied.",
+    "starting_equipment_for": [
+      {
+        "id": "criminal",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "diplomat-pack",
+    "name": "Diplomat's Pack",
+    "name_ru": "Набор дипломата",
+    "source": "srd-5.2.1",
+    "category": "pack",
+    "subcategory": null,
+    "cost": {
+      "amount": 39,
+      "unit": "gp"
+    },
+    "cost_cp": 3900,
+    "weight_lb": 39,
+    "categories": [
+      "adventuring-gear",
+      "equipment-packs"
+    ],
+    "description": "A Diplomat's Pack contains the following items: Chest, Fine Clothes, Ink, 5 Ink Pens, Lamp, 2 Map or Scroll Cases, 4 flasks of Oil, 5 sheets of Paper, 5 sheets of Parchment, Perfume, and Tinderbox.",
+    "pack": {
+      "contents": [
+        {
+          "item": "chest",
+          "qty": 1
+        },
+        {
+          "item": "clothes-fine",
+          "qty": 1
+        },
+        {
+          "item": "ink",
+          "qty": 1
+        },
+        {
+          "item": "ink-pen",
+          "qty": 5
+        },
+        {
+          "item": "lamp",
+          "qty": 1
+        },
+        {
+          "item": "case-map-or-scroll",
+          "qty": 2
+        },
+        {
+          "item": "flask",
+          "qty": 4
+        },
+        {
+          "item": "oil",
+          "qty": 4
+        },
+        {
+          "item": "paper",
+          "qty": 5
+        },
+        {
+          "item": "parchment",
+          "qty": 5
+        },
+        {
+          "item": "perfume",
+          "qty": 1
+        },
+        {
+          "item": "tinderbox",
+          "qty": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "dungeoneer-pack",
+    "name": "Dungeoneer's Pack",
+    "name_ru": "Набор исследователя подземелий",
+    "source": "srd-5.2.1",
+    "category": "pack",
+    "subcategory": null,
+    "cost": {
+      "amount": 12,
+      "unit": "gp"
+    },
+    "cost_cp": 1200,
+    "weight_lb": 55,
+    "categories": [
+      "adventuring-gear",
+      "equipment-packs"
+    ],
+    "description": "A Dungeoneer's Pack contains the following items: Backpack, Caltrops, Crowbar, 2 flasks of Oil, 10 days of Rations, Rope, Tinderbox, 10 Torches, and Waterskin.",
+    "pack": {
+      "contents": [
+        {
+          "item": "backpack",
+          "qty": 1
+        },
+        {
+          "item": "caltrops",
+          "qty": 10
+        },
+        {
+          "item": "crowbar",
+          "qty": 1
+        },
+        {
+          "item": "flask",
+          "qty": 2
+        },
+        {
+          "item": "oil",
+          "qty": 2
+        },
+        {
+          "item": "rations",
+          "qty": 10
+        },
+        {
+          "item": "rope",
+          "qty": 1
+        },
+        {
+          "item": "tinderbox",
+          "qty": 1
+        },
+        {
+          "item": "torch",
+          "qty": 10
+        },
+        {
+          "item": "waterskin",
+          "qty": 1
+        }
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "fighter",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "fighter",
+        "type": "class",
+        "option": "B",
+        "qty": 1
+      },
+      {
+        "id": "sorcerer",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "artificer",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "entertainers-pack",
+    "name": "Entertainer's Pack",
+    "name_ru": "Набор артиста",
+    "source": "srd-5.2.1",
+    "category": "pack",
+    "subcategory": null,
+    "cost": {
+      "amount": 40,
+      "unit": "gp"
+    },
+    "cost_cp": 4000,
+    "weight_lb": 58.5,
+    "categories": [
+      "adventuring-gear",
+      "equipment-packs"
+    ],
+    "description": "An Entertainer's Pack contains the following items: Backpack, Bedroll, Bell, Bullseye Lantern, 3 Costumes, Mirror, 8 flasks of Oil, 9 days of Rations, Tinderbox, and Waterskin.",
+    "pack": {
+      "contents": [
+        {
+          "item": "backpack",
+          "qty": 1
+        },
+        {
+          "item": "bedroll",
+          "qty": 1
+        },
+        {
+          "item": "costume",
+          "qty": 2
+        },
+        {
+          "item": "candle",
+          "qty": 5
+        },
+        {
+          "item": "rations",
+          "qty": 5
+        },
+        {
+          "item": "waterskin",
+          "qty": 1
+        },
+        {
+          "item": "disguise-kit",
+          "qty": 1
+        }
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "bard",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "explorers-pack",
+    "name": "Explorer's Pack",
+    "name_ru": "Набор путешественника",
+    "source": "srd-5.2.1",
+    "category": "pack",
+    "subcategory": null,
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 55,
+    "categories": [
+      "adventuring-gear",
+      "equipment-packs"
+    ],
+    "description": "An Explorer's Pack contains the following items: Backpack, Bedroll, 2 flasks of Oil, 10 days of Rations, Rope, Tinderbox, 10 Torches, and Waterskin.",
+    "pack": {
+      "contents": [
+        {
+          "item": "backpack",
+          "qty": 1
+        },
+        {
+          "item": "bedroll",
+          "qty": 1
+        },
+        {
+          "item": "oil",
+          "qty": 2
+        },
+        {
+          "item": "rations",
+          "qty": 10
+        },
+        {
+          "item": "rope",
+          "qty": 1
+        },
+        {
+          "item": "tinderbox",
+          "qty": 1
+        },
+        {
+          "item": "torch",
+          "qty": 10
+        },
+        {
+          "item": "waterskin",
+          "qty": 1
+        }
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "barbarian",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "druid",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "monk",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "ranger",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "flask",
+    "name": "Flask",
+    "name_ru": "Фляга",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 2,
+      "unit": "cp"
+    },
+    "cost_cp": 2,
+    "weight_lb": 1,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Flask holds up to 1 pint."
+  },
+  {
+    "id": "grappling-hook",
+    "name": "Grappling Hook",
+    "name_ru": "Крюк-кошка",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 2,
+      "unit": "gp"
+    },
+    "cost_cp": 200,
+    "weight_lb": 4,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "As a Utilize action, you can throw the Grappling Hook at a railing, a ledge, or another catch within 50 feet of yourself, and the hook catches on if you succeed on a DC 13 Dexterity (Acrobatics) check. If you tied a Rope to the hook, you can then climb it."
+  },
+  {
+    "id": "healers-kit",
+    "name": "Healer's Kit",
+    "name_ru": "Комплект целителя",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 3,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Healer's Kit has ten uses. As a Utilize action, you can expend one of its uses to stabilize an Unconscious creature that has 0 Hit Points without needing to make a Wisdom (Medicine) check.",
+    "starting_equipment_for": [
+      {
+        "id": "farmer",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "soldier",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "holy-water",
+    "name": "Holy Water",
+    "name_ru": "Святая вода",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "cost_cp": 2500,
+    "weight_lb": 1,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "When you take the Attack action, you can replace one of your attacks with throwing a flask of Holy Water. Target one creature you can see within 20 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or take 2d8 Radiant damage if it is a Fiend or an Undead."
+  },
+  {
+    "id": "hunting-trap",
+    "name": "Hunting Trap",
+    "name_ru": "Охотничий капкан",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 25,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "As a Utilize action, you can set a Hunting Trap, which is a sawtooth steel ring that snaps shut when a creature steps on a pressure plate in the center. The trap is affixed by a heavy chain to an immobile object, such as a tree or a spike driven into the ground. A creature that steps on the plate must succeed on a DC 13 Dexterity saving throw or take 1d4 Piercing damage and have its Speed reduced to 0 until the start of its next turn. Thereafter, until the creature breaks free of the trap, its movement is limited by the length of the chain (typically 3 feet). A creature can use its action to make a DC 13 Strength (Athletics) check, freeing itself or another creature within its reach on a success. Each failed check deals 1 Piercing damage to the trapped creature."
+  },
+  {
+    "id": "ink",
+    "name": "Ink",
+    "name_ru": "Чернила",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 0,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "Ink comes in a 1-ounce bottle, which provides enough ink to write about 500 pages."
+  },
+  {
+    "id": "ink-pen",
+    "name": "Ink Pen",
+    "name_ru": "Писчее перо",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 2,
+      "unit": "cp"
+    },
+    "cost_cp": 2,
+    "weight_lb": 0,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "Using Ink, an Ink Pen is used to write or draw."
+  },
+  {
+    "id": "jug",
+    "name": "Jug",
+    "name_ru": "Кувшин",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 2,
+      "unit": "cp"
+    },
+    "cost_cp": 2,
+    "weight_lb": 4,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Jug holds up to 1 gallon."
+  },
+  {
+    "id": "ladder",
+    "name": "Ladder",
+    "name_ru": "Лестница",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 1,
+      "unit": "sp"
+    },
+    "cost_cp": 10,
+    "weight_lb": 25,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Ladder is 10 feet tall. You must climb to move up or down it."
+  },
+  {
+    "id": "lamp",
+    "name": "Lamp",
+    "name_ru": "Лампа",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 5,
+      "unit": "sp"
+    },
+    "cost_cp": 50,
+    "weight_lb": 1,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Lamp burns Oil as fuel to cast Bright Light in a 15-foot radius and Dim Light for an additional 30 feet.",
+    "starting_equipment_for": [
+      {
+        "id": "hermit",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "scribe",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "lantern-bullseye",
+    "name": "Lantern, Bullseye",
+    "name_ru": "Направленный фонарь",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 2,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Bullseye Lantern burns Oil as fuel to cast Bright Light in a 60-foot Cone and Dim Light for an additional 60 feet."
+  },
+  {
+    "id": "lantern-hooded",
+    "name": "Lantern, Hooded",
+    "name_ru": "Закрытый фонарь",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 2,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Hooded Lantern burns Oil as fuel to cast Bright Light in a 30-foot radius and Dim Light for an additional 30 feet. As a Bonus Action, you can lower the hood, reducing the light to Dim Light in a 5-foot radius, or raise it again.",
+    "starting_equipment_for": [
+      {
+        "id": "guard",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "lock",
+    "name": "Lock",
+    "name_ru": "Замок",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 1,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Lock comes with a key. Without the key, a creature can use Thieves' Tools to pick this Lock with a successful DC 15 Dexterity (Sleight of Hand) check."
+  },
+  {
+    "id": "magnifying-glass",
+    "name": "Magnifying Glass",
+    "name_ru": "Увеличительное стекло",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 100,
+      "unit": "gp"
+    },
+    "cost_cp": 10000,
+    "weight_lb": 0,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Magnifying Glass grants Advantage on any ability check made to appraise or inspect a highly detailed item. Lighting a fire with a Magnifying Glass requires light as bright as sunlight to focus, tinder to ignite, and about 5 minutes for the fire to ignite."
+  },
+  {
+    "id": "manacles",
+    "name": "Manacles",
+    "name_ru": "Кандалы",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 2,
+      "unit": "gp"
+    },
+    "cost_cp": 200,
+    "weight_lb": 6,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "As a Utilize action, you can use Manacles to bind an unwilling Small or Medium creature within 5 feet of yourself that has the Grappled, Incapacitated, or Restrained condition if you succeed on a DC 13 Dexterity (Sleight of Hand) check. While bound, a creature has Disadvantage on attack rolls, and the creature is Restrained if the Manacles are attached to a chain or hook that is fixed in place. Escaping the Manacles requires a successful DC 20 Dexterity (Sleight of Hand) check as an action. Bursting them requires a successful DC 25 Strength (Athletics) check as an action.\n\nEach set of Manacles comes with a key. Without the key, a creature can use Thieves' Tools to pick the Manacles' lock with a successful DC 15 Dexterity (Sleight of Hand) check.",
+    "starting_equipment_for": [
+      {
+        "id": "guard",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "map",
+    "name": "Map",
+    "name_ru": "Карта",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 0,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "If you consult an accurate Map, you gain a +5 bonus to Wisdom (Survival) checks you make to find your way in the place represented on it."
+  },
+  {
+    "id": "mirror",
+    "name": "Mirror",
+    "name_ru": "Зеркало",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 0.5,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A handheld steel Mirror is useful for personal cosmetics but also for peeking around corners and reflecting light as a signal.",
+    "starting_equipment_for": [
+      {
+        "id": "entertainer",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "net",
+    "name": "Net",
+    "name_ru": "Сеть",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 3,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "When you take the Attack action, you can replace one of your attacks with throwing a Net. Target a creature you can see within 15 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or have the Restrained condition until it escapes. The target succeeds automatically if it is Huge or larger.\n\nTo escape, the target or a creature within 5 feet of it must take an action to make a DC 10 Strength (Athletics) check, freeing the Restrained creature on a success. Destroying the Net (AC 10; 5 HP; Immunity to Bludgeoning, Poison, and Psychic damage) also frees the target, ending the effect."
+  },
+  {
+    "id": "oil",
+    "name": "Oil",
+    "name_ru": "Масло",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 1,
+      "unit": "sp"
+    },
+    "cost_cp": 10,
+    "weight_lb": 1,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "You can douse a creature, object, or space with Oil or use it as fuel, as detailed below.\n\n***Dousing a Creature or an Object.*** When you take the Attack action, you can replace one of your attacks with throwing an Oil flask. Target one creature or object within 20 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or be covered in oil. If the target takes Fire damage before the oil dries (after 1 minute), the target takes an extra 5 Fire damage from burning oil.\n\n***Dousing a Space.*** You can take the Utilize action to pour an Oil flask on level ground to cover a 5-foot-square area within 5 feet of yourself. If lit, the oil burns until the end of the turn 2 rounds from when the oil was lit (or 12 seconds) and deals 5 Fire damage to any creature that enters the area or ends its turn there. A creature can take this damage only once per turn.\n\n***Fuel.*** Oil serves as fuel for Lamps and Lanterns. Once lit, a flask of Oil burns for 6 hours in a Lamp or Lantern. That duration doesn't need to be consecutive; you can extinguish the burning Oil (as a Utilize action) and rekindle it again until it has burned for a total of 6 hours.",
+    "starting_equipment_for": [
+      {
+        "id": "hermit",
+        "type": "background",
+        "option": "A",
+        "qty": 3
+      },
+      {
+        "id": "scribe",
+        "type": "background",
+        "option": "A",
+        "qty": 3
+      }
+    ]
+  },
+  {
+    "id": "paper",
+    "name": "Paper",
+    "name_ru": "Бумага",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 2,
+      "unit": "sp"
+    },
+    "cost_cp": 20,
+    "weight_lb": 0,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "One sheet of Paper can hold about 250 handwritten words."
+  },
+  {
+    "id": "parchment",
+    "name": "Parchment",
+    "name_ru": "Пергамент",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 1,
+      "unit": "sp"
+    },
+    "cost_cp": 10,
+    "weight_lb": 0,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "One sheet of Parchment can hold about 250 handwritten words.",
+    "starting_equipment_for": [
+      {
+        "id": "acolyte",
+        "type": "background",
+        "option": "A",
+        "qty": 10
+      },
+      {
+        "id": "sage",
+        "type": "background",
+        "option": "A",
+        "qty": 8
+      },
+      {
+        "id": "scribe",
+        "type": "background",
+        "option": "A",
+        "qty": 12
+      }
+    ]
+  },
+  {
+    "id": "perfume",
+    "name": "Perfume",
+    "name_ru": "Духи",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 0,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "Perfume comes in a 4-ounce vial. For 1 hour after applying Perfume to yourself, you have Advantage on Charisma (Persuasion) checks made to influence an Indifferent Humanoid within 5 feet of yourself.",
+    "starting_equipment_for": [
+      {
+        "id": "entertainer",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "noble",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "poison-basic",
+    "name": "Poison, Basic",
+    "name_ru": "Простой яд",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 100,
+      "unit": "gp"
+    },
+    "cost_cp": 10000,
+    "weight_lb": 0,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "As a Bonus Action, you can use a vial of Basic Poison to coat one weapon or up to three pieces of ammunition. A creature that takes Piercing or Slashing damage from the poisoned weapon or ammunition takes an extra 1d4 Poison damage. Once applied, the poison retains potency for 1 minute or until its damage is dealt, whichever comes first."
+  },
+  {
+    "id": "pole",
+    "name": "Pole",
+    "name_ru": "Шест",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 5,
+      "unit": "cp"
+    },
+    "cost_cp": 5,
+    "weight_lb": 7,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Pole is 10 feet long. You can use it to touch something up to 10 feet away. If you must make a Strength (Athletics) check as part of a High or Long Jump, you can use the Pole to vault, giving yourself Advantage on the check."
+  },
+  {
+    "id": "pot-iron",
+    "name": "Pot, Iron",
+    "name_ru": "Железный горшок",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 2,
+      "unit": "gp"
+    },
+    "cost_cp": 200,
+    "weight_lb": 10,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "An Iron Pot holds up to 1 gallon.",
+    "starting_equipment_for": [
+      {
+        "id": "farmer",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "potion-of-healing",
+    "name": "Potion of Healing",
+    "name_ru": "Зелье лечения",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "cost_cp": 5000,
+    "weight_lb": 0.5,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "This potion is a magic item. As a Bonus Action, you can drink it or administer it to another creature within 5 feet of yourself. The creature that drinks the magical red fluid in this vial regains 2d4 + 2 Hit Points."
+  },
+  {
+    "id": "pouch",
+    "name": "Pouch",
+    "name_ru": "Кошель",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 5,
+      "unit": "sp"
+    },
+    "cost_cp": 50,
+    "weight_lb": 1,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Pouch holds up to 6 pounds within one-fifth of a cubic foot.",
+    "starting_equipment_for": [
+      {
+        "id": "artisan",
+        "type": "background",
+        "option": "A",
+        "qty": 2
+      },
+      {
+        "id": "criminal",
+        "type": "background",
+        "option": "A",
+        "qty": 2
+      },
+      {
+        "id": "merchant",
+        "type": "background",
+        "option": "A",
+        "qty": 2
+      },
+      {
+        "id": "wayfarer",
+        "type": "background",
+        "option": "A",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "id": "priests-pack",
+    "name": "Priest's Pack",
+    "name_ru": "Набор священника",
+    "source": "srd-5.2.1",
+    "category": "pack",
+    "subcategory": null,
+    "cost": {
+      "amount": 33,
+      "unit": "gp"
+    },
+    "cost_cp": 3300,
+    "weight_lb": 29,
+    "categories": [
+      "adventuring-gear",
+      "equipment-packs"
+    ],
+    "description": "A Priest's Pack contains the following items: Backpack, Blanket, Holy Water, Lamp, 7 days of Rations, Robe, and Tinderbox.",
+    "pack": {
+      "contents": [
+        {
+          "item": "backpack",
+          "qty": 1
+        },
+        {
+          "item": "blanket",
+          "qty": 1
+        },
+        {
+          "item": "holy-water",
+          "qty": 1
+        },
+        {
+          "item": "lamp",
+          "qty": 1
+        },
+        {
+          "item": "rations",
+          "qty": 7
+        },
+        {
+          "item": "robe",
+          "qty": 1
+        },
+        {
+          "item": "tinderbox",
+          "qty": 1
+        }
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "cleric",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "paladin",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "quiver",
+    "name": "Quiver",
+    "name_ru": "Колчан",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 1,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Quiver holds up to 20 Arrows.",
+    "starting_equipment_for": [
+      {
+        "id": "fighter",
+        "type": "class",
+        "option": "B",
+        "qty": 1
+      },
+      {
+        "id": "ranger",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "rogue",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "guard",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "guide",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "soldier",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "ram-portable",
+    "name": "Ram, Portable",
+    "name_ru": "Портативный таран",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 4,
+      "unit": "gp"
+    },
+    "cost_cp": 400,
+    "weight_lb": 35,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "You can use a Portable Ram to break down doors. When doing so, you gain a +4 bonus to the Strength check. One other character can help you use the ram, giving you Advantage on this check."
+  },
+  {
+    "id": "rations",
+    "name": "Rations",
+    "name_ru": "Рационы",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 5,
+      "unit": "sp"
+    },
+    "cost_cp": 50,
+    "weight_lb": 2,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "Rations consist of travel-ready food, including jerky, dried fruit, hardtack, and nuts. See “Malnutrition” in the Rules Glossary for the risks of not eating."
+  },
+  {
+    "id": "robe",
+    "name": "Robe",
+    "name_ru": "Мантия",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 4,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Robe has vocational or ceremonial significance. Some events and locations admit only people wearing a Robe bearing certain colors or symbols.",
+    "starting_equipment_for": [
+      {
+        "id": "wizard",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "acolyte",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "sage",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "rope",
+    "name": "Rope",
+    "name_ru": "Верёвка",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 5,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "As a Utilize action, you can tie a knot with Rope if you succeed on a DC 10 Dexterity (Sleight of Hand) check. The Rope can be burst with a successful DC 20 Strength (Athletics) check.\n\nYou can bind an unwilling creature with the Rope only if the creature has the Grappled, Incapacitated, or Restrained condition. If the creature's legs are bound, the creature has the Restrained condition until it escapes. Escaping the Rope requires the creature to make a successful DC 15 Dexterity (Acrobatics) check as an action.",
+    "starting_equipment_for": [
+      {
+        "id": "sailor",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "sack",
+    "name": "Sack",
+    "name_ru": "Мешок",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 1,
+      "unit": "cp"
+    },
+    "cost_cp": 1,
+    "weight_lb": 0.5,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Sack holds up to 30 pounds within 1 cubic foot."
+  },
+  {
+    "id": "scholars-pack",
+    "name": "Scholar's Pack",
+    "name_ru": "Набор учёного",
+    "source": "srd-5.2.1",
+    "category": "pack",
+    "subcategory": null,
+    "cost": {
+      "amount": 40,
+      "unit": "gp"
+    },
+    "cost_cp": 4000,
+    "weight_lb": 22,
+    "categories": [
+      "adventuring-gear",
+      "equipment-packs"
+    ],
+    "description": "A Scholar's Pack contains the following items: Backpack, Book, Ink, Ink Pen, Lamp, 10 flasks of Oil, 10 sheets of Parchment, and Tinderbox.",
+    "pack": {
+      "contents": [
+        {
+          "item": "backpack",
+          "qty": 1
+        },
+        {
+          "item": "blanket",
+          "qty": 1
+        },
+        {
+          "item": "book",
+          "qty": 1
+        },
+        {
+          "item": "ink",
+          "qty": 1
+        },
+        {
+          "item": "ink-pen",
+          "qty": 1
+        },
+        {
+          "item": "lamp",
+          "qty": 1
+        },
+        {
+          "item": "oil",
+          "qty": 10
+        },
+        {
+          "item": "parchment",
+          "qty": 10
+        },
+        {
+          "item": "tinderbox",
+          "qty": 1
+        }
+      ]
+    },
+    "starting_equipment_for": [
+      {
+        "id": "warlock",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      },
+      {
+        "id": "wizard",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "shovel",
+    "name": "Shovel",
+    "name_ru": "Лопата",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 2,
+      "unit": "gp"
+    },
+    "cost_cp": 200,
+    "weight_lb": 5,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "Working for 1 hour, you can use a Shovel to dig a hole that is 5 feet on each side in soil or similar material.",
+    "starting_equipment_for": [
+      {
+        "id": "farmer",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "signal-whistle",
+    "name": "Signal Whistle",
+    "name_ru": "Сигнальный свисток",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 5,
+      "unit": "cp"
+    },
+    "cost_cp": 5,
+    "weight_lb": 0,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "When blown as a Utilize action, a Signal Whistle produces a sound that can be heard up to 600 feet away."
+  },
+  {
+    "id": "spell-scroll-cantrip",
+    "name": "Spell Scroll, Cantrip",
+    "name_ru": "Свиток заклинания (заговор)",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 30,
+      "unit": "gp"
+    },
+    "cost_cp": 3000,
+    "weight_lb": 0,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A *Spell Scroll* (Cantrip) or *Spell Scroll* (Level 1) is a magic item that bears the words of a cantrip or level 1 spell, respectively, determined by the scroll's creator. If the spell is on your class's spell list, you can read the scroll and cast the spell using its normal casting time and without providing any Material components.\nIf the spell requires a saving throw or an attack roll, the spell save DC is 13, and the attack bonus is +5. The scroll disintegrates when the casting is completed."
+  },
+  {
+    "id": "spell-scroll-level-1",
+    "name": "Spell Scroll, Level 1",
+    "name_ru": "Свиток заклинания (1 уровень)",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "cost_cp": 5000,
+    "weight_lb": 0,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A *Spell Scroll* (Cantrip) or *Spell Scroll* (Level 1) is a magic item that bears the words of a cantrip or level 1 spell, respectively, determined by the scroll's creator. If the spell is on your class's spell list, you can read the scroll and cast the spell using its normal casting time and without providing any Material components.\nIf the spell requires a saving throw or an attack roll, the spell save DC is 13, and the attack bonus is +5. The scroll disintegrates when the casting is completed."
+  },
+  {
+    "id": "spikes-iron",
+    "name": "Spikes, Iron",
+    "name_ru": "Железные шипы",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 5,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "Iron Spikes come in bundles of ten. As a Utilize action, you can use a blunt object, such as a Light Hammer, to hammer a spike into wood, earth, or a similar material. You can do so to jam a door shut or to then tie a Rope or Chain to the Spike."
+  },
+  {
+    "id": "spyglass",
+    "name": "Spyglass",
+    "name_ru": "Подзорная труба",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 1000,
+      "unit": "gp"
+    },
+    "cost_cp": 100000,
+    "weight_lb": 1,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "Objects viewed through a Spyglass are magnified to twice their size."
+  },
+  {
+    "id": "string",
+    "name": "String",
+    "name_ru": "Леска",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 1,
+      "unit": "sp"
+    },
+    "cost_cp": 10,
+    "weight_lb": 0,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "String is 10 feet long. You can tie a knot in it as a Utilize action."
+  },
+  {
+    "id": "tent",
+    "name": "Tent",
+    "name_ru": "Палатка",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 2,
+      "unit": "gp"
+    },
+    "cost_cp": 200,
+    "weight_lb": 20,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Tent sleeps up to two Small or Medium creatures.",
+    "starting_equipment_for": [
+      {
+        "id": "guide",
+        "type": "background",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "tinderbox",
+    "name": "Tinderbox",
+    "name_ru": "Трутница",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 5,
+      "unit": "sp"
+    },
+    "cost_cp": 50,
+    "weight_lb": 1,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Tinderbox is a small container holding flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a Candle, Lamp, Lantern, or Torch—or anything else with exposed fuel—takes a Bonus Action. Lighting any other fire takes 1 minute."
+  },
+  {
+    "id": "torch",
+    "name": "Torch",
+    "name_ru": "Факел",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 1,
+      "unit": "cp"
+    },
+    "cost_cp": 1,
+    "weight_lb": 1,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Torch burns for 1 hour, casting Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. When you take the Attack action, you can attack with the Torch, using it as a Simple Melee weapon. On a hit, the target takes 1 Fire damage."
+  },
+  {
+    "id": "vial",
+    "name": "Vial",
+    "name_ru": "Флакон",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 0,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Vial holds up to 4 ounces."
+  },
+  {
+    "id": "waterskin",
+    "name": "Waterskin",
+    "name_ru": "Бурдюк",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": {
+      "amount": 2,
+      "unit": "sp"
+    },
+    "cost_cp": 20,
+    "weight_lb": 5,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Waterskin holds up to 4 pints. If you don't drink sufficient water, you risk dehydration (see the Rules Glossary)."
+  },
+  {
+    "id": "arrows",
+    "name": "Arrows",
+    "name_ru": "Стрелы",
+    "source": "srd-5.2.1",
+    "category": "ammunition",
+    "subcategory": null,
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 1,
+    "ammunition": {
+      "bundle_size": 20,
+      "storage": "quiver"
+    },
+    "categories": [
+      "ammunition"
+    ],
+    "description": "Ammunition is required by a weapon that has the Ammunition property. A weapon's description specifies the type of ammunition used by the weapon. The Ammunition table lists the different types and the amount you get when you buy them. The table also lists the item that is typically used to store each type; storage must be bought separately.",
+    "starting_equipment_for": [
+      {
+        "id": "fighter",
+        "type": "class",
+        "option": "B",
+        "qty": 20
+      },
+      {
+        "id": "ranger",
+        "type": "class",
+        "option": "A",
+        "qty": 20
+      },
+      {
+        "id": "rogue",
+        "type": "class",
+        "option": "A",
+        "qty": 20
+      },
+      {
+        "id": "guide",
+        "type": "background",
+        "option": "A",
+        "qty": 20
+      },
+      {
+        "id": "soldier",
+        "type": "background",
+        "option": "A",
+        "qty": 20
+      }
+    ]
+  },
+  {
+    "id": "bolts",
+    "name": "Bolts",
+    "name_ru": "Арбалетные болты",
+    "source": "srd-5.2.1",
+    "category": "ammunition",
+    "subcategory": null,
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 1.5,
+    "ammunition": {
+      "bundle_size": 20,
+      "storage": "case"
+    },
+    "categories": [
+      "ammunition"
+    ],
+    "description": "Ammunition is required by a weapon that has the Ammunition property. A weapon's description specifies the type of ammunition used by the weapon. The Ammunition table lists the different types and the amount you get when you buy them. The table also lists the item that is typically used to store each type; storage must be bought separately.",
+    "starting_equipment_for": [
+      {
+        "id": "guard",
+        "type": "background",
+        "option": "A",
+        "qty": 20
+      }
+    ]
+  },
+  {
+    "id": "bullets-firearm",
+    "name": "Bullets, Firearm",
+    "name_ru": "Пули (огнестрельные)",
+    "source": "srd-5.2.1",
+    "category": "ammunition",
+    "subcategory": null,
+    "cost": {
+      "amount": 3,
+      "unit": "gp"
+    },
+    "cost_cp": 300,
+    "weight_lb": 2,
+    "ammunition": {
+      "bundle_size": 10,
+      "storage": "pouch"
+    },
+    "categories": [
+      "ammunition"
+    ],
+    "description": "Ammunition is required by a weapon that has the Ammunition property. A weapon's description specifies the type of ammunition used by the weapon. The Ammunition table lists the different types and the amount you get when you buy them. The table also lists the item that is typically used to store each type; storage must be bought separately."
+  },
+  {
+    "id": "bullets-sling",
+    "name": "Bullets, Sling",
+    "name_ru": "Снаряды для пращи",
+    "source": "srd-5.2.1",
+    "category": "ammunition",
+    "subcategory": null,
+    "cost": {
+      "amount": 4,
+      "unit": "cp"
+    },
+    "cost_cp": 4,
+    "weight_lb": 1.5,
+    "ammunition": {
+      "bundle_size": 20,
+      "storage": "pouch"
+    },
+    "categories": [
+      "ammunition"
+    ],
+    "description": "Ammunition is required by a weapon that has the Ammunition property. A weapon's description specifies the type of ammunition used by the weapon. The Ammunition table lists the different types and the amount you get when you buy them. The table also lists the item that is typically used to store each type; storage must be bought separately."
+  },
+  {
+    "id": "needles",
+    "name": "Needles",
+    "name_ru": "Иглы для духовой трубки",
+    "source": "srd-5.2.1",
+    "category": "ammunition",
+    "subcategory": null,
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 1,
+    "ammunition": {
+      "bundle_size": 50,
+      "storage": "pouch"
+    },
+    "categories": [
+      "ammunition"
+    ],
+    "description": "Ammunition is required by a weapon that has the Ammunition property. A weapon's description specifies the type of ammunition used by the weapon. The Ammunition table lists the different types and the amount you get when you buy them. The table also lists the item that is typically used to store each type; storage must be bought separately."
+  },
+  {
+    "id": "crystal",
+    "name": "Crystal",
+    "name_ru": "Кристалл",
+    "source": "srd-5.2.1",
+    "category": "focus",
+    "subcategory": "arcane",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 1,
+    "categories": [
+      "adventuring-gear",
+      "arcane-foci"
+    ],
+    "description": "An Arcane Focus takes one of the forms in the Arcane Focuses table and is bejeweled or carved to channel arcane magic. A Sorcerer, Warlock, or Wizard can use such an item as a Spellcasting Focus.",
+    "focus": {
+      "kind": "arcane"
+    },
+    "starting_equipment_for": [
+      {
+        "id": "sorcerer",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "orb",
+    "name": "Orb",
+    "name_ru": "Сфера",
+    "source": "srd-5.2.1",
+    "category": "focus",
+    "subcategory": "arcane",
+    "cost": {
+      "amount": 20,
+      "unit": "gp"
+    },
+    "cost_cp": 2000,
+    "weight_lb": 3,
+    "categories": [
+      "adventuring-gear",
+      "arcane-foci"
+    ],
+    "description": "An Arcane Focus takes one of the forms in the Arcane Focuses table and is bejeweled or carved to channel arcane magic. A Sorcerer, Warlock, or Wizard can use such an item as a Spellcasting Focus.",
+    "focus": {
+      "kind": "arcane"
+    },
+    "starting_equipment_for": [
+      {
+        "id": "warlock",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "rod",
+    "name": "Rod",
+    "name_ru": "Жезл",
+    "source": "srd-5.2.1",
+    "category": "focus",
+    "subcategory": "arcane",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 2,
+    "categories": [
+      "adventuring-gear",
+      "arcane-foci"
+    ],
+    "description": "An Arcane Focus takes one of the forms in the Arcane Focuses table and is bejeweled or carved to channel arcane magic. A Sorcerer, Warlock, or Wizard can use such an item as a Spellcasting Focus.",
+    "focus": {
+      "kind": "arcane"
+    }
+  },
+  {
+    "id": "staff",
+    "name": "Staff",
+    "name_ru": "Посох",
+    "source": "srd-5.2.1",
+    "category": "focus",
+    "subcategory": "arcane",
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 4,
+    "categories": [
+      "adventuring-gear",
+      "arcane-foci"
+    ],
+    "description": "An Arcane Focus takes one of the forms in the Arcane Focuses table and is bejeweled or carved to channel arcane magic. A Sorcerer, Warlock, or Wizard can use such an item as a Spellcasting Focus.",
+    "focus": {
+      "also_weapon": "quarterstaff",
+      "kind": "arcane"
+    },
+    "starting_equipment_for": [
+      {
+        "id": "wizard",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "wand",
+    "name": "Wand",
+    "name_ru": "Волшебная палочка",
+    "source": "srd-5.2.1",
+    "category": "focus",
+    "subcategory": "arcane",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 1,
+    "categories": [
+      "adventuring-gear",
+      "arcane-foci"
+    ],
+    "description": "An Arcane Focus takes one of the forms in the Arcane Focuses table and is bejeweled or carved to channel arcane magic. A Sorcerer, Warlock, or Wizard can use such an item as a Spellcasting Focus.",
+    "focus": {
+      "kind": "arcane"
+    }
+  },
+  {
+    "id": "sprig-of-mistletoe",
+    "name": "Sprig Of Mistletoe",
+    "name_ru": "Веточка омелы",
+    "source": "srd-5.2.1",
+    "category": "focus",
+    "subcategory": "druidic",
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 0,
+    "categories": [
+      "adventuring-gear",
+      "druidic-foci"
+    ],
+    "description": "A Druidic Focus takes one of the forms in the Druidic Focuses table and is carved, tied with ribbon, or painted to channel primal magic. A Druid or Ranger can use such an object as a Spellcasting Focus.",
+    "focus": {
+      "kind": "druidic"
+    },
+    "starting_equipment_for": [
+      {
+        "id": "ranger",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "wooden-staff",
+    "name": "Wooden Staff",
+    "name_ru": "Деревянный посох",
+    "source": "srd-5.2.1",
+    "category": "focus",
+    "subcategory": "druidic",
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 4,
+    "categories": [
+      "adventuring-gear",
+      "druidic-foci"
+    ],
+    "description": "A Druidic Focus takes one of the forms in the Druidic Focuses table and is carved, tied with ribbon, or painted to channel primal magic. A Druid or Ranger can use such an object as a Spellcasting Focus.",
+    "focus": {
+      "also_weapon": "quarterstaff",
+      "kind": "druidic"
+    },
+    "starting_equipment_for": [
+      {
+        "id": "druid",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "yew-wand",
+    "name": "Yew Wand",
+    "name_ru": "Тисовая палочка",
+    "source": "srd-5.2.1",
+    "category": "focus",
+    "subcategory": "druidic",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 1,
+    "categories": [
+      "adventuring-gear",
+      "druidic-foci"
+    ],
+    "description": "A Druidic Focus takes one of the forms in the Druidic Focuses table and is carved, tied with ribbon, or painted to channel primal magic. A Druid or Ranger can use such an object as a Spellcasting Focus.",
+    "focus": {
+      "kind": "druidic"
+    }
+  },
+  {
+    "id": "amulet",
+    "name": "Amulet",
+    "name_ru": "Амулет",
+    "source": "srd-5.2.1",
+    "category": "focus",
+    "subcategory": "holy-symbol",
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 1,
+    "categories": [
+      "adventuring-gear",
+      "holy-symbols"
+    ],
+    "description": "A Holy Symbol takes one of the forms in the Holy Symbol table and is bejeweled or painted to channel divine magic. A Cleric or Paladin can use a Holy Symbol as a Spellcasting Focus.\n\nThe table indicates whether a Holy Symbol needs to be held, worn, or borne on fabric (such as a tabard or banner) or a Shield.",
+    "focus": {
+      "kind": "holy-symbol",
+      "usage": "worn or held"
+    },
+    "starting_equipment_for": [
+      {
+        "id": "cleric",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "paladin",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "acolyte",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ]
+  },
+  {
+    "id": "emblem",
+    "name": "Emblem",
+    "name_ru": "Эмблема",
+    "source": "srd-5.2.1",
+    "category": "focus",
+    "subcategory": "holy-symbol",
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 0,
+    "categories": [
+      "adventuring-gear",
+      "holy-symbols"
+    ],
+    "description": "A Holy Symbol takes one of the forms in the Holy Symbol table and is bejeweled or painted to channel divine magic. A Cleric or Paladin can use a Holy Symbol as a Spellcasting Focus.\n\nThe table indicates whether a Holy Symbol needs to be held, worn, or borne on fabric (such as a tabard or banner) or a Shield.",
+    "focus": {
+      "kind": "holy-symbol",
+      "usage": "borne on fabric or a Shield"
+    },
+    "starting_equipment_for": [
+      {
+        "id": "cleric",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "paladin",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "acolyte",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ]
+  },
+  {
+    "id": "reliquary",
+    "name": "Reliquary",
+    "name_ru": "Реликварий",
+    "source": "srd-5.2.1",
+    "category": "focus",
+    "subcategory": "holy-symbol",
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 2,
+    "categories": [
+      "adventuring-gear",
+      "holy-symbols"
+    ],
+    "description": "A Holy Symbol takes one of the forms in the Holy Symbol table and is bejeweled or painted to channel divine magic. A Cleric or Paladin can use a Holy Symbol as a Spellcasting Focus.\n\nThe table indicates whether a Holy Symbol needs to be held, worn, or borne on fabric (such as a tabard or banner) or a Shield.",
+    "focus": {
+      "kind": "holy-symbol",
+      "usage": "held"
+    },
+    "starting_equipment_for": [
+      {
+        "id": "cleric",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "paladin",
+        "type": "class",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      },
+      {
+        "id": "acolyte",
+        "type": "background",
+        "option": "A",
+        "qty": 1,
+        "via": "choice"
+      }
+    ]
+  },
+  {
+    "id": "spellbook",
+    "name": "Spellbook",
+    "name_ru": "Книга заклинаний",
+    "source": "srd-5.2.1",
+    "category": "gear",
+    "subcategory": null,
+    "cost": null,
+    "cost_cp": null,
+    "weight_lb": 3,
+    "categories": [
+      "adventuring-gear"
+    ],
+    "description": "A Tiny object with 100 pages that holds a Wizard's spells (see the Wizard's Spellbook feature).",
+    "note": "Not listed in the 2024 equipment tables, so it has no purchase price; 5e-database gives 50 GP (the 2014 price).",
+    "starting_equipment_for": [
+      {
+        "id": "wizard",
+        "type": "class",
+        "option": "A",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "camel",
+    "name": "Camel",
+    "name_ru": "Верблюд",
+    "source": "srd-5.2.1",
+    "category": "mount",
+    "subcategory": null,
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "cost_cp": 5000,
+    "weight_lb": null,
+    "categories": [
+      "mounts"
+    ],
+    "mount": {
+      "carrying_capacity_lb": 450
+    }
+  },
+  {
+    "id": "elephant",
+    "name": "Elephant",
+    "name_ru": "Слон",
+    "source": "srd-5.2.1",
+    "category": "mount",
+    "subcategory": null,
+    "cost": {
+      "amount": 200,
+      "unit": "gp"
+    },
+    "cost_cp": 20000,
+    "weight_lb": null,
+    "categories": [
+      "mounts"
+    ],
+    "mount": {
+      "carrying_capacity_lb": 1320
+    }
+  },
+  {
+    "id": "horse-draft",
+    "name": "Horse, Draft",
+    "name_ru": "Упряжная лошадь",
+    "source": "srd-5.2.1",
+    "category": "mount",
+    "subcategory": null,
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "cost_cp": 5000,
+    "weight_lb": null,
+    "categories": [
+      "mounts"
+    ],
+    "mount": {
+      "carrying_capacity_lb": 540
+    }
+  },
+  {
+    "id": "horse-riding",
+    "name": "Horse, Riding",
+    "name_ru": "Ездовая лошадь",
+    "source": "srd-5.2.1",
+    "category": "mount",
+    "subcategory": null,
+    "cost": {
+      "amount": 75,
+      "unit": "gp"
+    },
+    "cost_cp": 7500,
+    "weight_lb": null,
+    "categories": [
+      "mounts"
+    ],
+    "mount": {
+      "carrying_capacity_lb": 480
+    }
+  },
+  {
+    "id": "mastiff",
+    "name": "Mastiff",
+    "name_ru": "Мастиф",
+    "source": "srd-5.2.1",
+    "category": "mount",
+    "subcategory": null,
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "cost_cp": 2500,
+    "weight_lb": null,
+    "categories": [
+      "mounts"
+    ],
+    "mount": {
+      "carrying_capacity_lb": 195
+    }
+  },
+  {
+    "id": "mule",
+    "name": "Mule",
+    "name_ru": "Мул",
+    "source": "srd-5.2.1",
+    "category": "mount",
+    "subcategory": null,
+    "cost": {
+      "amount": 8,
+      "unit": "gp"
+    },
+    "cost_cp": 800,
+    "weight_lb": null,
+    "categories": [
+      "mounts"
+    ],
+    "mount": {
+      "carrying_capacity_lb": 420
+    }
+  },
+  {
+    "id": "pony",
+    "name": "Pony",
+    "name_ru": "Пони",
+    "source": "srd-5.2.1",
+    "category": "mount",
+    "subcategory": null,
+    "cost": {
+      "amount": 30,
+      "unit": "gp"
+    },
+    "cost_cp": 3000,
+    "weight_lb": null,
+    "categories": [
+      "mounts"
+    ],
+    "mount": {
+      "carrying_capacity_lb": 225
+    }
+  },
+  {
+    "id": "warhorse",
+    "name": "Warhorse",
+    "name_ru": "Боевой конь",
+    "source": "srd-5.2.1",
+    "category": "mount",
+    "subcategory": null,
+    "cost": {
+      "amount": 400,
+      "unit": "gp"
+    },
+    "cost_cp": 40000,
+    "weight_lb": null,
+    "categories": [
+      "mounts"
+    ],
+    "mount": {
+      "carrying_capacity_lb": 540
+    }
+  },
+  {
+    "id": "carriage",
+    "name": "Carriage",
+    "name_ru": "Карета",
+    "source": "srd-5.2.1",
+    "category": "vehicle",
+    "subcategory": "land",
+    "cost": {
+      "amount": 100,
+      "unit": "gp"
+    },
+    "cost_cp": 10000,
+    "weight_lb": 600,
+    "categories": [
+      "tack-and-vehicles"
+    ]
+  },
+  {
+    "id": "cart",
+    "name": "Cart",
+    "name_ru": "Телега",
+    "source": "srd-5.2.1",
+    "category": "vehicle",
+    "subcategory": "land",
+    "cost": {
+      "amount": 15,
+      "unit": "gp"
+    },
+    "cost_cp": 1500,
+    "weight_lb": 200,
+    "categories": [
+      "tack-and-vehicles"
+    ]
+  },
+  {
+    "id": "chariot",
+    "name": "Chariot",
+    "name_ru": "Колесница",
+    "source": "srd-5.2.1",
+    "category": "vehicle",
+    "subcategory": "land",
+    "cost": {
+      "amount": 250,
+      "unit": "gp"
+    },
+    "cost_cp": 25000,
+    "weight_lb": 100,
+    "categories": [
+      "tack-and-vehicles"
+    ]
+  },
+  {
+    "id": "feed",
+    "name": "Feed per day",
+    "name_ru": "Корм (в день)",
+    "source": "srd-5.2.1",
+    "category": "tack",
+    "subcategory": null,
+    "cost": {
+      "amount": 5,
+      "unit": "cp"
+    },
+    "cost_cp": 5,
+    "weight_lb": 10,
+    "categories": [
+      "tack-and-vehicles"
+    ]
+  },
+  {
+    "id": "saddle-exotic",
+    "name": "Saddle, Exotic",
+    "name_ru": "Экзотическое седло",
+    "source": "srd-5.2.1",
+    "category": "tack",
+    "subcategory": null,
+    "cost": {
+      "amount": 60,
+      "unit": "gp"
+    },
+    "cost_cp": 6000,
+    "weight_lb": 40,
+    "categories": [
+      "tack-and-vehicles"
+    ]
+  },
+  {
+    "id": "saddle-military",
+    "name": "Saddle, Military",
+    "name_ru": "Военное седло",
+    "source": "srd-5.2.1",
+    "category": "tack",
+    "subcategory": null,
+    "cost": {
+      "amount": 20,
+      "unit": "gp"
+    },
+    "cost_cp": 2000,
+    "weight_lb": 30,
+    "categories": [
+      "tack-and-vehicles"
+    ]
+  },
+  {
+    "id": "saddle-riding",
+    "name": "Saddle, Riding",
+    "name_ru": "Ездовое седло",
+    "source": "srd-5.2.1",
+    "category": "tack",
+    "subcategory": null,
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 25,
+    "categories": [
+      "tack-and-vehicles"
+    ]
+  },
+  {
+    "id": "sled",
+    "name": "Sled",
+    "name_ru": "Сани",
+    "source": "srd-5.2.1",
+    "category": "vehicle",
+    "subcategory": "land",
+    "cost": {
+      "amount": 20,
+      "unit": "gp"
+    },
+    "cost_cp": 2000,
+    "weight_lb": 300,
+    "categories": [
+      "tack-and-vehicles"
+    ]
+  },
+  {
+    "id": "wagon",
+    "name": "Wagon",
+    "name_ru": "Фургон",
+    "source": "srd-5.2.1",
+    "category": "vehicle",
+    "subcategory": "land",
+    "cost": {
+      "amount": 35,
+      "unit": "gp"
+    },
+    "cost_cp": 3500,
+    "weight_lb": 400,
+    "categories": [
+      "tack-and-vehicles"
+    ]
+  },
+  {
+    "id": "airship",
+    "name": "Airship",
+    "name_ru": "Воздушный корабль",
+    "source": "srd-5.2.1",
+    "category": "vehicle",
+    "subcategory": "air",
+    "cost": {
+      "amount": 40000,
+      "unit": "gp"
+    },
+    "cost_cp": 4000000,
+    "weight_lb": null,
+    "categories": [
+      "ships"
+    ],
+    "vehicle": {
+      "speed": "8 mph",
+      "armor_class": 13,
+      "cargo_tons": 1,
+      "crew": 10,
+      "damage_threshold": null,
+      "hit_points": 300,
+      "passengers": 20
+    }
+  },
+  {
+    "id": "galley",
+    "name": "Galley",
+    "name_ru": "Галера",
+    "source": "srd-5.2.1",
+    "category": "vehicle",
+    "subcategory": "water",
+    "cost": {
+      "amount": 30000,
+      "unit": "gp"
+    },
+    "cost_cp": 3000000,
+    "weight_lb": null,
+    "categories": [
+      "ships"
+    ],
+    "vehicle": {
+      "speed": "4 mph",
+      "armor_class": 15,
+      "cargo_tons": 150,
+      "crew": 80,
+      "damage_threshold": 20,
+      "hit_points": 500,
+      "passengers": null
+    }
+  },
+  {
+    "id": "keelboat",
+    "name": "Keelboat",
+    "name_ru": "Килевая лодка",
+    "source": "srd-5.2.1",
+    "category": "vehicle",
+    "subcategory": "water",
+    "cost": {
+      "amount": 3000,
+      "unit": "gp"
+    },
+    "cost_cp": 300000,
+    "weight_lb": null,
+    "categories": [
+      "ships"
+    ],
+    "vehicle": {
+      "speed": "1 mph",
+      "armor_class": 15,
+      "cargo_tons": 0.5,
+      "crew": 1,
+      "damage_threshold": 10,
+      "hit_points": 100,
+      "passengers": 6
+    }
+  },
+  {
+    "id": "longship",
+    "name": "Longship",
+    "name_ru": "Ладья",
+    "source": "srd-5.2.1",
+    "category": "vehicle",
+    "subcategory": "water",
+    "cost": {
+      "amount": 10000,
+      "unit": "gp"
+    },
+    "cost_cp": 1000000,
+    "weight_lb": null,
+    "categories": [
+      "ships"
+    ],
+    "vehicle": {
+      "speed": "3 mph",
+      "armor_class": 15,
+      "cargo_tons": 10,
+      "crew": 40,
+      "damage_threshold": 15,
+      "hit_points": 300,
+      "passengers": 150
+    }
+  },
+  {
+    "id": "rowboat",
+    "name": "Rowboat",
+    "name_ru": "Гребная лодка",
+    "source": "srd-5.2.1",
+    "category": "vehicle",
+    "subcategory": "water",
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "cost_cp": 5000,
+    "weight_lb": null,
+    "categories": [
+      "ships"
+    ],
+    "vehicle": {
+      "speed": "1½ mph",
+      "armor_class": 11,
+      "cargo_tons": null,
+      "crew": 1,
+      "damage_threshold": null,
+      "hit_points": 50,
+      "passengers": 3
+    }
+  },
+  {
+    "id": "sailing-ship",
+    "name": "Sailing Ship",
+    "name_ru": "Парусный корабль",
+    "source": "srd-5.2.1",
+    "category": "vehicle",
+    "subcategory": "water",
+    "cost": {
+      "amount": 10000,
+      "unit": "gp"
+    },
+    "cost_cp": 1000000,
+    "weight_lb": null,
+    "categories": [
+      "ships"
+    ],
+    "vehicle": {
+      "speed": "2 mph",
+      "armor_class": 15,
+      "cargo_tons": 100,
+      "crew": 20,
+      "damage_threshold": 15,
+      "hit_points": 300,
+      "passengers": 20
+    }
+  },
+  {
+    "id": "warship",
+    "name": "Warship",
+    "name_ru": "Военный корабль",
+    "source": "srd-5.2.1",
+    "category": "vehicle",
+    "subcategory": "water",
+    "cost": {
+      "amount": 25000,
+      "unit": "gp"
+    },
+    "cost_cp": 2500000,
+    "weight_lb": null,
+    "categories": [
+      "ships"
+    ],
+    "vehicle": {
+      "speed": "2½ mph",
+      "armor_class": 15,
+      "cargo_tons": 200,
+      "crew": 60,
+      "damage_threshold": 20,
+      "hit_points": 500,
+      "passengers": 60
+    }
+  }
+]

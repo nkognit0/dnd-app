@@ -1,7 +1,29 @@
-/* secondary bg on both sides of the sheet column */
+/* the scrollbar's place is kept even when the page is short, so nothing moves sideways when
+   it appears (a panel opens, the tab changes) */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* a wizard window locks the page scroll and makes up for the hidden scrollbar with a margin;
+   the gutter already keeps that place */
+html body[data-scroll-locked] {
+  margin-right: 0 !important;
+}
+
+/* secondary bg around the sheet column; room at the bottom for the tab bar */
 body {
   margin: 0;
   background: #F9FAFC;
+  padding-bottom: calc(57px + env(safe-area-inset-bottom));
+}
+
+/* the game master's view has no tab bar */
+body.no-tabs {
+  padding-bottom: 0;
+}
+
+body.no-tabs .bottom-panel {
+  bottom: 0;
 }
 
 .app-toolbar {
@@ -17,10 +39,11 @@ body {
   border-bottom: 1px solid #B6C1D5;
 }
 
-/* sheets stack edge to edge in one centred column, outlined like the sheet boxes */
+/* sheets stack edge to edge in one centred column, outlined like the sheet boxes;
+   the inventory uses the same column */
 .sheet-column {
   max-width: 1240px;
-  margin: 0 auto;
+  margin: 0 auto 24px;
   border: 1px solid #B6C1D5;
   border-top: none;
 }
@@ -34,22 +57,395 @@ body {
   border-top: 1px solid #B6C1D5;
 }
 
-.app-footer {
-  max-width: 1240px;
-  margin: 16px auto 24px;
-  padding: 0 16px;
+/* the sheet stays mounted while the inventory is shown (and is what gets printed) */
+.hidden-tab {
+  display: none;
+}
+
+/* ---- tabs at the bottom, as in Safari: equal widths, a line between them; icons only on a phone */
+.tab-bar {
+  position: fixed;
+  z-index: 30;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: calc(57px + env(safe-area-inset-bottom));
+  padding-bottom: env(safe-area-inset-bottom);
+  display: flex;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid #B6C1D5;
+}
+
+.tab-bar button {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  background: none;
   color: #737E8A;
+  /* written like the ability names on the sheet («СИЛА»): 10 px, bold, capitals */
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.tab-bar button + button {
+  border-left: 1px solid #B6C1D5;
+}
+
+.tab-bar button.active {
+  color: #357ADE;
+}
+
+/* ---- the reference and the change log slide up from the bottom, over the page */
+.bottom-panel {
+  position: fixed;
+  z-index: 25;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(57px + env(safe-area-inset-bottom));
+  /* of the viewport without the scrollbar */
+  width: min(1240px, 100%);
+  max-height: min(55vh, 560px);
+  overflow-y: auto;
+  padding: 12px;
+  background: #F9FAFC;
+  border: 1px solid #B6C1D5;
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -4px 16px rgba(124, 142, 162, 0.2);
+}
+
+.panel-spacer {
+  height: min(55vh, 560px);
+}
+
+.wiki-card {
+  background: white;
+  border: 1px solid #B6C1D5;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.wiki-card + .wiki-card {
+  margin-top: 12px;
+}
+
+.wiki-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px 16px;
+}
+
+.wiki-text {
+  white-space: pre-wrap;
+}
+
+.wiki-close {
+  font-size: 20px;
+  line-height: 1;
+  padding: 0 4px;
+  color: #737E8A;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.changelog-event {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.changelog-entry {
+  padding: 4px 6px;
+  margin: 0 -6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.changelog-entry:hover {
+  background: #F2F3F5;
+}
+
+/* ---- inventory: money, search, a grid of square cells as wide as the sheet */
+.inventory-page {
+  background: white;
+  padding: 24px;
+}
+
+.inventory-money {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  margin-bottom: 16px;
+}
+
+/* the sheet's coin fields, laid out in a row */
+.inventory-coin {
+  width: 112px;
+  padding-left: 10px;
+}
+
+.inventory-search {
+  margin-bottom: 8px;
+}
+
+.inventory-results {
+  border: 1px solid #B6C1D5;
+  border-radius: 8px;
+  max-height: 320px;
+  overflow-y: auto;
+  margin-bottom: 16px;
+}
+
+.inventory-result {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+}
+
+.inventory-result + .inventory-result {
+  border-top: 1px solid #E4E9F2;
+}
+
+.inventory-result img {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.inventory-result-name {
+  flex: 1;
+  min-width: 0;
+}
+
+/* the hero on the left, the cells on the right */
+.inventory-body {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 24px;
+  align-items: start;
+  margin-top: 16px;
+}
+
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 6px;
+}
+
+.inventory-cell {
+  position: relative;
+  aspect-ratio: 1;
+  border: 1px solid #E4E9F2;
+  border-radius: 6px;
+  background: #F9FAFC;
+  padding: 10%;
+  /* a finger held on a thing drags it; no text selection or image menu */
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.inventory-cell.filled {
+  border-color: #B6C1D5;
+  background: white;
+  cursor: pointer;
+}
+
+.inventory-cell.filled:hover,
+.inventory-cell.selected {
+  box-shadow: 0 0 0 2px #357ADE;
+}
+
+.inventory-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* while dragging: where the thing may go, where it may not, the place it left */
+.inventory-cell.over {
+  box-shadow: 0 0 0 2px #357ADE;
+  background: rgba(53, 122, 222, 0.08);
+}
+
+.inventory-cell.refused {
+  box-shadow: 0 0 0 2px #E03131;
+}
+
+.inventory-cell.lifted {
+  opacity: 0.35;
+}
+
+.inventory-drag {
+  width: 100%;
+  height: 100%;
+  padding: 10%;
+  border: 1px solid #B6C1D5;
+  border-radius: 6px;
+  background: white;
+  box-shadow: 0 6px 16px rgba(124, 142, 162, 0.35);
+  cursor: grabbing;
+}
+
+.inventory-drag img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ---- the hero: armour and clothes above, hands below, the figure between them; the reserve
+   weapon set under it. It stays in view while the cells scroll by. */
+.hero {
+  position: sticky;
+  top: 76px;
+  padding: 16px;
+  background: #F9FAFC;
+  border: 1px solid #E4E9F2;
+  border-radius: 8px;
+}
+
+.hero-doll {
+  display: grid;
+  grid-template-columns: 88px 136px 88px;
+  grid-template-rows: 88px 72px 88px;
+  grid-template-areas: 'armor figure clothes' '. figure .' 'main1 figure off1';
+  gap: 12px;
+}
+
+.hero-doll [data-place='armor'] { grid-area: armor; }
+.hero-doll [data-place='clothes'] { grid-area: clothes; }
+.hero-doll [data-place='main1'] { grid-area: main1; }
+.hero-doll [data-place='off1'] { grid-area: off1; }
+
+.hero-figure {
+  grid-area: figure;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-figure-svg {
+  height: 100%;
+}
+
+.hero-ac {
+  position: absolute;
+  bottom: -14px;
+  padding: 1px 8px;
+  border: 1px solid #B6C1D5;
+  border-radius: 10px;
+  background: white;
   font-size: 12px;
-  line-height: 1.5;
+  font-weight: 600;
 }
 
-.app-footer p {
-  margin: 0 0 4px;
+.inventory-cell.hero-place {
+  background: white;
 }
 
-.app-footer a {
-  color: inherit;
-  text-decoration: underline;
+/* a percentage padding would follow the width of the hero, not of the place */
+.hero .inventory-cell {
+  padding: 9px;
+}
+
+.hero-place-label {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #737E8A;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.inventory-cell img.blocked {
+  opacity: 0.3;
+}
+
+.hero-reserve {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.hero-reserve .inventory-cell {
+  width: 88px;
+}
+
+.hero-reserve-label {
+  width: 88px;
+  color: #737E8A;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* tablet and phone: the hero above the cells */
+@media (max-width: 1023px) {
+  .inventory-body {
+    grid-template-columns: 1fr;
+  }
+  .hero {
+    position: static;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 599px) {
+  .inventory-page {
+    padding: 16px;
+  }
+  /* four narrower coins stay in one row */
+  .inventory-money {
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+  .inventory-coin {
+    width: 76px;
+    padding-left: 8px;
+  }
+  .inventory-money .d-and-d-currency .d-and-d-currency-value {
+    width: 56px;
+  }
+  .inventory-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  /* the toolbar takes several rows on a phone: it scrolls away with the page */
+  .app-toolbar {
+    position: static;
+  }
+  .hero {
+    padding: 12px;
+  }
+  .hero-doll {
+    grid-template-columns: 72px 112px 72px;
+    grid-template-rows: 72px 60px 72px;
+    gap: 10px;
+  }
+  .hero-reserve .inventory-cell,
+  .hero-reserve-label {
+    width: 72px;
+  }
+  .tab-bar button span {
+    display: none;
+  }
 }
 
 /* steps not reached yet: palette secondary text instead of black faded to grey */
@@ -79,9 +475,14 @@ body {
 @media print {
   body {
     background: white;
+    padding-bottom: 0;
   }
   .no-print {
     display: none !important;
+  }
+  /* the sheet is printed whichever tab is open */
+  .hidden-tab {
+    display: block;
   }
   .sheet-column {
     max-width: none;

@@ -1,0 +1,441 @@
+[
+  {
+    "id": "padded-armor",
+    "name": "Padded Armor",
+    "name_ru": "Стёганый доспех",
+    "source": "srd-5.2.1",
+    "type": "light",
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 8,
+    "armor_class": {
+      "add_dex": true,
+      "base": 11,
+      "dex_max": null
+    },
+    "doff_time": "1 Minute",
+    "don_time": "1 Minute",
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue",
+      "warlock",
+      "artificer"
+    ],
+    "stealth_disadvantage": true,
+    "strength_requirement": null
+  },
+  {
+    "id": "leather-armor",
+    "name": "Leather Armor",
+    "name_ru": "Кожаный доспех",
+    "source": "srd-5.2.1",
+    "type": "light",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 10,
+    "armor_class": {
+      "add_dex": true,
+      "base": 11,
+      "dex_max": null
+    },
+    "doff_time": "1 Minute",
+    "don_time": "1 Minute",
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue",
+      "warlock",
+      "artificer"
+    ],
+    "stealth_disadvantage": false,
+    "strength_requirement": null
+  },
+  {
+    "id": "studded-leather-armor",
+    "name": "Studded Leather Armor",
+    "name_ru": "Проклёпанный кожаный доспех",
+    "source": "srd-5.2.1",
+    "type": "light",
+    "cost": {
+      "amount": 45,
+      "unit": "gp"
+    },
+    "cost_cp": 4500,
+    "weight_lb": 13,
+    "armor_class": {
+      "add_dex": true,
+      "base": 12,
+      "dex_max": null
+    },
+    "doff_time": "1 Minute",
+    "don_time": "1 Minute",
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue",
+      "warlock",
+      "artificer"
+    ],
+    "stealth_disadvantage": false,
+    "strength_requirement": null
+  },
+  {
+    "id": "hide-armor",
+    "name": "Hide Armor",
+    "name_ru": "Шкурный доспех",
+    "source": "srd-5.2.1",
+    "type": "medium",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 12,
+    "armor_class": {
+      "add_dex": true,
+      "base": 12,
+      "dex_max": null
+    },
+    "conditional_proficiency": [
+      {
+        "class": "druid",
+        "option": "warden"
+      }
+    ],
+    "doff_time": "1 Minute",
+    "don_time": "5 Minutes",
+    "proficient_classes": [
+      "barbarian",
+      "cleric",
+      "fighter",
+      "paladin",
+      "ranger",
+      "artificer"
+    ],
+    "stealth_disadvantage": false,
+    "strength_requirement": null
+  },
+  {
+    "id": "chain-shirt",
+    "name": "Chain Shirt",
+    "name_ru": "Кольчужная рубаха",
+    "source": "srd-5.2.1",
+    "type": "medium",
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "cost_cp": 5000,
+    "weight_lb": 20,
+    "armor_class": {
+      "add_dex": true,
+      "base": 13,
+      "dex_max": null
+    },
+    "conditional_proficiency": [
+      {
+        "class": "druid",
+        "option": "warden"
+      }
+    ],
+    "doff_time": "1 Minute",
+    "don_time": "5 Minutes",
+    "proficient_classes": [
+      "barbarian",
+      "cleric",
+      "fighter",
+      "paladin",
+      "ranger",
+      "artificer"
+    ],
+    "stealth_disadvantage": false,
+    "strength_requirement": null
+  },
+  {
+    "id": "scale-mail",
+    "name": "Scale Mail",
+    "name_ru": "Чешуйчатый доспех",
+    "source": "srd-5.2.1",
+    "type": "medium",
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "cost_cp": 5000,
+    "weight_lb": 45,
+    "armor_class": {
+      "add_dex": true,
+      "base": 14,
+      "dex_max": null
+    },
+    "conditional_proficiency": [
+      {
+        "class": "druid",
+        "option": "warden"
+      }
+    ],
+    "doff_time": "1 Minute",
+    "don_time": "5 Minutes",
+    "proficient_classes": [
+      "barbarian",
+      "cleric",
+      "fighter",
+      "paladin",
+      "ranger",
+      "artificer"
+    ],
+    "stealth_disadvantage": true,
+    "strength_requirement": null
+  },
+  {
+    "id": "breastplate",
+    "name": "Breastplate",
+    "name_ru": "Кираса",
+    "source": "srd-5.2.1",
+    "type": "medium",
+    "cost": {
+      "amount": 400,
+      "unit": "gp"
+    },
+    "cost_cp": 40000,
+    "weight_lb": 20,
+    "armor_class": {
+      "add_dex": true,
+      "base": 14,
+      "dex_max": null
+    },
+    "conditional_proficiency": [
+      {
+        "class": "druid",
+        "option": "warden"
+      }
+    ],
+    "doff_time": "1 Minute",
+    "don_time": "5 Minutes",
+    "proficient_classes": [
+      "barbarian",
+      "cleric",
+      "fighter",
+      "paladin",
+      "ranger",
+      "artificer"
+    ],
+    "stealth_disadvantage": false,
+    "strength_requirement": null
+  },
+  {
+    "id": "half-plate-armor",
+    "name": "Half Plate Armor",
+    "name_ru": "Полулаты",
+    "source": "srd-5.2.1",
+    "type": "medium",
+    "cost": {
+      "amount": 750,
+      "unit": "gp"
+    },
+    "cost_cp": 75000,
+    "weight_lb": 40,
+    "armor_class": {
+      "add_dex": true,
+      "base": 15,
+      "dex_max": null
+    },
+    "conditional_proficiency": [
+      {
+        "class": "druid",
+        "option": "warden"
+      }
+    ],
+    "doff_time": "1 Minute",
+    "don_time": "5 Minutes",
+    "proficient_classes": [
+      "barbarian",
+      "cleric",
+      "fighter",
+      "paladin",
+      "ranger",
+      "artificer"
+    ],
+    "stealth_disadvantage": true,
+    "strength_requirement": null
+  },
+  {
+    "id": "ring-mail",
+    "name": "Ring Mail",
+    "name_ru": "Колечный доспех",
+    "source": "srd-5.2.1",
+    "type": "heavy",
+    "cost": {
+      "amount": 30,
+      "unit": "gp"
+    },
+    "cost_cp": 3000,
+    "weight_lb": 40,
+    "armor_class": {
+      "add_dex": false,
+      "base": 14,
+      "dex_max": null
+    },
+    "conditional_proficiency": [
+      {
+        "class": "cleric",
+        "option": "protector"
+      }
+    ],
+    "doff_time": "5 Minutes",
+    "don_time": "10 Minutes",
+    "proficient_classes": [
+      "fighter",
+      "paladin"
+    ],
+    "stealth_disadvantage": true,
+    "strength_requirement": null
+  },
+  {
+    "id": "chain-mail",
+    "name": "Chain Mail",
+    "name_ru": "Кольчуга",
+    "source": "srd-5.2.1",
+    "type": "heavy",
+    "cost": {
+      "amount": 75,
+      "unit": "gp"
+    },
+    "cost_cp": 7500,
+    "weight_lb": 55,
+    "armor_class": {
+      "add_dex": false,
+      "base": 16,
+      "dex_max": null
+    },
+    "conditional_proficiency": [
+      {
+        "class": "cleric",
+        "option": "protector"
+      }
+    ],
+    "doff_time": "5 Minutes",
+    "don_time": "10 Minutes",
+    "proficient_classes": [
+      "fighter",
+      "paladin"
+    ],
+    "stealth_disadvantage": true,
+    "strength_requirement": 13
+  },
+  {
+    "id": "splint-armor",
+    "name": "Splint Armor",
+    "name_ru": "Наборный доспех",
+    "source": "srd-5.2.1",
+    "type": "heavy",
+    "cost": {
+      "amount": 200,
+      "unit": "gp"
+    },
+    "cost_cp": 20000,
+    "weight_lb": 60,
+    "armor_class": {
+      "add_dex": false,
+      "base": 17,
+      "dex_max": null
+    },
+    "conditional_proficiency": [
+      {
+        "class": "cleric",
+        "option": "protector"
+      }
+    ],
+    "doff_time": "5 Minutes",
+    "don_time": "10 Minutes",
+    "proficient_classes": [
+      "fighter",
+      "paladin"
+    ],
+    "stealth_disadvantage": true,
+    "strength_requirement": 15
+  },
+  {
+    "id": "plate-armor",
+    "name": "Plate Armor",
+    "name_ru": "Латы",
+    "source": "srd-5.2.1",
+    "type": "heavy",
+    "cost": {
+      "amount": 1500,
+      "unit": "gp"
+    },
+    "cost_cp": 150000,
+    "weight_lb": 65,
+    "armor_class": {
+      "add_dex": false,
+      "base": 18,
+      "dex_max": null
+    },
+    "conditional_proficiency": [
+      {
+        "class": "cleric",
+        "option": "protector"
+      }
+    ],
+    "doff_time": "5 Minutes",
+    "don_time": "10 Minutes",
+    "proficient_classes": [
+      "fighter",
+      "paladin"
+    ],
+    "stealth_disadvantage": true,
+    "strength_requirement": 15
+  },
+  {
+    "id": "shield",
+    "name": "Shield",
+    "name_ru": "Щит",
+    "source": "srd-5.2.1",
+    "type": "shield",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 6,
+    "armor_class": {
+      "bonus": 2
+    },
+    "doff_time": "Utilize action",
+    "don_time": "Utilize action",
+    "proficient_classes": [
+      "barbarian",
+      "cleric",
+      "druid",
+      "fighter",
+      "paladin",
+      "ranger",
+      "artificer"
+    ],
+    "stealth_disadvantage": false,
+    "strength_requirement": null
+  }
+]

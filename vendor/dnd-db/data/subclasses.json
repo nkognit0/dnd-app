@@ -1,0 +1,3436 @@
+[
+  {
+    "id": "alchemist",
+    "name": "Alchemist",
+    "name_ru": "Алхимик",
+    "source": "efota",
+    "level": 3,
+    "class": "artificer",
+    "always_prepared": {
+      "13": [
+        "vitriolic-sphere",
+        "death-ward"
+      ],
+      "17": [
+        "cloudkill",
+        "raise-dead"
+      ],
+      "3": [
+        "healing-word",
+        "ray-of-sickness"
+      ],
+      "5": [
+        "acid-arrow",
+        "flaming-sphere"
+      ],
+      "9": [
+        "gaseous-form",
+        "mass-healing-word"
+      ]
+    },
+    "features": [
+      {
+        "id": "tools-of-the-trade",
+        "name": "Tools of the Trade",
+        "name_ru": "Инструменты специализации",
+        "level": 3
+      },
+      {
+        "id": "alchemist-spells",
+        "name": "Alchemist Spells",
+        "name_ru": "Заклинания Алхимика",
+        "level": 3
+      },
+      {
+        "id": "experimental-elixir",
+        "name": "Experimental Elixir",
+        "name_ru": "Экспериментальный эликсир",
+        "level": 3
+      },
+      {
+        "id": "alchemical-savant",
+        "name": "Alchemical Savant",
+        "name_ru": "Учёный-алхимик",
+        "level": 5
+      },
+      {
+        "id": "restorative-reagents",
+        "name": "Restorative Reagents",
+        "name_ru": "Восстанавливающие реагенты",
+        "level": 9
+      },
+      {
+        "id": "chemical-mastery",
+        "name": "Chemical Mastery",
+        "name_ru": "Мастерство алхимика",
+        "level": 15
+      }
+    ],
+    "grants": [
+      {
+        "level": 3,
+        "feature": "tools-of-the-trade",
+        "tool_fallback": "artisans-tools",
+        "tools": [
+          "alchemists-supplies",
+          "herbalism-kit"
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/class/artificer/"
+  },
+  {
+    "id": "armorer",
+    "name": "Armorer",
+    "name_ru": "Бронник",
+    "source": "efota",
+    "level": 3,
+    "class": "artificer",
+    "always_prepared": {
+      "13": [
+        "greater-invisibility",
+        "fire-shield"
+      ],
+      "17": [
+        "passwall",
+        "wall-of-force"
+      ],
+      "3": [
+        "thunderwave",
+        "magic-missile"
+      ],
+      "5": [
+        "shatter",
+        "mirror-image"
+      ],
+      "9": [
+        "hypnotic-pattern",
+        "lightning-bolt"
+      ]
+    },
+    "features": [
+      {
+        "id": "tools-of-the-trade",
+        "name": "Tools of the Trade",
+        "name_ru": "Инструменты специализации",
+        "level": 3
+      },
+      {
+        "id": "armorer-spells",
+        "name": "Armorer Spells",
+        "name_ru": "Заклинания Бронника",
+        "level": 3
+      },
+      {
+        "id": "arcane-armor",
+        "name": "Arcane Armor",
+        "name_ru": "Арканный доспех",
+        "level": 3
+      },
+      {
+        "id": "armor-model",
+        "name": "Armor Model",
+        "name_ru": "Модель доспеха",
+        "level": 3
+      },
+      {
+        "id": "extra-attack",
+        "name": "Extra Attack",
+        "name_ru": "Дополнительная атака",
+        "level": 5
+      },
+      {
+        "id": "improved-armorer",
+        "name": "Improved Armorer",
+        "name_ru": "Лучший бронник",
+        "level": 9
+      },
+      {
+        "id": "perfected-armor",
+        "name": "Perfected Armor",
+        "name_ru": "Идеальный доспех",
+        "level": 15
+      }
+    ],
+    "grants": [
+      {
+        "level": 3,
+        "armor": [
+          "heavy"
+        ],
+        "feature": "tools-of-the-trade",
+        "tool_fallback": "artisans-tools",
+        "tools": [
+          "smiths-tools"
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/class/artificer/"
+  },
+  {
+    "id": "artillerist",
+    "name": "Artillerist",
+    "name_ru": "Артиллерист",
+    "source": "efota",
+    "level": 3,
+    "class": "artificer",
+    "always_prepared": {
+      "13": [
+        "ice-storm",
+        "wall-of-fire"
+      ],
+      "17": [
+        "cone-of-cold",
+        "wall-of-force"
+      ],
+      "3": [
+        "thunderwave",
+        "shield"
+      ],
+      "5": [
+        "shatter",
+        "scorching-ray"
+      ],
+      "9": [
+        "fireball",
+        "wind-wall"
+      ]
+    },
+    "features": [
+      {
+        "id": "tools-of-the-trade",
+        "name": "Tools of the Trade",
+        "name_ru": "Инструменты специализации",
+        "level": 3
+      },
+      {
+        "id": "artillerist-spells",
+        "name": "Artillerist Spells",
+        "name_ru": "Заклинания Артиллериста",
+        "level": 3
+      },
+      {
+        "id": "eldritch-cannon",
+        "name": "Eldritch Cannon",
+        "name_ru": "Мистическая пушка",
+        "level": 3
+      },
+      {
+        "id": "arcane-firearm",
+        "name": "Arcane Firearm",
+        "name_ru": "Магострельное оружие",
+        "level": 5
+      },
+      {
+        "id": "explosive-cannon",
+        "name": "Explosive Cannon",
+        "name_ru": "Взрывная пушка",
+        "level": 9
+      },
+      {
+        "id": "fortified-position",
+        "name": "Fortified Position",
+        "name_ru": "Укреплённая позиция",
+        "level": 15
+      }
+    ],
+    "grants": [
+      {
+        "level": 3,
+        "feature": "tools-of-the-trade",
+        "tool_fallback": "artisans-tools",
+        "tools": [
+          "woodcarvers-tools"
+        ],
+        "weapons": [
+          "martial-ranged"
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/class/artificer/"
+  },
+  {
+    "id": "battle-smith",
+    "name": "Battle Smith",
+    "name_ru": "Боевой кузнец",
+    "source": "efota",
+    "level": 3,
+    "class": "artificer",
+    "always_prepared": {
+      "13": [
+        "aura-of-purity",
+        "fire-shield"
+      ],
+      "17": [
+        "banishing-smite",
+        "mass-cure-wounds"
+      ],
+      "3": [
+        "heroism",
+        "shield"
+      ],
+      "5": [
+        "warding-bond",
+        "shining-smite"
+      ],
+      "9": [
+        "aura-of-vitality",
+        "conjure-barrage"
+      ]
+    },
+    "features": [
+      {
+        "id": "tools-of-the-trade",
+        "name": "Tools of the Trade",
+        "name_ru": "Инструменты специализации",
+        "level": 3
+      },
+      {
+        "id": "x-spells",
+        "name": "X Spells",
+        "name_ru": "Заклинания Боевого кузнеца",
+        "level": 3
+      },
+      {
+        "id": "battle-ready",
+        "name": "Battle Ready",
+        "name_ru": "Боевая готовность",
+        "level": 3
+      },
+      {
+        "id": "steel-defender",
+        "name": "Steel Defender",
+        "name_ru": "Стальной защитник",
+        "level": 3
+      },
+      {
+        "id": "extra-attack",
+        "name": "Extra Attack",
+        "name_ru": "Дополнительная атака",
+        "level": 5
+      },
+      {
+        "id": "arcane-jolt",
+        "name": "Arcane Jolt",
+        "name_ru": "Магическая встряска",
+        "level": 9
+      },
+      {
+        "id": "improved-defender",
+        "name": "Improved Defender",
+        "name_ru": "Улучшенный защитник",
+        "level": 15
+      }
+    ],
+    "grants": [
+      {
+        "level": 3,
+        "feature": "tools-of-the-trade",
+        "tool_fallback": "artisans-tools",
+        "tools": [
+          "smiths-tools"
+        ]
+      },
+      {
+        "level": 3,
+        "feature": "battle-ready",
+        "weapons": [
+          "martial"
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/class/artificer/"
+  },
+  {
+    "id": "cartographer",
+    "name": "Cartographer",
+    "name_ru": "Картограф",
+    "source": "efota",
+    "level": 3,
+    "class": "artificer",
+    "always_prepared": {
+      "13": [
+        "banishment",
+        "locate-creature"
+      ],
+      "17": [
+        "scrying",
+        "teleportation-circle"
+      ],
+      "3": [
+        "healing-word",
+        "guiding-bolt",
+        "faerie-fire"
+      ],
+      "5": [
+        "locate-object",
+        "mind-spike"
+      ],
+      "9": [
+        "clairvoyance",
+        "call-lightning"
+      ]
+    },
+    "features": [
+      {
+        "id": "tools-of-the-trade",
+        "name": "Tools of the Trade",
+        "name_ru": "Инструменты специализации",
+        "level": 3
+      },
+      {
+        "id": "cartographer-spells",
+        "name": "Cartographer Spells",
+        "name_ru": "Заклинания Картографа",
+        "level": 3
+      },
+      {
+        "id": "adventurers-atlas",
+        "name": "Adventurer's Atlas",
+        "name_ru": "Атлас приключений",
+        "level": 3
+      },
+      {
+        "id": "mapping-magic",
+        "name": "Mapping Magic",
+        "name_ru": "Магия карты",
+        "level": 3
+      },
+      {
+        "id": "guided-precision",
+        "name": "Guided Precision",
+        "name_ru": "Направленная точность",
+        "level": 5
+      },
+      {
+        "id": "ingenious-movement",
+        "name": "Ingenious Movement",
+        "name_ru": "Гениальный ход",
+        "level": 9
+      },
+      {
+        "id": "superior-atlas",
+        "name": "Superior Atlas",
+        "name_ru": "Превосходный атлас",
+        "level": 15
+      }
+    ],
+    "grants": [
+      {
+        "level": 3,
+        "feature": "tools-of-the-trade",
+        "tool_fallback": "artisans-tools",
+        "tools": [
+          "calligraphers-supplies",
+          "cartographer-tools"
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/class/artificer/"
+  },
+  {
+    "id": "path-of-the-berserker",
+    "name": "Path of the Berserker",
+    "name_ru": "Путь берсерка",
+    "source": "srd-5.2.1",
+    "level": 3,
+    "class": "barbarian",
+    "features": [
+      {
+        "id": "frenzy",
+        "name": "Frenzy",
+        "name_ru": "Бешенство",
+        "level": 3
+      },
+      {
+        "id": "mindless-rage",
+        "name": "Mindless Rage",
+        "name_ru": "Бездумная ярость",
+        "level": 6
+      },
+      {
+        "id": "retaliation",
+        "name": "Retaliation",
+        "name_ru": "Ответный удар",
+        "level": 10
+      },
+      {
+        "id": "intimidating-presence",
+        "name": "Intimidating Presence",
+        "name_ru": "Устрашающее присутствие",
+        "level": 14
+      }
+    ],
+    "link": "https://next.dnd.su/class/barbarian/"
+  },
+  {
+    "id": "path-of-the-wild-heart",
+    "name": "Path of the Wild Heart",
+    "name_ru": "Путь дикого сердца",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "barbarian",
+    "features": [
+      {
+        "id": "animal-speaker",
+        "name": "Animal Speaker",
+        "name_ru": "Говорящий с животными",
+        "level": 3
+      },
+      {
+        "id": "rage-of-the-wilds",
+        "name": "Rage of the Wilds",
+        "name_ru": "Ярость дикой природы",
+        "level": 3
+      },
+      {
+        "id": "aspect-of-the-wilds",
+        "name": "Aspect of the Wilds",
+        "name_ru": "Аспект дикой природы",
+        "level": 6
+      },
+      {
+        "id": "nature-speaker",
+        "name": "Nature Speaker",
+        "name_ru": "Говорящий с природой",
+        "level": 10
+      },
+      {
+        "id": "power-of-the-wilds",
+        "name": "Power of the Wilds",
+        "name_ru": "Сила дикой природы",
+        "level": 14
+      }
+    ],
+    "grants": [
+      {
+        "level": 3,
+        "ability": "wis",
+        "feature": "animal-speaker",
+        "rituals": [
+          "beast-sense",
+          "speak-with-animals"
+        ]
+      },
+      {
+        "level": 10,
+        "ability": "wis",
+        "feature": "nature-speaker",
+        "rituals": [
+          "commune-with-nature"
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/class/barbarian/"
+  },
+  {
+    "id": "path-of-the-world-tree",
+    "name": "Path of the World Tree",
+    "name_ru": "Путь Мирового древа",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "barbarian",
+    "features": [
+      {
+        "id": "vitality-of-the-tree",
+        "name": "Vitality of the Tree",
+        "name_ru": "Жизненная сила Древа",
+        "level": 3
+      },
+      {
+        "id": "branches-of-the-tree",
+        "name": "Branches of the Tree",
+        "name_ru": "Ветви Древа",
+        "level": 6
+      },
+      {
+        "id": "battering-roots",
+        "name": "Battering Roots",
+        "name_ru": "Колотящее дубьё",
+        "level": 10
+      },
+      {
+        "id": "travel-along-the-tree",
+        "name": "Travel along the Tree",
+        "name_ru": "Путешествие по Древу",
+        "level": 14
+      }
+    ],
+    "link": "https://next.dnd.su/class/barbarian/"
+  },
+  {
+    "id": "path-of-the-zealot",
+    "name": "Path of the Zealot",
+    "name_ru": "Путь фанатика",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "barbarian",
+    "features": [
+      {
+        "id": "divine-fury",
+        "name": "Divine Fury",
+        "name_ru": "Божественная ярость",
+        "level": 3
+      },
+      {
+        "id": "warrior-of-the-gods",
+        "name": "Warrior of the Gods",
+        "name_ru": "Воин богов",
+        "level": 3
+      },
+      {
+        "id": "fanatical-focus",
+        "name": "Fanatical Focus",
+        "name_ru": "Фанатичная сосредоточенность",
+        "level": 6
+      },
+      {
+        "id": "zealous-presence",
+        "name": "Zealous Presence",
+        "name_ru": "Фанатичное присутствие",
+        "level": 10
+      },
+      {
+        "id": "rage-of-the-gods",
+        "name": "Rage of the Gods",
+        "name_ru": "Ярость богов",
+        "level": 14
+      }
+    ],
+    "link": "https://next.dnd.su/class/barbarian/"
+  },
+  {
+    "id": "college-of-dance",
+    "name": "College of Dance",
+    "name_ru": "Коллегия танца",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "bard",
+    "features": [
+      {
+        "id": "dazzling-footwork",
+        "name": "Dazzling Footwork",
+        "name_ru": "Ослепительные фуэте",
+        "level": 3
+      },
+      {
+        "id": "inspiring-movement",
+        "name": "Inspiring Movement",
+        "name_ru": "Вдохновляющие движения",
+        "level": 6
+      },
+      {
+        "id": "tandem-footwork",
+        "name": "Tandem Footwork",
+        "name_ru": "Совместный танец",
+        "level": 6
+      },
+      {
+        "id": "leading-evasion",
+        "name": "Leading Evasion",
+        "name_ru": "Ведущее уклонение",
+        "level": 14
+      }
+    ],
+    "link": "https://next.dnd.su/class/bard/"
+  },
+  {
+    "id": "college-of-glamour",
+    "name": "College of Glamour",
+    "name_ru": "Коллегия очарования",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "bard",
+    "features": [
+      {
+        "id": "beguiling-magic",
+        "name": "Beguiling Magic",
+        "name_ru": "Чарующая магия",
+        "level": 3
+      },
+      {
+        "id": "mantle-of-inspiration",
+        "name": "Mantle of Inspiration",
+        "name_ru": "Ореол вдохновения",
+        "level": 3
+      },
+      {
+        "id": "mantle-of-majesty",
+        "name": "Mantle of Majesty",
+        "name_ru": "Ореол величия",
+        "level": 6
+      },
+      {
+        "id": "unbreakable-majesty",
+        "name": "Unbreakable Majesty",
+        "name_ru": "Несокрушимое величие",
+        "level": 14
+      }
+    ],
+    "grants": [
+      {
+        "level": 3,
+        "feature": "beguiling-magic",
+        "spells": [
+          "charm-person",
+          "mirror-image"
+        ]
+      },
+      {
+        "level": 6,
+        "feature": "mantle-of-majesty",
+        "spells": [
+          "command"
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/class/bard/"
+  },
+  {
+    "id": "college-of-lore",
+    "name": "College of Lore",
+    "name_ru": "Коллегия знаний",
+    "source": "srd-5.2.1",
+    "level": 3,
+    "class": "bard",
+    "choices": [
+      {
+        "id": "bonus-proficiencies",
+        "level": 3,
+        "type": "skill",
+        "count": 3,
+        "feature": "bonus-proficiencies",
+        "from": "any"
+      },
+      {
+        "id": "magical-discoveries",
+        "level": 6,
+        "type": "spell",
+        "always_prepared": true,
+        "count": 2,
+        "feature": "magical-discoveries",
+        "lists": [
+          "wizard",
+          "druid",
+          "cleric"
+        ],
+        "spell_level": "slot-or-cantrip"
+      }
+    ],
+    "features": [
+      {
+        "id": "bonus-proficiencies",
+        "name": "Bonus Proficiencies",
+        "name_ru": "Дополнительные навыки",
+        "level": 3
+      },
+      {
+        "id": "cutting-words",
+        "name": "Cutting Words",
+        "name_ru": "Острое словцо",
+        "level": 3
+      },
+      {
+        "id": "magical-discoveries",
+        "name": "Magical Discoveries",
+        "name_ru": "Магические открытия",
+        "level": 6
+      },
+      {
+        "id": "peerless-skill",
+        "name": "Peerless Skill",
+        "name_ru": "Непревзойдённый навык",
+        "level": 14
+      }
+    ],
+    "link": "https://next.dnd.su/class/bard/"
+  },
+  {
+    "id": "college-of-valor",
+    "name": "College of Valor",
+    "name_ru": "Коллегия доблести",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "bard",
+    "features": [
+      {
+        "id": "combat-inspiration",
+        "name": "Combat Inspiration",
+        "name_ru": "Боевое вдохновение",
+        "level": 3
+      },
+      {
+        "id": "martial-training",
+        "name": "Martial Training",
+        "name_ru": "Боевая подготовка",
+        "level": 3
+      },
+      {
+        "id": "extra-attack",
+        "name": "Extra Attack",
+        "name_ru": "Дополнительная атака",
+        "level": 6
+      },
+      {
+        "id": "battle-magic",
+        "name": "Battle Magic",
+        "name_ru": "Боевая магия",
+        "level": 14
+      }
+    ],
+    "grants": [
+      {
+        "level": 3,
+        "armor": [
+          "medium",
+          "shield"
+        ],
+        "feature": "martial-training",
+        "weapons": [
+          "martial"
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/class/bard/"
+  },
+  {
+    "id": "life-domain",
+    "name": "Life Domain",
+    "name_ru": "Домен жизни",
+    "source": "srd-5.2.1",
+    "level": 3,
+    "class": "cleric",
+    "always_prepared": {
+      "3": [
+        "bless",
+        "cure-wounds",
+        "lesser-restoration",
+        "aid"
+      ],
+      "5": [
+        "revivify",
+        "mass-healing-word"
+      ],
+      "7": [
+        "aura-of-life",
+        "death-ward"
+      ],
+      "9": [
+        "greater-restoration",
+        "mass-cure-wounds"
+      ]
+    },
+    "features": [
+      {
+        "id": "life-domain-spells",
+        "name": "Life Domain Spells",
+        "name_ru": "Заклинания домена жизни",
+        "level": 3
+      },
+      {
+        "id": "disciple-of-life",
+        "name": "Disciple of Life",
+        "name_ru": "Поборник жизни",
+        "level": 3
+      },
+      {
+        "id": "preserve-life",
+        "name": "Preserve Life",
+        "name_ru": "Сохранение жизни",
+        "level": 3
+      },
+      {
+        "id": "blessed-healer",
+        "name": "Blessed Healer",
+        "name_ru": "Благословенный целитель",
+        "level": 6
+      },
+      {
+        "id": "supreme-healing",
+        "name": "Supreme Healing",
+        "name_ru": "Высшее исцеление",
+        "level": 17
+      }
+    ],
+    "link": "https://next.dnd.su/class/cleric/"
+  },
+  {
+    "id": "light-domain",
+    "name": "Light Domain",
+    "name_ru": "Домен света",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "cleric",
+    "always_prepared": {
+      "3": [
+        "see-invisibility",
+        "burning-hands",
+        "faerie-fire",
+        "scorching-ray"
+      ],
+      "5": [
+        "daylight",
+        "fireball"
+      ],
+      "7": [
+        "arcane-eye",
+        "wall-of-fire"
+      ],
+      "9": [
+        "scrying",
+        "flame-strike"
+      ]
+    },
+    "features": [
+      {
+        "id": "light-domain-spells",
+        "name": "Light Domain Spells",
+        "name_ru": "Заклинания домена света",
+        "level": 3
+      },
+      {
+        "id": "warding-flare",
+        "name": "Warding Flare",
+        "name_ru": "Ограждающая вспышка",
+        "level": 3
+      },
+      {
+        "id": "radiance-of-the-dawn",
+        "name": "Radiance of the Dawn",
+        "name_ru": "Сияние рассвета",
+        "level": 3
+      },
+      {
+        "id": "improved-warding-flare",
+        "name": "Improved Warding Flare",
+        "name_ru": "Улучшенная ограждающая вспышка",
+        "level": 6
+      },
+      {
+        "id": "corona-of-light",
+        "name": "Corona of Light",
+        "name_ru": "Корона света",
+        "level": 17
+      }
+    ],
+    "link": "https://next.dnd.su/class/cleric/"
+  },
+  {
+    "id": "trickery-domain",
+    "name": "Trickery Domain",
+    "name_ru": "Домен обмана",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "cleric",
+    "always_prepared": {
+      "3": [
+        "pass-without-trace",
+        "disguise-self",
+        "invisibility",
+        "charm-person"
+      ],
+      "5": [
+        "hypnotic-pattern",
+        "nondetection"
+      ],
+      "7": [
+        "dimension-door",
+        "confusion"
+      ],
+      "9": [
+        "modify-memory",
+        "dominate-person"
+      ]
+    },
+    "features": [
+      {
+        "id": "blessing-of-the-trickster",
+        "name": "Blessing of the Trickster",
+        "name_ru": "Благословение обманщика",
+        "level": 3
+      },
+      {
+        "id": "invoke-duplicity",
+        "name": "Invoke Duplicity",
+        "name_ru": "Двуличность",
+        "level": 3
+      },
+      {
+        "id": "trickery-domain-spells",
+        "name": "Trickery Domain Spells",
+        "name_ru": "Заклинания домена обмана",
+        "level": 3
+      },
+      {
+        "id": "tricksters-transposition",
+        "name": "Trickster's Transposition",
+        "name_ru": "Рокировка",
+        "level": 6
+      },
+      {
+        "id": "improved-duplicity",
+        "name": "Improved Duplicity",
+        "name_ru": "Улучшенная двуличность",
+        "level": 17
+      }
+    ],
+    "link": "https://next.dnd.su/class/cleric/"
+  },
+  {
+    "id": "war-domain",
+    "name": "War Domain",
+    "name_ru": "Домен войны",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "cleric",
+    "always_prepared": {
+      "3": [
+        "spiritual-weapon",
+        "magic-weapon",
+        "guiding-bolt",
+        "shield-of-faith"
+      ],
+      "5": [
+        "spirit-guardians",
+        "crusaders-mantle"
+      ],
+      "7": [
+        "fire-shield",
+        "freedom-of-movement"
+      ],
+      "9": [
+        "steel-wind-strike",
+        "hold-monster"
+      ]
+    },
+    "features": [
+      {
+        "id": "war-priest",
+        "name": "War Priest",
+        "name_ru": "Боевой священник",
+        "level": 3
+      },
+      {
+        "id": "war-domain-spells",
+        "name": "War Domain Spells",
+        "name_ru": "Заклинания домена войны",
+        "level": 3
+      },
+      {
+        "id": "guided-strike",
+        "name": "Guided Strike",
+        "name_ru": "Направленный удар",
+        "level": 3
+      },
+      {
+        "id": "war-gods-blessing",
+        "name": "War God's Blessing",
+        "name_ru": "Благословение бога войны",
+        "level": 6
+      },
+      {
+        "id": "avatar-of-battle",
+        "name": "Avatar of Battle",
+        "name_ru": "Воплощение битвы",
+        "level": 17
+      }
+    ],
+    "link": "https://next.dnd.su/class/cleric/"
+  },
+  {
+    "id": "circle-of-the-land",
+    "name": "Circle of the Land",
+    "name_ru": "Круг земли",
+    "source": "srd-5.2.1",
+    "level": 3,
+    "class": "druid",
+    "features": [
+      {
+        "id": "circle-of-the-land-spells",
+        "name": "Circle of the Land Spells",
+        "name_ru": "Заклинания круга земли",
+        "level": 3
+      },
+      {
+        "id": "lands-aid",
+        "name": "Land's Aid",
+        "name_ru": "Помощь земли",
+        "level": 3
+      },
+      {
+        "id": "natural-recovery",
+        "name": "Natural Recovery",
+        "name_ru": "Естественное восстановление",
+        "level": 6
+      },
+      {
+        "id": "natures-ward",
+        "name": "Nature's Ward",
+        "name_ru": "Покровительство природы",
+        "level": 10
+      },
+      {
+        "id": "natures-sanctuary",
+        "name": "Nature's Sanctuary",
+        "name_ru": "Природное убежище",
+        "level": 14
+      }
+    ],
+    "link": "https://next.dnd.su/class/druid/",
+    "note": "Circle spells depend on the land type chosen at the end of each Long Rest."
+  },
+  {
+    "id": "circle-of-the-moon",
+    "name": "Circle of the Moon",
+    "name_ru": "Круг луны",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "druid",
+    "always_prepared": {
+      "3": [
+        "starry-wisp",
+        "cure-wounds",
+        "moonbeam"
+      ],
+      "5": [
+        "conjure-animals"
+      ],
+      "7": [
+        "fount-of-moonlight"
+      ],
+      "9": [
+        "mass-cure-wounds"
+      ]
+    },
+    "features": [
+      {
+        "id": "circle-forms",
+        "name": "Circle Forms",
+        "name_ru": "Облики Круга",
+        "level": 3
+      },
+      {
+        "id": "circle-of-the-moon-spells",
+        "name": "Circle of the Moon Spells",
+        "name_ru": "Заклинания Круга луны",
+        "level": 3
+      },
+      {
+        "id": "improved-circle-forms",
+        "name": "Improved Circle Forms",
+        "name_ru": "Улучшенные облики Круга",
+        "level": 6
+      },
+      {
+        "id": "moonlight-step",
+        "name": "Moonlight Step",
+        "name_ru": "Шаг в лунный свет",
+        "level": 10
+      },
+      {
+        "id": "lunar-form",
+        "name": "Lunar Form",
+        "name_ru": "Лунный облик",
+        "level": 14
+      }
+    ],
+    "link": "https://next.dnd.su/class/druid/"
+  },
+  {
+    "id": "circle-of-the-sea",
+    "name": "Circle of the Sea",
+    "name_ru": "Круг моря",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "druid",
+    "always_prepared": {
+      "3": [
+        "thunderwave",
+        "shatter",
+        "ray-of-frost",
+        "gust-of-wind",
+        "fog-cloud"
+      ],
+      "5": [
+        "lightning-bolt",
+        "water-breathing"
+      ],
+      "7": [
+        "control-water",
+        "ice-storm"
+      ],
+      "9": [
+        "conjure-elemental",
+        "hold-monster"
+      ]
+    },
+    "features": [
+      {
+        "id": "circle-of-the-sea-spells",
+        "name": "Circle of the Sea Spells",
+        "name_ru": "Заклинания круга моря",
+        "level": 3
+      },
+      {
+        "id": "wrath-of-the-sea",
+        "name": "Wrath of the Sea",
+        "name_ru": "Гнев морей",
+        "level": 3
+      },
+      {
+        "id": "aquatic-affinity",
+        "name": "Aquatic Affinity",
+        "name_ru": "Связь с водами",
+        "level": 6
+      },
+      {
+        "id": "stormborn",
+        "name": "Stormborn",
+        "name_ru": "Рождённый бурей",
+        "level": 10
+      },
+      {
+        "id": "oceanic-gift",
+        "name": "Oceanic Gift",
+        "name_ru": "Дар океана",
+        "level": 14
+      }
+    ],
+    "link": "https://next.dnd.su/class/druid/"
+  },
+  {
+    "id": "circle-of-the-stars",
+    "name": "Circle of the Stars",
+    "name_ru": "Круг звёзд",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "druid",
+    "features": [
+      {
+        "id": "star-map",
+        "name": "Star Map",
+        "name_ru": "Звёздная карта",
+        "level": 3
+      },
+      {
+        "id": "starry-form",
+        "name": "Starry Form",
+        "name_ru": "Звёздный облик",
+        "level": 3
+      },
+      {
+        "id": "cosmic-omen",
+        "name": "Cosmic Omen",
+        "name_ru": "Космическое знамение",
+        "level": 6
+      },
+      {
+        "id": "twinkling-constellations",
+        "name": "Twinkling Constellations",
+        "name_ru": "Мерцающие созвездия",
+        "level": 10
+      },
+      {
+        "id": "full-of-stars",
+        "name": "Full of Stars",
+        "name_ru": "Звёздное тело",
+        "level": 14
+      }
+    ],
+    "grants": [
+      {
+        "level": 3,
+        "feature": "star-map",
+        "spells": [
+          "guidance",
+          "guiding-bolt"
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/class/druid/"
+  },
+  {
+    "id": "battle-master",
+    "name": "Battle Master",
+    "name_ru": "Мастер боя",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "fighter",
+    "choices": [
+      {
+        "id": "maneuvers-3",
+        "level": 3,
+        "type": "class-option",
+        "count": 3,
+        "feature": "combat-superiority",
+        "options_group": "maneuvers"
+      },
+      {
+        "id": "maneuvers-7",
+        "level": 7,
+        "type": "class-option",
+        "count": 2,
+        "feature": "combat-superiority",
+        "options_group": "maneuvers",
+        "replace": 1
+      },
+      {
+        "id": "maneuvers-10",
+        "level": 10,
+        "type": "class-option",
+        "count": 2,
+        "feature": "combat-superiority",
+        "options_group": "maneuvers",
+        "replace": 1
+      },
+      {
+        "id": "maneuvers-15",
+        "level": 15,
+        "type": "class-option",
+        "count": 2,
+        "feature": "combat-superiority",
+        "options_group": "maneuvers",
+        "replace": 1
+      },
+      {
+        "id": "student-of-war-tool",
+        "level": 3,
+        "type": "tool",
+        "count": 1,
+        "feature": "student-of-war",
+        "from_category": "artisans-tools"
+      },
+      {
+        "id": "student-of-war-skill",
+        "level": 3,
+        "type": "skill",
+        "count": 1,
+        "feature": "student-of-war",
+        "from": "class-list"
+      }
+    ],
+    "features": [
+      {
+        "id": "combat-superiority",
+        "name": "Combat Superiority",
+        "name_ru": "Боевое превосходство",
+        "level": 3
+      },
+      {
+        "id": "student-of-war",
+        "name": "Student of War",
+        "name_ru": "Изучающий войну",
+        "level": 3
+      },
+      {
+        "id": "know-your-enemy",
+        "name": "Know Your Enemy",
+        "name_ru": "Познай своего врага",
+        "level": 7
+      },
+      {
+        "id": "improved-combat-superiority",
+        "name": "Improved Combat Superiority",
+        "name_ru": "Улучшенное боевое превосходство",
+        "level": 10
+      },
+      {
+        "id": "relentless",
+        "name": "Relentless",
+        "name_ru": "Неутомимость",
+        "level": 15
+      },
+      {
+        "id": "ultimate-combat-superiority",
+        "name": "Ultimate Combat Superiority",
+        "name_ru": "Абсолютное боевое превосходство",
+        "level": 18
+      }
+    ],
+    "link": "https://next.dnd.su/class/fighter/"
+  },
+  {
+    "id": "champion",
+    "name": "Champion",
+    "name_ru": "Чемпион",
+    "source": "srd-5.2.1",
+    "level": 3,
+    "class": "fighter",
+    "choices": [
+      {
+        "id": "additional-fighting-style",
+        "level": 7,
+        "type": "fighting-style",
+        "feature": "additional-fighting-style"
+      }
+    ],
+    "features": [
+      {
+        "id": "improved-critical",
+        "name": "Improved Critical",
+        "name_ru": "Улучшенные критические попадания",
+        "level": 3
+      },
+      {
+        "id": "remarkable-athlete",
+        "name": "Remarkable Athlete",
+        "name_ru": "Выдающийся атлет",
+        "level": 3
+      },
+      {
+        "id": "additional-fighting-style",
+        "name": "Additional Fighting Style",
+        "name_ru": "Дополнительный боевой стиль",
+        "level": 7
+      },
+      {
+        "id": "heroic-warrior",
+        "name": "Heroic Warrior",
+        "name_ru": "Героический воин",
+        "level": 10
+      },
+      {
+        "id": "superior-critical",
+        "name": "Superior Critical",
+        "name_ru": "Превосходные критические попадания",
+        "level": 15
+      },
+      {
+        "id": "survivor",
+        "name": "Survivor",
+        "name_ru": "Вызов смерти",
+        "level": 18
+      }
+    ],
+    "link": "https://next.dnd.su/class/fighter/"
+  },
+  {
+    "id": "eldritch-knight",
+    "name": "Eldritch Knight",
+    "name_ru": "Мистический рыцарь",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "fighter",
+    "features": [
+      {
+        "id": "spellcasting",
+        "name": "Spellcasting",
+        "name_ru": "Сотворение заклинаний",
+        "level": 3
+      },
+      {
+        "id": "war-bond",
+        "name": "War Bond",
+        "name_ru": "Связь с оружием",
+        "level": 3
+      },
+      {
+        "id": "war-magic",
+        "name": "War Magic",
+        "name_ru": "Боевая магия",
+        "level": 7
+      },
+      {
+        "id": "eldritch-strike",
+        "name": "Eldritch Strike",
+        "name_ru": "Мистический удар",
+        "level": 10
+      },
+      {
+        "id": "arcane-charge",
+        "name": "Arcane Charge",
+        "name_ru": "Волшебный рывок",
+        "level": 15
+      },
+      {
+        "id": "improved-war-magic",
+        "name": "Improved War Magic",
+        "name_ru": "Улучшенная боевая магия",
+        "level": 18
+      }
+    ],
+    "link": "https://next.dnd.su/class/fighter/",
+    "spellcasting": {
+      "ability": "int",
+      "cantrip_swap": "level-up",
+      "cantrips": {
+        "10": 3,
+        "3": 2
+      },
+      "feature": "spellcasting",
+      "levels": {
+        "10": {
+          "prepared_spells": 7,
+          "spell_slots": [
+            4,
+            3,
+            0,
+            0
+          ]
+        },
+        "11": {
+          "prepared_spells": 8,
+          "spell_slots": [
+            4,
+            3,
+            0,
+            0
+          ]
+        },
+        "12": {
+          "prepared_spells": 8,
+          "spell_slots": [
+            4,
+            3,
+            0,
+            0
+          ]
+        },
+        "13": {
+          "prepared_spells": 9,
+          "spell_slots": [
+            4,
+            3,
+            2,
+            0
+          ]
+        },
+        "14": {
+          "prepared_spells": 10,
+          "spell_slots": [
+            4,
+            3,
+            2,
+            0
+          ]
+        },
+        "15": {
+          "prepared_spells": 10,
+          "spell_slots": [
+            4,
+            3,
+            2,
+            0
+          ]
+        },
+        "16": {
+          "prepared_spells": 11,
+          "spell_slots": [
+            4,
+            3,
+            3,
+            0
+          ]
+        },
+        "17": {
+          "prepared_spells": 11,
+          "spell_slots": [
+            4,
+            3,
+            3,
+            0
+          ]
+        },
+        "18": {
+          "prepared_spells": 11,
+          "spell_slots": [
+            4,
+            3,
+            3,
+            0
+          ]
+        },
+        "19": {
+          "prepared_spells": 12,
+          "spell_slots": [
+            4,
+            3,
+            3,
+            1
+          ]
+        },
+        "20": {
+          "prepared_spells": 13,
+          "spell_slots": [
+            4,
+            3,
+            3,
+            1
+          ]
+        },
+        "3": {
+          "prepared_spells": 3,
+          "spell_slots": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        "4": {
+          "prepared_spells": 4,
+          "spell_slots": [
+            3,
+            0,
+            0,
+            0
+          ]
+        },
+        "5": {
+          "prepared_spells": 4,
+          "spell_slots": [
+            3,
+            0,
+            0,
+            0
+          ]
+        },
+        "6": {
+          "prepared_spells": 4,
+          "spell_slots": [
+            3,
+            0,
+            0,
+            0
+          ]
+        },
+        "7": {
+          "prepared_spells": 5,
+          "spell_slots": [
+            4,
+            2,
+            0,
+            0
+          ]
+        },
+        "8": {
+          "prepared_spells": 6,
+          "spell_slots": [
+            4,
+            2,
+            0,
+            0
+          ]
+        },
+        "9": {
+          "prepared_spells": 6,
+          "spell_slots": [
+            4,
+            2,
+            0,
+            0
+          ]
+        }
+      },
+      "list": "wizard",
+      "prepared_swap": {
+        "count": "one",
+        "when": "level-up"
+      }
+    }
+  },
+  {
+    "id": "psi-warrior",
+    "name": "Psi Warrior",
+    "name_ru": "Пси-воин",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "fighter",
+    "features": [
+      {
+        "id": "psionic-power",
+        "name": "Psionic Power",
+        "name_ru": "Псионическая сила",
+        "level": 3
+      },
+      {
+        "id": "telekinetic-adept",
+        "name": "Telekinetic Adept",
+        "name_ru": "Адепт-телекинетик",
+        "level": 7
+      },
+      {
+        "id": "guarded-mind",
+        "name": "Guarded Mind",
+        "name_ru": "Защищённый разум",
+        "level": 10
+      },
+      {
+        "id": "bulwark-of-force",
+        "name": "Bulwark of Force",
+        "name_ru": "Оплот силы",
+        "level": 15
+      },
+      {
+        "id": "telekinetic-master",
+        "name": "Telekinetic Master",
+        "name_ru": "Мастер телекинеза",
+        "level": 18
+      }
+    ],
+    "grants": [
+      {
+        "level": 18,
+        "feature": "telekinetic-master",
+        "spells": [
+          "telekinesis"
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/class/fighter/"
+  },
+  {
+    "id": "warrior-of-mercy",
+    "name": "Warrior of Mercy",
+    "name_ru": "Воин милосердия",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "monk",
+    "features": [
+      {
+        "id": "implements-of-mercy",
+        "name": "Implements of Mercy",
+        "name_ru": "Орудия милосердия",
+        "level": 3
+      },
+      {
+        "id": "hand-of-healing",
+        "name": "Hand of healing",
+        "name_ru": "Исцеляющая рука",
+        "level": 3
+      },
+      {
+        "id": "hand-of-harm",
+        "name": "Hand of Harm",
+        "name_ru": "Повреждающая рука",
+        "level": 3
+      },
+      {
+        "id": "physicians-touch",
+        "name": "Physician's Touch",
+        "name_ru": "Прикосновение целителя",
+        "level": 6
+      },
+      {
+        "id": "flurry-of-healing-and-harm",
+        "name": "Flurry of Healing and Harm",
+        "name_ru": "Шквал исцеления и повреждения",
+        "level": 11
+      },
+      {
+        "id": "hand-of-ultimate-mercy",
+        "name": "Hand of Ultimate Mercy",
+        "name_ru": "Рука абсолютного милосердия",
+        "level": 17
+      }
+    ],
+    "grants": [
+      {
+        "level": 3,
+        "feature": "implements-of-mercy",
+        "skills": [
+          "insight",
+          "medicine"
+        ],
+        "tools": [
+          "herbalism-kit"
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/class/monk/"
+  },
+  {
+    "id": "warrior-of-shadow",
+    "name": "Warrior of Shadow",
+    "name_ru": "Воин тени",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "monk",
+    "features": [
+      {
+        "id": "shadow-arts",
+        "name": "Shadow Arts",
+        "name_ru": "Тёмные искусства",
+        "level": 3
+      },
+      {
+        "id": "shadow-step",
+        "name": "Shadow Step",
+        "name_ru": "Шаг в тень",
+        "level": 6
+      },
+      {
+        "id": "improved-shadow-step",
+        "name": "Improved Shadow Step",
+        "name_ru": "Улучшенный шаг в тень",
+        "level": 11
+      },
+      {
+        "id": "cloak-of-shadows",
+        "name": "Cloak of Shadows",
+        "name_ru": "Покров теней",
+        "level": 17
+      }
+    ],
+    "grants": [
+      {
+        "level": 3,
+        "ability": "wis",
+        "cantrips": [
+          "minor-illusion"
+        ],
+        "feature": "shadow-arts"
+      }
+    ],
+    "link": "https://next.dnd.su/class/monk/"
+  },
+  {
+    "id": "warrior-of-the-elements",
+    "name": "Warrior of the Elements",
+    "name_ru": "Воин cтихий",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "monk",
+    "features": [
+      {
+        "id": "elemental-attunement",
+        "name": "Elemental Attunement",
+        "name_ru": "Сродство со стихиями",
+        "level": 3
+      },
+      {
+        "id": "manipulate-elements",
+        "name": "Manipulate Elements",
+        "name_ru": "Управление стихиями",
+        "level": 3
+      },
+      {
+        "id": "environmental-burst",
+        "name": "Environmental Burst",
+        "name_ru": "Стихийный выброс",
+        "level": 6
+      },
+      {
+        "id": "stride-of-elements",
+        "name": "Stride of Elements",
+        "name_ru": "Поступь стихий",
+        "level": 11
+      },
+      {
+        "id": "elemental-epitome",
+        "name": "Elemental Epitome",
+        "name_ru": "Воплощение стихий",
+        "level": 17
+      }
+    ],
+    "grants": [
+      {
+        "level": 3,
+        "ability": "wis",
+        "cantrips": [
+          "elementalism"
+        ],
+        "feature": "manipulate-elements"
+      }
+    ],
+    "link": "https://next.dnd.su/class/monk/"
+  },
+  {
+    "id": "warrior-of-the-open-hand",
+    "name": "Warrior of the Open Hand",
+    "name_ru": "Воин открытой ладони",
+    "source": "srd-5.2.1",
+    "level": 3,
+    "class": "monk",
+    "features": [
+      {
+        "id": "open-hand-techniques",
+        "name": "Open Hand Techniques",
+        "name_ru": "Техники открытой ладони",
+        "level": 3
+      },
+      {
+        "id": "wholeness-of-body",
+        "name": "Wholeness of Body",
+        "name_ru": "Целостность тела",
+        "level": 6
+      },
+      {
+        "id": "fleet-step",
+        "name": "Fleet Step",
+        "name_ru": "Быстрые ноги",
+        "level": 11
+      },
+      {
+        "id": "quivering-palm",
+        "name": "Quivering Palm",
+        "name_ru": "Дрожащая ладонь",
+        "level": 17
+      }
+    ],
+    "link": "https://next.dnd.su/class/monk/"
+  },
+  {
+    "id": "oath-of-devotion",
+    "name": "Oath of Devotion",
+    "name_ru": "Клятва преданности",
+    "source": "srd-5.2.1",
+    "level": 3,
+    "class": "paladin",
+    "always_prepared": {
+      "13": [
+        "freedom-of-movement",
+        "guardian-of-faith"
+      ],
+      "17": [
+        "flame-strike",
+        "commune"
+      ],
+      "3": [
+        "protection-from-evil-and-good",
+        "shield-of-faith"
+      ],
+      "5": [
+        "zone-of-truth",
+        "aid"
+      ],
+      "9": [
+        "beacon-of-hope",
+        "dispel-magic"
+      ]
+    },
+    "features": [
+      {
+        "id": "oath-of-devotion-spells",
+        "name": "Oath of Devotion Spells",
+        "name_ru": "Заклинания Клятвы преданности",
+        "level": 3
+      },
+      {
+        "id": "sacred-weapon",
+        "name": "Sacred Weapon",
+        "name_ru": "Священное оружие",
+        "level": 3
+      },
+      {
+        "id": "aura-of-devotion",
+        "name": "Aura of Devotion",
+        "name_ru": "Аура преданности",
+        "level": 7
+      },
+      {
+        "id": "smite-of-protection",
+        "name": "Smite of Protection",
+        "name_ru": "Кара защитника",
+        "level": 15
+      },
+      {
+        "id": "holy-nimbus",
+        "name": "Holy Nimbus",
+        "name_ru": "Святой нимб",
+        "level": 20
+      }
+    ],
+    "link": "https://next.dnd.su/class/paladin/"
+  },
+  {
+    "id": "oath-of-glory",
+    "name": "Oath of Glory",
+    "name_ru": "Клятва славы",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "paladin",
+    "always_prepared": {
+      "13": [
+        "compulsion",
+        "freedom-of-movement"
+      ],
+      "17": [
+        "legend-lore",
+        "yolandes-regal-presence"
+      ],
+      "3": [
+        "heroism",
+        "guiding-bolt"
+      ],
+      "5": [
+        "magic-weapon",
+        "enhance-ability"
+      ],
+      "9": [
+        "protection-from-energy",
+        "haste"
+      ]
+    },
+    "features": [
+      {
+        "id": "oath-of-glory-spells",
+        "name": "Oath of Glory Spells",
+        "name_ru": "Заклинания Клятвы славы",
+        "level": 3
+      },
+      {
+        "id": "inspiring-smite",
+        "name": "Inspiring Smite",
+        "name_ru": "Воодушевляющий удар",
+        "level": 3
+      },
+      {
+        "id": "peerless-athlete",
+        "name": "Peerless Athlete",
+        "name_ru": "Несравненный атлет",
+        "level": 3
+      },
+      {
+        "id": "aura-of-alacrity",
+        "name": "Aura of Alacrity",
+        "name_ru": "Аура рвения",
+        "level": 7
+      },
+      {
+        "id": "glorious-defense",
+        "name": "Glorious Defense",
+        "name_ru": "Блестящая оборона",
+        "level": 15
+      },
+      {
+        "id": "living-legend",
+        "name": "Living Legend",
+        "name_ru": "Живая легенда",
+        "level": 20
+      }
+    ],
+    "link": "https://next.dnd.su/class/paladin/"
+  },
+  {
+    "id": "oath-of-the-ancients",
+    "name": "Oath of the Ancients",
+    "name_ru": "Клятва древних",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "paladin",
+    "always_prepared": {
+      "13": [
+        "ice-storm",
+        "stoneskin"
+      ],
+      "17": [
+        "tree-stride",
+        "commune-with-nature"
+      ],
+      "3": [
+        "ensnaring-strike",
+        "speak-with-animals"
+      ],
+      "5": [
+        "moonbeam",
+        "misty-step"
+      ],
+      "9": [
+        "protection-from-energy",
+        "plant-growth"
+      ]
+    },
+    "features": [
+      {
+        "id": "oath-of-the-ancients-spells",
+        "name": "Oath of the Ancients Spells",
+        "name_ru": "Заклинания Клятвы древних",
+        "level": 3
+      },
+      {
+        "id": "natures-wrath",
+        "name": "Nature's Wrath",
+        "name_ru": "Гнев природы",
+        "level": 3
+      },
+      {
+        "id": "aura-of-warding",
+        "name": "Aura of Warding",
+        "name_ru": "Аура опеки",
+        "level": 7
+      },
+      {
+        "id": "undying-sentinel",
+        "name": "Undying Sentinel",
+        "name_ru": "Бессмертный страж",
+        "level": 15
+      },
+      {
+        "id": "elder-champion",
+        "name": "Elder Champion",
+        "name_ru": "Древний чемпион",
+        "level": 20
+      }
+    ],
+    "link": "https://next.dnd.su/class/paladin/"
+  },
+  {
+    "id": "oath-of-vengeance",
+    "name": "Oath of Vengeance",
+    "name_ru": "Клятва возмездия",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "paladin",
+    "always_prepared": {
+      "13": [
+        "banishment",
+        "dimension-door"
+      ],
+      "17": [
+        "scrying",
+        "hold-monster"
+      ],
+      "3": [
+        "hunters-mark",
+        "bane"
+      ],
+      "5": [
+        "misty-step",
+        "hold-person"
+      ],
+      "9": [
+        "protection-from-energy",
+        "haste"
+      ]
+    },
+    "features": [
+      {
+        "id": "oath-of-vengeance-spells",
+        "name": "Oath of Vengeance Spells",
+        "name_ru": "Заклинания Клятвы возмездия",
+        "level": 3
+      },
+      {
+        "id": "vow-of-enmity",
+        "name": "Vow of Enmity",
+        "name_ru": "Обет вражды",
+        "level": 3
+      },
+      {
+        "id": "relentless-avenger",
+        "name": "Relentless Avenger",
+        "name_ru": "Неумолимый мститель",
+        "level": 7
+      },
+      {
+        "id": "soul-of-vengeance",
+        "name": "Soul of Vengeance",
+        "name_ru": "Душа мести",
+        "level": 15
+      },
+      {
+        "id": "avenging-angel",
+        "name": "Avenging Angel",
+        "name_ru": "Ангел отмщения",
+        "level": 20
+      }
+    ],
+    "link": "https://next.dnd.su/class/paladin/"
+  },
+  {
+    "id": "beast-master",
+    "name": "Beast Master",
+    "name_ru": "Повелитель зверей",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "ranger",
+    "features": [
+      {
+        "id": "primal-companion",
+        "name": "Primal Companion",
+        "name_ru": "Первичный спутник",
+        "level": 3
+      },
+      {
+        "id": "exceptional-training",
+        "name": "Exceptional Training",
+        "name_ru": "Исключительная дрессировка",
+        "level": 7
+      },
+      {
+        "id": "bestial-fury",
+        "name": "Bestial Fury",
+        "name_ru": "Звериная ярость",
+        "level": 11
+      },
+      {
+        "id": "share-spells",
+        "name": "Share Spells",
+        "name_ru": "Общие заклинания",
+        "level": 15
+      }
+    ],
+    "link": "https://next.dnd.su/class/ranger/"
+  },
+  {
+    "id": "fey-wanderer",
+    "name": "Fey Wanderer",
+    "name_ru": "Странник фей",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "ranger",
+    "always_prepared": {
+      "13": [
+        "dimension-door"
+      ],
+      "17": [
+        "mislead"
+      ],
+      "3": [
+        "charm-person"
+      ],
+      "5": [
+        "misty-step"
+      ],
+      "9": [
+        "summon-fey"
+      ]
+    },
+    "choices": [
+      {
+        "id": "otherworldly-glamour",
+        "level": 3,
+        "type": "skill",
+        "count": 1,
+        "feature": "otherworldly-glamour",
+        "from": [
+          "deception",
+          "performance",
+          "persuasion"
+        ]
+      }
+    ],
+    "features": [
+      {
+        "id": "dreadful-strikes",
+        "name": "Dreadful Strikes",
+        "name_ru": "Ужасающие удары",
+        "level": 3
+      },
+      {
+        "id": "fey-wanderer-spells",
+        "name": "Fey Wanderer Spells",
+        "name_ru": "Заклинания странника фей",
+        "level": 3
+      },
+      {
+        "id": "otherworldly-glamour",
+        "name": "Otherworldly Glamour",
+        "name_ru": "Потустороннее очарование",
+        "level": 3
+      },
+      {
+        "id": "beguiling-twist",
+        "name": "Beguiling Twist",
+        "name_ru": "Заманивающий трюк",
+        "level": 7
+      },
+      {
+        "id": "fey-reinforcements",
+        "name": "Fey Reinforcements",
+        "name_ru": "Подкрепление фей",
+        "level": 11
+      },
+      {
+        "id": "misty-wanderer",
+        "name": "Misty Wanderer",
+        "name_ru": "Туманный странник",
+        "level": 15
+      }
+    ],
+    "link": "https://next.dnd.su/class/ranger/"
+  },
+  {
+    "id": "gloom-stalker",
+    "name": "Gloom Stalker",
+    "name_ru": "Сумрачный охотник",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "ranger",
+    "always_prepared": {
+      "13": [
+        "greater-invisibility"
+      ],
+      "17": [
+        "seeming"
+      ],
+      "3": [
+        "disguise-self"
+      ],
+      "5": [
+        "rope-trick"
+      ],
+      "9": [
+        "fear"
+      ]
+    },
+    "features": [
+      {
+        "id": "dread-ambusher",
+        "name": "Dread Ambusher",
+        "name_ru": "Угроза из засады",
+        "level": 3
+      },
+      {
+        "id": "gloom-stalker-spells",
+        "name": "Gloom Stalker Spells",
+        "name_ru": "Заклинания сумрачного охотника",
+        "level": 3
+      },
+      {
+        "id": "umbral-sight",
+        "name": "Umbral Sight",
+        "name_ru": "Теневой взор",
+        "level": 3
+      },
+      {
+        "id": "iron-mind",
+        "name": "Iron Mind",
+        "name_ru": "Железный разум",
+        "level": 7
+      },
+      {
+        "id": "stalkers-flurry",
+        "name": "Stalker's Flurry",
+        "name_ru": "Охотничья ярость",
+        "level": 11
+      },
+      {
+        "id": "shadowy-dodge",
+        "name": "Shadowy Dodge",
+        "name_ru": "Теневое уклонение",
+        "level": 15
+      }
+    ],
+    "grants": [
+      {
+        "level": 7,
+        "feature": "iron-mind",
+        "save_fallback": [
+          "int",
+          "cha"
+        ],
+        "saves": [
+          "wis"
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/class/ranger/"
+  },
+  {
+    "id": "hunter",
+    "name": "Hunter",
+    "name_ru": "Охотник",
+    "source": "srd-5.2.1",
+    "level": 3,
+    "class": "ranger",
+    "features": [
+      {
+        "id": "hunters-lore",
+        "name": "Hunter's Lore",
+        "name_ru": "Знания охотника",
+        "level": 3
+      },
+      {
+        "id": "hunters-prey",
+        "name": "Hunter's Prey",
+        "name_ru": "Добыча охотника",
+        "level": 3
+      },
+      {
+        "id": "defensive-tactics",
+        "name": "Defensive Tactics",
+        "name_ru": "Оборонительная тактика",
+        "level": 7
+      },
+      {
+        "id": "superior-hunters-prey",
+        "name": "Superior Hunter's Prey",
+        "name_ru": "Добыча превосходного охотника",
+        "level": 11
+      },
+      {
+        "id": "superior-hunters-defense",
+        "name": "Superior Hunter's Defense",
+        "name_ru": "Защита превосходного охотника",
+        "level": 15
+      }
+    ],
+    "link": "https://next.dnd.su/class/ranger/"
+  },
+  {
+    "id": "arcane-trickster",
+    "name": "Arcane Trickster",
+    "name_ru": "Мистический ловкач",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "rogue",
+    "features": [
+      {
+        "id": "spellcasting",
+        "name": "Spellcasting",
+        "name_ru": "Сотворение заклинаний",
+        "level": 3
+      },
+      {
+        "id": "mage-hand-legerdemain",
+        "name": "Mage Hand Legerdemain",
+        "name_ru": "Ловкость волшебной руки",
+        "level": 3
+      },
+      {
+        "id": "magical-ambush",
+        "name": "Magical Ambush",
+        "name_ru": "Магическая засада",
+        "level": 9
+      },
+      {
+        "id": "versatile-trickster",
+        "name": "Versatile Trickster",
+        "name_ru": "Многогранный ловкач",
+        "level": 13
+      },
+      {
+        "id": "spell-thief",
+        "name": "Spell Thief",
+        "name_ru": "Вор заклинаний",
+        "level": 17
+      }
+    ],
+    "link": "https://next.dnd.su/class/rogue/",
+    "spellcasting": {
+      "ability": "int",
+      "cantrip_swap": "level-up",
+      "cantrips": {
+        "10": 3,
+        "3": 2
+      },
+      "feature": "spellcasting",
+      "fixed_cantrips": [
+        "mage-hand"
+      ],
+      "levels": {
+        "10": {
+          "prepared_spells": 7,
+          "spell_slots": [
+            4,
+            3,
+            0,
+            0
+          ]
+        },
+        "11": {
+          "prepared_spells": 8,
+          "spell_slots": [
+            4,
+            3,
+            0,
+            0
+          ]
+        },
+        "12": {
+          "prepared_spells": 8,
+          "spell_slots": [
+            4,
+            3,
+            0,
+            0
+          ]
+        },
+        "13": {
+          "prepared_spells": 9,
+          "spell_slots": [
+            4,
+            3,
+            2,
+            0
+          ]
+        },
+        "14": {
+          "prepared_spells": 10,
+          "spell_slots": [
+            4,
+            3,
+            2,
+            0
+          ]
+        },
+        "15": {
+          "prepared_spells": 10,
+          "spell_slots": [
+            4,
+            3,
+            2,
+            0
+          ]
+        },
+        "16": {
+          "prepared_spells": 11,
+          "spell_slots": [
+            4,
+            3,
+            3,
+            0
+          ]
+        },
+        "17": {
+          "prepared_spells": 11,
+          "spell_slots": [
+            4,
+            3,
+            3,
+            0
+          ]
+        },
+        "18": {
+          "prepared_spells": 11,
+          "spell_slots": [
+            4,
+            3,
+            3,
+            0
+          ]
+        },
+        "19": {
+          "prepared_spells": 12,
+          "spell_slots": [
+            4,
+            3,
+            3,
+            1
+          ]
+        },
+        "20": {
+          "prepared_spells": 13,
+          "spell_slots": [
+            4,
+            3,
+            3,
+            1
+          ]
+        },
+        "3": {
+          "prepared_spells": 3,
+          "spell_slots": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        "4": {
+          "prepared_spells": 4,
+          "spell_slots": [
+            3,
+            0,
+            0,
+            0
+          ]
+        },
+        "5": {
+          "prepared_spells": 4,
+          "spell_slots": [
+            3,
+            0,
+            0,
+            0
+          ]
+        },
+        "6": {
+          "prepared_spells": 4,
+          "spell_slots": [
+            3,
+            0,
+            0,
+            0
+          ]
+        },
+        "7": {
+          "prepared_spells": 5,
+          "spell_slots": [
+            4,
+            2,
+            0,
+            0
+          ]
+        },
+        "8": {
+          "prepared_spells": 6,
+          "spell_slots": [
+            4,
+            2,
+            0,
+            0
+          ]
+        },
+        "9": {
+          "prepared_spells": 6,
+          "spell_slots": [
+            4,
+            2,
+            0,
+            0
+          ]
+        }
+      },
+      "list": "wizard",
+      "prepared_swap": {
+        "count": "one",
+        "when": "level-up"
+      }
+    }
+  },
+  {
+    "id": "assassin",
+    "name": "Assassin",
+    "name_ru": "Убийца",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "rogue",
+    "features": [
+      {
+        "id": "assassinate",
+        "name": "Assassinate",
+        "name_ru": "Ликвидация",
+        "level": 3
+      },
+      {
+        "id": "assassins-tools",
+        "name": "Assassin's Tools",
+        "name_ru": "Инструменты убийцы",
+        "level": 3
+      },
+      {
+        "id": "infiltration-expertise",
+        "name": "Infiltration Expertise",
+        "name_ru": "Мастер проникновения",
+        "level": 9
+      },
+      {
+        "id": "envenom-weapons",
+        "name": "Envenom Weapons",
+        "name_ru": "Покрытое ядом оружие",
+        "level": 13
+      },
+      {
+        "id": "death-strike",
+        "name": "Death Strike",
+        "name_ru": "Смертельный удар",
+        "level": 17
+      }
+    ],
+    "grants": [
+      {
+        "level": 3,
+        "feature": "assassins-tools",
+        "tools": [
+          "disguise-kit",
+          "poisoners-kit"
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/class/rogue/"
+  },
+  {
+    "id": "soulknife",
+    "name": "Soulknife",
+    "name_ru": "Клинок душ",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "rogue",
+    "features": [
+      {
+        "id": "psionic-power",
+        "name": "Psionic Power",
+        "name_ru": "Псионическая сила",
+        "level": 3
+      },
+      {
+        "id": "psychic-blades",
+        "name": "Psychic Blades",
+        "name_ru": "Психические клинки",
+        "level": 3
+      },
+      {
+        "id": "soul-blades",
+        "name": "Soul Blades",
+        "name_ru": "Клинки души",
+        "level": 9
+      },
+      {
+        "id": "psychic-veil",
+        "name": "Psychic Veil",
+        "name_ru": "Психическая завеса",
+        "level": 13
+      },
+      {
+        "id": "rend-mind",
+        "name": "Rend Mind",
+        "name_ru": "Раздирание разума",
+        "level": 17
+      }
+    ],
+    "link": "https://next.dnd.su/class/rogue/"
+  },
+  {
+    "id": "thief",
+    "name": "Thief",
+    "name_ru": "Вор",
+    "source": "srd-5.2.1",
+    "level": 3,
+    "class": "rogue",
+    "features": [
+      {
+        "id": "fast-hands",
+        "name": "Fast Hands",
+        "name_ru": "Быстрые руки",
+        "level": 3
+      },
+      {
+        "id": "second-story-work",
+        "name": "Second-Story Work",
+        "name_ru": "Взлом с проникновением",
+        "level": 3
+      },
+      {
+        "id": "supreme-sneak",
+        "name": "Supreme Sneak",
+        "name_ru": "Совершенная скрытность",
+        "level": 9
+      },
+      {
+        "id": "use-magic-device",
+        "name": "Use Magic Device",
+        "name_ru": "Использование магических предметов",
+        "level": 13
+      },
+      {
+        "id": "thiefs-reflexes",
+        "name": "Thief's Reflexes",
+        "name_ru": "Воровские рефлексы",
+        "level": 17
+      }
+    ],
+    "link": "https://next.dnd.su/class/rogue/"
+  },
+  {
+    "id": "aberrant-sorcery",
+    "name": "Aberrant Sorcery",
+    "name_ru": "Аберрантное чародейство",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "sorcerer",
+    "always_prepared": {
+      "3": [
+        "dissonant-whispers",
+        "detect-thoughts",
+        "mind-sliver",
+        "arms-of-hadar",
+        "calm-emotions"
+      ],
+      "5": [
+        "hunger-of-hadar",
+        "sending"
+      ],
+      "7": [
+        "summon-aberration",
+        "black-tentacles"
+      ],
+      "9": [
+        "telepathic-bond",
+        "telekinesis"
+      ]
+    },
+    "features": [
+      {
+        "id": "psionic-spells",
+        "name": "Psionic Spells",
+        "name_ru": "Псионические заклинания",
+        "level": 3
+      },
+      {
+        "id": "telepathic-speech",
+        "name": "Telepathic Speech",
+        "name_ru": "Телепатическая речь",
+        "level": 3
+      },
+      {
+        "id": "psionic-sorcery",
+        "name": "Psionic Sorcery",
+        "name_ru": "Псионическое чародейство",
+        "level": 6
+      },
+      {
+        "id": "psychic-defenses",
+        "name": "Psychic Defenses",
+        "name_ru": "Психическая защита",
+        "level": 6
+      },
+      {
+        "id": "revelation-in-flesh",
+        "name": "Revelation in Flesh",
+        "name_ru": "Откровение во плоти",
+        "level": 14
+      },
+      {
+        "id": "warping-implosion",
+        "name": "Warping Implosion",
+        "name_ru": "Искажающий взрыв",
+        "level": 18
+      }
+    ],
+    "link": "https://next.dnd.su/class/sorcerer/"
+  },
+  {
+    "id": "clockwork-sorcery",
+    "name": "Clockwork Sorcery",
+    "name_ru": "Заводное чародейство",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "sorcerer",
+    "always_prepared": {
+      "3": [
+        "protection-from-evil-and-good",
+        "lesser-restoration",
+        "aid",
+        "alarm"
+      ],
+      "5": [
+        "protection-from-energy",
+        "dispel-magic"
+      ],
+      "7": [
+        "summon-construct",
+        "freedom-of-movement"
+      ],
+      "9": [
+        "greater-restoration",
+        "wall-of-force"
+      ]
+    },
+    "features": [
+      {
+        "id": "clockwork-spells",
+        "name": "Clockwork Spells",
+        "name_ru": "Заводные заклинания",
+        "level": 3
+      },
+      {
+        "id": "restore-balance",
+        "name": "Restore Balance",
+        "name_ru": "Восстановление баланса",
+        "level": 3
+      },
+      {
+        "id": "bastion-of-law",
+        "name": "Bastion of Law",
+        "name_ru": "Бастион закона",
+        "level": 6
+      },
+      {
+        "id": "trance-of-order",
+        "name": "Trance of Order",
+        "name_ru": "Транс упорядоченности",
+        "level": 14
+      },
+      {
+        "id": "clockwork-cavalcade",
+        "name": "Clockwork Cavalcade",
+        "name_ru": "Заводная кавалькада",
+        "level": 18
+      }
+    ],
+    "link": "https://next.dnd.su/class/sorcerer/"
+  },
+  {
+    "id": "draconic-sorcery",
+    "name": "Draconic Sorcery",
+    "name_ru": "Драконье чародейство",
+    "source": "srd-5.2.1",
+    "level": 3,
+    "class": "sorcerer",
+    "always_prepared": {
+      "3": [
+        "dragons-breath",
+        "command",
+        "alter-self",
+        "chromatic-orb"
+      ],
+      "5": [
+        "fly",
+        "fear"
+      ],
+      "7": [
+        "arcane-eye",
+        "charm-monster"
+      ],
+      "9": [
+        "summon-dragon",
+        "legend-lore"
+      ]
+    },
+    "choices": [
+      {
+        "id": "elemental-affinity",
+        "level": 6,
+        "type": "damage-type",
+        "count": 1,
+        "feature": "elemental-affinity",
+        "from": [
+          "acid",
+          "cold",
+          "fire",
+          "lightning",
+          "poison"
+        ]
+      }
+    ],
+    "features": [
+      {
+        "id": "draconic-spells",
+        "name": "Draconic Spells",
+        "name_ru": "Драконьи заклинания",
+        "level": 3
+      },
+      {
+        "id": "draconic-resilience",
+        "name": "Draconic Resilience",
+        "name_ru": "Драконья устойчивость",
+        "level": 3
+      },
+      {
+        "id": "elemental-affinity",
+        "name": "Elemental Affinity",
+        "name_ru": "Родство со стихией",
+        "level": 6
+      },
+      {
+        "id": "dragon-wings",
+        "name": "Dragon Wings",
+        "name_ru": "Крылья дракона",
+        "level": 14
+      },
+      {
+        "id": "dragon-companion",
+        "name": "Dragon Companion",
+        "name_ru": "Дракон-спутник",
+        "level": 18
+      }
+    ],
+    "grants": [
+      {
+        "level": 3,
+        "feature": "draconic-resilience",
+        "hp_per_class_level": 1
+      }
+    ],
+    "link": "https://next.dnd.su/class/sorcerer/"
+  },
+  {
+    "id": "wild-magic-sorcery",
+    "name": "Wild Magic Sorcery",
+    "name_ru": "Чародейство дикой магии",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "sorcerer",
+    "features": [
+      {
+        "id": "wild-magic-surge",
+        "name": "Wild Magic Surge",
+        "name_ru": "Всплеск дикой магии",
+        "level": 3
+      },
+      {
+        "id": "tides-of-chaos",
+        "name": "Tides of Chaos",
+        "name_ru": "Волны хаоса",
+        "level": 3
+      },
+      {
+        "id": "bend-luck",
+        "name": "Bend Luck",
+        "name_ru": "Искривление удачи",
+        "level": 6
+      },
+      {
+        "id": "controlled-chaos",
+        "name": "Controlled Chaos",
+        "name_ru": "Контролируемый хаос",
+        "level": 14
+      },
+      {
+        "id": "tamed-surge",
+        "name": "Tamed Surge",
+        "name_ru": "Укрощённый всплеск дикой магии",
+        "level": 18
+      }
+    ],
+    "link": "https://next.dnd.su/class/sorcerer/"
+  },
+  {
+    "id": "archfey-patron",
+    "name": "Archfey Patron",
+    "name_ru": "Архифея",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "warlock",
+    "always_prepared": {
+      "3": [
+        "phantasmal-force",
+        "faerie-fire",
+        "misty-step",
+        "calm-emotions",
+        "sleep"
+      ],
+      "5": [
+        "blink",
+        "plant-growth"
+      ],
+      "7": [
+        "greater-invisibility",
+        "dominate-beast"
+      ],
+      "9": [
+        "dominate-person",
+        "seeming"
+      ]
+    },
+    "features": [
+      {
+        "id": "archfey-spells",
+        "name": "Archfey Spells",
+        "name_ru": "Заклинания Архифеи",
+        "level": 3
+      },
+      {
+        "id": "steps-of-the-fey",
+        "name": "Steps of the Fey",
+        "name_ru": "Шаг феи",
+        "level": 3
+      },
+      {
+        "id": "misty-escape",
+        "name": "Misty Escape",
+        "name_ru": "Туманное исчезновение",
+        "level": 6
+      },
+      {
+        "id": "beguiling-defenses",
+        "name": "Beguiling Defenses",
+        "name_ru": "Чарующая защита",
+        "level": 10
+      },
+      {
+        "id": "bewitching-magic",
+        "name": "Bewitching Magic",
+        "name_ru": "Завораживающая магия",
+        "level": 14
+      }
+    ],
+    "link": "https://next.dnd.su/class/warlock/"
+  },
+  {
+    "id": "celestial-patron",
+    "name": "Celestial Patron",
+    "name_ru": "Небожитель",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "warlock",
+    "always_prepared": {
+      "3": [
+        "aid",
+        "cure-wounds",
+        "guiding-bolt",
+        "lesser-restoration",
+        "light",
+        "sacred-flame"
+      ],
+      "5": [
+        "daylight",
+        "revivify"
+      ],
+      "7": [
+        "guardian-of-faith",
+        "wall-of-fire"
+      ],
+      "9": [
+        "greater-restoration",
+        "summon-celestial"
+      ]
+    },
+    "features": [
+      {
+        "id": "celestial-spells",
+        "name": "Celestial Spells",
+        "name_ru": "Заклинания Небожителя",
+        "level": 3
+      },
+      {
+        "id": "healing-light",
+        "name": "Healing Light",
+        "name_ru": "Лечащий свет",
+        "level": 3
+      },
+      {
+        "id": "radiant-soul",
+        "name": "Radiant Soul",
+        "name_ru": "Сияющая душа",
+        "level": 6
+      },
+      {
+        "id": "celestial-resilience",
+        "name": "Celestial Resilience",
+        "name_ru": "Небесная стойкость",
+        "level": 10
+      },
+      {
+        "id": "searing-vengeance",
+        "name": "Searing Vengeance",
+        "name_ru": "Опаляющее возмездие",
+        "level": 14
+      }
+    ],
+    "link": "https://next.dnd.su/class/warlock/"
+  },
+  {
+    "id": "fiend-patron",
+    "name": "Fiend Patron",
+    "name_ru": "Исчадие",
+    "source": "srd-5.2.1",
+    "level": 3,
+    "class": "warlock",
+    "always_prepared": {
+      "3": [
+        "burning-hands",
+        "command",
+        "scorching-ray",
+        "suggestion"
+      ],
+      "5": [
+        "fireball",
+        "stinking-cloud"
+      ],
+      "7": [
+        "fire-shield",
+        "wall-of-fire"
+      ],
+      "9": [
+        "geas",
+        "insect-plague"
+      ]
+    },
+    "features": [
+      {
+        "id": "fiend-spells",
+        "name": "Fiend Spells",
+        "name_ru": "Заклинания Исчадия",
+        "level": 3
+      },
+      {
+        "id": "dark-ones-blessing",
+        "name": "Dark One's Blessing",
+        "name_ru": "Благословение темнейшего",
+        "level": 3
+      },
+      {
+        "id": "dark-ones-own-luck",
+        "name": "Dark One's Own Luck",
+        "name_ru": "Удача темнейшего",
+        "level": 6
+      },
+      {
+        "id": "fiendish-resilience",
+        "name": "Fiendish Resilience",
+        "name_ru": "Устойчивость исчадия",
+        "level": 10
+      },
+      {
+        "id": "hurl-through-hell",
+        "name": "Hurl Through Hell",
+        "name_ru": "Бросок через преисподнюю",
+        "level": 14
+      }
+    ],
+    "link": "https://next.dnd.su/class/warlock/"
+  },
+  {
+    "id": "great-old-one-patron",
+    "name": "Great Old One Patron",
+    "name_ru": "Великий древний",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "warlock",
+    "always_prepared": {
+      "3": [
+        "detect-thoughts",
+        "dissonant-whispers",
+        "phantasmal-force",
+        "hideous-laughter"
+      ],
+      "5": [
+        "clairvoyance",
+        "hunger-of-hadar"
+      ],
+      "7": [
+        "confusion",
+        "summon-aberration"
+      ],
+      "9": [
+        "modify-memory",
+        "telekinesis"
+      ]
+    },
+    "features": [
+      {
+        "id": "great-old-one-spells",
+        "name": "Great Old One Spells",
+        "name_ru": "Заклинания Великого древнего",
+        "level": 3
+      },
+      {
+        "id": "awakened-mind",
+        "name": "Awakened Mind",
+        "name_ru": "Пробуждённый разум",
+        "level": 3
+      },
+      {
+        "id": "psychic-spells",
+        "name": "Psychic Spells",
+        "name_ru": "Психические заклинания",
+        "level": 3
+      },
+      {
+        "id": "clairvoyant-combatant",
+        "name": "Clairvoyant Combatant",
+        "name_ru": "Провидящий боец",
+        "level": 6
+      },
+      {
+        "id": "eldritch-hex",
+        "name": "Eldritch Hex",
+        "name_ru": "Мистический сглаз",
+        "level": 10
+      },
+      {
+        "id": "thought-shield",
+        "name": "Thought Shield",
+        "name_ru": "Ментальный щит",
+        "level": 10
+      },
+      {
+        "id": "create-thrall",
+        "name": "Create Thrall",
+        "name_ru": "Порабощение",
+        "level": 14
+      }
+    ],
+    "grants": [
+      {
+        "level": 10,
+        "feature": "eldritch-hex",
+        "spells": [
+          "hex"
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/class/warlock/"
+  },
+  {
+    "id": "abjurer",
+    "name": "Abjurer",
+    "name_ru": "Оградитель",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "wizard",
+    "features": [
+      {
+        "id": "abjuration-savant",
+        "name": "Abjuration Savant",
+        "name_ru": "Учёный-Оградитель",
+        "level": 3
+      },
+      {
+        "id": "arcane-ward",
+        "name": "Arcane Ward",
+        "name_ru": "Волшебный щит",
+        "level": 3
+      },
+      {
+        "id": "projected-ward",
+        "name": "Projected Ward",
+        "name_ru": "Проецированный щит",
+        "level": 6
+      },
+      {
+        "id": "spell-breaker",
+        "name": "Spell Breaker",
+        "name_ru": "Разрушитель заклинаний",
+        "level": 10
+      },
+      {
+        "id": "spell-resistance",
+        "name": "Spell Resistance",
+        "name_ru": "Сопротивление заклинаниям",
+        "level": 14
+      }
+    ],
+    "grants": [
+      {
+        "level": 10,
+        "feature": "spell-breaker",
+        "spells": [
+          "counterspell",
+          "dispel-magic"
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/class/wizard/",
+    "savant_school": "abjuration"
+  },
+  {
+    "id": "diviner",
+    "name": "Diviner",
+    "name_ru": "Прорицатель",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "wizard",
+    "features": [
+      {
+        "id": "divination-savant",
+        "name": "Divination Savant",
+        "name_ru": "Учёный-Прорицатель",
+        "level": 3
+      },
+      {
+        "id": "portent",
+        "name": "Portent",
+        "name_ru": "Знамение",
+        "level": 3
+      },
+      {
+        "id": "expert-divination",
+        "name": "Expert Divination",
+        "name_ru": "Эксперт прорицания",
+        "level": 6
+      },
+      {
+        "id": "the-third-eye",
+        "name": "The Third Eye",
+        "name_ru": "Третий глаз",
+        "level": 10
+      },
+      {
+        "id": "greater-portent",
+        "name": "Greater Portent",
+        "name_ru": "Великое знамение",
+        "level": 14
+      }
+    ],
+    "link": "https://next.dnd.su/class/wizard/",
+    "savant_school": "divination"
+  },
+  {
+    "id": "evoker",
+    "name": "Evoker",
+    "name_ru": "Воплотитель",
+    "source": "srd-5.2.1",
+    "level": 3,
+    "class": "wizard",
+    "features": [
+      {
+        "id": "evocation-savant",
+        "name": "Evocation Savant",
+        "name_ru": "Учёный-Воплотитель",
+        "level": 3
+      },
+      {
+        "id": "potent-cantrip",
+        "name": "Potent Cantrip",
+        "name_ru": "Мощные заговоры",
+        "level": 3
+      },
+      {
+        "id": "sculpt-spells",
+        "name": "Sculpt Spells",
+        "name_ru": "Построение заклинаний",
+        "level": 6
+      },
+      {
+        "id": "empowered-evocation",
+        "name": "Empowered Evocation",
+        "name_ru": "Усиленное воплощение",
+        "level": 10
+      },
+      {
+        "id": "overchannel",
+        "name": "Overchannel",
+        "name_ru": "Перегрузка",
+        "level": 14
+      }
+    ],
+    "link": "https://next.dnd.su/class/wizard/",
+    "savant_school": "evocation"
+  },
+  {
+    "id": "illusionist",
+    "name": "Illusionist",
+    "name_ru": "Иллюзионист",
+    "source": "phb-2024",
+    "level": 3,
+    "class": "wizard",
+    "features": [
+      {
+        "id": "illusion-savant",
+        "name": "Illusion Savant",
+        "name_ru": "Учёный-Иллюзионист",
+        "level": 3
+      },
+      {
+        "id": "improved-illusions",
+        "name": "Improved Illusions",
+        "name_ru": "Улучшенные иллюзии",
+        "level": 3
+      },
+      {
+        "id": "phantasmal-creatures",
+        "name": "Phantasmal Creatures",
+        "name_ru": "Призрачные существа",
+        "level": 6
+      },
+      {
+        "id": "illusory-self",
+        "name": "Illusory Self",
+        "name_ru": "Собственная иллюзорность",
+        "level": 10
+      },
+      {
+        "id": "illusory-reality",
+        "name": "Illusory Reality",
+        "name_ru": "Иллюзорная реальность",
+        "level": 14
+      }
+    ],
+    "grants": [
+      {
+        "level": 3,
+        "cantrip_fallback_list": "wizard",
+        "cantrips": [
+          "minor-illusion"
+        ],
+        "feature": "improved-illusions",
+        "not_counted": true
+      },
+      {
+        "level": 6,
+        "feature": "phantasmal-creatures",
+        "spells": [
+          "summon-beast",
+          "summon-fey"
+        ]
+      }
+    ],
+    "link": "https://next.dnd.su/class/wizard/",
+    "savant_school": "illusion"
+  }
+]

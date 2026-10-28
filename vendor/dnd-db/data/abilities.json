@@ -1,0 +1,85 @@
+[
+  {
+    "id": "str",
+    "name": "Strength",
+    "name_ru": "Сила",
+    "source": "srd-5.2.1",
+    "abbr": "STR",
+    "abbr_ru": "СИЛ",
+    "description": "Physical might",
+    "skills": [
+      "athletics"
+    ]
+  },
+  {
+    "id": "dex",
+    "name": "Dexterity",
+    "name_ru": "Ловкость",
+    "source": "srd-5.2.1",
+    "abbr": "DEX",
+    "abbr_ru": "ЛОВ",
+    "description": "Agility, reflexes, and balance",
+    "skills": [
+      "acrobatics",
+      "sleight-of-hand",
+      "stealth"
+    ]
+  },
+  {
+    "id": "con",
+    "name": "Constitution",
+    "name_ru": "Телосложение",
+    "source": "srd-5.2.1",
+    "abbr": "CON",
+    "abbr_ru": "ТЕЛ",
+    "description": "Health and stamina",
+    "skills": []
+  },
+  {
+    "id": "int",
+    "name": "Intelligence",
+    "name_ru": "Интеллект",
+    "source": "srd-5.2.1",
+    "abbr": "INT",
+    "abbr_ru": "ИНТ",
+    "description": "Reasoning and memory",
+    "skills": [
+      "arcana",
+      "history",
+      "investigation",
+      "nature",
+      "religion"
+    ]
+  },
+  {
+    "id": "wis",
+    "name": "Wisdom",
+    "name_ru": "Мудрость",
+    "source": "srd-5.2.1",
+    "abbr": "WIS",
+    "abbr_ru": "МДР",
+    "description": "Perceptiveness and mental fortitude",
+    "skills": [
+      "animal-handling",
+      "insight",
+      "medicine",
+      "perception",
+      "survival"
+    ]
+  },
+  {
+    "id": "cha",
+    "name": "Charisma",
+    "name_ru": "Харизма",
+    "source": "srd-5.2.1",
+    "abbr": "CHA",
+    "abbr_ru": "ХАР",
+    "description": "Confidence, poise, and charm",
+    "skills": [
+      "deception",
+      "intimidation",
+      "performance",
+      "persuasion"
+    ]
+  }
+]

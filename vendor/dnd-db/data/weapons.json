@@ -1,0 +1,1547 @@
+[
+  {
+    "id": "club",
+    "name": "Club",
+    "name_ru": "Дубинка",
+    "source": "srd-5.2.1",
+    "category": "simple",
+    "type": "melee",
+    "cost": {
+      "amount": 1,
+      "unit": "sp"
+    },
+    "cost_cp": 10,
+    "weight_lb": 2,
+    "damage_dice": "1d4",
+    "damage_type": "bludgeoning",
+    "mastery": "slow",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "properties": [
+      "light"
+    ],
+    "property_details": {}
+  },
+  {
+    "id": "dagger",
+    "name": "Dagger",
+    "name_ru": "Кинжал",
+    "source": "srd-5.2.1",
+    "category": "simple",
+    "type": "melee",
+    "cost": {
+      "amount": 2,
+      "unit": "gp"
+    },
+    "cost_cp": 200,
+    "weight_lb": 1,
+    "damage_dice": "1d4",
+    "damage_type": "piercing",
+    "mastery": "nick",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "properties": [
+      "finesse",
+      "light",
+      "thrown"
+    ],
+    "property_details": {
+      "thrown": {
+        "range_long": 60,
+        "range_normal": 20
+      }
+    }
+  },
+  {
+    "id": "greatclub",
+    "name": "Greatclub",
+    "name_ru": "Палица",
+    "source": "srd-5.2.1",
+    "category": "simple",
+    "type": "melee",
+    "cost": {
+      "amount": 2,
+      "unit": "sp"
+    },
+    "cost_cp": 20,
+    "weight_lb": 10,
+    "damage_dice": "1d8",
+    "damage_type": "bludgeoning",
+    "mastery": "push",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "properties": [
+      "two-handed"
+    ],
+    "property_details": {}
+  },
+  {
+    "id": "handaxe",
+    "name": "Handaxe",
+    "name_ru": "Ручной топор",
+    "source": "srd-5.2.1",
+    "category": "simple",
+    "type": "melee",
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 2,
+    "damage_dice": "1d6",
+    "damage_type": "slashing",
+    "mastery": "vex",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "properties": [
+      "light",
+      "thrown"
+    ],
+    "property_details": {
+      "thrown": {
+        "range_long": 60,
+        "range_normal": 20
+      }
+    }
+  },
+  {
+    "id": "javelin",
+    "name": "Javelin",
+    "name_ru": "Метательное копьё",
+    "source": "srd-5.2.1",
+    "category": "simple",
+    "type": "melee",
+    "cost": {
+      "amount": 5,
+      "unit": "sp"
+    },
+    "cost_cp": 50,
+    "weight_lb": 2,
+    "damage_dice": "1d6",
+    "damage_type": "piercing",
+    "mastery": "slow",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "properties": [
+      "thrown"
+    ],
+    "property_details": {
+      "thrown": {
+        "range_long": 120,
+        "range_normal": 30
+      }
+    }
+  },
+  {
+    "id": "light-hammer",
+    "name": "Light Hammer",
+    "name_ru": "Лёгкий молот",
+    "source": "srd-5.2.1",
+    "category": "simple",
+    "type": "melee",
+    "cost": {
+      "amount": 2,
+      "unit": "gp"
+    },
+    "cost_cp": 200,
+    "weight_lb": 2,
+    "damage_dice": "1d4",
+    "damage_type": "bludgeoning",
+    "mastery": "nick",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "properties": [
+      "light",
+      "thrown"
+    ],
+    "property_details": {
+      "thrown": {
+        "range_long": 60,
+        "range_normal": 20
+      }
+    }
+  },
+  {
+    "id": "mace",
+    "name": "Mace",
+    "name_ru": "Булава",
+    "source": "srd-5.2.1",
+    "category": "simple",
+    "type": "melee",
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 4,
+    "damage_dice": "1d6",
+    "damage_type": "bludgeoning",
+    "mastery": "sap",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "properties": [],
+    "property_details": {}
+  },
+  {
+    "id": "quarterstaff",
+    "name": "Quarterstaff",
+    "name_ru": "Боевой посох",
+    "source": "srd-5.2.1",
+    "category": "simple",
+    "type": "melee",
+    "cost": {
+      "amount": 2,
+      "unit": "sp"
+    },
+    "cost_cp": 20,
+    "weight_lb": 4,
+    "damage_dice": "1d6",
+    "damage_type": "bludgeoning",
+    "mastery": "topple",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "properties": [
+      "versatile"
+    ],
+    "property_details": {
+      "versatile": {
+        "damage_dice": "1d8"
+      }
+    }
+  },
+  {
+    "id": "sickle",
+    "name": "Sickle",
+    "name_ru": "Серп",
+    "source": "srd-5.2.1",
+    "category": "simple",
+    "type": "melee",
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 2,
+    "damage_dice": "1d4",
+    "damage_type": "slashing",
+    "mastery": "nick",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "properties": [
+      "light"
+    ],
+    "property_details": {}
+  },
+  {
+    "id": "spear",
+    "name": "Spear",
+    "name_ru": "Копьё",
+    "source": "srd-5.2.1",
+    "category": "simple",
+    "type": "melee",
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "cost_cp": 100,
+    "weight_lb": 3,
+    "damage_dice": "1d6",
+    "damage_type": "piercing",
+    "mastery": "sap",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "properties": [
+      "thrown",
+      "versatile"
+    ],
+    "property_details": {
+      "thrown": {
+        "range_long": 60,
+        "range_normal": 20
+      },
+      "versatile": {
+        "damage_dice": "1d8"
+      }
+    }
+  },
+  {
+    "id": "dart",
+    "name": "Dart",
+    "name_ru": "Дротик",
+    "source": "srd-5.2.1",
+    "category": "simple",
+    "type": "ranged",
+    "cost": {
+      "amount": 5,
+      "unit": "cp"
+    },
+    "cost_cp": 5,
+    "weight_lb": 0.25,
+    "damage_dice": "1d4",
+    "damage_type": "piercing",
+    "mastery": "vex",
+    "mastery_classes": [
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "properties": [
+      "finesse",
+      "thrown"
+    ],
+    "property_details": {
+      "thrown": {
+        "range_long": 60,
+        "range_normal": 20
+      }
+    }
+  },
+  {
+    "id": "light-crossbow",
+    "name": "Light Crossbow",
+    "name_ru": "Лёгкий арбалет",
+    "source": "srd-5.2.1",
+    "category": "simple",
+    "type": "ranged",
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "cost_cp": 2500,
+    "weight_lb": 5,
+    "damage_dice": "1d8",
+    "damage_type": "piercing",
+    "mastery": "slow",
+    "mastery_classes": [
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "properties": [
+      "ammunition",
+      "loading",
+      "two-handed"
+    ],
+    "property_details": {
+      "ammunition": {
+        "ammunition": "bolts",
+        "range_long": 320,
+        "range_normal": 80
+      }
+    }
+  },
+  {
+    "id": "shortbow",
+    "name": "Shortbow",
+    "name_ru": "Короткий лук",
+    "source": "srd-5.2.1",
+    "category": "simple",
+    "type": "ranged",
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "cost_cp": 2500,
+    "weight_lb": 2,
+    "damage_dice": "1d6",
+    "damage_type": "piercing",
+    "mastery": "vex",
+    "mastery_classes": [
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "properties": [
+      "ammunition",
+      "two-handed"
+    ],
+    "property_details": {
+      "ammunition": {
+        "ammunition": "arrows",
+        "range_long": 320,
+        "range_normal": 80
+      }
+    }
+  },
+  {
+    "id": "sling",
+    "name": "Sling",
+    "name_ru": "Праща",
+    "source": "srd-5.2.1",
+    "category": "simple",
+    "type": "ranged",
+    "cost": {
+      "amount": 1,
+      "unit": "sp"
+    },
+    "cost_cp": 10,
+    "weight_lb": 0,
+    "damage_dice": "1d4",
+    "damage_type": "bludgeoning",
+    "mastery": "slow",
+    "mastery_classes": [
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "bard",
+      "cleric",
+      "druid",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue",
+      "sorcerer",
+      "warlock",
+      "wizard",
+      "artificer"
+    ],
+    "properties": [
+      "ammunition"
+    ],
+    "property_details": {
+      "ammunition": {
+        "ammunition": "bullets-sling",
+        "range_long": 120,
+        "range_normal": 30
+      }
+    }
+  },
+  {
+    "id": "battleaxe",
+    "name": "Battleaxe",
+    "name_ru": "Боевой топор",
+    "source": "srd-5.2.1",
+    "category": "martial",
+    "type": "melee",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 4,
+    "damage_dice": "1d8",
+    "damage_type": "slashing",
+    "mastery": "topple",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "properties": [
+      "versatile"
+    ],
+    "property_details": {
+      "versatile": {
+        "damage_dice": "1d10"
+      }
+    }
+  },
+  {
+    "id": "flail",
+    "name": "Flail",
+    "name_ru": "Цеп",
+    "source": "srd-5.2.1",
+    "category": "martial",
+    "type": "melee",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 2,
+    "damage_dice": "1d8",
+    "damage_type": "bludgeoning",
+    "mastery": "sap",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "properties": [],
+    "property_details": {}
+  },
+  {
+    "id": "glaive",
+    "name": "Glaive",
+    "name_ru": "Глефа",
+    "source": "srd-5.2.1",
+    "category": "martial",
+    "type": "melee",
+    "cost": {
+      "amount": 20,
+      "unit": "gp"
+    },
+    "cost_cp": 2000,
+    "weight_lb": 6,
+    "damage_dice": "1d10",
+    "damage_type": "slashing",
+    "mastery": "graze",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "properties": [
+      "heavy",
+      "reach",
+      "two-handed"
+    ],
+    "property_details": {}
+  },
+  {
+    "id": "greataxe",
+    "name": "Greataxe",
+    "name_ru": "Секира",
+    "source": "srd-5.2.1",
+    "category": "martial",
+    "type": "melee",
+    "cost": {
+      "amount": 30,
+      "unit": "gp"
+    },
+    "cost_cp": 3000,
+    "weight_lb": 7,
+    "damage_dice": "1d12",
+    "damage_type": "slashing",
+    "mastery": "cleave",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "properties": [
+      "heavy",
+      "two-handed"
+    ],
+    "property_details": {}
+  },
+  {
+    "id": "greatsword",
+    "name": "Greatsword",
+    "name_ru": "Двуручный меч",
+    "source": "srd-5.2.1",
+    "category": "martial",
+    "type": "melee",
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "cost_cp": 5000,
+    "weight_lb": 6,
+    "damage_dice": "2d6",
+    "damage_type": "slashing",
+    "mastery": "graze",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "properties": [
+      "heavy",
+      "two-handed"
+    ],
+    "property_details": {}
+  },
+  {
+    "id": "halberd",
+    "name": "Halberd",
+    "name_ru": "Алебарда",
+    "source": "srd-5.2.1",
+    "category": "martial",
+    "type": "melee",
+    "cost": {
+      "amount": 20,
+      "unit": "gp"
+    },
+    "cost_cp": 2000,
+    "weight_lb": 6,
+    "damage_dice": "1d10",
+    "damage_type": "slashing",
+    "mastery": "cleave",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "properties": [
+      "heavy",
+      "reach",
+      "two-handed"
+    ],
+    "property_details": {}
+  },
+  {
+    "id": "lance",
+    "name": "Lance",
+    "name_ru": "Длинное копьё",
+    "source": "srd-5.2.1",
+    "category": "martial",
+    "type": "melee",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 6,
+    "damage_dice": "1d10",
+    "damage_type": "piercing",
+    "mastery": "topple",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "properties": [
+      "heavy",
+      "reach",
+      "two-handed"
+    ],
+    "property_details": {
+      "two-handed": {
+        "note": "unless mounted"
+      }
+    }
+  },
+  {
+    "id": "longsword",
+    "name": "Longsword",
+    "name_ru": "Длинный меч",
+    "source": "srd-5.2.1",
+    "category": "martial",
+    "type": "melee",
+    "cost": {
+      "amount": 15,
+      "unit": "gp"
+    },
+    "cost_cp": 1500,
+    "weight_lb": 3,
+    "damage_dice": "1d8",
+    "damage_type": "slashing",
+    "mastery": "sap",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "properties": [
+      "versatile"
+    ],
+    "property_details": {
+      "versatile": {
+        "damage_dice": "1d10"
+      }
+    }
+  },
+  {
+    "id": "maul",
+    "name": "Maul",
+    "name_ru": "Молот",
+    "source": "srd-5.2.1",
+    "category": "martial",
+    "type": "melee",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 10,
+    "damage_dice": "2d6",
+    "damage_type": "bludgeoning",
+    "mastery": "topple",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "properties": [
+      "heavy",
+      "two-handed"
+    ],
+    "property_details": {}
+  },
+  {
+    "id": "morningstar",
+    "name": "Morningstar",
+    "name_ru": "Моргенштерн",
+    "source": "srd-5.2.1",
+    "category": "martial",
+    "type": "melee",
+    "cost": {
+      "amount": 15,
+      "unit": "gp"
+    },
+    "cost_cp": 1500,
+    "weight_lb": 4,
+    "damage_dice": "1d8",
+    "damage_type": "piercing",
+    "mastery": "sap",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "properties": [],
+    "property_details": {}
+  },
+  {
+    "id": "pike",
+    "name": "Pike",
+    "name_ru": "Пика",
+    "source": "srd-5.2.1",
+    "category": "martial",
+    "type": "melee",
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 18,
+    "damage_dice": "1d10",
+    "damage_type": "piercing",
+    "mastery": "push",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "properties": [
+      "heavy",
+      "reach",
+      "two-handed"
+    ],
+    "property_details": {}
+  },
+  {
+    "id": "rapier",
+    "name": "Rapier",
+    "name_ru": "Рапира",
+    "source": "srd-5.2.1",
+    "category": "martial",
+    "type": "melee",
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "cost_cp": 2500,
+    "weight_lb": 2,
+    "damage_dice": "1d8",
+    "damage_type": "piercing",
+    "mastery": "vex",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "properties": [
+      "finesse"
+    ],
+    "property_details": {}
+  },
+  {
+    "id": "scimitar",
+    "name": "Scimitar",
+    "name_ru": "Скимитар",
+    "source": "srd-5.2.1",
+    "category": "martial",
+    "type": "melee",
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "cost_cp": 2500,
+    "weight_lb": 3,
+    "damage_dice": "1d6",
+    "damage_type": "slashing",
+    "mastery": "nick",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "properties": [
+      "finesse",
+      "light"
+    ],
+    "property_details": {}
+  },
+  {
+    "id": "shortsword",
+    "name": "Shortsword",
+    "name_ru": "Короткий меч",
+    "source": "srd-5.2.1",
+    "category": "martial",
+    "type": "melee",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 2,
+    "damage_dice": "1d6",
+    "damage_type": "piercing",
+    "mastery": "vex",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "properties": [
+      "finesse",
+      "light"
+    ],
+    "property_details": {}
+  },
+  {
+    "id": "trident",
+    "name": "Trident",
+    "name_ru": "Трезубец",
+    "source": "srd-5.2.1",
+    "category": "martial",
+    "type": "melee",
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 4,
+    "damage_dice": "1d8",
+    "damage_type": "piercing",
+    "mastery": "topple",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "properties": [
+      "thrown",
+      "versatile"
+    ],
+    "property_details": {
+      "thrown": {
+        "range_long": 60,
+        "range_normal": 20
+      },
+      "versatile": {
+        "damage_dice": "1d10"
+      }
+    }
+  },
+  {
+    "id": "warhammer",
+    "name": "Warhammer",
+    "name_ru": "Боевой молот",
+    "source": "srd-5.2.1",
+    "category": "martial",
+    "type": "melee",
+    "cost": {
+      "amount": 15,
+      "unit": "gp"
+    },
+    "cost_cp": 1500,
+    "weight_lb": 5,
+    "damage_dice": "1d8",
+    "damage_type": "bludgeoning",
+    "mastery": "push",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "properties": [
+      "versatile"
+    ],
+    "property_details": {
+      "versatile": {
+        "damage_dice": "1d10"
+      }
+    }
+  },
+  {
+    "id": "war-pick",
+    "name": "War Pick",
+    "name_ru": "Боевая кирка",
+    "source": "srd-5.2.1",
+    "category": "martial",
+    "type": "melee",
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "cost_cp": 500,
+    "weight_lb": 2,
+    "damage_dice": "1d8",
+    "damage_type": "piercing",
+    "mastery": "sap",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "properties": [
+      "versatile"
+    ],
+    "property_details": {
+      "versatile": {
+        "damage_dice": "1d10"
+      }
+    }
+  },
+  {
+    "id": "whip",
+    "name": "Whip",
+    "name_ru": "Кнут",
+    "source": "srd-5.2.1",
+    "category": "martial",
+    "type": "melee",
+    "cost": {
+      "amount": 2,
+      "unit": "gp"
+    },
+    "cost_cp": 200,
+    "weight_lb": 3,
+    "damage_dice": "1d4",
+    "damage_type": "slashing",
+    "mastery": "slow",
+    "mastery_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "properties": [
+      "finesse",
+      "reach"
+    ],
+    "property_details": {}
+  },
+  {
+    "id": "blowgun",
+    "name": "Blowgun",
+    "name_ru": "Духовая трубка",
+    "source": "srd-5.2.1",
+    "category": "martial",
+    "type": "ranged",
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "cost_cp": 1000,
+    "weight_lb": 1,
+    "damage_dice": "1",
+    "damage_type": "piercing",
+    "mastery": "vex",
+    "mastery_classes": [
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "properties": [
+      "ammunition",
+      "loading"
+    ],
+    "property_details": {
+      "ammunition": {
+        "ammunition": "needles",
+        "range_long": 100,
+        "range_normal": 25
+      }
+    }
+  },
+  {
+    "id": "hand-crossbow",
+    "name": "Hand Crossbow",
+    "name_ru": "Ручной арбалет",
+    "source": "srd-5.2.1",
+    "category": "martial",
+    "type": "ranged",
+    "cost": {
+      "amount": 75,
+      "unit": "gp"
+    },
+    "cost_cp": 7500,
+    "weight_lb": 3,
+    "damage_dice": "1d6",
+    "damage_type": "piercing",
+    "mastery": "vex",
+    "mastery_classes": [
+      "fighter",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "monk",
+      "paladin",
+      "ranger",
+      "rogue"
+    ],
+    "properties": [
+      "ammunition",
+      "light",
+      "loading"
+    ],
+    "property_details": {
+      "ammunition": {
+        "ammunition": "bolts",
+        "range_long": 120,
+        "range_normal": 30
+      }
+    }
+  },
+  {
+    "id": "heavy-crossbow",
+    "name": "Heavy Crossbow",
+    "name_ru": "Тяжёлый арбалет",
+    "source": "srd-5.2.1",
+    "category": "martial",
+    "type": "ranged",
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "cost_cp": 5000,
+    "weight_lb": 18,
+    "damage_dice": "1d10",
+    "damage_type": "piercing",
+    "mastery": "push",
+    "mastery_classes": [
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "properties": [
+      "ammunition",
+      "heavy",
+      "loading",
+      "two-handed"
+    ],
+    "property_details": {
+      "ammunition": {
+        "ammunition": "bolts",
+        "range_long": 400,
+        "range_normal": 100
+      }
+    }
+  },
+  {
+    "id": "longbow",
+    "name": "Longbow",
+    "name_ru": "Длинный лук",
+    "source": "srd-5.2.1",
+    "category": "martial",
+    "type": "ranged",
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "cost_cp": 5000,
+    "weight_lb": 2,
+    "damage_dice": "1d8",
+    "damage_type": "piercing",
+    "mastery": "slow",
+    "mastery_classes": [
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "properties": [
+      "ammunition",
+      "heavy",
+      "two-handed"
+    ],
+    "property_details": {
+      "ammunition": {
+        "ammunition": "arrows",
+        "range_long": 600,
+        "range_normal": 150
+      }
+    }
+  },
+  {
+    "id": "musket",
+    "name": "Musket",
+    "name_ru": "Мушкет",
+    "source": "srd-5.2.1",
+    "category": "martial",
+    "type": "ranged",
+    "cost": {
+      "amount": 500,
+      "unit": "gp"
+    },
+    "cost_cp": 50000,
+    "weight_lb": 10,
+    "damage_dice": "1d12",
+    "damage_type": "piercing",
+    "mastery": "slow",
+    "mastery_classes": [
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "properties": [
+      "ammunition",
+      "loading",
+      "two-handed"
+    ],
+    "property_details": {
+      "ammunition": {
+        "ammunition": "bullets-firearm",
+        "range_long": 120,
+        "range_normal": 40
+      }
+    }
+  },
+  {
+    "id": "pistol",
+    "name": "Pistol",
+    "name_ru": "Пистоль",
+    "source": "srd-5.2.1",
+    "category": "martial",
+    "type": "ranged",
+    "cost": {
+      "amount": 250,
+      "unit": "gp"
+    },
+    "cost_cp": 25000,
+    "weight_lb": 3,
+    "damage_dice": "1d10",
+    "damage_type": "piercing",
+    "mastery": "vex",
+    "mastery_classes": [
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "proficient_classes": [
+      "barbarian",
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "properties": [
+      "ammunition",
+      "loading"
+    ],
+    "property_details": {
+      "ammunition": {
+        "ammunition": "bullets-firearm",
+        "range_long": 90,
+        "range_normal": 30
+      }
+    }
+  }
+]

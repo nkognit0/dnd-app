@@ -112,7 +112,7 @@ export function derive(s: WizardState): Derived {
   // skills
   const skills = new Map<string, string>()
   for (const id of bg?.skill_proficiencies || []) skills.set(id, 'предыстория')
-  if (s.species.skill) skills.set(s.species.skill, 'вид')
+  for (const id of s.species.skills) skills.set(id, 'вид')
   for (const slot of slots) {
     for (const p of slot.picks.picks) if (p.startsWith('skill:')) skills.set(p.slice(6), featLabel(slot.feat))
   }
@@ -122,6 +122,7 @@ export function derive(s: WizardState): Derived {
   const tools = new Map<string, string>()
   for (const id of bg?.tool_proficiencies.fixed || []) tools.set(id, 'предыстория')
   for (const id of s.background.toolChoice) tools.set(id, 'предыстория')
+  if (s.species.tool) tools.set(s.species.tool, 'вид')
   for (const slot of slots) {
     for (const p of slot.picks.picks) {
       if (p.startsWith('tool:')) tools.set(p.slice(5), featLabel(slot.feat))
@@ -146,7 +147,9 @@ export function derive(s: WizardState): Derived {
   }
 
   const darkvision = spOption?.darkvision ?? sp?.darkvision ?? null
-  const resistances = [...new Set([...(sp?.resistances || []), ...(spOption?.resistances || [])])]
+  const resistances = [...new Set([
+    ...(sp?.resistances || []), ...(spOption?.resistances || []), ...(s.species.resistance ? [s.species.resistance] : [])
+  ])]
 
   return {
     cls, bg, sp, spOption, order, size, sizeOptions, base, bonus, scores, mods, featSlots: slots,
@@ -254,8 +257,19 @@ export function armorClass(d: Derived, s: WizardState, inv: InventoryLine[]): Ar
       speedPenalty: penalty
     })
   }
+  // a species bonus (Warforged: Integrated Protection) applies with or without armor
+  const speciesAc = (d.sp?.traits || []).reduce((n, t) => n + Number((t.grants as { ac_bonus?: number } | undefined)?.ac_bonus || 0), 0)
+  if (speciesAc) {
+    const trait = d.sp!.traits.find((t) => (t.grants as { ac_bonus?: number } | undefined)?.ac_bonus)!
+    for (const c of candidates) {
+      c.value += speciesAc
+      c.formula += ` + ${speciesAc} (${SPECIES_AC_RU[trait.id] || trait.name})`
+    }
+  }
   return candidates.sort((x, y) => y.value - x.value)[0]
 }
+
+const SPECIES_AC_RU: Record<string, string> = { 'integrated-protection': 'Встроенная защита' }
 
 export function maxHitPoints(d: Derived): number {
   if (!d.cls) return 0
@@ -298,12 +312,13 @@ export function knownSpells(d: Derived, s: WizardState): KnownSpell[] {
     for (const id of g?.cantrips || []) add(id, clsAbility, true, 'feature')
   }
 
-  // species: lineage spells available at level 1, Thaumaturgy, Light
+  // species: lineage spells available at level 1, Thaumaturgy, Light, Friends, Hex Magic
   const spAbility = d.sp?.id === 'aasimar' ? 'cha' : s.species.spellAbility
   for (const x of d.spOption?.spells || []) if (x.character_level <= 1) add(x.spell, spAbility, true, 'species')
   for (const t of d.sp?.traits || []) {
-    const g = t.grants as { cantrips?: string[] } | undefined
-    for (const id of g?.cantrips || []) add(id, spAbility, true, 'species')
+    if (t.level && t.level > 1) continue
+    const g = t.grants as { cantrips?: string[]; spells?: string[] } | undefined
+    for (const id of [...(g?.cantrips || []), ...(g?.spells || [])]) add(id, spAbility, true, 'species')
   }
 
   // Magic Initiate

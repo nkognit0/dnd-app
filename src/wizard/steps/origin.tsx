@@ -2,11 +2,11 @@
 import { SimpleGrid, Stack } from '@mantine/core'
 import {
   abilityName, backgrounds, byId, categoryItems, classes, nameOf, originFeats, ruName, skills, speciesOptions,
-  species as speciesList
+  species as speciesList, toolItems
 } from '../../data'
 import type { WizardState } from '../state'
 import type { Derived } from '../../rules/derive'
-import { Fixed, Pick, options } from '../fields'
+import { Fixed, Pick, PickMany, options } from '../fields'
 import { ARMOR_RU, StepProps } from './common'
 
 const skillName = (id: string) => nameOf(byId.skill[id])
@@ -96,9 +96,19 @@ function speciesChoices(d: Derived) {
     option: ch.find((c) => c.type === 'species-option'),
     size: ch.find((c) => c.type === 'size'),
     skill: ch.find((c) => c.type === 'skill'),
+    tool: ch.find((c) => c.type === 'tool'),
+    skillOrTool: ch.find((c) => c.type === 'skill-or-tool'),
     feat: ch.find((c) => c.type === 'feat'),
-    ability: ch.find((c) => c.type === 'ability')
+    ability: ch.find((c) => c.type === 'ability'),
+    resistance: ch.find((c) => c.type === 'resistance')
   }
+}
+
+// species in Russian alphabetical order, as on dnd.su
+const speciesSorted = [...speciesList].sort((a, b) => nameOf(a).localeCompare(nameOf(b), 'ru'))
+
+const EMPTY_SPECIES: Omit<WizardState['species'], 'speciesId'> = {
+  optionId: null, size: null, skills: [], tool: null, feat: null, spellAbility: null, resistance: null
 }
 
 export function SpeciesStep({ s, d, set }: StepProps) {
@@ -108,10 +118,18 @@ export function SpeciesStep({ s, d, set }: StepProps) {
     ? options(speciesOptions.filter((o) => o.group === ch.option!.options_group), (o) => o.id, (o) => nameOf(o))
     : []
   const sizeData = d.sizeOptions.map((id) => ({ value: id, label: ruName('sizes', id) }))
+  // what the background already gives is not offered again
   const bgSkills = new Set(d.bg?.skill_proficiencies || [])
+  const bgTools = new Set([...(d.bg?.tool_proficiencies.fixed || []), ...s.background.toolChoice])
   const skillPool = ch.skill
     ? (ch.skill.from === 'any' || !ch.skill.from ? skills.map((x) => x.id) : ch.skill.from).filter((id) => !bgSkills.has(id))
     : []
+  const toolPool = toolItems.filter((t) => !bgTools.has(t.id))
+  const skillOrToolData = [
+    { group: 'Навыки', items: skills.filter((x) => !bgSkills.has(x.id)).map((x) => ({ value: 'skill:' + x.id, label: nameOf(x) })) },
+    { group: 'Инструменты', items: toolPool.map((x) => ({ value: 'tool:' + x.id, label: nameOf(x) })) }
+  ]
+  const skillOrTool = s.species.skills[0] ? 'skill:' + s.species.skills[0] : s.species.tool ? 'tool:' + s.species.tool : null
   const bgFeat = d.bg?.feat.id
   const featData = options(
     originFeats.filter((f) => f.id !== bgFeat || f.repeatable),
@@ -124,11 +142,9 @@ export function SpeciesStep({ s, d, set }: StepProps) {
     <Stack>
       <Pick
         label='Вид'
-        data={options(speciesList, (x) => x.id, (x) => nameOf(x))}
+        data={options(speciesSorted, (x) => x.id, (x) => nameOf(x))}
         value={s.species.speciesId}
-        onChange={(v) =>
-          set('species', { speciesId: v, optionId: null, size: null, skill: null, feat: null, spellAbility: null })
-        }
+        onChange={(v) => set('species', { speciesId: v, ...EMPTY_SPECIES })}
       />
       {sp && (
         <SimpleGrid cols={2}>
@@ -148,11 +164,38 @@ export function SpeciesStep({ s, d, set }: StepProps) {
             disabled={sizeData.length < 2}
           />
           {ch.skill && (
-            <Pick
-              label='Навык'
+            <PickMany
+              label={ch.skill.count > 1 ? 'Навыки' : 'Навык'}
               data={options(skillPool, (id) => id, skillName)}
-              value={s.species.skill}
-              onChange={(v) => patch({ skill: v })}
+              max={ch.skill.count}
+              value={s.species.skills}
+              onChange={(v) => patch({ skills: v })}
+            />
+          )}
+          {ch.tool && (
+            <Pick
+              label='Инструмент'
+              data={options(toolPool, (t) => t.id, (t) => nameOf(t))}
+              value={s.species.tool}
+              onChange={(v) => patch({ tool: v })}
+            />
+          )}
+          {ch.skillOrTool && (
+            <Pick
+              label='Навык или инструмент'
+              data={skillOrToolData}
+              value={skillOrTool}
+              onChange={(v) =>
+                patch(v?.startsWith('skill:') ? { skills: [v.slice(6)], tool: null } : { skills: [], tool: v ? v.slice(5) : null })
+              }
+            />
+          )}
+          {ch.resistance && (
+            <Pick
+              label='Сопротивление'
+              data={(ch.resistance.from as string[]).map((id) => ({ value: id, label: ruName('damage_types', id) }))}
+              value={s.species.resistance}
+              onChange={(v) => patch({ resistance: v })}
             />
           )}
           {ch.feat && (
@@ -171,6 +214,7 @@ export function SpeciesStep({ s, d, set }: StepProps) {
               onChange={(v) => patch({ spellAbility: v as WizardState['species']['spellAbility'] })}
             />
           )}
+          {sp.creature_type !== 'humanoid' && <Fixed label='Тип существа' value={ruName('creature_types', sp.creature_type)} />}
           <Fixed label='Скорость' value={d.speed + ' фт'} />
           <Fixed label='Тёмное зрение' value={d.darkvision ? d.darkvision + ' фт' : 'Нет'} />
           <Fixed
@@ -189,7 +233,10 @@ export function speciesValid(s: WizardState, d: Derived) {
   return Boolean(
     (!ch.option || s.species.optionId) &&
       d.size &&
-      (!ch.skill || s.species.skill) &&
+      (!ch.skill || s.species.skills.length === ch.skill.count) &&
+      (!ch.tool || s.species.tool) &&
+      (!ch.skillOrTool || s.species.skills.length || s.species.tool) &&
+      (!ch.resistance || s.species.resistance) &&
       (!ch.feat || s.species.feat) &&
       (!ch.ability || s.species.spellAbility)
   )

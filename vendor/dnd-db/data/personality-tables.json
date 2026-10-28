@@ -1,0 +1,229 @@
+{
+  "source": "srd-5.2.1",
+  "ability_descriptors": {
+    "cha": [
+      {
+        "high": "Charming",
+        "low": "Pedantic",
+        "roll": 1
+      },
+      {
+        "high": "Commanding",
+        "low": "Humorless",
+        "roll": 2
+      },
+      {
+        "high": "Hilarious",
+        "low": "Reserved",
+        "roll": 3
+      },
+      {
+        "high": "Inspiring",
+        "low": "Tactless",
+        "roll": 4
+      }
+    ],
+    "con": [
+      {
+        "high": "Energetic",
+        "low": "Frail",
+        "roll": 1
+      },
+      {
+        "high": "Hale",
+        "low": "Squeamish",
+        "roll": 2
+      },
+      {
+        "high": "Hearty",
+        "low": "Lethargic",
+        "roll": 3
+      },
+      {
+        "high": "Stable",
+        "low": "Fragile",
+        "roll": 4
+      }
+    ],
+    "dex": [
+      {
+        "high": "Lithe",
+        "low": "Jittery",
+        "roll": 1
+      },
+      {
+        "high": "Dynamic",
+        "low": "Clumsy",
+        "roll": 2
+      },
+      {
+        "high": "Fidgety",
+        "low": "Hesitant",
+        "roll": 3
+      },
+      {
+        "high": "Poised",
+        "low": "Unsteady",
+        "roll": 4
+      }
+    ],
+    "int": [
+      {
+        "high": "Decisive",
+        "low": "Artless",
+        "roll": 1
+      },
+      {
+        "high": "Logical",
+        "low": "Illogical",
+        "roll": 2
+      },
+      {
+        "high": "Informative",
+        "low": "Uninformed",
+        "roll": 3
+      },
+      {
+        "high": "Curious",
+        "low": "Frivolous",
+        "roll": 4
+      }
+    ],
+    "str": [
+      {
+        "high": "Muscular",
+        "low": "Weak",
+        "roll": 1
+      },
+      {
+        "high": "Sinewy",
+        "low": "Slight",
+        "roll": 2
+      },
+      {
+        "high": "Protective",
+        "low": "Self-conscious",
+        "roll": 3
+      },
+      {
+        "high": "Direct",
+        "low": "Indirect",
+        "roll": 4
+      }
+    ],
+    "wis": [
+      {
+        "high": "Serene",
+        "low": "Rash",
+        "roll": 1
+      },
+      {
+        "high": "Considerate",
+        "low": "Distracted",
+        "roll": 2
+      },
+      {
+        "high": "Attentive",
+        "low": "Oblivious",
+        "roll": 3
+      },
+      {
+        "high": "Wary",
+        "low": "Naive",
+        "roll": 4
+      }
+    ]
+  },
+  "alignment_traits": {
+    "chaotic": [
+      {
+        "roll": 1,
+        "trait": "Boastful"
+      },
+      {
+        "roll": 2,
+        "trait": "Impulsive"
+      },
+      {
+        "roll": 3,
+        "trait": "Rebellious"
+      },
+      {
+        "roll": 4,
+        "trait": "Self-absorbed"
+      }
+    ],
+    "evil": [
+      {
+        "roll": 1,
+        "trait": "Dishonest"
+      },
+      {
+        "roll": 2,
+        "trait": "Vengeful"
+      },
+      {
+        "roll": 3,
+        "trait": "Cruel"
+      },
+      {
+        "roll": 4,
+        "trait": "Greedy"
+      }
+    ],
+    "good": [
+      {
+        "roll": 1,
+        "trait": "Compassionate"
+      },
+      {
+        "roll": 2,
+        "trait": "Helpful"
+      },
+      {
+        "roll": 3,
+        "trait": "Honest"
+      },
+      {
+        "roll": 4,
+        "trait": "Kind"
+      }
+    ],
+    "lawful": [
+      {
+        "roll": 1,
+        "trait": "Cooperative"
+      },
+      {
+        "roll": 2,
+        "trait": "Loyal"
+      },
+      {
+        "roll": 3,
+        "trait": "Judgmental"
+      },
+      {
+        "roll": 4,
+        "trait": "Methodical"
+      }
+    ],
+    "neutral": [
+      {
+        "roll": 1,
+        "trait": "Selfish"
+      },
+      {
+        "roll": 2,
+        "trait": "Disinterested"
+      },
+      {
+        "roll": 3,
+        "trait": "Laconic"
+      },
+      {
+        "roll": 4,
+        "trait": "Pragmatic"
+      }
+    ]
+  }
+}

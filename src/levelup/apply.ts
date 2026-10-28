@@ -12,6 +12,8 @@ import {
 } from './plan'
 import { ARMOR_RU } from '../wizard/steps/common'
 import { SheetInfo, norm } from './read'
+import { Why, changelogOf, logEvent } from '../changelog/changelog'
+import { wornOf } from '../inventory/worn'
 
 export interface LevelUpResult {
   character: DnDCharacter
@@ -57,7 +59,8 @@ const TABLE_LINE = 'Таблица класса'
 export const SPECIES_TRAIT_RU: Record<string, string> = {
   'celestial-revelation': 'Небесное откровение',
   'draconic-flight': 'Драконий полёт',
-  'large-form': 'Большая форма'
+  'large-form': 'Большая форма',
+  'spider-climb-walls': 'Паучье лазание: по стенам и потолкам без рук'
 }
 
 function spellRow(id: string, tag: string, prepared: boolean): DnDSpell {
@@ -80,18 +83,46 @@ export function applyLevelUp(c: DnDCharacter, info: SheetInfo, picks: LevelPicks
   const feat = picks.feat ? byId.feat[picks.feat] : null
   const featGrants = (feat?.grants || {}) as Record<string, unknown> & { tools?: string[]; armor?: string[]; weapons?: string[]; spells?: string[]; cantrips?: string[] }
 
+  // why each field changes, for the change log
+  const why = new Why()
+  const q = (x: string) => `«${x}»`
+  const clsName = q(nameOf(cls))
+  const featureName = (id: string | undefined) =>
+    nameOf(classFeatures.find((x) => x.class === cls.id && x.feature === id)) || nameOf(sub?.features.find((x) => x.id === id) as never) || ''
+  // where a grant comes from: a class or subclass feature
+  const grantSource = (g: { feature?: string }) => {
+    const name = featureName(g.feature)
+    return name ? `умение ${q(name)}` : sub ? `подкласс ${q(nameOf(sub))}` : `класс ${clsName}`
+  }
+  const featSource = feat ? `черта ${q(nameOf(feat))}` : ''
+  const upper = (x: string) => x.charAt(0).toUpperCase() + x.slice(1)
+  // "бонус мастерства +2 → +3; модификатор: Сила +3 → +4"
+  const causes = (ab: Ability | null, usesPb: boolean, extra: string[] = []) => [
+    usesPb && dPb ? `бонус мастерства ${signed(pbOld)} → ${signed(pbNew)}` : '',
+    ab && mNew[ab] !== mOld[ab] ? `модификатор: ${abilityName(ab)} ${signed(mOld[ab])} → ${signed(mNew[ab])}` : '',
+    ...extra
+  ].filter(Boolean).join('; ')
+
   // ---- header
   out.classLevel = `${nameOf(cls)} ${level}`
+  why.field('classLevel', `Новый уровень класса ${clsName}: ${level - 1} → ${level}`)
   if (picks.subclass && sub) {
     out.subclass = nameOf(sub)
     summary.push(`Подкласс: ${nameOf(sub)}`)
+    why.field('subclass', `На ${level}-м уровне класс ${clsName} выбирает подкласс; выбран ${q(nameOf(sub))}`)
   }
   for (const a of ABILITIES) {
     out[a] = String(scores[a])
-    if (scores[a] !== info.scores[a]) summary.push(`${abilityName(a)}: ${info.scores[a]} → ${scores[a]}`)
+    if (scores[a] !== info.scores[a]) {
+      summary.push(`${abilityName(a)}: ${info.scores[a]} → ${scores[a]}`)
+      why.field(a, `${upper(featSource || 'черта')} на ${level}-м уровне: +${scores[a] - info.scores[a]}`)
+    }
   }
   out.proficiencyBonus = signed(pbNew)
   if (dPb) summary.push(`Бонус мастерства: ${signed(pbOld)} → ${signed(pbNew)}`)
+  why.field('proficiencyBonus', dPb
+    ? `Бонус мастерства растёт на 5, 9, 13 и 17 уровнях; на ${level}-м уровне он ${signed(pbNew)}`
+    : `По таблице уровней на ${level}-м уровне бонус мастерства ${signed(pbNew)}`)
 
   // ---- hit points and hit dice
   const gain = hpGain(info, picks)
@@ -101,6 +132,9 @@ export function applyLevelUp(c: DnDCharacter, info: SheetInfo, picks: LevelPicks
     const hp = toInt(c.hp)
     if (hp != null) out.hp = String(hp === oldMax ? oldMax + gain.total : hp + gain.total)
     summary.push(`Максимум хитов: ${oldMax} → ${oldMax + gain.total} (+${gain.total})`)
+    why.field('maxHp', `Кость хитов класса ${clsName} — к${cls.hit_die}: ${picks.hp.method === 'fixed' ? 'среднее' : 'бросок'} ${gain.base}; ` +
+      `модификатор Телосложения ${signed(gain.con)}` + gain.extras.map((e) => `; ${e.label} ${signed(e.value)}`).join(''))
+    why.field('hp', hp === oldMax ? 'Хиты были полными — теперь равны новому максимуму' : 'Текущие хиты растут на столько же, на сколько максимум')
   }
   const hd = `к${cls.hit_die}`
   const dieCount = (v: unknown) => { const m = String(v ?? '').match(/(\d+)\s*[кd]/); return m ? Number(m[1]) : null }
@@ -109,6 +143,8 @@ export function applyLevelUp(c: DnDCharacter, info: SheetInfo, picks: LevelPicks
   const hdLeft = dieCount(c.hitDice)
   out.hitDice = `${(hdLeft ?? level - 1) + 1}${hd}`
   summary.push(`Кости хитов: ${out.hitDiceMax}`)
+  why.field('hitDiceMax', `Каждый уровень класса ${clsName} добавляет одну кость хитов к${cls.hit_die}`)
+  why.field('hitDice', 'Новая кость хитов добавляется к запасу')
 
   // ---- proficiencies
   const grants = grantsAt(info, picks)
@@ -125,6 +161,10 @@ export function applyLevelUp(c: DnDCharacter, info: SheetInfo, picks: LevelPicks
     const other = old == null ? 0 : old - mOld[a] - (was ? pbOld : 0)
     out[a + 'Save'] = signed(mNew[a] + (now ? pbNew : 0) + other)
     out[a + 'SaveChecked'] = now
+    const fresh = now && !was
+    const from = fresh ? (featGrants.save_of_increased_ability ? featSource : grantSource(grants.find((g) => g.saves?.includes(a)) || {})) : ''
+    why.field(a + 'Save', 'Пересчёт: ' + causes(a, was, fresh ? [`новое владение (${from}): +${pbNew}`] : []))
+    if (fresh) why.field(a + 'SaveChecked', `Владение спасброском даёт ${from}`)
   }
   for (const a of newSaves) if (!info.saves.has(a)) summary.push(`Владение спасброском: ${abilityName(a)}`)
 
@@ -149,6 +189,16 @@ export function applyLevelUp(c: DnDCharacter, info: SheetInfo, picks: LevelPicks
     const other = old == null ? 0 : old - mOld[sk.ability] - Math.floor(before * pbOld)
     out[field] = signed(mNew[sk.ability] + Math.floor(after * pbNew) + other)
     out[field + 'Checked'] = prof
+    const newProf = prof && !wasProf
+    const grant = grants.find((g) => g.skills?.includes(sk.id))
+    const skillFrom = allSkills ? featSource : grant ? grantSource(grant)
+      : featSource && ch(/^ft:skill-or-tool$/).includes('skill:' + sk.id) ? featSource : 'выбор умения на этом уровне'
+    why.field(field, 'Пересчёт: ' + causes(sk.ability, before > 0, [
+      newProf ? `новое владение (${skillFrom})` : '',
+      newExpertise.has(sk.id) ? 'экспертность: бонус мастерства удваивается' : '',
+      !jack(level - 1) && jack(level) && !prof ? 'Мастер на все руки: половина бонуса мастерства' : ''
+    ]))
+    if (newProf) why.field(field + 'Checked', `Владение даёт ${skillFrom}`)
   }
   const skillNames = (ids: Iterable<string>) => [...ids].map((id) => nameOf(byId.skill[id])).join(', ')
   if (newSkills.size) summary.push('Владение навыками: ' + skillNames(newSkills))
@@ -159,16 +209,22 @@ export function applyLevelUp(c: DnDCharacter, info: SheetInfo, picks: LevelPicks
   const ppOld = toInt(c.passivePerception)
   const perceptionNew = toInt(out.skillPerception) ?? 0
   out.passivePerception = String(ppOld != null && perceptionOld != null ? ppOld + perceptionNew - perceptionOld : 10 + perceptionNew)
+  why.field('passivePerception', 'Меняется вместе с навыком Восприятие (10 + навык)')
 
   // initiative: Dexterity and, with Alert, the proficiency bonus
   const hadAlert = info.feats.has('alert')
   const initOld = toInt(c.init) ?? mOld.dex + (hadAlert ? pbOld : 0)
   out.init = signed(initOld + (mNew.dex - mOld.dex) + (hadAlert ? dPb : 0) + (picks.feat === 'alert' ? pbNew : 0))
+  why.field('init', 'Пересчёт: ' + causes('dex', hadAlert, picks.feat === 'alert' ? [`черта «Бдительный»: +${pbNew}`] : []))
 
   // armor class: only the parts that use the changed scores
   const ac = toInt(c.ac)
   if (ac != null) {
-    const worn = armor.find((x) => x.type !== 'shield' && norm(String(c.equipment ?? '')).includes(norm(nameOf(x))))
+    // the armour the hero wears in the inventory; a sheet without it: the armour its equipment names
+    const wornId = wornOf(c).armor?.id
+    const worn = c.worn
+      ? (wornId ? byId.armor[wornId] : undefined)
+      : armor.find((x) => x.type !== 'shield' && norm(String(c.equipment ?? '')).includes(norm(nameOf(x))))
     const dDex = mNew.dex - mOld.dex
     let delta = dDex
     if (worn?.type === 'heavy') delta = 0
@@ -177,20 +233,29 @@ export function applyLevelUp(c: DnDCharacter, info: SheetInfo, picks: LevelPicks
     else if (!worn && cls.id === 'monk') delta = dDex + mNew.wis - mOld.wis
     out.ac = String(ac + delta)
     if (delta) summary.push(`Класс доспеха: ${ac} → ${ac + delta}`)
+    why.field('ac', (worn ? `Доспех ${q(nameOf(worn))}${worn.type === 'medium' ? ' учитывает Ловкость до +2' : ' учитывает Ловкость'}` : 'Без доспеха КД зависит от Ловкости') +
+      '; ' + [causes('dex', false), !worn && cls.id === 'barbarian' ? causes('con', false) : '', !worn && cls.id === 'monk' ? causes('wis', false) : ''].filter(Boolean).join('; '))
   }
   if (featGrants.speed_bonus) {
     const sp = toInt(c.speed)
     if (sp != null) out.speed = `${sp + Number(featGrants.speed_bonus)} фт`
+    why.field('speed', `${upper(featSource)}: скорость +${featGrants.speed_bonus} фт`)
   }
 
   const armorNew = new Set([...grants.flatMap((g) => g.armor || []), ...(featGrants.armor || [])])
   const armorField: Record<string, string> = { light: 'armorLight', medium: 'armorMedium', heavy: 'armorHeavy', shield: 'armorShields' }
-  for (const a of armorNew) out[armorField[a]] = true
+  for (const a of armorNew) {
+    out[armorField[a]] = true
+    const g = grants.find((x) => x.armor?.includes(a))
+    why.field(armorField[a], `Тренированность даёт ${g ? grantSource(g) : featSource}`)
+  }
   if (armorNew.size) summary.push('Тренированность: ' + [...armorNew].map((a) => ARMOR_RU[a].toLowerCase()).join(', '))
   const weaponNew = [...grants.flatMap((g) => g.weapons || []), ...(featGrants.weapons || [])]
   if (weaponNew.length) {
     const text = weaponNew.map((w) => (w === 'martial' ? 'воинское оружие' : 'воинское дальнобойное оружие'))
     out.weaponProficiencies = appendList(c.weaponProficiencies, text)
+    const g = grants.find((x) => x.weapons?.length)
+    why.field('weaponProficiencies', `Владение оружием даёт ${g ? grantSource(g) : featSource}`)
     summary.push('Владение оружием: ' + text.join(', '))
   }
   const toolNew = [
@@ -201,11 +266,16 @@ export function applyLevelUp(c: DnDCharacter, info: SheetInfo, picks: LevelPicks
   ]
   if (toolNew.length) {
     out.toolProficiencies = appendList(c.toolProficiencies, toolNew.map((t) => nameOf(byId.item[t])))
+    for (const t of toolNew) {
+      const g = grants.find((x) => x.tools?.includes(t))
+      why.part('toolProficiencies', nameOf(byId.item[t]), `Владение даёт ${g ? grantSource(g) : featGrants.tools?.includes(t) ? featSource : 'выбор умения на этом уровне'}`)
+    }
     summary.push('Владение инструментами: ' + toolNew.map((t) => nameOf(byId.item[t])).join(', '))
   }
   const langNew = ch(/:language$/)
   if (langNew.length) {
     out.languages = appendList(c.languages, langNew.map((l) => nameOf(byId.language[l])))
+    why.field('languages', `Язык на выбор от умения класса на ${level}-м уровне`)
     summary.push('Языки: ' + langNew.map((l) => nameOf(byId.language[l])).join(', '))
   }
 
@@ -253,7 +323,9 @@ export function applyLevelUp(c: DnDCharacter, info: SheetInfo, picks: LevelPicks
   for (const f of classFeaturesAt(info, level)) {
     if (f.feature === 'ability-score-improvement' || f.feature === 'epic-boon') continue
     const detail = take(f.feature)
-    featureLines.push(`${nameOf(f)} (${ordinal(level)})` + (detail ? ': ' + detail : ''))
+    const line = `${nameOf(f)} (${ordinal(level)})` + (detail ? ': ' + detail : '')
+    featureLines.push(line)
+    why.part('classFeatures', line, `Класс ${clsName} получает это умение на ${level}-м уровне`)
   }
   for (const f of subclassFeaturesAt(sub, level)) {
     const g = grants.find((x) => x.feature === f.id)
@@ -264,17 +336,23 @@ export function applyLevelUp(c: DnDCharacter, info: SheetInfo, picks: LevelPicks
       sub?.always_prepared?.[String(level)] && /spells$/.test(f.id) ? 'подготовлены: ' + sub.always_prepared[String(level)].map((s) => nameOf(byId.spell[s])).join(', ') : '',
       take(f.id)
     )
-    featureLines.push(`${nameOf(f)} (${nameOf(sub)}, ${ordinal(level)})` + (detail ? ': ' + detail : ''))
+    const line = `${nameOf(f)} (${nameOf(sub)}, ${ordinal(level)})` + (detail ? ': ' + detail : '')
+    featureLines.push(line)
+    why.part('classFeatures', line, `Подкласс ${q(nameOf(sub))} даёт это умение на ${level}-м уровне`)
   }
   // choices of features gained earlier: more invocations, plans, masteries, maneuvers...
   for (const [feature, parts] of details) {
     const name = nameOf(classFeatures.find((f) => f.class === cls.id && f.feature === feature)) ||
       nameOf(sub?.features.find((f) => f.id === feature) as never) || feature
-    featureLines.push(`${name} (${ordinal(level)}): ` + parts.join('; '))
+    const line = `${name} (${ordinal(level)}): ` + parts.join('; ')
+    featureLines.push(line)
+    why.part('classFeatures', line, `Умение ${q(name)} получено раньше; на ${level}-м уровне в нём новые выборы`)
   }
   // always-prepared spells of a subclass gained at later levels (no new feature that level)
   if (sub && level > sub.level && sub.always_prepared?.[String(level)] && !subclassFeaturesAt(sub, level).length) {
-    featureLines.push(`Заклинания подкласса (${ordinal(level)}): ` + sub.always_prepared[String(level)].map((s) => nameOf(byId.spell[s])).join(', '))
+    const line = `Заклинания подкласса (${ordinal(level)}): ` + sub.always_prepared[String(level)].map((s) => nameOf(byId.spell[s])).join(', ')
+    featureLines.push(line)
+    why.part('classFeatures', line, `Подкласс ${q(nameOf(sub))}: эти заклинания всегда подготовлены с ${level}-го уровня`)
   }
   for (const u of cls.level_up_unsupported || []) {
     if (u.level === level) summary.push(`Не заполнено: ${nameOf(classFeatures.find((f) => f.class === cls.id && f.feature === u.feature))} — впишите вручную (в базе нет нужных данных).`)
@@ -301,21 +379,30 @@ export function applyLevelUp(c: DnDCharacter, info: SheetInfo, picks: LevelPicks
   }
   const keptLines = oldLines.filter((l) => !l.startsWith(TABLE_LINE) && l.trim()).map((l) => refreshed.get(l) ?? l)
   out.classFeatures = [...keptLines, ...featureLines, ...(cols.length ? [tableLine] : [])].join('\n')
+  why.part('classFeatures', tableLine, `Таблица класса ${clsName} на ${level}-м уровне`)
+  for (const l of refreshed.values()) why.part('classFeatures', l, 'Число в умении зависит от уровня или модификатора — пересчитано')
   summary.push(...featureLines)
   summary.push(...[...refreshed.values()].filter((l) => keptLines.includes(l)).map((l) => 'Обновлено: ' + l))
 
   // species traits from this level; the ones counted by the proficiency bonus follow it
   const sg = speciesGainsAt(info, level)
   const speciesLines = sg.traits.map((t) => `${SPECIES_TRAIT_RU[t.id] || t.name} (с ${ordinal(level)})`)
-  if (sg.lineageSpells.length) speciesLines.push(`Заклинание родословной (${ordinal(level)}): ` + sg.lineageSpells.map((s) => nameOf(byId.spell[s])).join(', '))
-  const spWas = speciesNumberLine(info.species.id, { level: level - 1, pb: pbOld, con: mOld.con, option: info.speciesOption })
-  const spNow = speciesNumberLine(info.species.id, { level, pb: pbNew, con: mNew.con, option: info.speciesOption })
+  for (const l of speciesLines) why.part('speciesTraits', l, `Особенность вида ${q(nameOf(info.species))} начинает действовать с ${level}-го уровня`)
+  if (sg.lineageSpells.length) {
+    const l = `Заклинание родословной (${ordinal(level)}): ` + sg.lineageSpells.map((s) => nameOf(byId.spell[s])).join(', ')
+    speciesLines.push(l)
+    why.part('speciesTraits', l, `Вариант вида ${q(nameOf(info.speciesOption))} даёт заклинание на ${level}-м уровне`)
+  }
+  const spWas = speciesNumberLine(info.species.id, { level: level - 1, pb: pbOld, con: mOld.con, str: mOld.str, option: info.speciesOption })
+  const spNow = speciesNumberLine(info.species.id, { level, pb: pbNew, con: mNew.con, str: mNew.str, option: info.speciesOption })
+  if (spNow) why.part('speciesTraits', spNow, 'Число в особенности вида зависит от уровня, бонуса мастерства или модификатора — пересчитано')
   const gnomeUses = (pb: number) => `${times(pb)} за долгий отдых без ячейки`
   const speciesText = String(c.speciesTraits ?? '').split('\n').map((l) => {
     if (spWas && spNow && l === spWas && spWas !== spNow) { summary.push('Обновлено: ' + spNow); return spNow }
     if (dPb && l.startsWith('Гномья родословная:') && l.includes(gnomeUses(pbOld))) {
       const next = l.replace(gnomeUses(pbOld), gnomeUses(pbNew))
       summary.push('Обновлено: ' + next)
+      why.part('speciesTraits', next, 'Число использований равно бонусу мастерства — пересчитано')
       return next
     }
     return l
@@ -340,16 +427,21 @@ export function applyLevelUp(c: DnDCharacter, info: SheetInfo, picks: LevelPicks
       }))
     const fixed = [...(featGrants.spells || []), ...(featGrants.cantrips || [])].map((s) => nameOf(byId.spell[s]))
     const kind = featStepKind(info) === 'epic-boon' ? 'эпический дар' : 'черта'
-    featLines.push(`«${nameOf(feat)}» (${kind}, ${ordinal(level)}): ` + join(inc.join(', '), extras.join(', '), fixed.join(', ')))
+    const line = `«${nameOf(feat)}» (${kind}, ${ordinal(level)}): ` + join(inc.join(', '), extras.join(', '), fixed.join(', '))
+    featLines.push(line)
+    why.part('feats', line, kind === 'эпический дар' ? 'На 19-м уровне класс получает эпический дар' : `На ${level}-м уровне класс ${clsName} даёт черту`)
   }
   const style = ch(/^(f|s):.*:style$/)[0]
   if (style && byId.feat[style]) {
     const swap = Object.keys(picks.choices).some((k) => k.startsWith('f:fighting-style-swap'))
     if (swap && info.fightingStyle) {
       out.feats = String(c.feats ?? '').replace(nameOf(byId.feat[info.fightingStyle]), nameOf(byId.feat[style]))
+      why.field('feats', 'Боевой стиль можно заменить при повышении уровня')
       summary.push(`Боевой стиль заменён: «${nameOf(byId.feat[info.fightingStyle])}» → «${nameOf(byId.feat[style])}»`)
     } else {
-      featLines.push(`«${nameOf(byId.feat[style])}» (боевой стиль, ${ordinal(level)})`)
+      const line = `«${nameOf(byId.feat[style])}» (боевой стиль, ${ordinal(level)})`
+      featLines.push(line)
+      why.part('feats', line, `Боевой стиль от умения класса на ${level}-м уровне`)
     }
   }
   if (featLines.length) {
@@ -362,7 +454,10 @@ export function applyLevelUp(c: DnDCharacter, info: SheetInfo, picks: LevelPicks
       const next = l
         .replace(`${points(pbOld)} удачи на долгий отдых`, `${points(pbNew)} удачи на долгий отдых`)
         .replace(`+${pbOld} к инициативе, можно меняться`, `+${pbNew} к инициативе, можно меняться`)
-      if (next !== l) summary.push('Обновлено: ' + next)
+      if (next !== l) {
+        summary.push('Обновлено: ' + next)
+        why.part('feats', next, 'Число зависит от бонуса мастерства — пересчитано')
+      }
       return next
     }).join('\n')
   }
@@ -384,19 +479,32 @@ export function applyLevelUp(c: DnDCharacter, info: SheetInfo, picks: LevelPicks
     lists[s.level].push(spellRow(id, tag, s.level === 0 ? false : prepared))
   }
   const added: string[] = []
-  const add = (ids: string[], tag: string, prepared: boolean) => ids.forEach((id) => { addSpell(id, tag, prepared); added.push(nameOf(byId.spell[id])) })
+  // every spell added with the reason it comes
+  const add = (ids: string[], tag: string, prepared: boolean, reason: string) => ids.forEach((id) => {
+    addSpell(id, tag, prepared)
+    added.push(nameOf(byId.spell[id]))
+    const sp = byId.spell[id]
+    if (sp) why.part(sp.level === 0 ? 'cantrips' : `lvl${sp.level}Spells`, spellRow(id, tag, prepared).name!, reason)
+  })
+  for (const id of [...ch(/^sp:cantrip-out$/), ...ch(/^sp:prepared-out$/)]) {
+    const sp = byId.spell[id]
+    if (sp) why.part(sp.level === 0 ? 'cantrips' : `lvl${sp.level}Spells`, nameOf(sp), 'Заменено другим заклинанием при повышении уровня')
+  }
   ch(/^sp:cantrip-out$/).forEach(removeSpell)
   ch(/^sp:prepared-out$/).forEach(removeSpell)
-  add([...ch(/^sp:cantrips$/), ...ch(/^sp:cantrip-in$/)], '', false)
-  add(ch(/^sp:spellbook$/).filter((id) => !ch(/^sp:prepared$/).includes(id)), '', false)
-  add(ch(/^sp:savant$/).filter((id) => !ch(/^sp:prepared$/).includes(id)), '', false)
-  add([...ch(/^sp:prepared$/), ...ch(/^sp:prepared-in$/)], '', true)
-  add(ch(/^f:.*:cantrip$/), cls.id === 'paladin' || cls.id === 'ranger' ? 'боевой стиль' : '', false)
-  add(ch(/^g:.*:cantrip$/), 'подкласс', false)
-  add(ch(/^s:.*:spell$/), 'подкласс', true)
-  add(ch(/^f:mystic-arcanum-\d:spell$/), 'арканум', true)
-  for (const a of plan?.automatic || []) add([a.id], a.tag, true)
-  add([...(featGrants.cantrips || []), ...(featGrants.spells || []), ...ch(/^ft-x:.*:spell$/), ...ch(/^ft:spell-\d$/)], 'черта', true)
+  add([...ch(/^sp:cantrips$/), ...ch(/^sp:cantrip-in$/)], '', false, `Таблица класса ${clsName}: на ${level}-м уровне больше заговоров`)
+  add(ch(/^sp:spellbook$/).filter((id) => !ch(/^sp:prepared$/).includes(id)), '', false, 'Волшебник вписывает в книгу два заклинания за уровень')
+  add(ch(/^sp:savant$/).filter((id) => !ch(/^sp:prepared$/).includes(id)), '', false, `Подкласс ${q(nameOf(sub))}: заклинания в книгу`)
+  add([...ch(/^sp:prepared$/), ...ch(/^sp:prepared-in$/)], '', true, `Таблица класса ${clsName}: на ${level}-м уровне можно подготовить больше заклинаний`)
+  add(ch(/^f:.*:cantrip$/), cls.id === 'paladin' || cls.id === 'ranger' ? 'боевой стиль' : '', false, 'Заговор от умения класса')
+  add(ch(/^g:.*:cantrip$/), 'подкласс', false, `Заговор от подкласса ${q(nameOf(sub))}`)
+  add(ch(/^s:.*:spell$/), 'подкласс', true, `Заклинание, выбранное по умению подкласса ${q(nameOf(sub))}`)
+  add(ch(/^f:mystic-arcanum-\d:spell$/), 'арканум', true, 'Таинственный арканум колдуна')
+  for (const a of plan?.automatic || []) {
+    add([a.id], a.tag, true, a.tag === 'вид' ? `Вариант вида ${q(nameOf(info.speciesOption))} даёт это заклинание на ${level}-м уровне`
+      : `Всегда подготовлено (${a.tag}) с ${level}-го уровня`)
+  }
+  add([...(featGrants.cantrips || []), ...(featGrants.spells || []), ...ch(/^ft-x:.*:spell$/), ...ch(/^ft:spell-\d$/)], 'черта', true, upper(featSource || 'черта'))
   if (added.length) summary.push('Заклинания: ' + added.join(', '))
   for (let l = 0; l <= 9; l++) {
     if (l === 0) out.cantrips = lists[0]
@@ -413,8 +521,15 @@ export function applyLevelUp(c: DnDCharacter, info: SheetInfo, picks: LevelPicks
       const slots = casterSlots(info, picks, level)
       for (let l = 1; l <= 9; l++) out[`lvl${l}SpellSlotsTotal`] = slots[l - 1] ? String(slots[l - 1]) : ''
     }
+    for (let l = 1; l <= 9; l++) {
+      why.field(`lvl${l}SpellSlotsTotal`, r.pact_slots ? `Ячейки договора колдуна на ${level}-м уровне: все одного круга` : `Таблица ячеек заклинаний на ${level}-м уровне`)
+    }
     const prepared = cls.spellcasting ? r.prepared_spells : sub?.spellcasting?.levels[String(level)]?.prepared_spells
     if (prepared) out.preparedSpellsTotal = String(prepared)
+    why.field('preparedSpellsTotal', `Таблица класса: подготовленных заклинаний на ${level}-м уровне`)
+    why.field('spellSaveDC', 'Пересчёт: ' + causes(casterAbility, true))
+    why.field('spellAttackBonus', 'Пересчёт: ' + causes(casterAbility, true))
+    why.field('spellcastingClass', sub?.spellcasting ? `Подкласс ${q(nameOf(sub))} даёт заклинательство` : `Заклинательство класса ${clsName}`)
     const dcOld = toInt(c.spellSaveDC)
     const atkOld = toInt(c.spellAttackBonus)
     const dMod = mNew[casterAbility] - mOld[casterAbility]
@@ -435,6 +550,7 @@ export function applyLevelUp(c: DnDCharacter, info: SheetInfo, picks: LevelPicks
         const best = Object.keys(steps).map(Number).filter((l) => l <= level).sort((x, y) => x - y).pop()
         if (best != null) a.damage = String(a.damage ?? '').replace(/^\S+/, dice(steps[String(best)]))
       }
+      why.part('attacks', String(a.name), 'Урон заговора растёт на 5, 11 и 17 уровнях; бонус или Сл — от бонуса мастерства и модификатора')
       const dc = String(a.bonus ?? '').match(/Сл\s*(\d+)/)
       const num = dc ? Number(dc[1]) : toInt(a.bonus)
       if (num != null) {
@@ -454,6 +570,7 @@ export function applyLevelUp(c: DnDCharacter, info: SheetInfo, picks: LevelPicks
       (w.properties.includes('finesse') ? (mOld.dex >= mOld.str ? 'dex' : 'str') : candidates[0])
     const dMod = mNew[ab] - mOld[ab]
     a.bonus = signed(bonus + dMod + (proficient ? dPb : 0))
+    why.part('attacks', String(a.name), 'Пересчёт: ' + causes(ab, proficient))
     a.damage = String(a.damage ?? '').replace(/^(\S+?)([+-]\d+)?(\s|$)/, (_, d: string, m: string | undefined, sp2: string) => {
       const next = (m ? Number(m) : 0) + dMod
       return d + (next ? signed(next) : '') + sp2
@@ -482,11 +599,14 @@ export function applyLevelUp(c: DnDCharacter, info: SheetInfo, picks: LevelPicks
         damage: `${dice(base)} ${ruName('damage_types', s.damage.type).toLowerCase()}`,
         notes: 'заговор'
       })
+      why.part('attacks', nameOf(s), 'Новый заговор с уроном')
     }
   }
   out.attacks = rows.slice(0, 5)
   const overflow = rows.slice(5).map((r) => `${r.name}: ${r.bonus}, ${r.damage}${r.notes ? '; ' + r.notes : ''}`)
   if (overflow.length) out.attacksText = appendText(c.attacksText, overflow.filter((l) => !String(c.attacksText ?? '').includes(l)))
+  why.field('attacksText', 'Не поместилось в таблицу из пяти строк')
 
-  return { character: out, summary }
+  const title = `Уровень ${level}: ${nameOf(cls)}${sub ? ` (${nameOf(sub)})` : ''}`
+  return { character: logEvent(c, out, why, title, changelogOf(c)), summary }
 }
